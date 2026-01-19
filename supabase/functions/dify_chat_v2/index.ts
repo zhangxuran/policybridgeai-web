@@ -9,7 +9,6 @@ interface DifyChatRequest {
   query: string;
   conversation_id?: string;
   user_id: string;
-  isPaid?: boolean;
   files?: Array<{
     type: string;
     transfer_method: string;
@@ -64,22 +63,19 @@ async function isPaidUser(userId: string): Promise<boolean> {
     console.log(`   - Subscription Status: ${profile.subscription_status}`);
 
     // 检查是否为付费用户
-    // 只有当 subscription_plan='professional' 且 subscription_status='active' 时才是付费用户
-    const isPaid = profile.subscription_plan === 'professional' && profile.subscription_status === 'active';
+    const isPaid = profile.subscription_plan !== 'free' && profile.subscription_status === 'active';
     
     console.log('='.repeat(60));
     if (isPaid) {
       console.log(`[isPaidUser] ✅ RESULT: 💎 PAID USER`);
       console.log(`   - Plan: ${profile.subscription_plan}`);
       console.log(`   - Status: ${profile.subscription_status}`);
-      console.log(`   - Will use: PAID API (app-pIcqAGmge68TyoSCyohtlPus)`);
+      console.log(`   - Will use: PAID API (app-Svga3U8E8RxuMjoxYwWTeizZ)`);
     } else {
       console.log(`[isPaidUser] ✅ RESULT: 🆓 FREE USER`);
       console.log(`   - Plan: ${profile.subscription_plan}`);
       console.log(`   - Status: ${profile.subscription_status}`);
-      console.log(`   - Will use: FREE API (app-t1Mc7ID3o0DRqSQ6FwvW4YrH)`);
-      console.log(`   - Note: Using new FREE API key`);
-
+      console.log(`   - Will use: FREE API (app-HhvrEdwxk4ZxoqMAQE6GUNQc or app-t1Mc7ID3o0DRqSQ6FwvW4YrH)`);
     }
     console.log('='.repeat(60));
     
@@ -169,15 +165,8 @@ Deno.serve(async (req) => {
       );
     }
 
-    // 🔑 改进：优先使用前端传来的 isPaid，如果没有才查询数据库
-    let isPaid = body.isPaid;
-    
-    if (isPaid === undefined) {
-      console.log(`[${requestId}] ⚠️ isPaid not provided by frontend, querying database...`);
-      isPaid = await isPaidUser(body.user_id);
-    } else {
-      console.log(`[${requestId}] ✅ Using isPaid from frontend: ${isPaid}`);
-    }
+    // 🔑 检查用户是否为付费用户，选择对应的 API Key
+    const isPaid = await isPaidUser(body.user_id);
     
     // Get Dify API configuration
     const difyApiUrl = Deno.env.get('DIFY_API_URL') || 'https://dify.policybridgeai.com/v1';
@@ -186,7 +175,7 @@ Deno.serve(async (req) => {
     let difyApiKey: string;
     if (isPaid) {
       // 付费用户使用付费版 API
-      difyApiKey = Deno.env.get('DIFY_API_KEY_PAID') || 'app-pIcqAGmge68TyoSCyohtlPus' || '';
+      difyApiKey = Deno.env.get('DIFY_API_KEY_PAID') || Deno.env.get('DIFY_API_KEY') || '';
       console.log(`[${requestId}] 💎 User ${body.user_id} is PAID - Using PAID API`);
       console.log(`[${requestId}] 🔑 API Key: ${difyApiKey.substring(0, 20)}...`);
     } else {

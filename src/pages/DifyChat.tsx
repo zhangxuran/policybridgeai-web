@@ -16,10 +16,6 @@ import { UpgradeDialog } from '@/components/UpgradeDialog';
 import { stripMarkdown } from '@/lib/markdownUtils';
 import { useTranslation, TFunction } from 'react-i18next';
 
-// 注意：Dify API 密钥应该从环境变量中读取
-// 前端可以访问 VITE_* 前缀的环境变量
-// 后端 Edge Function 通过 Supabase 环境变量访问完整的密钥
-
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -44,7 +40,6 @@ interface DifyChatRequestBody {
   query: string;
   user_id: string;
   conversation_id?: string;
-  isPaid?: boolean;
   files?: Array<{
     type: string;
     transfer_method: string;
@@ -66,17 +61,10 @@ interface FundingOption {
 
 // API configuration for 金税四期
 const RADAR_API_CONFIG = {
-  baseUrl: import.meta.env.VITE_DIFY_API_URL || 'https://dify.policybridgeai.com/v1',
-  freeApiKey: import.meta.env.VITE_RADAR_API_KEY_FREE || 'app-eWwd99fqtvRwRyA3OZumjZ2i',
-  paidApiKey: import.meta.env.VITE_RADAR_API_KEY_PAID || 'app-TIXqfUd5q44bkkComdoIRG6B'
+  baseUrl: 'https://dify.policybridgeai.com/v1',
+  freeApiKey: 'app-eWwd99fqtvRwRyA3OZumjZ2i',
+  paidApiKey: 'app-TIXqfUd5q44bkkComdoIRG6B'
 };
-
-// 日志输出配置信息
-console.log('🔧 Dify Configuration Loaded:', {
-  apiUrl: RADAR_API_CONFIG.baseUrl,
-  radarFreeApi: RADAR_API_CONFIG.freeApiKey.substring(0, 10) + '...',
-  radarPaidApi: RADAR_API_CONFIG.paidApiKey.substring(0, 10) + '...'
-});
 
 // Helper function to get file type from filename
 const getFileType = (filename: string): 'pdf' | 'word' | 'txt' => {
@@ -305,7 +293,7 @@ const parseMessageContent = (content: string, isUserMessage: boolean = false, t:
 };
 
 export default function DifyChat() {
-  const { user, refreshSubscription, isPaid } = useAuth();
+  const { user, refreshSubscription } = useAuth();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const [input, setInput] = useState('');
@@ -554,7 +542,58 @@ export default function DifyChat() {
    * Check user subscription by directly querying the profiles table
    * This ensures we always get the latest subscription status from the database
    */
-  // checkUserSubscription 函数已移除，现在直接使用 AuthContext 中的 isPaid
+  const checkUserSubscription = async (): Promise<boolean> => {
+    if (!user) {
+      console.log('❌ No user found');
+      return false;
+    }
+
+    try {
+      console.log('='.repeat(60));
+      console.log('🔍 CHECKING USER SUBSCRIPTION STATUS');
+      console.log('='.repeat(60));
+      console.log('👤 User ID:', user.id);
+      console.log('📧 User Email:', user.email);
+
+      // Query the profiles table directly to get the latest subscription info
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('subscription_plan, subscription_status, email')
+        .eq('id', user.id)
+        .single();
+
+      if (error) {
+        console.error('❌ Error querying profiles table:', error);
+        console.log('⚠️ Profile not found in database - defaulting to FREE plan');
+        return false;
+      }
+
+      if (!data) {
+        console.log('⚠️ No profile data found - defaulting to FREE plan');
+        return false;
+      }
+
+      console.log('📊 Profile Data Retrieved:');
+      console.log('   - Email:', data.email);
+      console.log('   - Subscription Plan:', data.subscription_plan);
+      console.log('   - Subscription Status:', data.subscription_status);
+
+      const isPaid = data.subscription_plan !== 'free' && data.subscription_status === 'active';
+      
+      console.log('='.repeat(60));
+      console.log(`✅ SUBSCRIPTION CHECK RESULT: ${isPaid ? '💎 PAID USER' : '🆓 FREE USER'}`);
+      console.log('='.repeat(60));
+      console.log(`📌 Plan: ${data.subscription_plan}`);
+      console.log(`📌 Status: ${data.subscription_status}`);
+      console.log(`📌 API to use: ${isPaid ? 'PAID API (app-TIXqfUd5q44bkkComdoIRG6B)' : 'FREE API (app-eWwd99fqtvRwRyA3OZumjZ2i)'}`);
+      console.log('='.repeat(60));
+      
+      return isPaid;
+    } catch (error) {
+      console.error('❌ Exception in checkUserSubscription:', error);
+      return false;
+    }
+  };
 
   const callRadarAPI = async (query: string, isPaid: boolean) => {
     const apiKey = isPaid ? RADAR_API_CONFIG.paidApiKey : RADAR_API_CONFIG.freeApiKey;
@@ -656,8 +695,7 @@ export default function DifyChat() {
     try {
       const requestBody: DifyChatRequestBody = {
         query: messageText,
-        user_id: user!.id,
-        isPaid: isPaid
+        user_id: user!.id
       };
 
       if (currentDifyConversationId) {
@@ -823,8 +861,9 @@ export default function DifyChat() {
     setMessages((prev) => [...prev, thinkingMessage]);
 
     try {
-      // 直接使用 Context 中的 isPaid，无需查询数据库
-      toast.info(isPaid ? t('difyChat.messages.usingPaidAPI') : t('difyChat.messages.usingFreeAPI'));
+      const isPaidUser = await checkUserSubscription();
+      
+      toast.info(isPaidUser ? t('difyChat.messages.usingPaidAPI') : t('difyChat.messages.usingFreeAPI'));
 
       if (!conversationIdForSaving) {
         const dateStr = new Date().toLocaleString('zh-CN', {
@@ -857,7 +896,7 @@ export default function DifyChat() {
         await saveMessageToDatabase(conversationIdForSaving, 'user', messageText);
       }
 
-      const stream = await callRadarAPI(messageText, isPaid);
+      const stream = await callRadarAPI(messageText, isPaidUser);
 
       if (!stream) {
         throw new Error('未收到API响应');
@@ -1232,8 +1271,9 @@ export default function DifyChat() {
     setMessages((prev) => [...prev, thinkingMessage]);
 
     try {
-      // 直接使用 Context 中的 isPaid，无需查询数据库
-      toast.info(isPaid ? t('difyChat.messages.usingPaidAPI') : t('difyChat.messages.usingFreeAPI'));
+      const isPaidUser = await checkUserSubscription();
+      
+      toast.info(isPaidUser ? t('difyChat.messages.usingPaidAPI') : t('difyChat.messages.usingFreeAPI'));
 
       if (!conversationIdForSaving) {
         const dateStr = new Date().toLocaleString('zh-CN', {
@@ -1266,7 +1306,7 @@ export default function DifyChat() {
         await saveMessageToDatabase(conversationIdForSaving, 'user', queryContent);
       }
 
-      const stream = await callRadarAPI(queryContent, isPaid);
+      const stream = await callRadarAPI(queryContent, isPaidUser);
 
       if (!stream) {
         throw new Error('未收到API响应');

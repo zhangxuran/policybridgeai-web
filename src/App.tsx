@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { Toaster } from '@/components/ui/sonner';
 import Index from '@/pages/Index';
+import ProductIntroduction from '@/pages/ProductIntroduction';
+import ContactUs from '@/pages/ContactUs';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import Dashboard from '@/pages/Dashboard';
@@ -19,7 +21,6 @@ import TermsOfService from '@/pages/TermsOfService';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import Disclaimer from '@/pages/Disclaimer';
 import AdminPanel from '@/pages/AdminPanel';
-import AuthCallback from '@/pages/AuthCallback';
 import '@/i18n/config';
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/product-introduction" element={<ProductIntroduction />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />

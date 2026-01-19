@@ -8,7 +8,6 @@ interface AuthContextType {
   loading: boolean;
   subscriptionPlan: string;
   subscriptionStatus: string;
-  isPaid: boolean;
   login: (email: string, password: string) => Promise<{ success: boolean; message: string }>;
   register: (data: RegisterData) => Promise<{ success: boolean; message: string }>;
   logout: () => Promise<{ success: boolean; message?: string }>;
@@ -32,7 +31,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [subscriptionPlan, setSubscriptionPlan] = useState<string>('free');
   const [subscriptionStatus, setSubscriptionStatus] = useState<string>('active');
-  const [isPaid, setIsPaid] = useState<boolean>(false);
 
   useEffect(() => {
     // Check active sessions and sets the user
@@ -52,7 +50,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       } else {
         setSubscriptionPlan('free');
         setSubscriptionStatus('active');
-        setIsPaid(false);
       }
       setLoading(false);
     });
@@ -69,21 +66,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         .single();
 
       if (!error && data) {
-        const plan = data.subscription_plan || 'free';
-        const status = data.subscription_status || 'active';
-        
-        setSubscriptionPlan(plan);
-        setSubscriptionStatus(status);
-        
-        // 计算 isPaid: 只有当 subscription_plan='professional' 且 subscription_status='active' 时才是付费用户
-        const paid = plan === 'professional' && status === 'active';
-        setIsPaid(paid);
-        
-        console.log('✅ Subscription loaded:', {
-          plan: plan,
-          status: status,
-          isPaid: paid
-        });
+        setSubscriptionPlan(data.subscription_plan || 'free');
+        setSubscriptionStatus(data.subscription_status || 'active');
       }
     } catch (error) {
       console.error('Error loading subscription info:', error);
@@ -303,7 +287,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(null);
       setSubscriptionPlan('free');
       setSubscriptionStatus('active');
-      setIsPaid(false);
       
       // Sign out from Supabase
       const { error } = await supabase.auth.signOut();
@@ -333,7 +316,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     loading,
     subscriptionPlan,
     subscriptionStatus,
-    isPaid,
     login,
     register,
     logout,
