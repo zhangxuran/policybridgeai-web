@@ -1,0 +1,374 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Prezzi",
+    "aiReview": "Revisione IA",
+    "login": "Accedi",
+    "register": "Registrati",
+    "dashboard": "Dashboard",
+    "myOrders": "I miei ordini",
+    "buyBooster": "Acquista Booster",
+    "logout": "Esci",
+    "loggingOut": "Disconnessione...",
+    "remaining": "{{count}} rimanenti"
+  },
+  "hero": {
+    "title": "PolicyBridge.ai",
+    "subtitle": "Prima di firmare un contratto, verifica se è davvero sicuro",
+    "description": "PolicyBridge.ai fornisce la prima linea di screening dei rischi di conformità<br/>per contratti transfrontalieri per PMI senza team legali professionali",
+    "startReview": "Inizia Revisione",
+    "getStarted": "Scansione Gratuita Rischi Contrattuali"
+  },
+  "advantage": {
+    "title": "I nostri vantaggi principali",
+    "subtitle": "A differenza dei LLM tradizionali, PolicyBridge.ai fornisce servizi professionali basati su dati legali in tempo reale",
+    "database": {
+      "title": "I rischi contrattuali spesso derivano da conoscenze legali obsolete",
+      "subtitle": "",
+      "point1": "I rischi di conformità nei contratti transfrontalieri spesso derivano dalla negligenza degli aggiornamenti normativi",
+      "point2": "I cambiamenti nelle sanzioni, embarghi o regole tariffarie possono influenzare direttamente l'applicabilità del contratto",
+      "point3": "Fare affidamento su una comprensione legale obsoleta può portare all'invalidazione o alla restrizione delle clausole nelle controversie",
+      "point4": "Le differenze nelle regole tra paesi e regioni sono spesso identificate erroneamente come 'pratiche del settore'"
+    },
+    "difference": {
+      "title": "PolicyBridge.ai è per la valutazione dei rischi di conformità, non per Q&A IA generali",
+      "subtitle": "",
+      "point1": "La valutazione dei rischi di conformità si concentra sull'applicazione delle regole, non sulla comprensione del testo",
+      "point2": "La conformità transfrontaliera dipende fortemente da contesti transazionali specifici ed è difficile da generalizzare",
+      "point3": "Le risposte senza fonti tracciabili non sono adatte per il processo decisionale sulla conformità",
+      "point4": "I veri rischi spesso derivano da cambiamenti normativi piuttosto che dalla formulazione contrattuale"
+    },
+    "caseLaw": {
+      "title": "Molti problemi delle clausole contrattuali non sono scritti nella legge ma rivelati nelle controversie",
+      "subtitle": "",
+      "point1": "Numerose controversie commerciali transfrontaliere mostrano che le clausole rischiose spesso emergono solo durante le fasi di esecuzione o controversia",
+      "point2": "I tipi di controversia comuni si concentrano tipicamente su violazioni contrattuali, allocazione di responsabilità, pagamenti e problemi di qualità",
+      "point3": "Strutture contrattuali simili possono presentare risultati di rischio completamente diversi in diverse controversie",
+      "point4": "Combinare l'esperienza della pratica legale aiuta a identificare i punti di rischio facilmente trascurati prima della firma"
+    }
+  },
+  "features": {
+    "title": "Funzionalità principali",
+    "smartReview": {
+      "title": "Revisione Intelligente dei Contratti",
+      "description": "Carica documenti contrattuali, l'IA identifica automaticamente le clausole chiave e conduce una revisione completa rispetto alle ultime leggi e regolamenti"
+    },
+    "riskAlert": {
+      "title": "Allerta Rischi di Conformità",
+      "description": "Monitoraggio in tempo reale delle liste di embargo e dei cambiamenti delle politiche tariffarie, avviso proattivo dei potenziali rischi di conformità"
+    },
+    "multiCountry": {
+      "title": "Confronto Multi-giurisdizionale",
+      "description": "Supporto per l'analisi comparativa di leggi e regolamenti in più paesi e regioni per aiutarti a formulare strategie commerciali ottimali"
+    },
+    "caseMatching": {
+      "title": "Corrispondenza Intelligente dei Casi",
+      "description": "Basato su un database di oltre 1000 casi reali, l'IA analizza intelligentemente i tuoi problemi, abbina rapidamente precedenti e soluzioni pertinenti, rendendo le questioni legali complesse semplici e chiare"
+    }
+  },
+  "dataSources": {
+    "title": "Le nostre fonti di dati",
+    "subtitle": "Garantire l'autorità e la tempestività dei dati",
+    "international": {
+      "title": "Organizzazioni internazionali",
+      "item1": "Commissione delle Nazioni Unite sul diritto commerciale internazionale (UNCITRAL)",
+      "item2": "Organizzazione mondiale del commercio (WTO)",
+      "item3": "Camera di commercio internazionale (ICC)",
+      "item4": "Gruppo di azione finanziaria (FATF)"
+    },
+    "official": {
+      "title": "Agenzie ufficiali nazionali",
+      "item1": "Siti web ufficiali delle amministrazioni doganali nazionali",
+      "item2": "Siti web ufficiali dei Ministeri del Commercio",
+      "item3": "Dipartimenti di controllo delle importazioni ed esportazioni",
+      "item4": "Annunci della Commissione tariffaria"
+    },
+    "updateFrequency": "<strong>Frequenza di aggiornamento dei dati:</strong> Aggiornamenti automatici giornalieri | Notifiche in tempo reale per cambiamenti di politica importanti"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "description": "Se hai domande o hai bisogno di assistenza, non esitare a contattarci",
+    "email": "Email di contatto",
+    "response": "Risponderemo alla tua email entro 24 ore"
+  },
+  "footer": {
+    "description": "Piattaforma professionale di revisione della conformità del commercio transfrontaliero",
+    "quickLinks": "Link rapidi",
+    "terms": "Termini di servizio",
+    "privacy": "Informativa sulla privacy",
+    "disclaimer": "Disclaimer",
+    "contactUs": "Contattaci",
+    "copyright": "© 2024 PolicyBridge.ai. Tutti i diritti riservati"
+  },
+  "login": {
+    "title": "Bentornato",
+    "subtitle": "Accedi al tuo account PolicyBridge.ai",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Accedi",
+    "loggingIn": "Accesso in corso...",
+    "noAccount": "Non hai un account?",
+    "registerNow": "Registrati ora",
+    "checkingStatus": "Controllo dello stato di accesso...",
+    "redirecting": "Reindirizzamento...",
+    "errors": {
+      "emptyFields": "Inserisci email e password",
+      "loginFailed": "Accesso fallito, riprova",
+      "timeout": "Timeout di accesso, controlla la tua connessione di rete",
+      "generic": "Si è verificato un errore durante l'accesso"
+    },
+    "success": "Accesso riuscito!"
+  },
+  "register": {
+    "title": "Crea Account",
+    "subtitle": "Crea il tuo account PolicyBridge.ai",
+    "email": "Email",
+    "password": "Password",
+    "passwordPlaceholder": "Almeno 6 caratteri",
+    "confirmPassword": "Conferma Password",
+    "confirmPasswordPlaceholder": "Inserisci nuovamente la password",
+    "registerButton": "Registrati",
+    "registering": "Registrazione in corso...",
+    "hasAccount": "Hai già un account?",
+    "loginNow": "Accedi ora",
+    "agreeToTerms": {
+      "prefix": "Ho letto e accetto",
+      "terms": "i Termini di servizio",
+      "and": "e",
+      "privacy": "l'Informativa sulla privacy"
+    },
+    "errors": {
+      "emptyFields": "Compila tutti i campi",
+      "passwordMismatch": "Le password non corrispondono",
+      "passwordTooShort": "La password deve essere di almeno 6 caratteri",
+      "registerFailed": "Registrazione fallita, riprova",
+      "emailExists": "Questa email è già registrata",
+      "agreeToTerms": "Accetta prima i Termini di servizio e l'Informativa sulla privacy"
+    },
+    "success": "Registrazione riuscita! Controlla la tua email di verifica"
+  },
+  "pricing": {
+    "title": "Scegli il piano giusto per te",
+    "subtitle": "Dalla versione di prova alla personalizzazione aziendale, soddisfacendo diverse esigenze di servizi legali",
+    "free": "Gratuito",
+    "contactUs": "Contattaci",
+    "unlimited": "Illimitato",
+    "fullCaseFollowUp": "Follow-up illimitato per l'intero caso",
+    "freeUse": "Uso gratuito",
+    "processing": "Elaborazione...",
+    "buyNow": "Acquista ora",
+    "viewDetailedComparison": "Visualizza confronto dettagliato delle funzionalità",
+    "perMonth": "/mese",
+    "perYear": "/anno",
+    "perWeek": "/settimana",
+    "orderCreated": "Ordine creato con successo",
+    "tiers": {
+      "free": {
+        "name": "Versione di prova (Gratuita)",
+        "period": "",
+        "unitCost": "Prova gratuita",
+        "features": {
+          "role": "Ruolo: Consulenza legale / di conformità",
+          "uploadSupport": "✅ Caricamento contratto supportato",
+          "riskAssessment": "✅ Valutazione e avvisi dei rischi contrattuali",
+          "noConclusion": "❌ Nessuna conclusione di giudizio di conformità",
+          "noSolution": "❌ Nessuna soluzione di avviso contrattuale"
+        }
+      },
+      "professional": {
+        "name": "Membro settimanale",
+        "period": "Settimanale",
+        "unitCost": "¥49/settimana",
+        "features": {
+          "positioning": "🔑 Core: Strumento di valutazione dei rischi di conformità a breve termine e intensivo",
+          "legalConsulting": "✅ Consulenza legale / di conformità",
+          "uploadSupport": "✅ Caricamento contratto supportato",
+          "fullRiskJudgment": "✅ Valutazione completa dei rischi di conformità",
+          "riskDetails": "✅ Punti di rischio + Tipi di rischio + Motivi di rischio",
+          "decisionReference": "✅ Riferimento decisionale prima della firma",
+          "caseAnalysis": "✅ Analisi di casi simili nel database"
+        }
+      },
+      "monthly": {
+        "name": "Membro mensile",
+        "period": "Mensile",
+        "unitCost": "¥299/mese",
+        "features": {
+          "positioning": "🔑 Core: Strumento di valutazione della conformità stabile",
+          "legalConsulting": "✅ Consulenza legale / di conformità",
+          "uploadSupport": "✅ Caricamento contratto supportato",
+          "fullRiskJudgment": "✅ Valutazione completa dei rischi di conformità",
+          "riskDetails": "✅ Punti di rischio + Tipi di rischio + Motivi di rischio",
+          "decisionReference": "✅ Riferimento decisionale prima della firma",
+          "caseAnalysis": "✅ Analisi di casi simili nel database",
+          "higherStability": "✅ Maggiore stabilità e priorità del sistema per impostazione predefinita",
+          "dedicatedSupport": "✅ Supporto clienti dedicato"
+        }
+      },
+      "yearly": {
+        "name": "Membro annuale",
+        "period": "Annuale",
+        "unitCost": "¥2499/anno",
+        "features": {
+          "positioning": "🔑 Core: Valutazione dei rischi di conformità come parte del flusso di lavoro a lungo termine",
+          "legalConsulting": "✅ Consulenza legale / di conformità",
+          "uploadSupport": "✅ Caricamento contratto supportato",
+          "fullRiskJudgment": "✅ Valutazione completa dei rischi di conformità",
+          "riskDetails": "✅ Punti di rischio + Tipi di rischio + Motivi di rischio",
+          "decisionReference": "✅ Riferimento decisionale prima della firma",
+          "caseAnalysis": "✅ Analisi di casi simili nel database",
+          "higherStability": "✅ Maggiore stabilità e priorità del sistema per impostazione predefinita",
+          "longTermBusiness": "✅ Adatto per affari transfrontalieri a lungo termine",
+          "dedicatedSupport": "✅ Supporto clienti dedicato"
+        }
+      },
+      "enterprise": {
+        "name": "Personalizzazione aziendale",
+        "period": "Contattaci",
+        "unitCost": "Prezzi personalizzati",
+        "features": {
+          "positioning": "Core: Soluzioni personalizzate di livello aziendale",
+          "systemIntegration": "Integrazione del sistema aziendale",
+          "multiUser": "Gestione account multi-utente",
+          "apiIntegration": "Integrazione interfaccia API",
+          "privateDeployment": "Distribuzione dati privata",
+          "dedicatedSupport": "Supporto clienti dedicato",
+          "customDevelopment": "Sviluppo di funzionalità personalizzate",
+          "sla": "Accordo di servizio SLA",
+          "support247": "Supporto tecnico 7×24"
+        }
+      }
+    },
+    "toasts": {
+      "freeNoNeed": "La versione di prova non richiede acquisto",
+      "freeDescription": "Puoi utilizzare direttamente la versione di prova per la consulenza legale testuale",
+      "enterpriseCustom": "Personalizzazione aziendale",
+      "enterpriseDescription": "Contatta il nostro team di vendita per soluzioni personalizzate",
+      "loginRequired": "Effettua prima l'accesso",
+      "purchaseFailed": "Acquisto fallito",
+      "tierNotFound": "Pacchetto non trovato",
+      "orderFailed": "Impossibile creare l'ordine",
+      "retryLater": "Riprova più tardi",
+      "sessionExpired": "Sessione scaduta, effettua nuovamente l'accesso",
+      "systemInitializing": "Sistema in inizializzazione, riprova più tardi",
+      "networkError": "Errore di rete, controlla la tua connessione",
+      "permissionDenied": "Permesso negato, effettua nuovamente l'accesso"
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "q1": {
+        "question": "Qual è la differenza tra la versione di prova e le versioni a pagamento?",
+        "answer": "La versione di prova supporta solo la consulenza legale testuale, senza caricamento contratti e generazione documenti Word. Le versioni a pagamento forniscono revisione completa dei contratti, analisi dei rischi e funzionalità di generazione documenti."
+      },
+      "q2": {
+        "question": "Per quali scenari è adatta la versione professionale?",
+        "answer": "La versione professionale è adatta per utenti che occasionalmente necessitano di revisione contratti, addebitata per contratto a 49 yuan ciascuno, con follow-up illimitato e generazione revisioni, perfetta per individui o piccole transazioni."
+      },
+      "q3": {
+        "question": "Qual è la differenza tra abbonamento mensile e annuale?",
+        "answer": "Mensile 299 yuan/mese, annuale 2499 yuan/anno (circa 209 yuan/mese), risparmiando 1089 yuan all'anno. Entrambi hanno funzionalità identiche, supportando caricamento illimitato di contratti e generazione documenti."
+      },
+      "q4": {
+        "question": "Quali servizi include la personalizzazione aziendale?",
+        "answer": "La personalizzazione aziendale fornisce integrazione del sistema aziendale, gestione multi-utente, interfacce API, distribuzione privata, supporto dedicato e altri servizi personalizzati, adatti per clienti aziendali con esigenze speciali."
+      },
+      "q5": {
+        "question": "Come scelgo il piano giusto per me?",
+        "answer": "Per consulenza occasionale, scegli la versione di prova; per rivedere 1-2 contratti, scegli la versione professionale; per revisioni frequenti di contratti, scegli l'abbonamento; per utenti aziendali con esigenze personalizzate, scegli la personalizzazione aziendale."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "La mia Dashboard",
+    "subtitle": "Gestisci i tuoi abbonamenti e i registri di utilizzo",
+    "currentPlan": "Piano attuale",
+    "usage": "Utilizzo",
+    "validityRemaining": "Validità rimanente",
+    "unlimited": "Illimitato",
+    "expired": "Scaduto",
+    "timeRemaining": {
+      "days": "{{days}} giorni {{hours}} ore",
+      "hours": "{{hours}} ore"
+    },
+    "status": {
+      "active": "Attivo",
+      "none": "Nessun abbonamento",
+      "expired": "Scaduto"
+    },
+    "alerts": {
+      "expired": "Il tuo abbonamento è scaduto. Rinnova per continuare a utilizzare il servizio.",
+      "noSubscription": "Non hai ancora un abbonamento attivo.",
+      "viewPlans": "Visualizza piani"
+    },
+    "quickActions": {
+      "title": "Azioni rapide",
+      "description": "Scorciatoie per funzioni utilizzate frequentemente",
+      "startReview": "Inizia revisione",
+      "buyBooster": "Acquista booster",
+      "upgrade": "Aggiorna piano",
+      "permissions": "Demo permessi"
+    },
+    "permissions": {
+      "title": "Permessi del piano attuale",
+      "description": "Il tuo piano {{tier}} include le seguenti funzionalità e permessi",
+      "available": "Disponibile",
+      "unavailable": "Non disponibile",
+      "unlimited": "Illimitato",
+      "wantMore": "Vuoi più funzionalità?",
+      "upgradePrompt": "Passa a un piano superiore per sbloccare più funzionalità professionali",
+      "viewPlans": "Visualizza piani"
+    }
+  },
+  "orders": {
+    "title": "I miei ordini",
+    "backToHome": "Torna alla home",
+    "orderList": "Elenco ordini",
+    "description": "Visualizza e gestisci tutti i tuoi registri di ordini",
+    "searchPlaceholder": "Cerca numero ordine o nome pacchetto...",
+    "filterStatus": "Filtra stato",
+    "allStatus": "Tutti gli stati",
+    "noMatchingOrders": "Nessun ordine corrispondente trovato",
+    "noOrders": "Nessun registro di ordini ancora",
+    "tryAdjustFilters": "Prova a regolare i criteri di ricerca o i filtri",
+    "ordersWillAppear": "Dopo l'acquisto di un pacchetto, i registri degli ordini appariranno qui",
+    "browsePlans": "Sfoglia piani",
+    "status": {
+      "pending": "In attesa",
+      "paid": "Pagato",
+      "cancelled": "Annullato",
+      "refunded": "Rimborsato"
+    },
+    "table": {
+      "orderNumber": "Numero ordine",
+      "packageName": "Nome pacchetto",
+      "contracts": "Contratti",
+      "amount": "Importo",
+      "status": "Stato",
+      "purchaseTime": "Data di acquisto",
+      "actions": "Azioni",
+      "pieces": "pz",
+      "includesBonus": "Include {{count}} bonus",
+      "viewDetails": "Visualizza dettagli"
+    },
+    "summary": {
+      "total": "Totale {{count}} ordini",
+      "totalAmount": "Importo totale"
+    }
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "cancel": "Annulla",
+    "confirm": "Conferma",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "close": "Chiudi",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "submit": "Invia",
+    "search": "Cerca"
+  }
+}

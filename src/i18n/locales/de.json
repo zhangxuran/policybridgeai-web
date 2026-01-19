@@ -1,0 +1,686 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "pricing": "Preise",
+    "aiReview": "KI-Überprüfung",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "dashboard": "Dashboard",
+    "myOrders": "Meine Bestellungen",
+    "buyBooster": "Booster kaufen",
+    "logout": "Abmelden",
+    "loggingOut": "Abmeldung...",
+    "remaining": "{{count}} verbleibend"
+  },
+  "hero": {
+    "title": "PolicyBridge.ai",
+    "subtitle": "Vor der Vertragsunterzeichnung prüfen, ob er wirklich sicher ist",
+    "description": "PolicyBridge.ai bietet die erste Linie des Compliance-Risiko-Screenings<br/>für grenzüberschreitende Verträge für KMUs ohne professionelle Rechtsabteilungen",
+    "startReview": "Überprüfung starten",
+    "getStarted": "Kostenloser Vertragsrisiko-Scan"
+  },
+  "advantage": {
+    "title": "Unsere Kernvorteile",
+    "subtitle": "Im Gegensatz zu traditionellen LLMs bietet PolicyBridge.ai professionelle Dienstleistungen basierend auf Echtzeit-Rechtsdaten",
+    "database": {
+      "title": "Vertragsrisiken entstehen oft aus veralteten Rechtskenntnissen",
+      "subtitle": "",
+      "point1": "Compliance-Risiken in grenzüberschreitenden Verträgen entstehen oft durch Vernachlässigung regulatorischer Updates",
+      "point2": "Änderungen bei Sanktionen, Embargos oder Zollregeln können die Durchsetzbarkeit von Verträgen direkt beeinflussen",
+      "point3": "Das Vertrauen auf veraltetes Rechtsverständnis kann dazu führen, dass Klauseln in Streitigkeiten ungültig oder eingeschränkt werden",
+      "point4": "Unterschiede in den Regeln zwischen Ländern und Regionen werden oft fälschlicherweise als 'Branchenpraktiken' identifiziert"
+    },
+    "difference": {
+      "title": "PolicyBridge.ai dient der Compliance-Risikobewertung, nicht allgemeinen KI-Fragen",
+      "subtitle": "",
+      "point1": "Compliance-Risikobewertung konzentriert sich auf Regelanwendung, nicht auf Textverständnis",
+      "point2": "Grenzüberschreitende Compliance hängt stark von spezifischen Transaktionskontexten ab und ist schwer zu verallgemeinern",
+      "point3": "Antworten ohne nachvollziehbare Quellen sind für Compliance-Entscheidungen ungeeignet",
+      "point4": "Echte Risiken entstehen oft aus regulatorischen Änderungen statt aus Vertragsformulierungen"
+    },
+    "caseLaw": {
+      "title": "Viele Vertragsklauselprobleme stehen nicht im Gesetz, sondern zeigen sich in Streitigkeiten",
+      "subtitle": "",
+      "point1": "Zahlreiche grenzüberschreitende Handelsstreitigkeiten zeigen, dass riskante Klauseln oft erst in der Erfüllungs- oder Streitphase auftauchen",
+      "point2": "Häufige Streittypen konzentrieren sich typischerweise auf Vertragsverletzungen, Haftungsverteilung, Zahlungen und Qualitätsprobleme",
+      "point3": "Ähnliche Vertragsstrukturen können in verschiedenen Streitigkeiten völlig unterschiedliche Risikoergebnisse aufweisen",
+      "point4": "Die Kombination rechtlicher Praxiserfahrung hilft, leicht übersehene Risikopunkte vor der Unterzeichnung zu identifizieren"
+    }
+  },
+  "features": {
+    "title": "Kernfunktionen",
+    "smartReview": {
+      "title": "Intelligente Vertragsüberprüfung",
+      "description": "Laden Sie Vertragsdokumente hoch, KI identifiziert automatisch Schlüsselklauseln und führt eine umfassende Überprüfung anhand der neuesten Gesetze und Vorschriften durch"
+    },
+    "riskAlert": {
+      "title": "Compliance-Risikowarnung",
+      "description": "Echtzeitüberwachung von Embargolisten und Zollpolitikänderungen, proaktive Warnung vor potenziellen Compliance-Risiken"
+    },
+    "multiCountry": {
+      "title": "Multijurisdiktionaler Vergleich",
+      "description": "Unterstützung für vergleichende Analyse von Gesetzen und Vorschriften in mehreren Ländern und Regionen zur Formulierung optimaler Handelsstrategien"
+    },
+    "caseMatching": {
+      "title": "Intelligente Fallzuordnung",
+      "description": "Basierend auf einer Datenbank mit über 1000 realen Fällen analysiert KI intelligent Ihre Probleme, ordnet schnell relevante Präzedenzfälle und Lösungen zu und macht komplexe Rechtsfragen einfach und klar"
+    }
+  },
+  "dataSources": {
+    "title": "Unsere Datenquellen",
+    "subtitle": "Gewährleistung der Autorität und Aktualität der Daten",
+    "international": {
+      "title": "Internationale Organisationen",
+      "item1": "Kommission der Vereinten Nationen für internationales Handelsrecht (UNCITRAL)",
+      "item2": "Welthandelsorganisation (WTO)",
+      "item3": "Internationale Handelskammer (ICC)",
+      "item4": "Financial Action Task Force (FATF)"
+    },
+    "official": {
+      "title": "Nationale Behörden",
+      "item1": "Offizielle Websites der nationalen Zollverwaltungen",
+      "item2": "Offizielle Websites der Handelsministerien",
+      "item3": "Import- und Exportkontrollbehörden",
+      "item4": "Zollkommissionsankündigungen"
+    },
+    "updateFrequency": "<strong>Datenaktualisierungsfrequenz:</strong> Tägliche automatische Crawling-Updates | Echtzeitbenachrichtigungen bei wichtigen Politikänderungen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Wenn Sie Fragen haben oder Hilfe benötigen, kontaktieren Sie uns gerne",
+    "email": "Kontakt-E-Mail",
+    "response": "Wir werden Ihre E-Mail innerhalb von 24 Stunden beantworten"
+  },
+  "footer": {
+    "description": "Professionelle Plattform für grenzüberschreitende Handels-Compliance-Überprüfung",
+    "quickLinks": "Schnelllinks",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzrichtlinie",
+    "disclaimer": "Haftungsausschluss",
+    "contactUs": "Kontaktieren Sie uns",
+    "copyright": "© 2024 PolicyBridge.ai. Alle Rechte vorbehalten"
+  },
+  "login": {
+    "title": "Willkommen zurück",
+    "subtitle": "Melden Sie sich bei Ihrem PolicyBridge.ai-Konto an",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "loginButton": "Anmelden",
+    "loggingIn": "Anmeldung läuft...",
+    "noAccount": "Noch kein Konto?",
+    "registerNow": "Jetzt registrieren",
+    "checkingStatus": "Anmeldestatus wird überprüft...",
+    "redirecting": "Weiterleitung...",
+    "errors": {
+      "emptyFields": "Bitte geben Sie E-Mail und Passwort ein",
+      "loginFailed": "Anmeldung fehlgeschlagen, bitte versuchen Sie es erneut",
+      "timeout": "Anmeldungs-Timeout, bitte überprüfen Sie Ihre Netzwerkverbindung",
+      "generic": "Bei der Anmeldung ist ein Fehler aufgetreten"
+    },
+    "success": "Anmeldung erfolgreich!"
+  },
+  "register": {
+    "title": "Konto erstellen",
+    "subtitle": "Erstellen Sie Ihr PolicyBridge.ai-Konto",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "passwordPlaceholder": "Mindestens 6 Zeichen",
+    "confirmPassword": "Passwort bestätigen",
+    "confirmPasswordPlaceholder": "Passwort erneut eingeben",
+    "registerButton": "Registrieren",
+    "registering": "Registrierung läuft...",
+    "hasAccount": "Bereits ein Konto?",
+    "loginNow": "Jetzt anmelden",
+    "agreeToTerms": {
+      "prefix": "Ich habe gelesen und stimme zu",
+      "terms": "den Nutzungsbedingungen",
+      "and": "und",
+      "privacy": "der Datenschutzrichtlinie"
+    },
+    "errors": {
+      "emptyFields": "Bitte füllen Sie alle Felder aus",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "passwordTooShort": "Passwort muss mindestens 6 Zeichen lang sein",
+      "registerFailed": "Registrierung fehlgeschlagen, bitte versuchen Sie es erneut",
+      "emailExists": "Diese E-Mail ist bereits registriert",
+      "agreeToTerms": "Bitte stimmen Sie zuerst den Nutzungsbedingungen und der Datenschutzrichtlinie zu"
+    },
+    "success": "Registrierung erfolgreich! Bitte überprüfen Sie Ihre Bestätigungs-E-Mail"
+  },
+  "confirmDialog": {
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen"
+  },
+  "upgradeDialog": {
+    "title": "Datei-Upload-Funktion freischalten",
+    "description": "Upgraden Sie auf Professional oder höhere Pläne, um Vertragsdateien für intelligente Analyse hochzuladen",
+    "trialVersion": "Testversion",
+    "professionalVersion": "Professional und höher",
+    "recommended": "Empfohlen",
+    "features": {
+      "basicChat": "Basis-Textkonversation",
+      "noFileUpload": "Keine Vertragsdatei-Uploads möglich",
+      "noDeepAnalysis": "Keine Tiefenanalyse möglich",
+      "smartChat": "Intelligente Textkonversation",
+      "fileUpload": "Vertragsdateien hochladen (PDF/DOC/DOCX/TXT)",
+      "aiAnalysis": "KI-Tiefenvertragsanalyse",
+      "unlimitedUsage": "Unbegrenzte Nutzung"
+    },
+    "benefits": {
+      "title": "Vorteile der Datei-Upload-Funktion:",
+      "format": "Unterstützung mehrerer Formate: PDF, DOC, DOCX, TXT",
+      "extraction": "KI extrahiert automatisch Schlüsselklauseln und Risikopunkte",
+      "comparison": "Intelligenter Vergleich und Compliance-Prüfungen",
+      "advice": "Professionelle Rechtsberatung und Änderungsvorschläge"
+    },
+    "cancelButton": "Abbrechen",
+    "upgradeButton": "Jetzt upgraden"
+  },
+  "featureGate": {
+    "locked": "Funktion gesperrt",
+    "upgrade": "Upgraden, um mehr Funktionen freizuschalten",
+    "upgradeDescription": "Upgraden Sie auf einen höheren Plan, um mehr professionelle Funktionen freizuschalten",
+    "viewPlans": "Pläne anzeigen"
+  },
+  "subscriptionAlert": {
+    "expired": {
+      "title": "Abonnement abgelaufen",
+      "description": "Ihr {{plan}}-Abonnement ist am {{date}} abgelaufen, bitte verlängern Sie, um den Service weiterhin zu nutzen",
+      "renewButton": "Jetzt verlängern"
+    },
+    "expiring": {
+      "title": "Abonnement läuft bald ab",
+      "description": "Ihr {{plan}}-Abonnement läuft in {{days}} Tagen ab ({{date}}), bitte rechtzeitig verlängern",
+      "renewButton": "Jetzt verlängern",
+      "dismissButton": "Später erinnern"
+    },
+    "active": {
+      "title": "Abonnementstatus",
+      "description": "Ihr {{plan}}-Abonnement läuft in {{days}} Tagen ab ({{date}})"
+    }
+  },
+  "usageIndicator": {
+    "monthlyUsage": "Monatliche Nutzung",
+    "unlimited": "Unbegrenzt",
+    "enterpriseUnlimited": "Unternehmensbenutzer genießen unbegrenzte Nutzung",
+    "exhausted": {
+      "title": "Monatliche Nutzung erschöpft",
+      "buyBooster": "Booster kaufen",
+      "upgradePlan": "Plan upgraden"
+    },
+    "low": {
+      "title": "Geringe verbleibende Nutzung",
+      "description": "{{remaining}} Nutzungen verbleibend, erwägen Sie den Kauf eines Boosters oder ein Upgrade"
+    },
+    "remaining": "{{remaining}} Nutzungen verbleibend"
+  },
+  "dataManagement": {
+    "title": "Datenverwaltung",
+    "description": "Verwalten Sie Ihren Gesprächsverlauf und Datenaufbewahrungseinstellungen",
+    "retentionPolicy": "Datenaufbewahrungsrichtlinie",
+    "retentionOptions": {
+      "immediate": "Sofort löschen",
+      "30days": "30 Tage aufbewahren",
+      "permanent": "Dauerhaft aufbewahren"
+    },
+    "retentionDescriptions": {
+      "immediate": "Daten sofort nach Gesprächsende löschen",
+      "30days": "Gesprächsdaten nach 30 Tagen automatisch löschen",
+      "permanent": "Alle Gesprächsdaten dauerhaft aufbewahren"
+    },
+    "statistics": {
+      "conversations": "Gesprächsverlauf",
+      "conversationsCount": "Gespräche",
+      "storage": "Speicher",
+      "storageSize": "MB (ca. {{count}} Nachrichten)"
+    },
+    "actions": {
+      "settings": "Aufbewahrungseinstellungen",
+      "clearAll": "Alle Daten löschen"
+    },
+    "settingsDialog": {
+      "title": "Datenaufbewahrungseinstellungen",
+      "description": "Wählen Sie Ihre Gesprächsdatenaufbewahrungsrichtlinie",
+      "options": {
+        "immediate": {
+          "title": "Sofort löschen",
+          "description": "Alle zugehörigen Daten sofort nach Gesprächsende löschen für maximale Privatsphäre"
+        },
+        "30days": {
+          "title": "30 Tage aufbewahren (Empfohlen)",
+          "description": "Gesprächsdaten 30 Tage aufbewahren, Balance zwischen Privatsphäre und Komfort"
+        },
+        "permanent": {
+          "title": "Dauerhaft aufbewahren",
+          "description": "Alle Gesprächsdaten dauerhaft aufbewahren für einfachen Zugriff auf Verlauf"
+        }
+      },
+      "cancelButton": "Abbrechen",
+      "saveButton": "Einstellungen speichern",
+      "saving": "Speichern..."
+    },
+    "clearDialog": {
+      "title": "Alle Daten löschen bestätigen?",
+      "description": "Dies wird Ihren gesamten Gesprächsverlauf dauerhaft löschen, einschließlich aller Nachrichteninhalte. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmButton": "Löschen bestätigen",
+      "cancelButton": "Abbrechen"
+    },
+    "toasts": {
+      "settingsUpdated": "Datenaufbewahrungseinstellungen aktualisiert",
+      "settingsFailed": "Fehler beim Speichern der Einstellungen",
+      "dataCleared": "Alle Verlaufsdaten gelöscht",
+      "clearFailed": "Fehler beim Löschen der Daten"
+    }
+  },
+  "disclaimerDialog": {
+    "title": "Wichtiger Hinweis",
+    "description": "Bitte lesen Sie das Folgende sorgfältig durch, bevor Sie unsere Plattformdienste nutzen",
+    "serviceNature": {
+      "title": "Art des Dienstes",
+      "notConstitute": "Die von dieser Plattform bereitgestellte Analyse stellt NICHT dar:",
+      "items": {
+        "legalOpinion": "Formelle Rechtsauskunft",
+        "legalConsultation": "Professionelle Rechtsberatung",
+        "legalEvidence": "Direkt in Gerichtsverfahren verwendbare Beweise"
+      }
+    },
+    "recommendations": {
+      "title": "Wir empfehlen dringend:",
+      "items": {
+        "consultLawyer": "Konsultieren Sie einen professionellen Anwalt vor Unterzeichnung wichtiger Verträge",
+        "dueDiligence": "Führen Sie unabhängige Due Diligence durch",
+        "notSoleDecision": "Verwenden Sie die Analyse dieser Plattform nicht als alleinige Entscheidungsgrundlage"
+      }
+    },
+    "limitations": {
+      "title": "Technische Einschränkungen:",
+      "items": {
+        "aiErrors": "KI-Technologie kann Fehler oder Auslassungen produzieren",
+        "dataDelay": "Datenaktualisierungen haben Zeitverzögerungen",
+        "noGuarantee": "Kann keine 100%ige Genauigkeit garantieren"
+      }
+    },
+    "dataRetention": {
+      "title": "Datenaufbewahrungsmethode",
+      "description": "Bitte wählen Sie Ihre bevorzugte Datenaufbewahrungsmethode. Sie können diese jederzeit in den Einstellungen ändern",
+      "options": {
+        "immediate": {
+          "title": "Sofort löschen",
+          "description": "Alle zugehörigen Daten sofort nach Überprüfung löschen"
+        },
+        "30days": {
+          "title": "30 Tage aufbewahren (Empfohlen)",
+          "description": "Nach 30 Tagen automatisch löschen, bequem zum Anzeigen des Verlaufs"
+        },
+        "permanent": {
+          "title": "Dauerhaft aufbewahren",
+          "description": "Dauerhaft aufbewahren, kann jederzeit in Einstellungen gelöscht werden"
+        }
+      }
+    },
+    "agreement": {
+      "prefix": "Ich habe gelesen und stimme dem",
+      "disclaimer": "Haftungsausschluss",
+      "suffix": "zu und verstehe die Art und Einschränkungen der Dienste dieser Plattform"
+    },
+    "cancelButton": "Abbrechen",
+    "acceptButton": "Zustimmen und fortfahren"
+  },
+  "difyChat": {
+    "backToHome": "Zurück zur Startseite",
+    "newConversation": "Neues Gespräch",
+    "conversationHistory": "Gesprächsverlauf",
+    "selectAll": "Alle auswählen",
+    "deleteSelected": "Ausgewählte löschen ({{count}})",
+    "welcome": {
+      "title": "Willkommen bei PolicyBridge.AI!",
+      "subtitle": "Um Ihre Probleme besser zu lösen, wählen Sie bitte Ihre Identität:",
+      "description": "Nach Auswahl Ihrer Identität können wir Sie präziser bedienen",
+      "identities": {
+        "seller": "Grenzüberschreitender Verkäufer/Lieferant",
+        "buyer": "Grenzüberschreitender Käufer",
+        "intermediary": "Kanal/Vermittler",
+        "logistics": "Spediteur (Logistik)",
+        "brand": "Marke/Technologie (IP/OEM)",
+        "warehouse": "Übersee-Lager (WMS/3PL)",
+        "finance": "Finanzen/Zahlung (Finanzier)"
+      }
+    },
+    "thinking": {
+      "identityConfirmation": "Identitätsbestätigung",
+      "understanding": "Ihre Frage wird verstanden...",
+      "callingKnowledge": "Zugriff auf Wissensdatenbank...",
+      "analyzingRegulations": "Relevante Vorschriften werden analysiert...",
+      "generating": "Antwort wird generiert...",
+      "almostDone": "Fast fertig..."
+    },
+    "fileUpload": {
+      "uploading": "Datei wird hochgeladen...",
+      "uploadSuccess": "Datei erfolgreich hochgeladen",
+      "uploadFailed": "Datei-Upload fehlgeschlagen, bitte versuchen Sie es erneut",
+      "invalidFormat": "Nur PDF, DOC, DOCX, TXT-Formate werden unterstützt",
+      "fileTooLarge": "Dateigröße darf 10 MB nicht überschreiten",
+      "fileRemoved": "Datei entfernt",
+      "downloadFile": "Datei herunterladen"
+    },
+    "input": {
+      "placeholder": "Geben Sie Ihre Frage ein...",
+      "placeholderWithFile": "Geben Sie Ihre Frage ein (Datei angehängt)...",
+      "placeholderSelectIdentity": "Bitte wählen Sie zuerst Ihre Identität...",
+      "placeholderRadarForm": "Bitte füllen Sie die Finanzierungsinformationen im obigen Formular aus..."
+    },
+    "messages": {
+      "sendSuccess": "Nachricht erfolgreich gesendet",
+      "sendFailed": "Fehler beim Senden der Nachricht, bitte überprüfen Sie die Netzwerkverbindung",
+      "loadFailed": "Fehler beim Laden des Gesprächs",
+      "deleteFailed": "Fehler beim Löschen des Gesprächs",
+      "deleteSuccess": "Gespräch gelöscht",
+      "batchDeleteSuccess": "{{count}} Gespräche gelöscht",
+      "batchDeleteFailed": "Massenlöschung fehlgeschlagen",
+      "analysisComplete": "Analyse abgeschlossen",
+      "analysisFailed": "Analyse fehlgeschlagen, bitte versuchen Sie es erneut",
+      "usingFreeAPI": "Kostenlose API wird für Analyse verwendet...",
+      "usingPaidAPI": "Kostenpflichtige API wird für Analyse verwendet..."
+    },
+    "confirmDelete": {
+      "title": "Gespräch löschen bestätigen?",
+      "description": "Das Löschen des Gesprächs wird alle Gesprächsinhalte dauerhaft löschen, einschließlich Vertragsdaten. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmButton": "Löschen bestätigen",
+      "cancelButton": "Abbrechen"
+    },
+    "confirmBatchDelete": {
+      "title": "Massenlöschung bestätigen?",
+      "description": "Sind Sie sicher, dass Sie die ausgewählten {{count}} Gespräche löschen möchten? Dies wird alle Gesprächsinhalte dauerhaft löschen, einschließlich Vertragsdaten. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmButton": "Löschen bestätigen",
+      "cancelButton": "Abbrechen"
+    },
+    "conversationTitles": {
+      "seller": "Lieferantenberatung",
+      "buyer": "Käuferberatung",
+      "intermediary": "Vermittlerberatung",
+      "logistics": "Logistikberatung",
+      "brand": "Markenberatung",
+      "warehouse": "Lagerberatung",
+      "finance": "Finanzberatung",
+      "default": "Gespräch"
+    }
+  },
+  "aiReview": {
+    "redirecting": "Weiterleitung zum KI-Gesprächsfenster..."
+  },
+  "pricing": {
+    "title": "Wählen Sie den richtigen Plan für Sie",
+    "subtitle": "Von der Testversion bis zur Unternehmensanpassung, erfüllen verschiedene rechtliche Dienstleistungsbedürfnisse",
+    "free": "Kostenlos",
+    "contactUs": "Kontaktieren Sie uns",
+    "unlimited": "Unbegrenzt",
+    "fullCaseFollowUp": "Unbegrenzte Nachverfolgung für den gesamten Fall",
+    "freeUse": "Kostenlose Nutzung",
+    "processing": "Verarbeitung...",
+    "buyNow": "Jetzt kaufen",
+    "viewDetailedComparison": "Detaillierte Funktionsvergleich anzeigen",
+    "perMonth": "/Monat",
+    "perYear": "/Jahr",
+    "perWeek": "/Woche",
+    "orderCreated": "Bestellung erfolgreich erstellt",
+    "tiers": {
+      "free": {
+        "name": "Testversion (Kostenlos)",
+        "period": "",
+        "unitCost": "Kostenloser Test",
+        "features": {
+          "role": "Rolle: Rechts- / Compliance-Beratung",
+          "uploadSupport": "✅ Vertragsupload unterstützt",
+          "riskAssessment": "✅ Vertragsrisikobewertung und Warnungen",
+          "noConclusion": "❌ Keine Compliance-Beurteilungsschlussfolgerungen",
+          "noSolution": "❌ Keine Vertragswarnlösungen"
+        }
+      },
+      "professional": {
+        "name": "Wöchentliches Mitglied",
+        "period": "Wöchentlich",
+        "unitCost": "€9.9/Woche",
+        "features": {
+          "positioning": "🔑 Kern: Kurzfristiges, intensives Compliance-Risikobewertungstool",
+          "legalConsulting": "✅ Rechts- / Compliance-Beratung",
+          "uploadSupport": "✅ Vertragsupload unterstützt",
+          "fullRiskJudgment": "✅ Vollständige Compliance-Risikobewertung",
+          "riskDetails": "✅ Risikopunkte + Risikotypen + Risikogründe",
+          "decisionReference": "✅ Entscheidungsreferenz vor Unterzeichnung",
+          "caseAnalysis": "✅ Ähnliche Fallanalyse in der Datenbank"
+        }
+      },
+      "monthly": {
+        "name": "Monatliches Mitglied",
+        "period": "Monatlich",
+        "unitCost": "€39.9/Monat",
+        "features": {
+          "positioning": "🔑 Kern: Stabiles Compliance-Bewertungstool",
+          "legalConsulting": "✅ Rechts- / Compliance-Beratung",
+          "uploadSupport": "✅ Vertragsupload unterstützt",
+          "fullRiskJudgment": "✅ Vollständige Compliance-Risikobewertung",
+          "riskDetails": "✅ Risikopunkte + Risikotypen + Risikogründe",
+          "decisionReference": "✅ Entscheidungsreferenz vor Unterzeichnung",
+          "caseAnalysis": "✅ Ähnliche Fallanalyse in der Datenbank",
+          "higherStability": "✅ Standardmäßig höhere Systemstabilität und Priorität",
+          "dedicatedSupport": "✅ Dedizierter Kundensupport"
+        }
+      },
+      "yearly": {
+        "name": "Jährliches Mitglied",
+        "period": "Jährlich",
+        "unitCost": "€329/Jahr",
+        "features": {
+          "positioning": "🔑 Kern: Compliance-Risikobewertung als Teil des langfristigen Workflows",
+          "legalConsulting": "✅ Rechts- / Compliance-Beratung",
+          "uploadSupport": "✅ Vertragsupload unterstützt",
+          "fullRiskJudgment": "✅ Vollständige Compliance-Risikobewertung",
+          "riskDetails": "✅ Risikopunkte + Risikotypen + Risikogründe",
+          "decisionReference": "✅ Entscheidungsreferenz vor Unterzeichnung",
+          "caseAnalysis": "✅ Ähnliche Fallanalyse in der Datenbank",
+          "higherStability": "✅ Standardmäßig höhere Systemstabilität und Priorität",
+          "longTermBusiness": "✅ Geeignet für langfristiges grenzüberschreitendes Geschäft",
+          "dedicatedSupport": "✅ Dedizierter Kundensupport"
+        }
+      },
+      "enterprise": {
+        "name": "Unternehmensanpassung",
+        "period": "Kontaktieren Sie uns",
+        "unitCost": "Individuelle Preisgestaltung",
+        "features": {
+          "positioning": "Kern: Unternehmensweite maßgeschneiderte Lösungen",
+          "systemIntegration": "Unternehmenssystemintegration",
+          "multiUser": "Multi-Benutzer-Kontoverwaltung",
+          "apiIntegration": "API-Schnittstellenintegration",
+          "privateDeployment": "Private Datenbereitstellung",
+          "dedicatedSupport": "Dedizierter Kundensupport",
+          "customDevelopment": "Individuelle Funktionsentwicklung",
+          "sla": "SLA-Servicevereinbarung",
+          "support247": "7×24 technischer Support"
+        }
+      }
+    },
+    "toasts": {
+      "freeNoNeed": "Testversion erfordert keinen Kauf",
+      "freeDescription": "Sie können die Testversion direkt für textliche Rechtsberatung verwenden",
+      "enterpriseCustom": "Unternehmensanpassung",
+      "enterpriseDescription": "Bitte kontaktieren Sie unser Vertriebsteam für maßgeschneiderte Lösungen",
+      "loginRequired": "Bitte melden Sie sich zuerst an",
+      "purchaseFailed": "Kauf fehlgeschlagen",
+      "tierNotFound": "Paket nicht gefunden",
+      "orderFailed": "Bestellung konnte nicht erstellt werden",
+      "retryLater": "Bitte versuchen Sie es später erneut",
+      "sessionExpired": "Sitzung abgelaufen, bitte melden Sie sich erneut an",
+      "systemInitializing": "System wird initialisiert, bitte versuchen Sie es später erneut",
+      "networkError": "Netzwerkfehler, bitte überprüfen Sie Ihre Verbindung",
+      "permissionDenied": "Berechtigung verweigert, bitte melden Sie sich erneut an"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": {
+        "question": "Was ist der Unterschied zwischen Testversion und kostenpflichtigen Versionen?",
+        "answer": "Die Testversion unterstützt nur textliche Rechtsberatung, ohne Vertragsupload und Word-Dokumentgenerierung. Kostenpflichtige Versionen bieten vollständige Vertragsüberprüfung, Risikoanalyse und Dokumentgenerierungsfunktionen."
+      },
+      "q2": {
+        "question": "Für welche Szenarien ist die Professional-Version geeignet?",
+        "answer": "Die Professional-Version eignet sich für Benutzer, die gelegentlich Verträge überprüfen müssen, wird pro Vertrag zu €9.9 berechnet, mit unbegrenzter Nachverfolgung und Revisionsgenerierung, perfekt für Einzelpersonen oder kleine Transaktionen."
+      },
+      "q3": {
+        "question": "Was ist der Unterschied zwischen monatlicher und jährlicher Mitgliedschaft?",
+        "answer": "Monatlich €39.9/Monat, jährlich €329/Jahr (ca. €27.4/Monat), jährlich €150 sparen. Beide haben identische Funktionen und unterstützen unbegrenzten Vertragsupload und Dokumentgenerierung."
+      },
+      "q4": {
+        "question": "Welche Dienstleistungen umfasst die Unternehmensanpassung?",
+        "answer": "Die Unternehmensanpassung bietet Unternehmenssystemintegration, Multi-Benutzer-Verwaltung, API-Schnittstellen, private Bereitstellung, dedizierten Support und andere maßgeschneiderte Dienstleistungen, geeignet für Unternehmenskunden mit besonderen Anforderungen."
+      },
+      "q5": {
+        "question": "Wie wähle ich den richtigen Plan für mich?",
+        "answer": "Für gelegentliche Beratung wählen Sie die Testversion; für die Überprüfung von 1-2 Verträgen wählen Sie die Professional-Version; für häufige Vertragsüberprüfungen wählen Sie die Mitgliedschaft; für Unternehmensbenutzer mit individuellen Anforderungen wählen Sie die Unternehmensanpassung."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Mein Dashboard",
+    "subtitle": "Verwalten Sie Ihre Abonnements und Nutzungsaufzeichnungen",
+    "currentPlan": "Aktueller Plan",
+    "usage": "Nutzung",
+    "validityRemaining": "Verbleibende Gültigkeit",
+    "unlimited": "Unbegrenzt",
+    "expired": "Abgelaufen",
+    "timeRemaining": {
+      "days": "{{days}} Tage {{hours}} Stunden",
+      "hours": "{{hours}} Stunden"
+    },
+    "status": {
+      "active": "Aktiv",
+      "none": "Kein Abonnement",
+      "expired": "Abgelaufen"
+    },
+    "alerts": {
+      "expired": "Ihr Abonnement ist abgelaufen. Bitte verlängern Sie, um den Service weiterhin zu nutzen.",
+      "noSubscription": "Sie haben noch kein aktives Abonnement.",
+      "viewPlans": "Pläne anzeigen"
+    },
+    "quickActions": {
+      "title": "Schnellaktionen",
+      "description": "Häufig verwendete Funktionsverknüpfungen",
+      "startReview": "Überprüfung starten",
+      "buyBooster": "Booster kaufen",
+      "upgrade": "Plan upgraden",
+      "permissions": "Berechtigungen Demo"
+    },
+    "permissions": {
+      "title": "Aktuelle Plan-Berechtigungen",
+      "description": "Ihr {{tier}}-Plan enthält die folgenden Funktionen und Berechtigungen",
+      "available": "Verfügbar",
+      "unavailable": "Nicht verfügbar",
+      "unlimited": "Unbegrenzt",
+      "wantMore": "Möchten Sie mehr Funktionen?",
+      "upgradePrompt": "Upgraden Sie auf einen höheren Plan, um mehr professionelle Funktionen freizuschalten",
+      "viewPlans": "Pläne anzeigen"
+    }
+  },
+  "orders": {
+    "title": "Meine Bestellungen",
+    "backToHome": "Zurück zur Startseite",
+    "orderList": "Bestellliste",
+    "description": "Alle Ihre Bestellaufzeichnungen anzeigen und verwalten",
+    "searchPlaceholder": "Bestellnummer oder Paketname suchen...",
+    "filterStatus": "Status filtern",
+    "allStatus": "Alle Status",
+    "noMatchingOrders": "Keine übereinstimmenden Bestellungen gefunden",
+    "noOrders": "Noch keine Bestellaufzeichnungen",
+    "tryAdjustFilters": "Bitte versuchen Sie, Suchkriterien oder Filter anzupassen",
+    "ordersWillAppear": "Nach dem Kauf eines Pakets werden Bestellaufzeichnungen hier angezeigt",
+    "browsePlans": "Pläne durchsuchen",
+    "status": {
+      "pending": "Ausstehend",
+      "paid": "Bezahlt",
+      "cancelled": "Storniert",
+      "refunded": "Erstattet"
+    },
+    "table": {
+      "orderNumber": "Bestellnummer",
+      "packageName": "Paketname",
+      "contracts": "Verträge",
+      "amount": "Betrag",
+      "status": "Status",
+      "purchaseTime": "Kaufdatum",
+      "actions": "Aktionen",
+      "pieces": "Stk",
+      "includesBonus": "Enthält {{count}} Bonus",
+      "viewDetails": "Details anzeigen"
+    },
+    "summary": {
+      "total": "Gesamt {{count}} Bestellungen",
+      "totalAmount": "Gesamtbetrag"
+    }
+  },
+  "orderDetail": {
+    "title": "Bestelldetails",
+    "orderNumber": "Bestellnummer: ",
+    "status": {
+      "pending": "Ausstehend",
+      "paid": "Bezahlt",
+      "cancelled": "Storniert",
+      "refunded": "Erstattet"
+    },
+    "sections": {
+      "orderInfo": "Bestellinformationen",
+      "packageDetails": "Paketdetails"
+    },
+    "fields": {
+      "packageName": "Paketname",
+      "amount": "Bestellbetrag",
+      "createdAt": "Erstellungsdatum",
+      "updatedAt": "Aktualisierungsdatum",
+      "contractsCount": "Anzahl der Verträge",
+      "actualReceived": "Tatsächlich erhalten",
+      "validityPeriod": "Gültigkeitsdauer: {{months}} Monate"
+    },
+    "unlimited": "Unbegrenzt",
+    "contractsUnit": " Stk",
+    "payment": {
+      "title": "Bestellung bezahlen",
+      "description": "Bitte schließen Sie die Zahlung innerhalb von 24 Stunden ab, überfällige Bestellungen werden automatisch storniert",
+      "payNow": "Jetzt bezahlen",
+      "processing": "Verarbeitung..."
+    },
+    "invoice": {
+      "title": "Rechnungsdownload",
+      "download": "Rechnung herunterladen",
+      "downloadInProgress": "Rechnungsdownload-Funktion in Entwicklung"
+    },
+    "actions": {
+      "backToOrders": "Zurück zu Bestellungen"
+    },
+    "errors": {
+      "loginRequired": "Bitte melden Sie sich zuerst an",
+      "invalidOrderId": "Ungültige Bestellnummer",
+      "orderNotFound": "Bestellung nicht gefunden",
+      "loadFailed": "Fehler beim Laden der Bestellung",
+      "paymentFailed": "Zahlung fehlgeschlagen, bitte versuchen Sie es später erneut",
+      "paymentFailedTitle": "Zahlung fehlgeschlagen",
+      "noPaymentUrl": "Zahlungslink konnte nicht abgerufen werden",
+      "stripeNotConfigured": "Bitte kontaktieren Sie den Administrator, um Stripe-Zahlungsschlüssel zu konfigurieren. Siehe STRIPE_SETUP.md-Dokumentation.",
+      "networkError": "Netzwerkfehler, bitte überprüfen Sie die Netzwerkverbindung"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "submit": "Absenden",
+    "search": "Suchen",
+    "pleaseLogin": "Bitte melden Sie sich zuerst an"
+  }
+}

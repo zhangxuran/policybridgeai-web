@@ -1,0 +1,748 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "pricing": "Tarifs",
+    "aiReview": "Révision IA",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "dashboard": "Tableau de bord",
+    "myOrders": "Mes commandes",
+    "buyBooster": "Acheter un booster",
+    "logout": "Déconnexion",
+    "loggingOut": "Déconnexion...",
+    "remaining": "{{count}} restant(s)"
+  },
+  "hero": {
+    "title": "PolicyBridge.ai",
+    "subtitle": "Avant de signer un contrat, vérifiez s'il est vraiment sûr",
+    "description": "PolicyBridge.ai fournit la première ligne de filtrage des risques de conformité<br/>pour les contrats transfrontaliers des PME sans équipes juridiques professionnelles",
+    "startReview": "Commencer la révision",
+    "getStarted": "Analyse gratuite des risques contractuels"
+  },
+  "advantage": {
+    "title": "Nos avantages principaux",
+    "subtitle": "Contrairement aux LLM traditionnels, PolicyBridge.ai fournit des services professionnels basés sur des données juridiques en temps réel",
+    "database": {
+      "title": "Les risques contractuels proviennent souvent de connaissances juridiques obsolètes",
+      "subtitle": "",
+      "point1": "Les risques de conformité dans les contrats transfrontaliers proviennent souvent de la négligence des mises à jour réglementaires",
+      "point2": "Les changements dans les sanctions, embargos ou règles tarifaires peuvent affecter directement l'applicabilité des contrats",
+      "point3": "Se fier à une compréhension juridique obsolète peut entraîner l'invalidation ou la restriction de clauses en cas de litige",
+      "point4": "Les différences de règles entre pays et régions sont souvent confondues avec des 'pratiques industrielles'"
+    },
+    "difference": {
+      "title": "PolicyBridge.ai est pour l'évaluation des risques de conformité, pas pour les Q&R IA générales",
+      "subtitle": "",
+      "point1": "L'évaluation des risques de conformité se concentre sur l'application des règles, pas sur la compréhension du texte",
+      "point2": "La conformité transfrontalière dépend fortement des contextes transactionnels spécifiques et est difficile à généraliser",
+      "point3": "Les réponses sans sources traçables ne conviennent pas à la prise de décision en matière de conformité",
+      "point4": "Les vrais risques proviennent souvent de changements réglementaires plutôt que de la formulation contractuelle"
+    },
+    "caseLaw": {
+      "title": "De nombreux problèmes de clauses contractuelles ne sont pas écrits dans la loi mais révélés dans les litiges",
+      "subtitle": "",
+      "point1": "De nombreux litiges commerciaux transfrontaliers montrent que les clauses à risque n'émergent souvent que pendant l'exécution ou les phases de litige",
+      "point2": "Les types de litiges courants se concentrent généralement sur les violations de contrat, l'allocation de responsabilité, les paiements et les problèmes de qualité",
+      "point3": "Des structures contractuelles similaires peuvent présenter des résultats de risque complètement différents dans différents litiges",
+      "point4": "Combiner l'expérience de la pratique juridique aide à identifier les points de risque facilement négligés avant la signature"
+    }
+  },
+  "features": {
+    "title": "Fonctionnalités principales",
+    "smartReview": {
+      "title": "Révision intelligente des contrats",
+      "description": "Téléchargez des documents contractuels, l'IA identifie automatiquement les clauses clés et effectue une révision complète par rapport aux dernières lois et réglementations"
+    },
+    "riskAlert": {
+      "title": "Alerte aux risques de conformité",
+      "description": "Surveillance en temps réel des listes d'embargo et des changements de politique tarifaire, alertant de manière proactive les risques de conformité potentiels"
+    },
+    "multiCountry": {
+      "title": "Comparaison multijuridictionnelle",
+      "description": "Prise en charge de l'analyse comparative des lois et réglementations dans plusieurs pays et régions pour vous aider à formuler des stratégies commerciales optimales"
+    },
+    "caseMatching": {
+      "title": "Correspondance intelligente de cas",
+      "description": "Basé sur une base de données de plus de 1000 cas réels, l'IA analyse intelligemment vos problèmes, fait correspondre rapidement les précédents et solutions pertinents, rendant les questions juridiques complexes simples et claires"
+    }
+  },
+  "dataSources": {
+    "title": "Nos sources de données",
+    "subtitle": "Garantir l'autorité et l'actualité des données",
+    "international": {
+      "title": "Organisations internationales",
+      "item1": "Commission des Nations Unies pour le droit commercial international (CNUDCI)",
+      "item2": "Organisation mondiale du commerce (OMC)",
+      "item3": "Chambre de commerce internationale (CCI)",
+      "item4": "Groupe d'action financière (GAFI)"
+    },
+    "official": {
+      "title": "Agences officielles nationales",
+      "item1": "Sites officiels des administrations douanières nationales",
+      "item2": "Sites officiels des ministères du Commerce",
+      "item3": "Départements de contrôle des importations et exportations",
+      "item4": "Annonces de la Commission tarifaire"
+    },
+    "updateFrequency": "<strong>Fréquence de mise à jour des données :</strong> Mises à jour automatiques quotidiennes | Notifications en temps réel pour les changements de politique majeurs"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Si vous avez des questions ou besoin d'aide, n'hésitez pas à nous contacter",
+    "email": "Email de contact",
+    "response": "Nous répondrons à votre email dans les 24 heures"
+  },
+  "footer": {
+    "description": "Plateforme professionnelle de révision de conformité du commerce transfrontalier",
+    "quickLinks": "Liens rapides",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "disclaimer": "Clause de non-responsabilité",
+    "contactUs": "Contactez-nous",
+    "copyright": "© 2024 PolicyBridge.ai. Tous droits réservés"
+  },
+  "login": {
+    "title": "Bon retour",
+    "subtitle": "Connectez-vous à votre compte PolicyBridge.ai",
+    "email": "Email",
+    "password": "Mot de passe",
+    "loginButton": "Connexion",
+    "loggingIn": "Connexion en cours...",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "registerNow": "S'inscrire maintenant",
+    "checkingStatus": "Vérification du statut de connexion...",
+    "redirecting": "Redirection...",
+    "googleLogin": "Se connecter avec Google",
+    "googleLoggingIn": "Connexion avec Google...",
+    "orDivider": "Ou",
+    "errors": {
+      "emptyFields": "Veuillez entrer l'email et le mot de passe",
+      "loginFailed": "Échec de la connexion, veuillez réessayer",
+      "timeout": "Délai de connexion dépassé, veuillez vérifier votre connexion réseau",
+      "generic": "Une erreur s'est produite lors de la connexion",
+      "googleLoginFailed": "Échec de la connexion avec Google, veuillez réessayer"
+    },
+    "success": "Connexion réussie !"
+  },
+  "register": {
+    "title": "Créer un compte",
+    "subtitle": "Créez votre compte PolicyBridge.ai",
+    "email": "Email",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Au moins 6 caractères",
+    "confirmPassword": "Confirmer le mot de passe",
+    "confirmPasswordPlaceholder": "Entrez à nouveau le mot de passe",
+    "registerButton": "S'inscrire",
+    "registering": "Inscription en cours...",
+    "hasAccount": "Vous avez déjà un compte ?",
+    "loginNow": "Se connecter maintenant",
+    "googleRegister": "S'inscrire avec Google",
+    "googleRegistering": "Inscription avec Google...",
+    "orDivider": "Ou",
+    "agreeToTerms": {
+      "prefix": "J'ai lu et j'accepte",
+      "terms": "les Conditions d'utilisation",
+      "and": "et",
+      "privacy": "la Politique de confidentialité"
+    },
+    "errors": {
+      "emptyFields": "Veuillez remplir tous les champs",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
+      "registerFailed": "Échec de l'inscription, veuillez réessayer",
+      "emailExists": "Cet email est déjà enregistré",
+      "agreeToTerms": "Veuillez d'abord accepter les Conditions d'utilisation et la Politique de confidentialité",
+      "googleRegisterFailed": "Échec de l'inscription avec Google, veuillez réessayer"
+    },
+    "success": "Inscription réussie ! Veuillez vérifier votre email de vérification"
+  },
+  "confirmDialog": {
+    "confirm": "Confirmer",
+    "cancel": "Annuler"
+  },
+  "upgradeDialog": {
+    "title": "Débloquer la fonction de téléchargement de fichiers",
+    "description": "Passez aux plans Professionnel ou supérieurs pour télécharger des fichiers contractuels pour une analyse intelligente",
+    "trialVersion": "Version d'essai",
+    "professionalVersion": "Professionnel et supérieur",
+    "recommended": "Recommandé",
+    "features": {
+      "basicChat": "Conversation textuelle de base",
+      "noFileUpload": "Impossible de télécharger des fichiers contractuels",
+      "noDeepAnalysis": "Impossible d'effectuer une analyse approfondie",
+      "smartChat": "Conversation textuelle intelligente",
+      "fileUpload": "Télécharger des fichiers contractuels (PDF/DOC/DOCX/TXT)",
+      "aiAnalysis": "Analyse contractuelle approfondie par IA",
+      "unlimitedUsage": "Utilisation illimitée"
+    },
+    "benefits": {
+      "title": "Avantages de la fonction de téléchargement de fichiers :",
+      "format": "Prise en charge de plusieurs formats : PDF, DOC, DOCX, TXT",
+      "extraction": "L'IA extrait automatiquement les clauses clés et les points de risque",
+      "comparison": "Comparaison intelligente et vérifications de conformité",
+      "advice": "Conseils juridiques professionnels et suggestions de modification"
+    },
+    "cancelButton": "Annuler",
+    "upgradeButton": "Mettre à niveau maintenant"
+  },
+  "featureGate": {
+    "locked": "Fonctionnalité verrouillée",
+    "upgrade": "Mettre à niveau pour débloquer plus de fonctionnalités",
+    "upgradeDescription": "Passez à un plan supérieur pour débloquer plus de fonctionnalités professionnelles",
+    "viewPlans": "Voir les plans"
+  },
+  "subscriptionAlert": {
+    "expired": {
+      "title": "Abonnement expiré",
+      "description": "Votre abonnement {{plan}} a expiré le {{date}}, veuillez renouveler pour continuer à utiliser le service",
+      "renewButton": "Renouveler maintenant"
+    },
+    "expiring": {
+      "title": "Abonnement expirant bientôt",
+      "description": "Votre abonnement {{plan}} expire dans {{days}} jours ({{date}}), veuillez renouveler à temps",
+      "renewButton": "Renouveler maintenant",
+      "dismissButton": "Rappeler plus tard"
+    },
+    "active": {
+      "title": "Statut de l'abonnement",
+      "description": "Votre abonnement {{plan}} expire dans {{days}} jours ({{date}})"
+    }
+  },
+  "usageIndicator": {
+    "monthlyUsage": "Utilisation mensuelle",
+    "unlimited": "Illimité",
+    "enterpriseUnlimited": "Les utilisateurs d'entreprise bénéficient d'une utilisation illimitée",
+    "exhausted": {
+      "title": "Utilisation mensuelle épuisée",
+      "buyBooster": "Acheter un booster",
+      "upgradePlan": "Mettre à niveau le plan"
+    },
+    "low": {
+      "title": "Utilisation restante faible",
+      "description": "{{remaining}} utilisations restantes, envisagez d'acheter un booster ou de mettre à niveau"
+    },
+    "remaining": "{{remaining}} utilisations restantes"
+  },
+  "dataManagement": {
+    "title": "Gestion des données",
+    "description": "Gérez votre historique de conversation et les paramètres de conservation des données",
+    "retentionPolicy": "Politique de conservation des données",
+    "retentionOptions": {
+      "immediate": "Supprimer immédiatement",
+      "30days": "Conserver pendant 30 jours",
+      "permanent": "Conserver en permanence"
+    },
+    "retentionDescriptions": {
+      "immediate": "Supprimer les données immédiatement après la fin de la conversation",
+      "30days": "Supprimer automatiquement les données de conversation après 30 jours",
+      "permanent": "Conserver toutes les données de conversation en permanence"
+    },
+    "statistics": {
+      "conversations": "Historique des conversations",
+      "conversationsCount": "conversations",
+      "storage": "Stockage",
+      "storageSize": "Mo (environ {{count}} messages)"
+    },
+    "actions": {
+      "settings": "Paramètres de conservation",
+      "clearAll": "Effacer toutes les données"
+    },
+    "settingsDialog": {
+      "title": "Paramètres de conservation des données",
+      "description": "Choisissez votre politique de conservation des données de conversation",
+      "options": {
+        "immediate": {
+          "title": "Supprimer immédiatement",
+          "description": "Supprimer toutes les données associées immédiatement après la fin de la conversation pour une confidentialité maximale"
+        },
+        "30days": {
+          "title": "Conserver pendant 30 jours (Recommandé)",
+          "description": "Conserver les données de conversation pendant 30 jours, équilibrant confidentialité et commodité"
+        },
+        "permanent": {
+          "title": "Conserver en permanence",
+          "description": "Conserver toutes les données de conversation en permanence pour un accès facile à l'historique"
+        }
+      },
+      "cancelButton": "Annuler",
+      "saveButton": "Enregistrer les paramètres",
+      "saving": "Enregistrement..."
+    },
+    "clearDialog": {
+      "title": "Confirmer l'effacement de toutes les données ?",
+      "description": "Cela supprimera définitivement tout votre historique de conversation, y compris tout le contenu des messages. Cette action ne peut pas être annulée.",
+      "confirmButton": "Confirmer l'effacement",
+      "cancelButton": "Annuler"
+    },
+    "toasts": {
+      "settingsUpdated": "Paramètres de conservation des données mis à jour",
+      "settingsFailed": "Échec de l'enregistrement des paramètres",
+      "dataCleared": "Toutes les données d'historique effacées",
+      "clearFailed": "Échec de l'effacement des données"
+    }
+  },
+  "disclaimerDialog": {
+    "title": "Avis important",
+    "description": "Veuillez lire attentivement ce qui suit avant d'utiliser nos services de plateforme",
+    "serviceNature": {
+      "title": "Nature du service",
+      "notConstitute": "L'analyse fournie par cette plateforme NE constitue PAS :",
+      "items": {
+        "legalOpinion": "Avis juridique formel",
+        "legalConsultation": "Consultation juridique professionnelle",
+        "legalEvidence": "Preuve directement utilisable dans des procédures judiciaires"
+      }
+    },
+    "recommendations": {
+      "title": "Nous recommandons fortement :",
+      "items": {
+        "consultLawyer": "Consulter un avocat professionnel avant de signer des contrats importants",
+        "dueDiligence": "Effectuer une diligence raisonnable indépendante",
+        "notSoleDecision": "Ne pas utiliser l'analyse de cette plateforme comme seule base de décision"
+      }
+    },
+    "limitations": {
+      "title": "Limitations techniques :",
+      "items": {
+        "aiErrors": "La technologie IA peut produire des erreurs ou des omissions",
+        "dataDelay": "Les mises à jour des données ont des délais",
+        "noGuarantee": "Ne peut garantir une précision à 100%"
+      }
+    },
+    "dataRetention": {
+      "title": "Méthode de conservation des données",
+      "description": "Veuillez choisir votre méthode de conservation des données préférée. Vous pouvez la modifier dans les paramètres à tout moment",
+      "options": {
+        "immediate": {
+          "title": "Supprimer immédiatement",
+          "description": "Supprimer toutes les données associées immédiatement après la révision"
+        },
+        "30days": {
+          "title": "Conserver pendant 30 jours (Recommandé)",
+          "description": "Supprimer automatiquement après 30 jours, pratique pour consulter l'historique"
+        },
+        "permanent": {
+          "title": "Conserver en permanence",
+          "description": "Conserver en permanence, peut être supprimé dans les paramètres à tout moment"
+        }
+      }
+    },
+    "agreement": {
+      "prefix": "J'ai lu et j'accepte la",
+      "disclaimer": "Clause de non-responsabilité",
+      "suffix": ", et je comprends la nature et les limitations des services de cette plateforme"
+    },
+    "cancelButton": "Annuler",
+    "acceptButton": "Accepter et continuer"
+  },
+  "difyChat": {
+    "backToHome": "Retour à l'accueil",
+    "newConversation": "Nouvelle conversation",
+    "conversationHistory": "Historique des conversations",
+    "selectAll": "Tout sélectionner",
+    "deleteSelected": "Supprimer la sélection ({{count}})",
+    "welcome": {
+      "title": "Bienvenue sur PolicyBridge.AI !",
+      "subtitle": "Pour mieux résoudre vos problèmes, veuillez sélectionner votre identité :",
+      "description": "Après avoir sélectionné votre identité, nous pourrons vous servir plus précisément",
+      "identities": {
+        "seller": "Vendeur/Fournisseur transfrontalier",
+        "buyer": "Acheteur transfrontalier",
+        "intermediary": "Canal/Intermédiaire",
+        "logistics": "Transitaire (Logistique)",
+        "brand": "Marque/Technologie (IP/OEM)",
+        "warehouse": "Entrepôt à l'étranger (WMS/3PL)",
+        "finance": "Finance/Paiement (Financier)"
+      }
+    },
+    "thinking": {
+      "identityConfirmation": "Confirmation de l'identité",
+      "understanding": "Compréhension de votre question...",
+      "callingKnowledge": "Accès à la base de connaissances...",
+      "analyzingRegulations": "Analyse des réglementations pertinentes...",
+      "generating": "Génération de la réponse...",
+      "almostDone": "Presque terminé..."
+    },
+    "fileUpload": {
+      "uploading": "Téléchargement du fichier...",
+      "uploadSuccess": "Fichier téléchargé avec succès",
+      "uploadFailed": "Échec du téléchargement du fichier, veuillez réessayer",
+      "invalidFormat": "Seuls les formats PDF, DOC, DOCX, TXT sont pris en charge",
+      "fileTooLarge": "La taille du fichier ne peut pas dépasser 10 Mo",
+      "fileRemoved": "Fichier supprimé",
+      "downloadFile": "Télécharger le fichier"
+    },
+    "input": {
+      "placeholder": "Entrez votre question...",
+      "placeholderWithFile": "Entrez votre question (fichier joint)...",
+      "placeholderSelectIdentity": "Veuillez d'abord sélectionner votre identité...",
+      "placeholderRadarForm": "Veuillez remplir les informations de financement dans le formulaire ci-dessus..."
+    },
+    "messages": {
+      "sendSuccess": "Message envoyé avec succès",
+      "sendFailed": "Échec de l'envoi du message, veuillez vérifier la connexion réseau",
+      "loadFailed": "Échec du chargement de la conversation",
+      "deleteFailed": "Échec de la suppression de la conversation",
+      "deleteSuccess": "Conversation supprimée",
+      "batchDeleteSuccess": "{{count}} conversations supprimées",
+      "batchDeleteFailed": "Échec de la suppression groupée",
+      "analysisComplete": "Analyse terminée",
+      "analysisFailed": "Échec de l'analyse, veuillez réessayer",
+      "usingFreeAPI": "Utilisation de l'API gratuite pour l'analyse...",
+      "usingPaidAPI": "Utilisation de l'API payante pour l'analyse..."
+    },
+    "confirmDelete": {
+      "title": "Confirmer la suppression de la conversation ?",
+      "description": "La suppression de la conversation supprimera définitivement tout le contenu de la conversation, y compris les données contractuelles. Cette action ne peut pas être annulée.",
+      "confirmButton": "Confirmer la suppression",
+      "cancelButton": "Annuler"
+    },
+    "confirmBatchDelete": {
+      "title": "Confirmer la suppression groupée ?",
+      "description": "Êtes-vous sûr de vouloir supprimer les {{count}} conversations sélectionnées ? Cela supprimera définitivement tout le contenu des conversations, y compris les données contractuelles. Cette action ne peut pas être annulée.",
+      "confirmButton": "Confirmer la suppression",
+      "cancelButton": "Annuler"
+    },
+    "conversationTitles": {
+      "seller": "Consultation fournisseur",
+      "buyer": "Consultation acheteur",
+      "intermediary": "Consultation intermédiaire",
+      "logistics": "Consultation logistique",
+      "brand": "Consultation marque",
+      "warehouse": "Consultation entrepôt",
+      "finance": "Consultation finance",
+      "default": "Conversation"
+    }
+  },
+  "aiReview": {
+    "redirecting": "Redirection vers la fenêtre de conversation IA..."
+  },
+  "pricing": {
+    "title": "Choisissez le plan qui vous convient",
+    "subtitle": "De la version d'essai à la personnalisation d'entreprise, répondant aux différents besoins de services juridiques",
+    "free": "Gratuit",
+    "contactUs": "Contactez-nous",
+    "unlimited": "Illimité",
+    "fullCaseFollowUp": "Suivi illimité pour l'ensemble du dossier",
+    "freeUse": "Utilisation gratuite",
+    "processing": "Traitement...",
+    "buyNow": "Acheter maintenant",
+    "viewDetailedComparison": "Voir la comparaison détaillée des fonctionnalités",
+    "perMonth": "/mois",
+    "perYear": "/an",
+    "perWeek": "/semaine",
+    "orderCreated": "Commande créée avec succès",
+    "tiers": {
+      "free": {
+        "name": "Version d'essai (Gratuite)",
+        "period": "",
+        "unitCost": "Essai gratuit",
+        "features": {
+          "role": "Rôle : Consultation juridique / de conformité",
+          "uploadSupport": "✅ Téléchargement de contrat pris en charge",
+          "riskAssessment": "✅ Évaluation et alertes des risques contractuels",
+          "noConclusion": "❌ Pas de conclusions de jugement de conformité",
+          "noSolution": "❌ Pas de solutions d'alerte contractuelle"
+        }
+      },
+      "professional": {
+        "name": "Membre hebdomadaire",
+        "period": "Hebdomadaire",
+        "unitCost": "€9.9/semaine",
+        "features": {
+          "positioning": "🔑 Cœur : Outil d'évaluation des risques de conformité à court terme et intensif",
+          "legalConsulting": "✅ Consultation juridique / de conformité",
+          "uploadSupport": "✅ Téléchargement de contrat pris en charge",
+          "fullRiskJudgment": "✅ Évaluation complète des risques de conformité",
+          "riskDetails": "✅ Points de risque + Types de risque + Raisons du risque",
+          "decisionReference": "✅ Référence de décision avant signature",
+          "caseAnalysis": "✅ Analyse de cas similaires dans la base de données"
+        }
+      },
+      "monthly": {
+        "name": "Membre mensuel",
+        "period": "Mensuel",
+        "unitCost": "€39.9/mois",
+        "features": {
+          "positioning": "🔑 Cœur : Outil d'évaluation de conformité stable",
+          "legalConsulting": "✅ Consultation juridique / de conformité",
+          "uploadSupport": "✅ Téléchargement de contrat pris en charge",
+          "fullRiskJudgment": "✅ Évaluation complète des risques de conformité",
+          "riskDetails": "✅ Points de risque + Types de risque + Raisons du risque",
+          "decisionReference": "✅ Référence de décision avant signature",
+          "caseAnalysis": "✅ Analyse de cas similaires dans la base de données",
+          "higherStability": "✅ Stabilité et priorité système plus élevées par défaut",
+          "dedicatedSupport": "✅ Support client dédié"
+        }
+      },
+      "yearly": {
+        "name": "Membre annuel",
+        "period": "Annuel",
+        "unitCost": "€329/an",
+        "features": {
+          "positioning": "🔑 Cœur : Évaluation des risques de conformité dans le cadre du flux de travail à long terme",
+          "legalConsulting": "✅ Consultation juridique / de conformité",
+          "uploadSupport": "✅ Téléchargement de contrat pris en charge",
+          "fullRiskJudgment": "✅ Évaluation complète des risques de conformité",
+          "riskDetails": "✅ Points de risque + Types de risque + Raisons du risque",
+          "decisionReference": "✅ Référence de décision avant signature",
+          "caseAnalysis": "✅ Analyse de cas similaires dans la base de données",
+          "higherStability": "✅ Stabilité et priorité système plus élevées par défaut",
+          "longTermBusiness": "✅ Adapté aux affaires transfrontalières à long terme",
+          "dedicatedSupport": "✅ Support client dédié"
+        }
+      },
+      "enterprise": {
+        "name": "Version personnalisée entreprise",
+        "period": "Contactez-nous",
+        "unitCost": "Tarification personnalisée",
+        "features": {
+          "positioning": "Cœur : Solutions personnalisées de niveau entreprise",
+          "systemIntegration": "Intégration du système d'entreprise",
+          "multiUser": "Gestion de comptes multi-utilisateurs",
+          "apiIntegration": "Intégration d'interface API",
+          "privateDeployment": "Déploiement privé des données",
+          "dedicatedSupport": "Support client dédié",
+          "customDevelopment": "Développement de fonctionnalités personnalisées",
+          "sla": "Accord de service SLA",
+          "support247": "Support technique 7×24"
+        }
+      }
+    },
+    "toasts": {
+      "freeNoNeed": "La version d'essai ne nécessite pas d'achat",
+      "freeDescription": "Vous pouvez utiliser directement la version d'essai pour la consultation juridique textuelle",
+      "enterpriseCustom": "Version personnalisée entreprise",
+      "enterpriseDescription": "Veuillez contacter notre équipe commerciale pour des solutions personnalisées",
+      "loginRequired": "Veuillez d'abord vous connecter",
+      "purchaseFailed": "Échec de l'achat",
+      "tierNotFound": "Package non trouvé",
+      "orderFailed": "Échec de la création de la commande",
+      "retryLater": "Veuillez réessayer plus tard",
+      "sessionExpired": "Session expirée, veuillez vous reconnecter",
+      "systemInitializing": "Initialisation du système, veuillez réessayer plus tard",
+      "networkError": "Erreur réseau, veuillez vérifier votre connexion",
+      "permissionDenied": "Permission refusée, veuillez vous reconnecter"
+    },
+    "faq": {
+      "title": "Questions fréquemment posées",
+      "q1": {
+        "question": "Quelle est la différence entre la version d'essai et les versions payantes ?",
+        "answer": "La version d'essai ne prend en charge que la consultation juridique textuelle, sans téléchargement de contrat ni génération de documents Word. Les versions payantes offrent des fonctionnalités complètes de révision de contrat, d'analyse des risques et de génération de documents."
+      },
+      "q2": {
+        "question": "Pour quels scénarios la version professionnelle est-elle adaptée ?",
+        "answer": "La version professionnelle convient aux utilisateurs qui ont occasionnellement besoin de réviser des contrats, facturée par contrat à €9.9 chacun, avec suivi illimité et génération de révisions, parfaite pour les particuliers ou les petites transactions."
+      },
+      "q3": {
+        "question": "Quelle est la différence entre l'adhésion mensuelle et annuelle ?",
+        "answer": "Mensuel à €39.9/mois, annuel à €329/an (environ €27.4/mois), économisant €150 par an. Les deux ont des fonctionnalités identiques, prenant en charge le téléchargement illimité de contrats et la génération de documents."
+      },
+      "q4": {
+        "question": "Quels services la version personnalisée entreprise inclut-elle ?",
+        "answer": "La version personnalisée entreprise fournit l'intégration du système d'entreprise, la gestion multi-utilisateurs, les interfaces API, le déploiement privé, le support dédié et d'autres services personnalisés, adaptés aux clients d'entreprise ayant des besoins spéciaux."
+      },
+      "q5": {
+        "question": "Comment choisir le plan qui me convient ?",
+        "answer": "Pour une consultation occasionnelle, choisissez la version d'essai ; pour réviser 1 à 2 contrats, choisissez la version professionnelle ; pour des révisions fréquentes de contrats, choisissez la version membre ; pour les utilisateurs d'entreprise ayant des besoins personnalisés, choisissez la version personnalisée entreprise."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Mon tableau de bord",
+    "subtitle": "Gérez vos abonnements et enregistrements d'utilisation",
+    "currentPlan": "Plan actuel",
+    "usage": "Utilisation",
+    "validityRemaining": "Validité restante",
+    "unlimited": "Illimité",
+    "expired": "Expiré",
+    "timeRemaining": {
+      "days": "{{days}} jours {{hours}} heures",
+      "hours": "{{hours}} heures"
+    },
+    "status": {
+      "active": "Actif",
+      "none": "Aucun abonnement",
+      "expired": "Expiré"
+    },
+    "alerts": {
+      "expired": "Votre abonnement a expiré. Veuillez renouveler pour continuer à utiliser le service.",
+      "noSubscription": "Vous n'avez pas encore d'abonnement actif.",
+      "viewPlans": "Voir les plans"
+    },
+    "quickActions": {
+      "title": "Actions rapides",
+      "description": "Raccourcis de fonctions fréquemment utilisées",
+      "startReview": "Commencer la révision",
+      "buyBooster": "Acheter un booster",
+      "upgrade": "Mettre à niveau le plan",
+      "permissions": "Démo des permissions"
+    },
+    "permissions": {
+      "title": "Permissions du plan actuel",
+      "description": "Votre plan {{tier}} inclut les fonctionnalités et permissions suivantes",
+      "available": "Disponible",
+      "unavailable": "Indisponible",
+      "unlimited": "Illimité",
+      "wantMore": "Vous voulez plus de fonctionnalités ?",
+      "upgradePrompt": "Passez à un plan supérieur pour débloquer plus de fonctionnalités professionnelles",
+      "viewPlans": "Voir les plans"
+    }
+  },
+  "dashboardPage": {
+    "header": {
+      "title": "PolicyBridge PBA",
+      "subtitle": "Système de révision de contrats IA",
+      "backToHome": "Retour à l'accueil",
+      "logout": "Déconnexion"
+    },
+    "userInfo": {
+      "title": "Informations utilisateur",
+      "expired": "Expiré",
+      "daysRemaining": "Expire dans {{days}} jours",
+      "companyName": "Nom de l'entreprise",
+      "contactName": "Personne de contact",
+      "phone": "Téléphone de contact",
+      "notSet": "Non défini",
+      "editProfile": "Modifier le profil"
+    },
+    "profile": {
+      "companyNameLabel": "Nom de l'entreprise (Facultatif)",
+      "companyNamePlaceholder": "Veuillez entrer le nom de l'entreprise",
+      "contactNameLabel": "Nom du contact (Facultatif)",
+      "contactNamePlaceholder": "Veuillez entrer le nom du contact",
+      "phoneLabel": "Téléphone de contact (Facultatif)",
+      "phonePlaceholder": "Veuillez entrer le téléphone de contact",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "cancel": "Annuler",
+      "phoneInvalidTitle": "Format de numéro de téléphone invalide",
+      "phoneInvalidDescription": "Veuillez entrer un numéro de téléphone valide",
+      "saveSuccessTitle": "Profil enregistré",
+      "saveSuccessDescription": "Vos informations ont été mises à jour avec succès",
+      "saveFailedTitle": "Échec de l'enregistrement",
+      "saveFailedDescription": "Veuillez réessayer plus tard"
+    },
+    "subscription": {
+      "title": "Statut de l'abonnement",
+      "currentPlan": "Plan actuel",
+      "expired": "Expiré",
+      "daysRemaining": "Jours restants",
+      "zeroDays": "0 jour",
+      "permanent": "Permanent",
+      "daysCount": "{{days}} jours",
+      "upgradePlan": "Mettre à niveau le plan",
+      "uploadContract": "Télécharger un contrat"
+    },
+    "contracts": {
+      "title": "Contrats récemment révisés",
+      "description": "Voir vos enregistrements de contrats téléchargés et révisés récemment",
+      "noContracts": "Aucun enregistrement de contrat pour le moment",
+      "uploadFirst": "Télécharger le premier contrat",
+      "statusCompleted": "Terminé",
+      "statusProcessing": "En cours"
+    }
+  },
+  "orders": {
+    "title": "Mes commandes",
+    "backToHome": "Retour à l'accueil",
+    "orderList": "Liste des commandes",
+    "description": "Voir et gérer tous vos enregistrements de commandes",
+    "searchPlaceholder": "Rechercher un numéro de commande ou un nom de package...",
+    "filterStatus": "Filtrer le statut",
+    "allStatus": "Tous les statuts",
+    "noMatchingOrders": "Aucune commande correspondante trouvée",
+    "noOrders": "Aucun enregistrement de commande pour le moment",
+    "tryAdjustFilters": "Veuillez essayer d'ajuster les critères de recherche ou les filtres",
+    "ordersWillAppear": "Après l'achat d'un package, les enregistrements de commandes apparaîtront ici",
+    "browsePlans": "Parcourir les plans",
+    "status": {
+      "pending": "En attente",
+      "paid": "Payé",
+      "cancelled": "Annulé",
+      "refunded": "Remboursé"
+    },
+    "table": {
+      "orderNumber": "Numéro de commande",
+      "packageName": "Nom du package",
+      "contracts": "Contrats",
+      "amount": "Montant",
+      "status": "Statut",
+      "purchaseTime": "Date d'achat",
+      "actions": "Actions",
+      "pieces": "pcs",
+      "includesBonus": "Inclut {{count}} bonus",
+      "viewDetails": "Voir les détails"
+    },
+    "summary": {
+      "total": "Total {{count}} commandes",
+      "totalAmount": "Montant total"
+    }
+  },
+  "orderDetail": {
+    "title": "Détails de la commande",
+    "orderNumber": "Numéro de commande : ",
+    "status": {
+      "pending": "En attente",
+      "paid": "Payé",
+      "cancelled": "Annulé",
+      "refunded": "Remboursé"
+    },
+    "sections": {
+      "orderInfo": "Informations de la commande",
+      "packageDetails": "Détails du package"
+    },
+    "fields": {
+      "packageName": "Nom du package",
+      "amount": "Montant de la commande",
+      "createdAt": "Date de création",
+      "updatedAt": "Date de mise à jour",
+      "contractsCount": "Nombre de contrats",
+      "actualReceived": "Reçu réel",
+      "validityPeriod": "Période de validité : {{months}} mois"
+    },
+    "unlimited": "Illimité",
+    "contractsUnit": " pcs",
+    "payment": {
+      "title": "Payer la commande",
+      "description": "Veuillez effectuer le paiement dans les 24 heures, les commandes en retard seront automatiquement annulées",
+      "payNow": "Payer maintenant",
+      "processing": "Traitement..."
+    },
+    "invoice": {
+      "title": "Téléchargement de facture",
+      "download": "Télécharger la facture",
+      "downloadInProgress": "Fonction de téléchargement de facture en développement"
+    },
+    "actions": {
+      "backToOrders": "Retour aux commandes"
+    },
+    "errors": {
+      "loginRequired": "Veuillez d'abord vous connecter",
+      "invalidOrderId": "ID de commande invalide",
+      "orderNotFound": "Commande introuvable",
+      "loadFailed": "Échec du chargement de la commande",
+      "paymentFailed": "Échec du paiement, veuillez réessayer plus tard",
+      "paymentFailedTitle": "Échec du paiement",
+      "noPaymentUrl": "Impossible d'obtenir le lien de paiement",
+      "stripeNotConfigured": "Veuillez contacter l'administrateur pour configurer les clés de paiement Stripe. Consultez la documentation STRIPE_SETUP.md.",
+      "networkError": "Erreur réseau, veuillez vérifier la connexion réseau"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "search": "Rechercher",
+    "pleaseLogin": "Veuillez d'abord vous connecter"
+  }
+}

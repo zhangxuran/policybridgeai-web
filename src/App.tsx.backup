@@ -1,0 +1,47 @@
+import { Toaster } from '@/components/ui/sonner';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Index from './pages/Index';
+import NotFound from './pages/NotFound';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
+import Pricing from './pages/Pricing';
+import FeatureComparison from './pages/FeatureComparison';
+import BoosterPack from './pages/BoosterPack';
+import Orders from './pages/Orders';
+import PaymentSuccess from './pages/PaymentSuccess';
+import AIReview from './pages/AIReview';
+import DifyChat from './pages/DifyChat';
+import { AuthProvider } from './contexts/AuthContext';
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/feature-comparison" element={<FeatureComparison />} />
+            <Route path="/booster-pack" element={<BoosterPack />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/payment-success" element={<PaymentSuccess />} />
+            <Route path="/ai-review" element={<AIReview />} />
+            <Route path="/dify-chat" element={<DifyChat />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;

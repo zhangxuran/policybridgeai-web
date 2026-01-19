@@ -1,0 +1,1071 @@
+{
+  "nav": {
+    "home": "首页",
+    "pricing": "定价",
+    "aiReview": "AI 审查",
+    "login": "登录",
+    "register": "注册",
+    "dashboard": "仪表盘",
+    "myOrders": "我的订单",
+    "buyBooster": "购买加油包",
+    "logout": "退出登录",
+    "loggingOut": "正在退出...",
+    "remaining": "剩余 {{count}} 次"
+  },
+  "admin": {
+    "title": "管理员后台",
+    "subtitle": "管理所有客户信息和订阅情况",
+    "filters": "搜索和筛选",
+    "searchPlaceholder": "搜索邮箱、公司或联系人姓名...",
+    "filterByPlan": "按套餐筛选",
+    "allPlans": "全部套餐",
+    "freePlan": "免费版",
+    "professionalPlan": "专业版",
+    "enterprisePlan": "企业版",
+    "email": "邮箱",
+    "company": "公司",
+    "contact": "联系人",
+    "phone": "电话",
+    "plan": "套餐",
+    "status": "状态",
+    "role": "角色",
+    "registeredDate": "注册日期",
+    "noResults": "未找到客户",
+    "showing": "显示",
+    "of": "共",
+    "customerDetails": "客户详情",
+    "detailsDescription": "查看完整的客户信息和使用统计",
+    "usageStatistics": "使用统计",
+    "totalConversations": "总对话数",
+    "usedQuota": "已使用配额",
+    "totalQuota": "总配额",
+    "orderHistory": "订单历史",
+    "noOrders": "暂无订单历史",
+    "error": "错误",
+    "accessDenied": "访问被拒绝",
+    "pleaseLogin": "请先登录",
+    "adminOnly": "此页面仅限管理员访问",
+    "failedToCheckPermissions": "检查权限失败",
+    "unexpectedError": "发生意外错误",
+    "checkingPermissions": "正在检查权限...",
+    "securityNotice": "安全提示",
+    "securityNoticeDesc": "您正在查看敏感的客户数据。请谨慎处理并遵守数据保护法规。"
+  },
+  "hero": {
+    "title": "合规桥 PBA",
+    "subtitle": "合规桥 PBA 为没有专业法务团队的中小跨国企业,提供跨境合同的第一道合规风险筛查",
+    "description": "签署合同前,先验证它是否真的安全",
+    "taxPhase4": "✨ 金税四期来了?我们帮您在签约前就发现税务风险",
+    "startReview": "开始审查",
+    "getStarted": "免费合同风险扫描"
+  },
+  "advantage": {
+    "title": "我们的核心优势",
+    "subtitle": "与传统 LLM 不同,合规桥 PBA 基于实时法律数据提供专业服务",
+    "database": {
+      "title": "合同风险往往源于过时的法律认知",
+      "subtitle": "",
+      "point1": "跨境合同的合规风险往往来自对法规更新的忽视",
+      "point2": "制裁、禁运或关税规则的变化可能直接影响合同的可执行性",
+      "point3": "依赖过时的法律理解可能导致条款在纠纷中被判无效或受限",
+      "point4": "各国各地区的规则差异常被误认为是'行业惯例'"
+    },
+    "difference": {
+      "title": "合规桥 PBA 做的是合规风险评估,而非通用 AI 问答",
+      "subtitle": "",
+      "point1": "合规风险评估的核心是规则适用,而非文本理解",
+      "point2": "跨境合规高度依赖具体交易情境,难以泛化",
+      "point3": "无法溯源的回答不适合用于合规决策",
+      "point4": "真正的风险往往来自法规变化,而非合同措辞"
+    },
+    "caseLaw": {
+      "title": "很多合同条款问题不写在法条里,而是写在纠纷里",
+      "subtitle": "",
+      "point1": "大量跨境贸易纠纷显示,风险条款往往在履约或纠纷阶段才显现",
+      "point2": "常见纠纷类型通常集中在合同违约、责任分配、付款和质量问题",
+      "point3": "相似的合同结构在不同纠纷中可能呈现完全不同的风险结果",
+      "point4": "结合法律实践经验有助于在签约前识别容易被忽视的风险点"
+    }
+  },
+  "features": {
+    "title": "核心功能",
+    "smartReview": {
+      "title": "智能合同审查",
+      "description": "上传合同文档,AI 自动识别关键条款,对照最新法律法规进行全面审查"
+    },
+    "riskAlert": {
+      "title": "合规风险预警",
+      "description": "实时监控禁运清单和关税政策变化,主动提醒潜在合规风险"
+    },
+    "multiCountry": {
+      "title": "多国法规对比",
+      "description": "支持多个国家和地区的法律法规对比分析,帮助您制定最优贸易策略"
+    },
+    "caseMatching": {
+      "title": "智能案例匹配",
+      "description": "基于 1000+ 真实案例数据库,AI 智能分析您的问题,快速匹配相关判例和解决方案,让复杂法律问题变得简单清晰"
+    },
+    "taxCompliance": {
+      "title": "金税四期合规雷达",
+      "description": "我们理解金税四期带来的合规压力。基于合同审查能力,我们为您提供税务合规风险预警,让您在签署合同前就能发现潜在的税务问题。"
+    }
+  },
+  "dataSources": {
+    "title": "我们的数据来源",
+    "subtitle": "确保数据的权威性和时效性",
+    "international": {
+      "title": "国际组织",
+      "item1": "联合国国际贸易法委员会 (UNCITRAL)",
+      "item2": "世界贸易组织 (WTO)",
+      "item3": "国际商会 (ICC)",
+      "item4": "金融行动特别工作组 (FATF)"
+    },
+    "official": {
+      "title": "各国官方机构",
+      "item1": "各国海关总署官方网站",
+      "item2": "商务部/贸易部官方网站",
+      "item3": "进出口管制部门",
+      "item4": "关税委员会公告"
+    },
+    "updateFrequency": "<strong>数据更新频率:</strong> 每日自动爬取更新 | 重大政策变化实时推送"
+  },
+  "contact": {
+    "title": "联系我们",
+    "description": "如果您有任何问题或需要帮助,请随时联系我们",
+    "email": "联系邮箱",
+    "response": "我们将在 24 小时内回复您的邮件"
+  },
+  "footer": {
+    "description": "专业的跨境贸易合规审查平台",
+    "quickLinks": "快速链接",
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "disclaimer": "免责声明",
+    "contactUs": "联系我们",
+    "copyright": "© 2024 合规桥 PBA. 保留所有权利"
+  },
+  "termsOfService": {
+    "title": "合规桥 PBA 服务条款",
+    "lastUpdated": "最后更新日期:2024年12月",
+    "backToHome": "返回首页",
+    "section1": {
+      "title": "1. 服务说明",
+      "subtitle1": "1.1 服务性质",
+      "content1": "合规桥 PBA(以下简称本平台或我们)是一个基于人工智能技术的跨境贸易合规审查辅助工具。本平台提供的服务包括但不限于:",
+      "list1": ["合同文档的自动化分析", "法律法规的参考查询", "合规风险的初步识别"],
+      "subtitle2": "1.2 重要声明",
+      "warning": "本平台提供的所有分析结果和建议仅供参考,不构成正式的法律意见或专业咨询。",
+      "content2": "用户在做出任何法律或商业决策前,应当:",
+      "list2": ["咨询具有执业资格的专业律师", "进行独立的尽职调查", "根据具体情况做出判断"]
+    },
+    "section2": {
+      "title": "2. 免责声明",
+      "subtitle1": "2.1 服务限制",
+      "item1": "准确性限制:尽管我们努力保持数据库的实时更新,但我们不保证所有信息100%准确、完整或最新。",
+      "item2": "技术限制:AI 技术存在固有局限性,可能产生误判或遗漏。",
+      "item3": "适用范围限制:本平台主要针对国际贸易合规场景,可能不适用于所有法律领域。",
+      "subtitle2": "2.2 责任限制",
+      "content": "在法律允许的最大范围内:",
+      "list": [
+        "我们不对用户因使用本服务而产生的任何直接、间接、偶然、特殊或后果性损失承担责任",
+        "我们不对第三方数据源的准确性或可用性承担责任",
+        "我们不对用户基于本平台建议做出的决策承担责任"
+      ],
+      "subtitle3": "2.3 用户责任",
+      "userContent": "用户应当:",
+      "userList": [
+        "自行承担使用本服务的所有风险",
+        "对上传的文档内容负责",
+        "遵守所有适用的法律法规",
+        "不将本平台的分析结果作为唯一决策依据"
+      ]
+    },
+    "section3": {
+      "title": "3. 数据隐私与安全",
+      "subtitle1": "3.1 数据收集",
+      "content1": "我们收集的信息包括:",
+      "list1": ["账户信息(邮箱、密码等)", "上传的合同文档", "使用行为数据", "技术日志信息"],
+      "subtitle2": "3.2 数据使用",
+      "content2": "您的数据将用于:",
+      "list2": [
+        "提供和改进服务",
+        "进行 AI 模型训练(仅使用匿名化数据)",
+        "技术支持和故障排查",
+        "遵守法律要求"
+      ],
+      "subtitle3": "3.3 数据保护",
+      "content3": "我们采取的安全措施:",
+      "list3": ["传输和存储加密", "访问控制和权限管理", "定期安全审计", "数据备份和灾难恢复"],
+      "subtitle4": "3.4 数据保留",
+      "retention1": "默认保留期:审核记录保留30天后自动删除",
+      "retention2": "立即删除:用户可选择审核完成后立即删除",
+      "retention3": "长期保留:用户可选择长期保存(需明确同意)",
+      "subtitle5": "3.5 用户权利",
+      "content5": "您有权:",
+      "list5": ["查看您的所有数据", "导出您的数据", "删除您的数据", "撤回同意"]
+    },
+    "section4": {
+      "title": "4. 知识产权",
+      "subtitle1": "4.1 平台权利",
+      "content1": "本平台的所有内容(包括但不限于软件、界面设计、文本、图像)均受知识产权法保护。",
+      "subtitle2": "4.2 用户内容",
+      "list": [
+        "您保留上传内容的所有权",
+        "您授予我们处理这些内容以提供服务的许可",
+        "我们不会将您的内容用于未经授权的目的"
+      ]
+    },
+    "section5": {
+      "title": "5. 联系我们",
+      "content": "如有任何问题或疑虑,请联系:",
+      "email": "邮箱:",
+      "response": "我们会在24小时内回复您的咨询"
+    },
+    "agreement": "通过使用本平台,您确认已阅读、理解并同意遵守本服务条款。"
+  },
+  "privacyPolicy": {
+    "title": "合规桥 PBA 隐私政策",
+    "effectiveDate": "生效日期:2024年12月",
+    "backToHome": "返回首页",
+    "intro": {
+      "title": "引言",
+      "content": "合规桥 PBA(我们、我们的或本平台)重视您的隐私。本隐私政策说明我们如何收集、使用、存储和保护您的个人信息。"
+    },
+    "section1": {
+      "title": "1. 我们收集的信息",
+      "subtitle1": "1.1 您主动提供的信息",
+      "item1": "账户信息:邮箱地址、密码(加密存储)",
+      "item2": "合同文档:您上传用于审查的文件",
+      "item3": "联系信息:您通过客服提供的信息",
+      "subtitle2": "1.2 自动收集的信息",
+      "item4": "使用数据:访问时间、功能使用情况、点击行为",
+      "item5": "设备信息:浏览器类型、操作系统、IP地址",
+      "item6": "技术日志:错误日志、性能数据"
+    },
+    "section2": {
+      "title": "2. 信息使用方式",
+      "subtitle1": "2.1 服务提供",
+      "list1": ["处理和分析您上传的合同文档", "提供合规审查结果和建议", "维护和改进服务质量"],
+      "subtitle2": "2.2 改进和研发",
+      "highlight": "匿名化数据分析:我们可能使用匿名化的数据来改进 AI 模型性能、优化用户体验、开发新功能。",
+      "commitment": "重要承诺:用于训练的数据已完全匿名化,无法识别个人身份。"
+    },
+    "section3": {
+      "title": "3. 数据安全措施",
+      "subtitle1": "3.1 技术保护",
+      "item1": "加密传输:使用 TLS/SSL 加密所有数据传输",
+      "item2": "加密存储:敏感数据在数据库中加密存储",
+      "item3": "访问控制:严格的权限管理和身份验证",
+      "item4": "安全审计:定期进行安全评估和渗透测试",
+      "subtitle2": "3.2 第三方安全",
+      "content": "我们使用 Supabase 作为数据库服务商",
+      "compliance": "Supabase 符合 SOC 2 Type II、ISO 27001 等安全标准",
+      "evaluation": "所有第三方服务商都经过严格的安全评估"
+    },
+    "section4": {
+      "title": "4. 数据保留与删除",
+      "subtitle1": "4.1 保留期限",
+      "tableHeaders": ["数据类型", "默认保留期", "说明"],
+      "tableRows": [
+        ["账户信息", "账户存续期间", "账户注销后30天内删除"],
+        ["合同文档", "30天", "可选择立即删除或长期保留"],
+        ["审查记录", "30天", "与文档同步删除"],
+        ["使用日志", "90天", "用于故障排查和安全分析"]
+      ],
+      "subtitle2": "4.2 数据删除选项",
+      "content": "您可以选择:",
+      "option1": "立即删除:审核完成后立即删除所有相关数据",
+      "option2": "30天保留:自动保留30天后删除(默认)",
+      "option3": "长期保留:主动选择长期保存(可随时删除)",
+      "subtitle3": "4.3 删除方式",
+      "methods": [
+        "在审核完成页面选择立即删除",
+        "在历史记录中删除单个记录",
+        "在账户设置中批量删除所有数据",
+        "联系客服请求删除"
+      ]
+    },
+    "section5": {
+      "title": "5. 您的隐私权利",
+      "right1": "访问权:您有权查看我们持有的关于您的所有个人信息",
+      "right2": "更正权:您可以更新或更正不准确的个人信息",
+      "right3": "删除权:您可以要求删除您的个人信息",
+      "right4": "导出权:您可以以常用格式导出您的数据",
+      "right5": "撤回同意:您可以随时撤回之前给予的同意"
+    },
+    "section6": {
+      "title": "6. 联系我们",
+      "content": "如对本隐私政策有任何疑问,请联系:",
+      "email": "邮箱:",
+      "response": "回复时间:24小时内"
+    },
+    "agreement": "通过使用本平台,您确认已阅读并理解本隐私政策。"
+  },
+  "disclaimer": {
+    "title": "合规桥 PBA 免责声明",
+    "lastUpdated": "最后更新:2024年12月",
+    "backToHome": "返回首页",
+    "importantNotice": "重要提示:请在使用本服务前仔细阅读本免责声明",
+    "section1": {
+      "title": "1. 服务性质声明",
+      "subtitle1": "1.1 辅助工具定位",
+      "content1": "合规桥 PBA 是一个基于人工智能技术的辅助性参考工具,旨在帮助用户初步识别跨境贸易合同中的潜在合规问题。",
+      "subtitle2": "1.2 非专业法律服务",
+      "warning": "本平台提供的所有分析、建议和信息均不构成:",
+      "notConstitute": ["正式的法律意见", "专业的法律咨询", "律师-客户关系", "可直接用于法律程序的证据"],
+      "subtitle3": "1.3 专业建议必要性",
+      "recommend": "我们强烈建议:",
+      "recommendations": [
+        "在签署重要合同前咨询专业律师",
+        "对涉及重大利益的事项进行独立尽职调查",
+        "根据具体情况和最新法规做出决策",
+        "不要将本平台的分析作为唯一决策依据"
+      ]
+    },
+    "section2": {
+      "title": "2. 数据准确性声明",
+      "subtitle1": "2.1 尽力义务",
+      "commitment": "我们承诺:",
+      "commitments": ["定期更新法律法规数据库", "从官方权威来源获取信息", "持续改进 AI 模型准确性"],
+      "subtitle2": "2.2 准确性限制",
+      "cannot": "但我们无法保证:",
+      "limitations": [
+        "所有信息100%准确、完整或最新",
+        "覆盖所有国家和地区的所有法律",
+        "AI 分析结果完全无误"
+      ]
+    },
+    "section3": {
+      "title": "3. 技术限制声明",
+      "subtitle1": "3.1 AI 技术局限性",
+      "content1": "人工智能技术存在固有限制:",
+      "limits": ["可能产生误判或遗漏", "对复杂情况的理解可能不完整", "无法替代人类专业判断"],
+      "subtitle2": "3.2 适用范围限制",
+      "suitableFor": "本平台主要针对:",
+      "suitable": ["国际贸易合同", "跨境交易合规", "海关和贸易法规"],
+      "notSuitableFor": "可能不适用于:",
+      "notSuitable": ["特殊行业的专业合同", "复杂的多方协议", "高度定制化的法律文件"]
+    },
+    "section4": {
+      "title": "4. 责任限制",
+      "content": "在法律允许的最大范围内,我们不对以下情况承担责任:",
+      "noLiability": [
+        "因使用本服务导致的合同纠纷",
+        "基于本平台建议做出的商业决策",
+        "未能识别的合规风险",
+        "数据不准确导致的损失",
+        "利润损失、商业机会损失、商誉损失"
+      ]
+    },
+    "section5": {
+      "title": "5. 用户责任",
+      "content": "用户应当:",
+      "responsibilities": [
+        "对自己的决策负全部责任",
+        "进行独立的风险评估",
+        "咨询专业人士意见",
+        "遵守所有适用法律",
+        "将本平台作为参考工具使用",
+        "不过度依赖 AI 分析"
+      ]
+    },
+    "section6": {
+      "title": "6. 数据安全声明",
+      "content": "我们采取合理的安全措施保护您的数据,但:",
+      "limitations": [
+        "无法保证绝对安全",
+        "不对黑客攻击等安全事件承担责任",
+        "建议用户采取自身安全措施"
+      ],
+      "privacyTitle": "隐私保护建议:",
+      "privacyTips": [
+        "请查阅我们的隐私政策了解详情",
+        "敏感信息建议脱敏后上传",
+        "可选择审核后立即删除数据"
+      ]
+    },
+    "section7": {
+      "title": "7. 联系方式",
+      "content": "如对本免责声明有任何疑问,请联系:",
+      "email": "邮箱:",
+      "response": "回复时间:24小时内"
+    },
+    "reminder": {
+      "title": "重要提醒",
+      "content": "在使用本服务前,请确保您已:",
+      "checklist": [
+        "完整阅读并理解本免责声明",
+        "了解本平台的服务性质和限制",
+        "明白需要咨询专业律师的情况",
+        "同意自行承担使用本服务的风险"
+      ]
+    },
+    "finalAgreement": "通过使用本平台,您确认已阅读、理解并接受本免责声明的所有条款。"
+  },
+  "login": {
+    "title": "欢迎回来",
+    "subtitle": "登录您的合规桥 PBA 账户",
+    "email": "邮箱",
+    "password": "密码",
+    "loginButton": "登录",
+    "loggingIn": "登录中...",
+    "noAccount": "还没有账户?",
+    "registerNow": "立即注册",
+    "checkingStatus": "正在检查登录状态...",
+    "redirecting": "正在跳转...",
+    "googleLogin": "使用 Google 登录",
+    "googleLoggingIn": "正在使用 Google 登录...",
+    "orDivider": "或",
+    "errors": {
+      "emptyFields": "请输入邮箱和密码",
+      "loginFailed": "登录失败,请重试",
+      "timeout": "登录超时,请检查网络连接",
+      "generic": "登录过程中发生错误",
+      "googleLoginFailed": "Google 登录失败,请重试"
+    },
+    "success": "登录成功!"
+  },
+  "register": {
+    "title": "创建账户",
+    "subtitle": "创建您的合规桥 PBA 账户",
+    "email": "邮箱",
+    "password": "密码",
+    "passwordPlaceholder": "至少 6 个字符",
+    "confirmPassword": "确认密码",
+    "confirmPasswordPlaceholder": "再次输入密码",
+    "registerButton": "注册",
+    "registering": "注册中...",
+    "hasAccount": "已有账户?",
+    "loginNow": "立即登录",
+    "googleRegister": "使用 Google 注册",
+    "googleRegistering": "正在使用 Google 注册...",
+    "orDivider": "或",
+    "agreeToTerms": {
+      "prefix": "我已阅读并同意",
+      "terms": "服务条款",
+      "and": "和",
+      "privacy": "隐私政策"
+    },
+    "errors": {
+      "emptyFields": "请填写所有字段",
+      "passwordMismatch": "两次输入的密码不一致",
+      "passwordTooShort": "密码至少需要 6 个字符",
+      "registerFailed": "注册失败,请重试",
+      "emailExists": "该邮箱已被注册",
+      "agreeToTerms": "请先同意服务条款和隐私政策",
+      "googleRegisterFailed": "Google 注册失败,请重试"
+    },
+    "success": "注册成功!请查收验证邮件"
+  },
+  "confirmDialog": {
+    "confirm": "确认",
+    "cancel": "取消"
+  },
+  "upgradeDialog": {
+    "title": "解锁文件上传功能",
+    "description": "升级到专业版或更高套餐,即可上传合同文件进行智能分析",
+    "trialVersion": "体验版",
+    "professionalVersion": "专业版及以上",
+    "recommended": "推荐",
+    "features": {
+      "basicChat": "基础文字对话",
+      "noFileUpload": "无法上传合同文件",
+      "noDeepAnalysis": "无法进行深度分析",
+      "smartChat": "智能文字对话",
+      "fileUpload": "上传合同文件 (PDF/DOC/DOCX/TXT)",
+      "aiAnalysis": "AI 深度合同分析",
+      "unlimitedUsage": "无使用次数限制"
+    },
+    "benefits": {
+      "title": "文件上传功能优势:",
+      "format": "支持多种格式: PDF, DOC, DOCX, TXT",
+      "extraction": "AI 自动提取关键条款和风险点",
+      "comparison": "智能对比和合规性检查",
+      "advice": "专业法律建议和修改建议"
+    },
+    "cancelButton": "取消",
+    "upgradeButton": "立即升级"
+  },
+  "featureGate": {
+    "locked": "功能已锁定",
+    "upgrade": "升级解锁更多功能",
+    "upgradeDescription": "升级到更高套餐,解锁更多专业功能",
+    "viewPlans": "查看套餐"
+  },
+  "subscriptionAlert": {
+    "expired": {
+      "title": "订阅已过期",
+      "description": "您的{{plan}}订阅已于 {{date}} 过期,请续费以继续使用服务",
+      "renewButton": "立即续费"
+    },
+    "expiring": {
+      "title": "订阅即将到期",
+      "description": "您的{{plan}}订阅还有 {{days}} 天到期({{date}}),请及时续费",
+      "renewButton": "立即续费",
+      "dismissButton": "稍后提醒"
+    },
+    "active": {
+      "title": "订阅状态",
+      "description": "您的{{plan}}订阅还有 {{days}} 天到期({{date}})"
+    }
+  },
+  "usageIndicator": {
+    "monthlyUsage": "本月使用次数",
+    "unlimited": "无限次数",
+    "enterpriseUnlimited": "企业版用户享有无限制使用权限",
+    "exhausted": {
+      "title": "本月使用次数已用完",
+      "buyBooster": "购买加油包",
+      "upgradePlan": "升级套餐"
+    },
+    "low": {
+      "title": "剩余次数不足",
+      "description": "还剩 {{remaining}} 次,建议购买加油包或升级套餐"
+    },
+    "remaining": "还剩 {{remaining}} 次可用"
+  },
+  "dataManagement": {
+    "title": "数据管理",
+    "description": "管理您的对话历史和数据保留设置",
+    "retentionPolicy": "数据保留策略",
+    "retentionOptions": {
+      "immediate": "立即删除",
+      "30days": "保留30天",
+      "permanent": "长期保留"
+    },
+    "retentionDescriptions": {
+      "immediate": "对话结束后立即删除数据",
+      "30days": "对话数据保留30天后自动删除",
+      "permanent": "长期保留所有对话数据"
+    },
+    "statistics": {
+      "conversations": "历史对话",
+      "conversationsCount": "个对话记录",
+      "storage": "存储空间",
+      "storageSize": "MB (约 {{count}} 条消息)"
+    },
+    "actions": {
+      "settings": "保留设置",
+      "clearAll": "清空数据"
+    },
+    "settingsDialog": {
+      "title": "数据保留设置",
+      "description": "选择您的对话数据保留策略",
+      "options": {
+        "immediate": {
+          "title": "立即删除",
+          "description": "对话结束后立即删除所有相关数据,最大程度保护隐私"
+        },
+        "30days": {
+          "title": "保留30天(推荐)",
+          "description": "对话数据保留30天,平衡隐私保护和使用便利"
+        },
+        "permanent": {
+          "title": "长期保留",
+          "description": "长期保存所有对话数据,方便随时查看历史记录"
+        }
+      },
+      "cancelButton": "取消",
+      "saveButton": "保存设置",
+      "saving": "保存中..."
+    },
+    "clearDialog": {
+      "title": "确认清空所有数据?",
+      "description": "此操作将永久删除您的所有对话历史记录,包括所有消息内容。此操作不可撤销。",
+      "confirmButton": "确认清空",
+      "cancelButton": "取消"
+    },
+    "toasts": {
+      "settingsUpdated": "数据保留设置已更新",
+      "settingsFailed": "保存设置失败",
+      "dataCleared": "所有历史数据已清空",
+      "clearFailed": "清空数据失败"
+    }
+  },
+  "disclaimerDialog": {
+    "title": "重要提示",
+    "description": "在使用本平台服务前,请仔细阅读以下内容",
+    "serviceNature": {
+      "title": "服务性质说明",
+      "notConstitute": "本平台提供的分析不构成:",
+      "items": {
+        "legalOpinion": "正式的法律意见",
+        "legalConsultation": "专业的法律咨询",
+        "legalEvidence": "可直接用于法律程序的证据"
+      }
+    },
+    "recommendations": {
+      "title": "我们强烈建议:",
+      "items": {
+        "consultLawyer": "在签署重要合同前咨询专业律师",
+        "dueDiligence": "进行独立的尽职调查",
+        "notSoleDecision": "不要将本平台的分析作为唯一决策依据"
+      }
+    },
+    "limitations": {
+      "title": "技术限制:",
+      "items": {
+        "aiErrors": "AI 技术可能产生误判或遗漏",
+        "dataDelay": "数据更新存在时间差",
+        "noGuarantee": "无法保证100%准确性"
+      }
+    },
+    "dataRetention": {
+      "title": "数据保留方式",
+      "description": "请选择您希望的数据保留方式,您可以随时在设置中更改",
+      "options": {
+        "immediate": {
+          "title": "立即删除",
+          "description": "审核完成后立即删除所有相关数据"
+        },
+        "30days": {
+          "title": "保留30天(推荐)",
+          "description": "自动保留30天后删除,方便查看历史记录"
+        },
+        "permanent": {
+          "title": "长期保留",
+          "description": "长期保存,可随时在设置中删除"
+        }
+      }
+    },
+    "agreement": {
+      "prefix": "我已阅读并同意",
+      "disclaimer": "免责声明",
+      "suffix": ",理解本平台的服务性质和限制"
+    },
+    "cancelButton": "取消",
+    "acceptButton": "同意并继续"
+  },
+  "difyChat": {
+    "backToHome": "返回主页",
+    "newConversation": "新对话",
+    "conversationHistory": "历史对话",
+    "selectAll": "全选",
+    "deleteSelected": "删除选中 ({{count}})",
+    "welcome": {
+      "title": "欢迎使用PolicyBridge.AI!",
+      "subtitle": "为了更好的解决您的问题,请选择您的身份:",
+      "description": "选择您的身份后,我们能更加精准的为您服务",
+      "identities": {
+        "seller": "跨境卖家/供应商",
+        "buyer": "跨境买家",
+        "intermediary": "渠道/中间商",
+        "logistics": "货运代理 (Logistics)",
+        "brand": "品牌/技术方 (IP/OEM)",
+        "warehouse": "海外仓 (WMS/3PL)",
+        "finance": "金融/支付 (Financier)"
+      }
+    },
+    "radarInterface": {
+      "title": "金税四期跨境财税合规雷达",
+      "button": "金税四期\\n跨境财税合规雷达",
+      "formTitle": "请勾选您实际涉及的资金(可多选):",
+      "fundingOptions": {
+        "A": "第三方支付平台(如 Payoneer/PingPong 等)提现至国内对公账户",
+        "B": "第三方支付平台提现至法人或关联人个人银行卡",
+        "C": "使用海外货款直接支付境内供应商货款或服务费",
+        "D": "通过香港或其他离岸公司账户直接汇款至境内个人卡(亲友或员工)",
+        "E": "货代或第三方代付人民币结转,或通过非银行渠道进行本外币对冲",
+        "F": "涉及虚拟资产(如 USDT 等)与法定货币的兑换结算"
+      },
+      "amountLabel": "金额:",
+      "amountPlaceholder": "0.00",
+      "submitButton": "提交",
+      "analyzing": "分析中...",
+      "selectAtLeastOne": "请至少选择一个资金方式"
+    },
+    "thinking": {
+      "identityConfirmation": "正在进行身份确认",
+      "understanding": "正在理解您的问题...",
+      "callingKnowledge": "正在调用知识库...",
+      "analyzingRegulations": "正在分析相关法规...",
+      "generating": "正在生成回复...",
+      "almostDone": "即将完成..."
+    },
+    "fileUpload": {
+      "uploading": "正在上传文件...",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败,请重试",
+      "invalidFormat": "仅支持 PDF, DOC, DOCX, TXT 格式的文件",
+      "fileTooLarge": "文件大小不能超过 10MB",
+      "fileRemoved": "已移除文件",
+      "downloadFile": "下载文件"
+    },
+    "input": {
+      "placeholder": "输入您的问题...",
+      "placeholderWithFile": "输入您的问题(已附加文件)...",
+      "placeholderSelectIdentity": "请先选择您的身份...",
+      "placeholderRadarForm": "请在上方表单中填写资金信息..."
+    },
+    "messages": {
+      "sendSuccess": "消息发送成功",
+      "sendFailed": "发送消息失败,请检查网络连接",
+      "loadFailed": "加载对话失败",
+      "deleteFailed": "删除对话失败",
+      "deleteSuccess": "对话已删除",
+      "batchDeleteSuccess": "已删除 {{count}} 个对话",
+      "batchDeleteFailed": "批量删除失败",
+      "analysisComplete": "分析完成",
+      "analysisFailed": "分析失败,请重试",
+      "usingFreeAPI": "使用免费版API分析中...",
+      "usingPaidAPI": "使用付费版API分析中...",
+      "copiedSuccess": "已复制到剪贴板",
+      "copyFailed": "复制失败"
+    },
+    "confirmDelete": {
+      "title": "确认删除对话?",
+      "description": "删除对话将永久删除所有对话内容,包括合同数据等,此操作不可撤销。",
+      "confirmButton": "确认删除",
+      "cancelButton": "取消"
+    },
+    "confirmBatchDelete": {
+      "title": "确认批量删除?",
+      "description": "您确定要删除选中的 {{count}} 个对话吗?删除对话将永久删除所有对话内容,包括合同数据等,此操作不可撤销。",
+      "confirmButton": "确认删除",
+      "cancelButton": "取消"
+    },
+    "conversationTitles": {
+      "seller": "供应商咨询",
+      "buyer": "采购商咨询",
+      "intermediary": "中间商咨询",
+      "logistics": "货运代理咨询",
+      "brand": "品牌方咨询",
+      "warehouse": "海外仓咨询",
+      "finance": "金融咨询",
+      "radar": "金税四期跨境财税合规雷达",
+      "default": "对话"
+    }
+  },
+  "aiReview": {
+    "redirecting": "正在跳转到 AI 对话窗口..."
+  },
+  "pricing": {
+    "title": "选择适合您的套餐",
+    "subtitle": "从试用到企业定制,满足不同法律服务需求",
+    "free": "免费",
+    "contactUs": "联系我们",
+    "unlimited": "无限制",
+    "fullCaseFollowUp": "全案无限次追问",
+    "freeUse": "免费使用",
+    "processing": "处理中...",
+    "buyNow": "立即购买",
+    "viewDetailedComparison": "查看详细功能对比",
+    "perMonth": "/月",
+    "perYear": "/年",
+    "perWeek": "/周",
+    "orderCreated": "订单创建成功",
+    "tiers": {
+      "free": {
+        "name": "试用版 (免费)",
+        "period": "",
+        "unitCost": "免费试用",
+        "features": {
+          "role": "角色:法律 / 合规咨询",
+          "uploadSupport": "✅ 支持合同上传",
+          "riskAssessment": "✅ 合同风险评估和预警",
+          "noConclusion": "❌ 无合规判断结论",
+          "noSolution": "❌ 无合同预警解决方案"
+        }
+      },
+      "professional": {
+        "name": "周会员",
+        "period": "周",
+        "unitCost": "¥49/周",
+        "features": {
+          "positioning": "🔑 核心:短期、集中的合规风险评估工具",
+          "legalConsulting": "✅ 法律 / 合规咨询",
+          "uploadSupport": "✅ 支持合同上传",
+          "fullRiskJudgment": "✅ 完整合规风险评估",
+          "riskDetails": "✅ 风险点 + 风险类型 + 风险原因",
+          "decisionReference": "✅ 签约前决策参考",
+          "caseAnalysis": "✅ 数据库相似案例分析"
+        }
+      },
+      "monthly": {
+        "name": "月会员",
+        "period": "月",
+        "unitCost": "¥299/月",
+        "features": {
+          "positioning": "🔑 核心:稳定的合规评估工具",
+          "legalConsulting": "✅ 法律 / 合规咨询",
+          "uploadSupport": "✅ 支持合同上传",
+          "fullRiskJudgment": "✅ 完整合规风险评估",
+          "riskDetails": "✅ 风险点 + 风险类型 + 风险原因",
+          "decisionReference": "✅ 签约前决策参考",
+          "caseAnalysis": "✅ 数据库相似案例分析",
+          "higherStability": "✅ 默认更高的系统稳定性和优先级",
+          "dedicatedSupport": "✅ 专属客户支持"
+        }
+      },
+      "yearly": {
+        "name": "年会员",
+        "period": "年",
+        "unitCost": "¥2499/年",
+        "features": {
+          "positioning": "🔑 核心:合规风险评估作为长期工作流的一部分",
+          "legalConsulting": "✅ 法律 / 合规咨询",
+          "uploadSupport": "✅ 支持合同上传",
+          "fullRiskJudgment": "✅ 完整合规风险评估",
+          "riskDetails": "✅ 风险点 + 风险类型 + 风险原因",
+          "decisionReference": "✅ 签约前决策参考",
+          "caseAnalysis": "✅ 数据库相似案例分析",
+          "higherStability": "✅ 默认更高的系统稳定性和优先级",
+          "longTermBusiness": "✅ 适合长期跨境业务",
+          "dedicatedSupport": "✅ 专属客户支持"
+        }
+      },
+      "enterprise": {
+        "name": "企业定制",
+        "period": "联系我们",
+        "unitCost": "定制报价",
+        "features": {
+          "positioning": "核心:企业级定制解决方案",
+          "systemIntegration": "企业系统集成",
+          "multiUser": "多用户账户管理",
+          "apiIntegration": "API 接口集成",
+          "privateDeployment": "私有数据部署",
+          "dedicatedSupport": "专属客户支持",
+          "customDevelopment": "定制功能开发",
+          "sla": "SLA 服务协议",
+          "support247": "7×24 技术支持"
+        }
+      }
+    },
+    "toasts": {
+      "freeNoNeed": "试用版无需购买",
+      "freeDescription": "您可以直接使用试用版进行文字法律咨询",
+      "enterpriseCustom": "企业定制",
+      "enterpriseDescription": "请联系我们的销售团队获取定制方案",
+      "loginRequired": "请先登录",
+      "purchaseFailed": "购买失败",
+      "tierNotFound": "套餐不存在",
+      "orderFailed": "创建订单失败",
+      "retryLater": "请稍后重试",
+      "sessionExpired": "会话已过期,请重新登录",
+      "systemInitializing": "系统初始化中,请稍后再试",
+      "networkError": "网络错误,请检查您的连接",
+      "permissionDenied": "权限不足,请重新登录"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": {
+        "question": "试用版和付费版有什么区别?",
+        "answer": "试用版仅支持文字法律咨询,不支持合同上传和 Word 文档生成。付费版提供完整的合同审查、风险分析和文档生成功能。"
+      },
+      "q2": {
+        "question": "专业版适合什么场景?",
+        "answer": "专业版适合偶尔需要合同审查的用户,按合同计费,每份 ¥49,支持无限次追问和修改版本生成,适合个人或小额交易。"
+      },
+      "q3": {
+        "question": "月会员和年会员有什么区别?",
+        "answer": "月会员 ¥299/月,年会员 ¥2499/年(约 ¥209/月),年付可节省 ¥1089。功能完全相同,均支持无限次合同上传和文档生成。"
+      },
+      "q4": {
+        "question": "企业定制包含哪些服务?",
+        "answer": "企业定制提供企业系统集成、多用户管理、API 接口、私有部署、专属支持等定制化服务,适合有特殊需求的企业客户。"
+      },
+      "q5": {
+        "question": "如何选择合适的套餐?",
+        "answer": "偶尔咨询选试用版;审查 1-2 份合同选专业版;频繁合同审查选会员;企业用户有定制需求选企业定制。"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "我的仪表盘",
+    "subtitle": "管理您的订阅和使用记录",
+    "currentPlan": "当前套餐",
+    "usage": "使用情况",
+    "validityRemaining": "有效期剩余",
+    "unlimited": "无限制",
+    "expired": "已过期",
+    "timeRemaining": {
+      "days": "{{days}} 天 {{hours}} 小时",
+      "hours": "{{hours}} 小时"
+    },
+    "status": {
+      "active": "使用中",
+      "none": "未订阅",
+      "expired": "已过期"
+    },
+    "alerts": {
+      "expired": "您的订阅已过期,请续费以继续使用服务。",
+      "noSubscription": "您还没有订阅任何套餐。",
+      "viewPlans": "查看套餐"
+    },
+    "quickActions": {
+      "title": "快捷操作",
+      "description": "常用功能快捷入口",
+      "startReview": "开始审查",
+      "buyBooster": "购买加油包",
+      "upgrade": "升级套餐",
+      "permissions": "权限演示"
+    },
+    "permissions": {
+      "title": "当前套餐权限",
+      "description": "您的 {{tier}} 套餐包含以下功能和权限",
+      "available": "可用",
+      "unavailable": "不可用",
+      "unlimited": "无限制",
+      "wantMore": "想要更多功能?",
+      "upgradePrompt": "升级到更高套餐,解锁更多专业功能",
+      "viewPlans": "查看套餐"
+    }
+  },
+  "dashboardPage": {
+    "header": {
+      "title": "合规桥 PBA",
+      "subtitle": "AI合同审核系统",
+      "backToHome": "返回首页",
+      "logout": "退出登录"
+    },
+    "userInfo": {
+      "title": "用户信息",
+      "expired": "已过期",
+      "daysRemaining": "{{days}} 天后到期",
+      "companyName": "公司名称",
+      "contactName": "联系人",
+      "phone": "联系电话",
+      "notSet": "未设置",
+      "editProfile": "编辑个人资料"
+    },
+    "profile": {
+      "companyNameLabel": "公司名称(选填)",
+      "companyNamePlaceholder": "请输入公司名称",
+      "contactNameLabel": "联系人姓名(选填)",
+      "contactNamePlaceholder": "请输入联系人姓名",
+      "phoneLabel": "联系电话(选填)",
+      "phonePlaceholder": "请输入联系电话",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "取消",
+      "phoneInvalidTitle": "电话号码格式不正确",
+      "phoneInvalidDescription": "请输入有效的电话号码",
+      "saveSuccessTitle": "个人资料已保存",
+      "saveSuccessDescription": "您的信息已成功更新",
+      "saveFailedTitle": "保存失败",
+      "saveFailedDescription": "请稍后重试"
+    },
+    "subscription": {
+      "title": "订阅状态",
+      "currentPlan": "当前套餐",
+      "expired": "已过期",
+      "daysRemaining": "剩余天数",
+      "zeroDays": "0 天",
+      "permanent": "永久有效",
+      "daysCount": "{{days}} 天",
+      "upgradePlan": "升级套餐",
+      "uploadContract": "上传合同"
+    },
+    "contracts": {
+      "title": "最近审核的合同",
+      "description": "查看您最近上传和审核的合同记录",
+      "noContracts": "暂无合同记录",
+      "uploadFirst": "上传第一份合同",
+      "statusCompleted": "已完成",
+      "statusProcessing": "处理中"
+    }
+  },
+  "orders": {
+    "title": "我的订单",
+    "backToHome": "返回主页",
+    "orderList": "订单列表",
+    "description": "查看和管理您的所有订单记录",
+    "searchPlaceholder": "搜索订单号或套餐名称...",
+    "filterStatus": "筛选状态",
+    "allStatus": "全部状态",
+    "noMatchingOrders": "没有找到匹配的订单",
+    "noOrders": "暂无订单记录",
+    "tryAdjustFilters": "请尝试调整搜索条件或筛选器",
+    "ordersWillAppear": "购买套餐后,订单记录将显示在这里",
+    "browsePlans": "浏览套餐",
+    "status": {
+      "pending": "待支付",
+      "paid": "已支付",
+      "cancelled": "已取消",
+      "refunded": "已退款"
+    },
+    "table": {
+      "orderNumber": "订单号",
+      "packageName": "套餐名称",
+      "contracts": "合同数",
+      "amount": "金额",
+      "status": "状态",
+      "purchaseTime": "购买时间",
+      "actions": "操作",
+      "pieces": "份",
+      "includesBonus": "含赠送 {{count}} 份",
+      "viewDetails": "查看详情"
+    },
+    "summary": {
+      "total": "共 {{count}} 个订单",
+      "totalAmount": "总金额"
+    }
+  },
+  "orderDetail": {
+    "title": "订单详情",
+    "orderNumber": "订单号:",
+    "status": {
+      "pending": "待支付",
+      "paid": "已支付",
+      "cancelled": "已取消",
+      "refunded": "已退款"
+    },
+    "sections": {
+      "orderInfo": "订单信息",
+      "packageDetails": "套餐详情"
+    },
+    "fields": {
+      "packageName": "套餐名称",
+      "amount": "订单金额",
+      "createdAt": "创建时间",
+      "updatedAt": "更新时间",
+      "contractsCount": "合同数量",
+      "actualReceived": "实际获得",
+      "validityPeriod": "有效期:{{months}} 个月"
+    },
+    "unlimited": "无限制",
+    "contractsUnit": "份",
+    "payment": {
+      "title": "支付订单",
+      "description": "请在24小时内完成支付,逾期订单将自动取消",
+      "payNow": "立即支付",
+      "processing": "处理中..."
+    },
+    "invoice": {
+      "title": "发票下载",
+      "download": "下载发票",
+      "downloadInProgress": "发票下载功能开发中"
+    },
+    "actions": {
+      "backToOrders": "返回订单列表"
+    },
+    "errors": {
+      "loginRequired": "请先登录",
+      "invalidOrderId": "订单ID无效",
+      "orderNotFound": "订单不存在",
+      "loadFailed": "加载订单失败",
+      "paymentFailed": "支付失败,请稍后重试",
+      "paymentFailedTitle": "支付失败",
+      "noPaymentUrl": "未获取到支付链接",
+      "stripeNotConfigured": "请联系管理员配置Stripe支付密钥。参考 STRIPE_SETUP.md 文档。",
+      "networkError": "网络错误,请检查网络连接"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "search": "搜索",
+    "pleaseLogin": "请先登录"
+  }
+}

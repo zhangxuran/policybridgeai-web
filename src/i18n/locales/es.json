@@ -1,0 +1,487 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "pricing": "Precios",
+    "aiReview": "Revisión IA",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "dashboard": "Panel",
+    "myOrders": "Mis pedidos",
+    "buyBooster": "Comprar Booster",
+    "logout": "Cerrar sesión",
+    "loggingOut": "Cerrando sesión...",
+    "remaining": "{{count}} restantes"
+  },
+  "hero": {
+    "title": "PolicyBridge.ai",
+    "subtitle": "Antes de firmar un contrato, verifica si es realmente seguro",
+    "description": "PolicyBridge.ai proporciona la primera línea de detección de riesgos de cumplimiento<br/>para contratos transfronterizos para PYMEs sin equipos legales profesionales",
+    "startReview": "Iniciar revisión",
+    "getStarted": "Escaneo gratuito de riesgos contractuales"
+  },
+  "advantage": {
+    "title": "Nuestras ventajas principales",
+    "subtitle": "A diferencia de los LLM tradicionales, PolicyBridge.ai proporciona servicios profesionales basados en datos legales en tiempo real",
+    "database": {
+      "title": "Los riesgos contractuales a menudo provienen de conocimientos legales obsoletos",
+      "subtitle": "",
+      "point1": "Los riesgos de cumplimiento en contratos transfronterizos a menudo surgen de descuidar actualizaciones regulatorias",
+      "point2": "Los cambios en sanciones, embargos o reglas arancelarias pueden afectar directamente la aplicabilidad del contrato",
+      "point3": "Confiar en una comprensión legal obsoleta puede llevar a que las cláusulas sean invalidadas o restringidas en disputas",
+      "point4": "Las diferencias en las reglas entre países y regiones a menudo se identifican erróneamente como 'prácticas de la industria'"
+    },
+    "difference": {
+      "title": "PolicyBridge.ai es para evaluación de riesgos de cumplimiento, no para preguntas y respuestas de IA generales",
+      "subtitle": "",
+      "point1": "La evaluación de riesgos de cumplimiento se centra en la aplicación de reglas, no en la comprensión del texto",
+      "point2": "El cumplimiento transfronterizo depende en gran medida de contextos transaccionales específicos y es difícil de generalizar",
+      "point3": "Las respuestas sin fuentes rastreables no son adecuadas para la toma de decisiones de cumplimiento",
+      "point4": "Los riesgos reales a menudo provienen de cambios regulatorios en lugar de la redacción contractual"
+    },
+    "caseLaw": {
+      "title": "Muchos problemas de cláusulas contractuales no están escritos en la ley sino revelados en disputas",
+      "subtitle": "",
+      "point1": "Numerosas disputas comerciales transfronterizas muestran que las cláusulas riesgosas a menudo solo emergen durante las fases de ejecución o disputa",
+      "point2": "Los tipos de disputa comunes típicamente se concentran en incumplimientos contractuales, asignación de responsabilidad, pagos y problemas de calidad",
+      "point3": "Estructuras contractuales similares pueden presentar resultados de riesgo completamente diferentes en diferentes disputas",
+      "point4": "Combinar la experiencia de la práctica legal ayuda a identificar puntos de riesgo fácilmente pasados por alto antes de la firma"
+    }
+  },
+  "features": {
+    "title": "Características principales",
+    "smartReview": {
+      "title": "Revisión inteligente de contratos",
+      "description": "Cargue documentos contractuales, la IA identifica automáticamente cláusulas clave y realiza una revisión completa según las últimas leyes y regulaciones"
+    },
+    "riskAlert": {
+      "title": "Alerta de riesgos de cumplimiento",
+      "description": "Monitoreo en tiempo real de listas de embargo y cambios en políticas arancelarias, alertando proactivamente sobre riesgos potenciales de cumplimiento"
+    },
+    "multiCountry": {
+      "title": "Comparación multijurisdiccional",
+      "description": "Soporte para análisis comparativo de leyes y regulaciones en múltiples países y regiones para ayudarlo a formular estrategias comerciales óptimas"
+    },
+    "caseMatching": {
+      "title": "Coincidencia inteligente de casos",
+      "description": "Basado en una base de datos de más de 1000 casos reales, la IA analiza inteligentemente sus problemas, coincide rápidamente con precedentes y soluciones relevantes, haciendo que asuntos legales complejos sean simples y claros"
+    }
+  },
+  "dataSources": {
+    "title": "Nuestras fuentes de datos",
+    "subtitle": "Garantizando la autoridad y actualidad de los datos",
+    "international": {
+      "title": "Organizaciones internacionales",
+      "item1": "Comisión de las Naciones Unidas para el Derecho Mercantil Internacional (CNUDMI)",
+      "item2": "Organización Mundial del Comercio (OMC)",
+      "item3": "Cámara de Comercio Internacional (CCI)",
+      "item4": "Grupo de Acción Financiera Internacional (GAFI)"
+    },
+    "official": {
+      "title": "Agencias oficiales nacionales",
+      "item1": "Sitios web oficiales de las administraciones aduaneras nacionales",
+      "item2": "Sitios web oficiales de los Ministerios de Comercio",
+      "item3": "Departamentos de control de importaciones y exportaciones",
+      "item4": "Anuncios de la Comisión Arancelaria"
+    },
+    "updateFrequency": "<strong>Frecuencia de actualización de datos:</strong> Actualizaciones automáticas diarias | Notificaciones en tiempo real para cambios de política importantes"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "description": "Si tiene alguna pregunta o necesita ayuda, no dude en contactarnos",
+    "email": "Correo electrónico de contacto",
+    "response": "Responderemos a su correo electrónico dentro de 24 horas"
+  },
+  "footer": {
+    "description": "Plataforma profesional de revisión de cumplimiento de comercio transfronterizo",
+    "quickLinks": "Enlaces rápidos",
+    "terms": "Términos de servicio",
+    "privacy": "Política de privacidad",
+    "disclaimer": "Descargo de responsabilidad",
+    "contactUs": "Contáctenos",
+    "copyright": "© 2024 PolicyBridge.ai. Todos los derechos reservados"
+  },
+  "login": {
+    "title": "Bienvenido de nuevo",
+    "subtitle": "Inicie sesión en su cuenta de PolicyBridge.ai",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "loginButton": "Iniciar sesión",
+    "loggingIn": "Iniciando sesión...",
+    "noAccount": "¿No tiene una cuenta?",
+    "registerNow": "Registrarse ahora",
+    "checkingStatus": "Verificando estado de inicio de sesión...",
+    "redirecting": "Redirigiendo...",
+    "googleLogin": "Iniciar sesión con Google",
+    "googleLoggingIn": "Iniciando sesión con Google...",
+    "orDivider": "O",
+    "errors": {
+      "emptyFields": "Por favor ingrese correo electrónico y contraseña",
+      "loginFailed": "Inicio de sesión fallido, por favor intente nuevamente",
+      "timeout": "Tiempo de espera de inicio de sesión agotado, por favor verifique su conexión de red",
+      "generic": "Ocurrió un error durante el inicio de sesión",
+      "googleLoginFailed": "Inicio de sesión con Google fallido, por favor intente nuevamente"
+    },
+    "success": "¡Inicio de sesión exitoso!"
+  },
+  "register": {
+    "title": "Crear cuenta",
+    "subtitle": "Cree su cuenta de PolicyBridge.ai",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Al menos 6 caracteres",
+    "confirmPassword": "Confirmar contraseña",
+    "confirmPasswordPlaceholder": "Ingrese la contraseña nuevamente",
+    "registerButton": "Registrarse",
+    "registering": "Registrando...",
+    "hasAccount": "¿Ya tiene una cuenta?",
+    "loginNow": "Iniciar sesión ahora",
+    "googleRegister": "Registrarse con Google",
+    "googleRegistering": "Registrando con Google...",
+    "orDivider": "O",
+    "agreeToTerms": {
+      "prefix": "He leído y acepto",
+      "terms": "los Términos de servicio",
+      "and": "y",
+      "privacy": "la Política de privacidad"
+    },
+    "errors": {
+      "emptyFields": "Por favor complete todos los campos",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
+      "registerFailed": "Registro fallido, por favor intente nuevamente",
+      "emailExists": "Este correo electrónico ya está registrado",
+      "agreeToTerms": "Por favor acepte primero los Términos de servicio y la Política de privacidad",
+      "googleRegisterFailed": "Registro con Google fallido, por favor intente nuevamente"
+    },
+    "success": "¡Registro exitoso! Por favor revise su correo electrónico de verificación"
+  },
+  "pricing": {
+    "title": "Elija el plan adecuado para usted",
+    "subtitle": "Desde la versión de prueba hasta la personalización empresarial, satisfaciendo diferentes necesidades de servicios legales",
+    "free": "Gratis",
+    "contactUs": "Contáctenos",
+    "unlimited": "Ilimitado",
+    "fullCaseFollowUp": "Seguimiento ilimitado para todo el caso",
+    "freeUse": "Uso gratuito",
+    "processing": "Procesando...",
+    "buyNow": "Comprar ahora",
+    "viewDetailedComparison": "Ver comparación detallada de características",
+    "perMonth": "/mes",
+    "perYear": "/año",
+    "perWeek": "/semana",
+    "orderCreated": "Pedido creado exitosamente",
+    "tiers": {
+      "free": {
+        "name": "Versión de prueba (Gratis)",
+        "period": "",
+        "unitCost": "Prueba gratuita",
+        "features": {
+          "role": "Rol: Consulta legal / de cumplimiento",
+          "uploadSupport": "✅ Carga de contrato soportada",
+          "riskAssessment": "✅ Evaluación y alertas de riesgos contractuales",
+          "noConclusion": "❌ Sin conclusiones de juicio de cumplimiento",
+          "noSolution": "❌ Sin soluciones de alerta contractual"
+        }
+      },
+      "professional": {
+        "name": "Miembro semanal",
+        "period": "Semanal",
+        "unitCost": "€9.9/semana",
+        "features": {
+          "positioning": "🔑 Núcleo: Herramienta de evaluación de riesgos de cumplimiento a corto plazo e intensiva",
+          "legalConsulting": "✅ Consulta legal / de cumplimiento",
+          "uploadSupport": "✅ Carga de contrato soportada",
+          "fullRiskJudgment": "✅ Evaluación completa de riesgos de cumplimiento",
+          "riskDetails": "✅ Puntos de riesgo + Tipos de riesgo + Razones de riesgo",
+          "decisionReference": "✅ Referencia de decisión antes de firmar",
+          "caseAnalysis": "✅ Análisis de casos similares en la base de datos"
+        }
+      },
+      "monthly": {
+        "name": "Miembro mensual",
+        "period": "Mensual",
+        "unitCost": "€39.9/mes",
+        "features": {
+          "positioning": "🔑 Núcleo: Herramienta de evaluación de cumplimiento estable",
+          "legalConsulting": "✅ Consulta legal / de cumplimiento",
+          "uploadSupport": "✅ Carga de contrato soportada",
+          "fullRiskJudgment": "✅ Evaluación completa de riesgos de cumplimiento",
+          "riskDetails": "✅ Puntos de riesgo + Tipos de riesgo + Razones de riesgo",
+          "decisionReference": "✅ Referencia de decisión antes de firmar",
+          "caseAnalysis": "✅ Análisis de casos similares en la base de datos",
+          "higherStability": "✅ Mayor estabilidad y prioridad del sistema por defecto",
+          "dedicatedSupport": "✅ Soporte al cliente dedicado"
+        }
+      },
+      "yearly": {
+        "name": "Miembro anual",
+        "period": "Anual",
+        "unitCost": "€329/año",
+        "features": {
+          "positioning": "🔑 Núcleo: Evaluación de riesgos de cumplimiento como parte del flujo de trabajo a largo plazo",
+          "legalConsulting": "✅ Consulta legal / de cumplimiento",
+          "uploadSupport": "✅ Carga de contrato soportada",
+          "fullRiskJudgment": "✅ Evaluación completa de riesgos de cumplimiento",
+          "riskDetails": "✅ Puntos de riesgo + Tipos de riesgo + Razones de riesgo",
+          "decisionReference": "✅ Referencia de decisión antes de firmar",
+          "caseAnalysis": "✅ Análisis de casos similares en la base de datos",
+          "higherStability": "✅ Mayor estabilidad y prioridad del sistema por defecto",
+          "longTermBusiness": "✅ Adecuado para negocios transfronterizos a largo plazo",
+          "dedicatedSupport": "✅ Soporte al cliente dedicado"
+        }
+      },
+      "enterprise": {
+        "name": "Personalización empresarial",
+        "period": "Contáctenos",
+        "unitCost": "Precios personalizados",
+        "features": {
+          "positioning": "Núcleo: Soluciones personalizadas de nivel empresarial",
+          "systemIntegration": "Integración del sistema empresarial",
+          "multiUser": "Gestión de cuentas multiusuario",
+          "apiIntegration": "Integración de interfaz API",
+          "privateDeployment": "Implementación privada de datos",
+          "dedicatedSupport": "Soporte al cliente dedicado",
+          "customDevelopment": "Desarrollo de características personalizadas",
+          "sla": "Acuerdo de servicio SLA",
+          "support247": "Soporte técnico 7×24"
+        }
+      }
+    },
+    "toasts": {
+      "freeNoNeed": "La versión de prueba no requiere compra",
+      "freeDescription": "Puede usar directamente la versión de prueba para consulta legal textual",
+      "enterpriseCustom": "Personalización empresarial",
+      "enterpriseDescription": "Por favor contacte a nuestro equipo de ventas para soluciones personalizadas",
+      "loginRequired": "Por favor inicie sesión primero",
+      "purchaseFailed": "Compra fallida",
+      "tierNotFound": "Paquete no encontrado",
+      "orderFailed": "No se pudo crear el pedido",
+      "retryLater": "Por favor intente nuevamente más tarde",
+      "sessionExpired": "Sesión expirada, por favor inicie sesión nuevamente",
+      "systemInitializing": "Sistema inicializando, por favor intente nuevamente más tarde",
+      "networkError": "Error de red, por favor verifique su conexión",
+      "permissionDenied": "Permiso denegado, por favor inicie sesión nuevamente"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": {
+        "question": "¿Cuál es la diferencia entre la versión de prueba y las versiones de pago?",
+        "answer": "La versión de prueba solo admite consulta legal textual, sin carga de contratos ni generación de documentos Word. Las versiones de pago proporcionan revisión completa de contratos, análisis de riesgos y funciones de generación de documentos."
+      },
+      "q2": {
+        "question": "¿Para qué escenarios es adecuada la versión profesional?",
+        "answer": "La versión profesional es adecuada para usuarios que ocasionalmente necesitan revisar contratos, se cobra por contrato a €9.9 cada uno, con seguimiento ilimitado y generación de revisiones, perfecto para individuos o transacciones pequeñas."
+      },
+      "q3": {
+        "question": "¿Cuál es la diferencia entre membresía mensual y anual?",
+        "answer": "Mensual €39.9/mes, anual €329/año (aproximadamente €27.4/mes), ahorrando €150 al año. Ambos tienen características idénticas, admitiendo carga ilimitada de contratos y generación de documentos."
+      },
+      "q4": {
+        "question": "¿Qué servicios incluye la personalización empresarial?",
+        "answer": "La personalización empresarial proporciona integración del sistema empresarial, gestión multiusuario, interfaces API, implementación privada, soporte dedicado y otros servicios personalizados, adecuados para clientes empresariales con necesidades especiales."
+      },
+      "q5": {
+        "question": "¿Cómo elijo el plan adecuado para mí?",
+        "answer": "Para consulta ocasional, elija la versión de prueba; para revisar 1-2 contratos, elija la versión profesional; para revisiones frecuentes de contratos, elija la membresía; para usuarios empresariales con necesidades personalizadas, elija la personalización empresarial."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Mi panel",
+    "subtitle": "Administre sus suscripciones y registros de uso",
+    "currentPlan": "Plan actual",
+    "usage": "Uso",
+    "validityRemaining": "Validez restante",
+    "unlimited": "Ilimitado",
+    "expired": "Expirado",
+    "timeRemaining": {
+      "days": "{{days}} días {{hours}} horas",
+      "hours": "{{hours}} horas"
+    },
+    "status": {
+      "active": "Activo",
+      "none": "Sin suscripción",
+      "expired": "Expirado"
+    },
+    "alerts": {
+      "expired": "Su suscripción ha expirado. Por favor renueve para continuar usando el servicio.",
+      "noSubscription": "Aún no tiene una suscripción activa.",
+      "viewPlans": "Ver planes"
+    },
+    "quickActions": {
+      "title": "Acciones rápidas",
+      "description": "Accesos directos a funciones de uso frecuente",
+      "startReview": "Iniciar revisión",
+      "buyBooster": "Comprar booster",
+      "upgrade": "Actualizar plan",
+      "permissions": "Demo de permisos"
+    },
+    "permissions": {
+      "title": "Permisos del plan actual",
+      "description": "Su plan {{tier}} incluye las siguientes características y permisos",
+      "available": "Disponible",
+      "unavailable": "No disponible",
+      "unlimited": "Ilimitado",
+      "wantMore": "¿Quiere más características?",
+      "upgradePrompt": "Actualice a un plan superior para desbloquear más características profesionales",
+      "viewPlans": "Ver planes"
+    }
+  },
+  "dashboardPage": {
+    "header": {
+      "title": "PolicyBridge PBA",
+      "subtitle": "Sistema de Revisión de Contratos IA",
+      "backToHome": "Volver al inicio",
+      "logout": "Cerrar sesión"
+    },
+    "userInfo": {
+      "title": "Información del usuario",
+      "expired": "Expirado",
+      "daysRemaining": "Expira en {{days}} días",
+      "companyName": "Nombre de la empresa",
+      "contactName": "Persona de contacto",
+      "phone": "Teléfono de contacto",
+      "notSet": "No establecido",
+      "editProfile": "Editar perfil"
+    },
+    "profile": {
+      "companyNameLabel": "Nombre de la empresa (Opcional)",
+      "companyNamePlaceholder": "Por favor ingrese el nombre de la empresa",
+      "contactNameLabel": "Nombre de contacto (Opcional)",
+      "contactNamePlaceholder": "Por favor ingrese el nombre de contacto",
+      "phoneLabel": "Teléfono de contacto (Opcional)",
+      "phonePlaceholder": "Por favor ingrese el teléfono de contacto",
+      "save": "Guardar",
+      "saving": "Guardando...",
+      "cancel": "Cancelar",
+      "phoneInvalidTitle": "Formato de número de teléfono inválido",
+      "phoneInvalidDescription": "Por favor ingrese un número de teléfono válido",
+      "saveSuccessTitle": "Perfil guardado",
+      "saveSuccessDescription": "Su información ha sido actualizada exitosamente",
+      "saveFailedTitle": "Error al guardar",
+      "saveFailedDescription": "Por favor intente nuevamente más tarde"
+    },
+    "subscription": {
+      "title": "Estado de suscripción",
+      "currentPlan": "Plan actual",
+      "expired": "Expirado",
+      "daysRemaining": "Días restantes",
+      "zeroDays": "0 días",
+      "permanent": "Permanente",
+      "daysCount": "{{days}} días",
+      "upgradePlan": "Actualizar plan",
+      "uploadContract": "Cargar contrato"
+    },
+    "contracts": {
+      "title": "Contratos revisados recientemente",
+      "description": "Ver sus registros de contratos cargados y revisados recientemente",
+      "noContracts": "Aún no hay registros de contratos",
+      "uploadFirst": "Cargar primer contrato",
+      "statusCompleted": "Completado",
+      "statusProcessing": "Procesando"
+    }
+  },
+  "orders": {
+    "title": "Mis pedidos",
+    "backToHome": "Volver al inicio",
+    "orderList": "Lista de pedidos",
+    "description": "Ver y administrar todos sus registros de pedidos",
+    "searchPlaceholder": "Buscar número de pedido o nombre de paquete...",
+    "filterStatus": "Filtrar estado",
+    "allStatus": "Todos los estados",
+    "noMatchingOrders": "No se encontraron pedidos coincidentes",
+    "noOrders": "Aún no hay registros de pedidos",
+    "tryAdjustFilters": "Por favor intente ajustar los criterios de búsqueda o filtros",
+    "ordersWillAppear": "Después de comprar un paquete, los registros de pedidos aparecerán aquí",
+    "browsePlans": "Explorar planes",
+    "status": {
+      "pending": "Pendiente",
+      "paid": "Pagado",
+      "cancelled": "Cancelado",
+      "refunded": "Reembolsado"
+    },
+    "table": {
+      "orderNumber": "Número de pedido",
+      "packageName": "Nombre del paquete",
+      "contracts": "Contratos",
+      "amount": "Monto",
+      "status": "Estado",
+      "purchaseTime": "Fecha de compra",
+      "actions": "Acciones",
+      "pieces": "pzs",
+      "includesBonus": "Incluye {{count}} bonificación",
+      "viewDetails": "Ver detalles"
+    },
+    "summary": {
+      "total": "Total {{count}} pedidos",
+      "totalAmount": "Monto total"
+    }
+  },
+  "orderDetail": {
+    "title": "Detalles del pedido",
+    "orderNumber": "Número de pedido: ",
+    "status": {
+      "pending": "Pendiente",
+      "paid": "Pagado",
+      "cancelled": "Cancelado",
+      "refunded": "Reembolsado"
+    },
+    "sections": {
+      "orderInfo": "Información del pedido",
+      "packageDetails": "Detalles del paquete"
+    },
+    "fields": {
+      "packageName": "Nombre del paquete",
+      "amount": "Monto del pedido",
+      "createdAt": "Fecha de creación",
+      "updatedAt": "Fecha de actualización",
+      "contractsCount": "Cantidad de contratos",
+      "actualReceived": "Recibido real",
+      "validityPeriod": "Período de validez: {{months}} meses"
+    },
+    "unlimited": "Ilimitado",
+    "contractsUnit": " pzs",
+    "payment": {
+      "title": "Pagar pedido",
+      "description": "Por favor complete el pago dentro de 24 horas, los pedidos vencidos se cancelarán automáticamente",
+      "payNow": "Pagar ahora",
+      "processing": "Procesando..."
+    },
+    "invoice": {
+      "title": "Descarga de factura",
+      "download": "Descargar factura",
+      "downloadInProgress": "Función de descarga de factura en desarrollo"
+    },
+    "actions": {
+      "backToOrders": "Volver a pedidos"
+    },
+    "errors": {
+      "loginRequired": "Por favor inicie sesión primero",
+      "invalidOrderId": "ID de pedido inválido",
+      "orderNotFound": "Pedido no encontrado",
+      "loadFailed": "Error al cargar el pedido",
+      "paymentFailed": "Pago fallido, por favor intente nuevamente más tarde",
+      "paymentFailedTitle": "Pago fallido",
+      "noPaymentUrl": "No se pudo obtener el enlace de pago",
+      "stripeNotConfigured": "Por favor contacte al administrador para configurar las claves de pago de Stripe. Consulte la documentación STRIPE_SETUP.md.",
+      "networkError": "Error de red, por favor verifique la conexión de red"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "search": "Buscar",
+    "pleaseLogin": "Por favor inicie sesión primero"
+  }
+}

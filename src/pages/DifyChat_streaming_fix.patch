@@ -1,0 +1,23 @@
+--- DifyChat.tsx.original
++++ DifyChat.tsx.fixed
+@@ -597,7 +597,7 @@
+                   // Handle different event types from Dify
+                   // Dify can send different event types:
+                   // - 'agent_message' or 'message': Contains incremental content
+-                  // - 'message_end': Marks the end of streaming
++                  // - 'message_end': Marks the end of streaming and contains conversation_id
+                   if (eventData.event === 'agent_message' || eventData.event === 'message') {
+                     // Try to get incremental content from different possible fields
+                     // Some Dify versions use 'delta', others use 'answer'
+@@ -620,9 +620,11 @@
+                         lastMessage.content = streamedContent;
+                       }
+                       return newMessages;
+                     });
++                  } else if (eventData.event === 'message_end') {
++                    // Stream ended, get conversation_id
+                     streamedConversationId = eventData.conversation_id || '';
+                     console.log('Stream ended, conversation_id:', streamedConversationId);
+                   }
+                 } catch (parseError) {
+                   console.error('Error parsing SSE data:', parseError);

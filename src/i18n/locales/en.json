@@ -1,0 +1,1113 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "aiReview": "AI Review",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "myOrders": "My Orders",
+    "buyBooster": "Buy Booster",
+    "logout": "Logout",
+    "loggingOut": "Logging out...",
+    "remaining": "{{count}} remaining"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "Manage all customer information and subscriptions",
+    "filters": "Search and Filters",
+    "searchPlaceholder": "Search by email, company, or contact name...",
+    "filterByPlan": "Filter by Plan",
+    "allPlans": "All Plans",
+    "freePlan": "Free",
+    "professionalPlan": "Professional",
+    "enterprisePlan": "Enterprise",
+    "email": "Email",
+    "company": "Company",
+    "contact": "Contact",
+    "phone": "Phone",
+    "plan": "Plan",
+    "status": "Status",
+    "role": "Role",
+    "registeredDate": "Registered Date",
+    "noResults": "No customers found",
+    "showing": "Showing",
+    "of": "of",
+    "customerDetails": "Customer Details",
+    "detailsDescription": "View complete customer information and usage statistics",
+    "usageStatistics": "Usage Statistics",
+    "totalConversations": "Total Conversations",
+    "usedQuota": "Used Quota",
+    "totalQuota": "Total Quota",
+    "orderHistory": "Order History",
+    "noOrders": "No order history",
+    "error": "Error",
+    "accessDenied": "Access Denied",
+    "pleaseLogin": "Please log in first",
+    "adminOnly": "This page is only accessible to administrators",
+    "failedToCheckPermissions": "Failed to check permissions",
+    "unexpectedError": "An unexpected error occurred",
+    "checkingPermissions": "Checking permissions...",
+    "securityNotice": "Security Notice",
+    "securityNoticeDesc": "You are viewing sensitive customer data. Please handle with care and comply with data protection regulations."
+  },
+  "hero": {
+    "title": "PolicyBridge.ai",
+    "subtitle": "Verify contract safety before signing",
+    "description": "PolicyBridge.ai provides the first line of compliance risk screening<br/>for cross-border contracts for SMEs without professional legal teams",
+    "startReview": "Start Review",
+    "getStarted": "Free Contract Risk Scan"
+  },
+  "advantage": {
+    "title": "Our Core Advantages",
+    "subtitle": "Unlike traditional LLMs, PolicyBridge.ai provides professional services based on real-time legal data",
+    "database": {
+      "title": "Contract risks often arise from outdated legal knowledge",
+      "subtitle": "",
+      "point1": "Compliance risks in cross-border contracts often stem from neglecting regulatory updates",
+      "point2": "Changes in sanctions, embargoes, or tariff rules can directly affect contract enforceability",
+      "point3": "Relying on outdated legal understanding may result in clauses being invalidated or restricted in disputes",
+      "point4": "Differences in rules between countries and regions are often mistakenly identified as 'industry practices'"
+    },
+    "difference": {
+      "title": "PolicyBridge.ai serves compliance risk assessment, not general AI Q&A",
+      "subtitle": "",
+      "point1": "Compliance risk assessment focuses on rule application, not text understanding",
+      "point2": "Cross-border compliance heavily relies on specific transaction contexts and is difficult to generalize",
+      "point3": "Answers without traceable sources are unsuitable for compliance decisions",
+      "point4": "Real risks often come from regulatory changes rather than contract wording"
+    },
+    "caseLaw": {
+      "title": "Many contract clause issues are not written in laws, but in disputes",
+      "subtitle": "",
+      "point1": "Numerous cross-border trade disputes show that risky clauses often emerge during performance or dispute stages",
+      "point2": "Common dispute types typically focus on contract breaches, liability allocation, payments, and quality issues",
+      "point3": "Similar contract structures may present completely different risk outcomes in different disputes",
+      "point4": "Combining legal practice experience helps identify easily overlooked risk points before signing"
+    }
+  },
+  "features": {
+    "title": "Core Features",
+    "smartReview": {
+      "title": "Smart Contract Review",
+      "description": "Upload contract documents, AI automatically identifies key clauses and conducts comprehensive review against the latest laws and regulations"
+    },
+    "riskAlert": {
+      "title": "Compliance Risk Alert",
+      "description": "Real-time monitoring of embargo lists and tariff policy changes, proactively alerting potential compliance risks"
+    },
+    "multiCountry": {
+      "title": "Multi-jurisdictional Comparison",
+      "description": "Support for comparative analysis of laws and regulations across multiple countries and regions to formulate optimal trade strategies"
+    },
+    "caseMatching": {
+      "title": "Intelligent Case Matching",
+      "description": "Based on a database of 1000+ real cases, AI intelligently analyzes your issues, quickly matches relevant precedents and solutions, making complex legal issues simple and clear"
+    }
+  },
+  "dataSources": {
+    "title": "Our Data Sources",
+    "subtitle": "Ensuring data authority and timeliness",
+    "international": {
+      "title": "International Organizations",
+      "item1": "United Nations Commission on International Trade Law (UNCITRAL)",
+      "item2": "World Trade Organization (WTO)",
+      "item3": "International Chamber of Commerce (ICC)",
+      "item4": "Financial Action Task Force (FATF)"
+    },
+    "official": {
+      "title": "National Authorities",
+      "item1": "Official websites of national customs administrations",
+      "item2": "Official websites of ministries of commerce",
+      "item3": "Import and export control authorities",
+      "item4": "Tariff commission announcements"
+    },
+    "updateFrequency": "<strong>Data Update Frequency:</strong> Daily automatic crawling updates | Real-time notifications for major policy changes"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "If you have any questions or need assistance, please feel free to contact us",
+    "email": "Contact Email",
+    "response": "We will respond to your email within 24 hours"
+  },
+  "footer": {
+    "description": "Professional cross-border trade compliance review platform",
+    "quickLinks": "Quick Links",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "disclaimer": "Disclaimer",
+    "contactUs": "Contact Us",
+    "copyright": "© 2024 PolicyBridge.ai. All rights reserved"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your PolicyBridge.ai account",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "loggingIn": "Signing in...",
+    "noAccount": "Don't have an account?",
+    "registerNow": "Register now",
+    "checkingStatus": "Checking login status...",
+    "redirecting": "Redirecting...",
+    "googleLogin": "Sign in with Google",
+    "googleLoggingIn": "Signing in with Google...",
+    "orDivider": "Or",
+    "errors": {
+      "emptyFields": "Please enter email and password",
+      "loginFailed": "Login failed, please try again",
+      "timeout": "Login timeout, please check your network connection",
+      "generic": "An error occurred during login",
+      "googleLoginFailed": "Google login failed, please try again"
+    },
+    "success": "Login successful!"
+  },
+  "register": {
+    "title": "Create Account",
+    "subtitle": "Create your PolicyBridge.ai account",
+    "email": "Email",
+    "password": "Password",
+    "passwordPlaceholder": "At least 6 characters",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter password",
+    "registerButton": "Register",
+    "registering": "Registering...",
+    "hasAccount": "Already have an account?",
+    "loginNow": "Sign in now",
+    "googleRegister": "Sign up with Google",
+    "googleRegistering": "Signing up with Google...",
+    "orDivider": "Or",
+    "agreeToTerms": {
+      "prefix": "I have read and agree to the",
+      "terms": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy"
+    },
+    "errors": {
+      "emptyFields": "Please fill in all fields",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "registerFailed": "Registration failed, please try again",
+      "emailExists": "This email is already registered",
+      "agreeToTerms": "Please agree to the Terms of Service and Privacy Policy first",
+      "googleRegisterFailed": "Google registration failed, please try again"
+    },
+    "success": "Registration successful! Please check your confirmation email"
+  },
+  "confirmDialog": {
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "upgradeDialog": {
+    "title": "Unlock File Upload Feature",
+    "description": "Upgrade to Professional or higher plans to upload contract files for intelligent analysis",
+    "trialVersion": "Trial Version",
+    "professionalVersion": "Professional and above",
+    "recommended": "Recommended",
+    "features": {
+      "basicChat": "Basic text conversation",
+      "noFileUpload": "Cannot upload contract files",
+      "noDeepAnalysis": "Cannot perform deep analysis",
+      "smartChat": "Intelligent text conversation",
+      "fileUpload": "Upload contract files (PDF/DOC/DOCX/TXT)",
+      "aiAnalysis": "AI deep contract analysis",
+      "unlimitedUsage": "Unlimited usage"
+    },
+    "benefits": {
+      "title": "File Upload Feature Benefits:",
+      "format": "Support multiple formats: PDF, DOC, DOCX, TXT",
+      "extraction": "AI automatically extracts key clauses and risk points",
+      "comparison": "Intelligent comparison and compliance checks",
+      "advice": "Professional legal advice and modification suggestions"
+    },
+    "cancelButton": "Cancel",
+    "upgradeButton": "Upgrade Now"
+  },
+  "featureGate": {
+    "locked": "Feature Locked",
+    "upgrade": "Upgrade to unlock more features",
+    "upgradeDescription": "Upgrade to a higher plan to unlock more professional features",
+    "viewPlans": "View Plans"
+  },
+  "subscriptionAlert": {
+    "expired": {
+      "title": "Subscription Expired",
+      "description": "Your {{plan}} subscription expired on {{date}}, please renew to continue using the service",
+      "renewButton": "Renew Now"
+    },
+    "expiring": {
+      "title": "Subscription Expiring Soon",
+      "description": "Your {{plan}} subscription expires in {{days}} days ({{date}}), please renew in time",
+      "renewButton": "Renew Now",
+      "dismissButton": "Remind Later"
+    },
+    "active": {
+      "title": "Subscription Status",
+      "description": "Your {{plan}} subscription expires in {{days}} days ({{date}})"
+    }
+  },
+  "usageIndicator": {
+    "monthlyUsage": "Monthly Usage",
+    "unlimited": "Unlimited",
+    "enterpriseUnlimited": "Enterprise users enjoy unlimited usage",
+    "exhausted": {
+      "title": "Monthly usage exhausted",
+      "buyBooster": "Buy Booster",
+      "upgradePlan": "Upgrade Plan"
+    },
+    "low": {
+      "title": "Low remaining usage",
+      "description": "{{remaining}} uses remaining, consider buying a booster or upgrading"
+    },
+    "remaining": "{{remaining}} uses remaining"
+  },
+  "dataManagement": {
+    "title": "Data Management",
+    "description": "Manage your conversation history and data retention settings",
+    "retentionPolicy": "Data Retention Policy",
+    "retentionOptions": {
+      "immediate": "Delete Immediately",
+      "30days": "Retain for 30 Days",
+      "permanent": "Retain Permanently"
+    },
+    "retentionDescriptions": {
+      "immediate": "Delete data immediately after conversation ends",
+      "30days": "Automatically delete conversation data after 30 days",
+      "permanent": "Retain all conversation data permanently"
+    },
+    "statistics": {
+      "conversations": "Conversation History",
+      "conversationsCount": "conversations",
+      "storage": "Storage",
+      "storageSize": "MB (approx. {{count}} messages)"
+    },
+    "actions": {
+      "settings": "Retention Settings",
+      "clearAll": "Clear All Data"
+    },
+    "settingsDialog": {
+      "title": "Data Retention Settings",
+      "description": "Choose your conversation data retention policy",
+      "options": {
+        "immediate": {
+          "title": "Delete Immediately",
+          "description": "Delete all related data immediately after conversation ends for maximum privacy"
+        },
+        "30days": {
+          "title": "Retain for 30 Days (Recommended)",
+          "description": "Retain conversation data for 30 days, balancing privacy and convenience"
+        },
+        "permanent": {
+          "title": "Retain Permanently",
+          "description": "Retain all conversation data permanently for easy access to history"
+        }
+      },
+      "cancelButton": "Cancel",
+      "saveButton": "Save Settings",
+      "saving": "Saving..."
+    },
+    "clearDialog": {
+      "title": "Confirm clearing all data?",
+      "description": "This will permanently delete all your conversation history, including all message content. This action cannot be undone.",
+      "confirmButton": "Confirm Clear",
+      "cancelButton": "Cancel"
+    },
+    "toasts": {
+      "settingsUpdated": "Data retention settings updated",
+      "settingsFailed": "Failed to save settings",
+      "dataCleared": "All history data cleared",
+      "clearFailed": "Failed to clear data"
+    }
+  },
+  "disclaimerDialog": {
+    "title": "Important Notice",
+    "description": "Please read the following carefully before using our platform services",
+    "serviceNature": {
+      "title": "Nature of Service",
+      "notConstitute": "The analysis provided by this platform does NOT constitute:",
+      "items": {
+        "legalOpinion": "Formal legal opinion",
+        "legalConsultation": "Professional legal consultation",
+        "legalEvidence": "Evidence directly usable in legal proceedings"
+      }
+    },
+    "recommendations": {
+      "title": "We strongly recommend:",
+      "items": {
+        "consultLawyer": "Consult a professional lawyer before signing important contracts",
+        "dueDiligence": "Conduct independent due diligence",
+        "notSoleDecision": "Do not use this platform's analysis as the sole decision-making basis"
+      }
+    },
+    "limitations": {
+      "title": "Technical Limitations:",
+      "items": {
+        "aiErrors": "AI technology may produce errors or omissions",
+        "dataDelay": "Data updates have time delays",
+        "noGuarantee": "Cannot guarantee 100% accuracy"
+      }
+    },
+    "dataRetention": {
+      "title": "Data Retention Method",
+      "description": "Please choose your preferred data retention method. You can change this at any time in settings",
+      "options": {
+        "immediate": {
+          "title": "Delete Immediately",
+          "description": "Delete all related data immediately after review"
+        },
+        "30days": {
+          "title": "Retain for 30 Days (Recommended)",
+          "description": "Automatically delete after 30 days, convenient for viewing history"
+        },
+        "permanent": {
+          "title": "Retain Permanently",
+          "description": "Retain permanently, can be deleted anytime in settings"
+        }
+      }
+    },
+    "agreement": {
+      "prefix": "I have read and agree to the",
+      "disclaimer": "Disclaimer",
+      "suffix": "and understand the nature and limitations of this platform's services"
+    },
+    "cancelButton": "Cancel",
+    "acceptButton": "Agree and Continue"
+  },
+  "difyChat": {
+    "backToHome": "Back to Home",
+    "newConversation": "New Conversation",
+    "conversationHistory": "Conversation History",
+    "selectAll": "Select All",
+    "deleteSelected": "Delete Selected ({{count}})",
+    "welcome": {
+      "title": "Welcome to PolicyBridge.AI!",
+      "subtitle": "To better solve your problems, please select your identity:",
+      "description": "After selecting your identity, we can serve you more precisely",
+      "identities": {
+        "seller": "Cross-border Seller/Supplier",
+        "buyer": "Cross-border Buyer",
+        "intermediary": "Channel/Intermediary",
+        "logistics": "Freight Forwarder (Logistics)",
+        "brand": "Brand/Technology (IP/OEM)",
+        "warehouse": "Overseas Warehouse (WMS/3PL)",
+        "finance": "Finance/Payment (Financier)"
+      }
+    },
+    "thinking": {
+      "identityConfirmation": "Identity confirmation",
+      "understanding": "Understanding your question...",
+      "callingKnowledge": "Accessing knowledge base...",
+      "analyzingRegulations": "Analyzing relevant regulations...",
+      "generating": "Generating response...",
+      "almostDone": "Almost done..."
+    },
+    "fileUpload": {
+      "uploading": "Uploading file...",
+      "uploadSuccess": "File uploaded successfully",
+      "uploadFailed": "File upload failed, please try again",
+      "invalidFormat": "Only PDF, DOC, DOCX, TXT formats are supported",
+      "fileTooLarge": "File size cannot exceed 10MB",
+      "fileRemoved": "File removed",
+      "downloadFile": "Download file"
+    },
+    "input": {
+      "placeholder": "Enter your question...",
+      "placeholderWithFile": "Enter your question (file attached)...",
+      "placeholderSelectIdentity": "Please select your identity first...",
+      "placeholderRadarForm": "Please fill in the funding information in the form above..."
+    },
+    "messages": {
+      "sendSuccess": "Message sent successfully",
+      "sendFailed": "Failed to send message, please check network connection",
+      "loadFailed": "Failed to load conversation",
+      "deleteFailed": "Failed to delete conversation",
+      "deleteSuccess": "Conversation deleted",
+      "batchDeleteSuccess": "Deleted {{count}} conversations",
+      "batchDeleteFailed": "Batch delete failed",
+      "analysisComplete": "Analysis complete",
+      "analysisFailed": "Analysis failed, please try again",
+      "usingFreeAPI": "Using free API for analysis...",
+      "usingPaidAPI": "Using paid API for analysis..."
+    },
+    "confirmDelete": {
+      "title": "Confirm delete conversation?",
+      "description": "Deleting the conversation will permanently delete all conversation content, including contract data. This action cannot be undone.",
+      "confirmButton": "Confirm Delete",
+      "cancelButton": "Cancel"
+    },
+    "confirmBatchDelete": {
+      "title": "Confirm batch delete?",
+      "description": "Are you sure you want to delete the selected {{count}} conversations? Deleting conversations will permanently delete all conversation content, including contract data. This action cannot be undone.",
+      "confirmButton": "Confirm Delete",
+      "cancelButton": "Cancel"
+    },
+    "conversationTitles": {
+      "seller": "Supplier Consultation",
+      "buyer": "Buyer Consultation",
+      "intermediary": "Intermediary Consultation",
+      "logistics": "Logistics Consultation",
+      "brand": "Brand Consultation",
+      "warehouse": "Warehouse Consultation",
+      "finance": "Finance Consultation",
+      "default": "Conversation"
+    }
+  },
+  "aiReview": {
+    "redirecting": "Redirecting to AI conversation window..."
+  },
+  "pricing": {
+    "title": "Choose the Right Plan for You",
+    "subtitle": "From trial to enterprise customization, meeting different legal service needs",
+    "free": "Free",
+    "contactUs": "Contact Us",
+    "unlimited": "Unlimited",
+    "fullCaseFollowUp": "Unlimited follow-up for full case",
+    "freeUse": "Free use",
+    "processing": "Processing...",
+    "buyNow": "Buy Now",
+    "viewDetailedComparison": "View detailed feature comparison",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "perWeek": "/week",
+    "orderCreated": "Order created successfully",
+    "tiers": {
+      "free": {
+        "name": "Trial Version (Free)",
+        "period": "",
+        "unitCost": "Free trial",
+        "features": {
+          "role": "Role: Legal / Compliance Consulting",
+          "uploadSupport": "✅ Contract upload supported",
+          "riskAssessment": "✅ Contract risk assessment and warnings",
+          "noConclusion": "❌ No compliance judgment conclusions",
+          "noSolution": "❌ No contract warning solutions"
+        }
+      },
+      "professional": {
+        "name": "Weekly Member",
+        "period": "Weekly",
+        "unitCost": "€9.9/week",
+        "features": {
+          "positioning": "🔑 Core: Short-term, intensive compliance risk assessment tool",
+          "legalConsulting": "✅ Legal / Compliance Consulting",
+          "uploadSupport": "✅ Contract upload supported",
+          "fullRiskJudgment": "✅ Complete compliance risk assessment",
+          "riskDetails": "✅ Risk points + Risk types + Risk reasons",
+          "decisionReference": "✅ Decision reference before signing",
+          "caseAnalysis": "✅ Similar case analysis in database"
+        }
+      },
+      "monthly": {
+        "name": "Monthly Member",
+        "period": "Monthly",
+        "unitCost": "€39.9/month",
+        "features": {
+          "positioning": "🔑 Core: Stable compliance assessment tool",
+          "legalConsulting": "✅ Legal / Compliance Consulting",
+          "uploadSupport": "✅ Contract upload supported",
+          "fullRiskJudgment": "✅ Complete compliance risk assessment",
+          "riskDetails": "✅ Risk points + Risk types + Risk reasons",
+          "decisionReference": "✅ Decision reference before signing",
+          "caseAnalysis": "✅ Similar case analysis in database",
+          "higherStability": "✅ Higher system stability and priority by default",
+          "dedicatedSupport": "✅ Dedicated customer support"
+        }
+      },
+      "yearly": {
+        "name": "Yearly Member",
+        "period": "Yearly",
+        "unitCost": "€329/year",
+        "features": {
+          "positioning": "🔑 Core: Compliance risk assessment as part of long-term workflow",
+          "legalConsulting": "✅ Legal / Compliance Consulting",
+          "uploadSupport": "✅ Contract upload supported",
+          "fullRiskJudgment": "✅ Complete compliance risk assessment",
+          "riskDetails": "✅ Risk points + Risk types + Risk reasons",
+          "decisionReference": "✅ Decision reference before signing",
+          "caseAnalysis": "✅ Similar case analysis in database",
+          "higherStability": "✅ Higher system stability and priority by default",
+          "longTermBusiness": "✅ Suitable for long-term cross-border business",
+          "dedicatedSupport": "✅ Dedicated customer support"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise Customization",
+        "period": "Contact us",
+        "unitCost": "Custom pricing",
+        "features": {
+          "positioning": "Core: Enterprise-level customized solutions",
+          "systemIntegration": "Enterprise system integration",
+          "multiUser": "Multi-user account management",
+          "apiIntegration": "API interface integration",
+          "privateDeployment": "Private data deployment",
+          "dedicatedSupport": "Dedicated customer support",
+          "customDevelopment": "Custom feature development",
+          "sla": "SLA service agreement",
+          "support247": "7×24 technical support"
+        }
+      }
+    },
+    "toasts": {
+      "freeNoNeed": "Trial version does not require purchase",
+      "freeDescription": "You can directly use the trial version for text legal consultation",
+      "enterpriseCustom": "Enterprise customization",
+      "enterpriseDescription": "Please contact our sales team for customized solutions",
+      "loginRequired": "Please log in first",
+      "purchaseFailed": "Purchase failed",
+      "tierNotFound": "Package not found",
+      "orderFailed": "Failed to create order",
+      "retryLater": "Please try again later",
+      "sessionExpired": "Session expired, please log in again",
+      "systemInitializing": "System initializing, please try again later",
+      "networkError": "Network error, please check your connection",
+      "permissionDenied": "Permission denied, please log in again"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What is the difference between trial and paid versions?",
+        "answer": "The trial version only supports text legal consultation, without contract upload and Word document generation. Paid versions provide complete contract review, risk analysis, and document generation functions."
+      },
+      "q2": {
+        "question": "What scenarios is the Professional version suitable for?",
+        "answer": "The Professional version is suitable for users who occasionally need contract review, charged per contract at €9.9, supporting unlimited follow-up and revision generation, suitable for individuals or small transactions."
+      },
+      "q3": {
+        "question": "What is the difference between monthly and yearly membership?",
+        "answer": "Monthly €39.9/month, yearly €329/year (about €27.4/month), annual payment saves €150. Functions are identical, both support unlimited contract upload and document generation."
+      },
+      "q4": {
+        "question": "What services does enterprise customization include?",
+        "answer": "Enterprise customization provides enterprise system integration, multi-user management, API interfaces, private deployment, dedicated support and other customized services, suitable for enterprise customers with special needs."
+      },
+      "q5": {
+        "question": "How to choose the right package?",
+        "answer": "For occasional consultation choose trial version; for reviewing 1-2 contracts choose Professional version; for frequent contract review choose membership; for enterprise users with custom needs choose enterprise customization."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "My Dashboard",
+    "subtitle": "Manage your subscriptions and usage records",
+    "currentPlan": "Current Plan",
+    "usage": "Usage",
+    "validityRemaining": "Validity Remaining",
+    "unlimited": "Unlimited",
+    "expired": "Expired",
+    "timeRemaining": {
+      "days": "{{days}} days {{hours}} hours",
+      "hours": "{{hours}} hours"
+    },
+    "status": {
+      "active": "Active",
+      "none": "No subscription",
+      "expired": "Expired"
+    },
+    "alerts": {
+      "expired": "Your subscription has expired. Please renew to continue using the service.",
+      "noSubscription": "You don't have any active subscription yet.",
+      "viewPlans": "View Plans"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "description": "Frequently used function shortcuts",
+      "startReview": "Start Review",
+      "buyBooster": "Buy Booster",
+      "upgrade": "Upgrade Plan",
+      "permissions": "Permissions Demo"
+    },
+    "permissions": {
+      "title": "Current Plan Permissions",
+      "description": "Your {{tier}} plan includes the following features and permissions",
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "unlimited": "Unlimited",
+      "wantMore": "Want more features?",
+      "upgradePrompt": "Upgrade to a higher plan to unlock more professional features",
+      "viewPlans": "View Plans"
+    }
+  },
+  "dashboardPage": {
+    "header": {
+      "title": "PolicyBridge PBA",
+      "subtitle": "AI Contract Review System",
+      "backToHome": "Back to Home",
+      "logout": "Logout"
+    },
+    "userInfo": {
+      "title": "User Information",
+      "expired": "Expired",
+      "daysRemaining": "Expires in {{days}} days",
+      "companyName": "Company Name",
+      "contactName": "Contact Person",
+      "phone": "Contact Phone",
+      "notSet": "Not Set",
+      "editProfile": "Edit Profile"
+    },
+    "profile": {
+      "companyNameLabel": "Company Name (Optional)",
+      "companyNamePlaceholder": "Please enter company name",
+      "contactNameLabel": "Contact Name (Optional)",
+      "contactNamePlaceholder": "Please enter contact name",
+      "phoneLabel": "Contact Phone (Optional)",
+      "phonePlaceholder": "Please enter contact phone",
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "phoneInvalidTitle": "Invalid phone number format",
+      "phoneInvalidDescription": "Please enter a valid phone number",
+      "saveSuccessTitle": "Profile saved",
+      "saveSuccessDescription": "Your information has been successfully updated",
+      "saveFailedTitle": "Save failed",
+      "saveFailedDescription": "Please try again later"
+    },
+    "subscription": {
+      "title": "Subscription Status",
+      "currentPlan": "Current Plan",
+      "expired": "Expired",
+      "daysRemaining": "Days Remaining",
+      "zeroDays": "0 days",
+      "permanent": "Permanent",
+      "daysCount": "{{days}} days",
+      "upgradePlan": "Upgrade Plan",
+      "uploadContract": "Upload Contract"
+    },
+    "contracts": {
+      "title": "Recently Reviewed Contracts",
+      "description": "View your recently uploaded and reviewed contract records",
+      "noContracts": "No contract records yet",
+      "uploadFirst": "Upload first contract",
+      "statusCompleted": "Completed",
+      "statusProcessing": "Processing"
+    }
+  },
+  "orders": {
+    "title": "My Orders",
+    "backToHome": "Back to Home",
+    "orderList": "Order List",
+    "description": "View and manage all your order records",
+    "searchPlaceholder": "Search order number or package name...",
+    "filterStatus": "Filter Status",
+    "allStatus": "All Status",
+    "noMatchingOrders": "No matching orders found",
+    "noOrders": "No order records yet",
+    "tryAdjustFilters": "Please try adjusting search criteria or filters",
+    "ordersWillAppear": "After purchasing a package, order records will appear here",
+    "browsePlans": "Browse Plans",
+    "status": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded"
+    },
+    "table": {
+      "orderNumber": "Order Number",
+      "packageName": "Package Name",
+      "contracts": "Contracts",
+      "amount": "Amount",
+      "status": "Status",
+      "purchaseTime": "Purchase Date",
+      "actions": "Actions",
+      "pieces": "pcs",
+      "includesBonus": "Includes {{count}} bonus",
+      "viewDetails": "View Details"
+    },
+    "summary": {
+      "total": "Total {{count}} orders",
+      "totalAmount": "Total Amount"
+    }
+  },
+  "orderDetail": {
+    "title": "Order Details",
+    "orderNumber": "Order Number: ",
+    "status": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded"
+    },
+    "sections": {
+      "orderInfo": "Order Information",
+      "packageDetails": "Package Details"
+    },
+    "fields": {
+      "packageName": "Package Name",
+      "amount": "Order Amount",
+      "createdAt": "Created Date",
+      "updatedAt": "Updated Date",
+      "contractsCount": "Contracts Count",
+      "actualReceived": "Actually Received",
+      "validityPeriod": "Validity Period: {{months}} months"
+    },
+    "unlimited": "Unlimited",
+    "contractsUnit": " pcs",
+    "payment": {
+      "title": "Pay Order",
+      "description": "Please complete payment within 24 hours, overdue orders will be automatically cancelled",
+      "payNow": "Pay Now",
+      "processing": "Processing..."
+    },
+    "invoice": {
+      "title": "Invoice Download",
+      "download": "Download Invoice",
+      "downloadInProgress": "Invoice download function in development"
+    },
+    "actions": {
+      "backToOrders": "Back to Orders"
+    },
+    "errors": {
+      "loginRequired": "Please log in first",
+      "invalidOrderId": "Invalid order ID",
+      "orderNotFound": "Order not found",
+      "loadFailed": "Failed to load order",
+      "paymentFailed": "Payment failed, please try again later",
+      "paymentFailedTitle": "Payment Failed",
+      "noPaymentUrl": "Failed to retrieve payment link",
+      "stripeNotConfigured": "Please contact administrator to configure Stripe payment keys. See STRIPE_SETUP.md documentation.",
+      "networkError": "Network error, please check network connection"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search",
+    "pleaseLogin": "Please log in first"
+  },
+  "termsOfService": {
+    "title": "PolicyBridge.ai Terms of Service",
+    "lastUpdated": "Last Updated: December 2024",
+    "backToHome": "Back to Home",
+    "section1": {
+      "title": "1. Service Description",
+      "subtitle1": "1.1 Nature of Service",
+      "content1": "PolicyBridge.ai (hereinafter referred to as \"the Platform\" or \"we\") is an AI-powered cross-border trade compliance review assistance tool. Services provided by the Platform include but are not limited to:",
+      "list1": [
+        "Automated analysis of contract documents",
+        "Reference queries for laws and regulations",
+        "Preliminary identification of compliance risks"
+      ],
+      "subtitle2": "1.2 Important Statement",
+      "warning": "All analysis results and recommendations provided by the Platform are for reference only and do not constitute formal legal opinions or professional consultation.",
+      "content2": "Before making any legal or business decisions, users should:",
+      "list2": [
+        "Consult a licensed professional lawyer",
+        "Conduct independent due diligence",
+        "Make judgments based on specific circumstances"
+      ]
+    },
+    "section2": {
+      "title": "2. Disclaimer",
+      "subtitle1": "2.1 Service Limitations",
+      "item1": "Accuracy Limitations: Although we strive to keep our database updated in real-time, we do not guarantee that all information is 100% accurate, complete, or current.",
+      "item2": "Technical Limitations: AI technology has inherent limitations and may produce misjudgments or omissions.",
+      "item3": "Scope Limitations: The Platform primarily targets international trade compliance scenarios and may not be applicable to all legal fields.",
+      "subtitle2": "2.2 Liability Limitations",
+      "content": "To the maximum extent permitted by law:",
+      "list": [
+        "We are not liable for any direct, indirect, incidental, special, or consequential damages arising from the use of this service",
+        "We are not responsible for the accuracy or availability of third-party data sources",
+        "We are not liable for decisions made based on recommendations from the Platform"
+      ],
+      "subtitle3": "2.3 User Responsibilities",
+      "userContent": "Users should:",
+      "userList": [
+        "Bear all risks of using this service",
+        "Be responsible for the content of uploaded documents",
+        "Comply with all applicable laws and regulations",
+        "Not use the Platform's analysis results as the sole basis for decision-making"
+      ]
+    },
+    "section3": {
+      "title": "3. Data Privacy and Security",
+      "subtitle1": "3.1 Data Collection",
+      "content1": "Information we collect includes:",
+      "list1": [
+        "Account information (email, password, etc.)",
+        "Uploaded contract documents",
+        "Usage behavior data",
+        "Technical log information"
+      ],
+      "subtitle2": "3.2 Data Usage",
+      "content2": "Your data will be used for:",
+      "list2": [
+        "Providing and improving services",
+        "AI model training (using anonymized data only)",
+        "Technical support and troubleshooting",
+        "Compliance with legal requirements"
+      ],
+      "subtitle3": "3.3 Data Protection",
+      "content3": "Security measures we implement:",
+      "list3": [
+        "Transmission and storage encryption",
+        "Access control and permission management",
+        "Regular security audits",
+        "Data backup and disaster recovery"
+      ],
+      "subtitle4": "3.4 Data Retention",
+      "retention1": "Default retention period: Review records are automatically deleted after 30 days",
+      "retention2": "Immediate deletion: Users can choose to delete immediately after review completion",
+      "retention3": "Long-term retention: Users can choose long-term storage (requires explicit consent)",
+      "subtitle5": "3.5 User Rights",
+      "content5": "You have the right to:",
+      "list5": [
+        "View all your data",
+        "Export your data",
+        "Delete your data",
+        "Withdraw consent"
+      ]
+    },
+    "section4": {
+      "title": "4. Intellectual Property",
+      "subtitle1": "4.1 Platform Rights",
+      "content1": "All content on the Platform (including but not limited to software, interface design, text, images) is protected by intellectual property laws.",
+      "subtitle2": "4.2 User Content",
+      "list": [
+        "You retain ownership of uploaded content",
+        "You grant us a license to process this content to provide services",
+        "We will not use your content for unauthorized purposes"
+      ]
+    },
+    "section5": {
+      "title": "5. Contact Us",
+      "content": "For any questions or concerns, please contact:",
+      "email": "Email:",
+      "response": "We will respond to your inquiry within 24 hours"
+    },
+    "agreement": "By using the Platform, you confirm that you have read, understood, and agree to comply with these Terms of Service."
+  },
+  "privacyPolicy": {
+    "title": "PolicyBridge.ai Privacy Policy",
+    "effectiveDate": "Effective Date: December 2024",
+    "backToHome": "Back to Home",
+    "intro": {
+      "title": "Introduction",
+      "content": "PolicyBridge.ai (\"we\", \"our\", or \"the Platform\") values your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information."
+    },
+    "section1": {
+      "title": "1. Information We Collect",
+      "subtitle1": "1.1 Information You Provide",
+      "item1": "Account Information: Email address, password (encrypted storage)",
+      "item2": "Contract Documents: Files you upload for review",
+      "item3": "Contact Information: Information you provide through customer service",
+      "subtitle2": "1.2 Automatically Collected Information",
+      "item4": "Usage Data: Access times, feature usage, click behavior",
+      "item5": "Device Information: Browser type, operating system, IP address",
+      "item6": "Technical Logs: Error logs, performance data"
+    },
+    "section2": {
+      "title": "2. How We Use Information",
+      "subtitle1": "2.1 Service Provision",
+      "list1": [
+        "Process and analyze your uploaded contract documents",
+        "Provide compliance review results and recommendations",
+        "Maintain and improve service quality"
+      ],
+      "subtitle2": "2.2 Improvement and Research",
+      "highlight": "Anonymized Data Analysis: We may use anonymized data to improve AI model performance, optimize user experience, and develop new features.",
+      "commitment": "Important Commitment: Data used for training is fully anonymized and cannot identify individuals."
+    },
+    "section3": {
+      "title": "3. Data Security Measures",
+      "subtitle1": "3.1 Technical Protection",
+      "item1": "Encrypted Transmission: All data transmission uses TLS/SSL encryption",
+      "item2": "Encrypted Storage: Sensitive data is encrypted in the database",
+      "item3": "Access Control: Strict permission management and authentication",
+      "item4": "Security Audits: Regular security assessments and penetration testing",
+      "subtitle2": "3.2 Third-Party Security",
+      "content": "We use Supabase as our database service provider",
+      "compliance": "Supabase complies with SOC 2 Type II, ISO 27001, and other security standards",
+      "evaluation": "All third-party service providers undergo rigorous security evaluation"
+    },
+    "section4": {
+      "title": "4. Data Retention and Deletion",
+      "subtitle1": "4.1 Retention Periods",
+      "tableHeaders": [
+        "Data Type",
+        "Default Retention Period",
+        "Description"
+      ],
+      "tableRows": [
+        [
+          "Account Information",
+          "During account existence",
+          "Deleted within 30 days after account closure"
+        ],
+        [
+          "Contract Documents",
+          "30 days",
+          "Can choose immediate deletion or long-term retention"
+        ],
+        [
+          "Review Records",
+          "30 days",
+          "Deleted synchronously with documents"
+        ],
+        [
+          "Usage Logs",
+          "90 days",
+          "Used for troubleshooting and security analysis"
+        ]
+      ],
+      "subtitle2": "4.2 Data Deletion Options",
+      "content": "You can choose:",
+      "option1": "Immediate Deletion: Delete all related data immediately after review completion",
+      "option2": "30-Day Retention: Automatically delete after 30 days (default)",
+      "option3": "Long-Term Retention: Actively choose long-term storage (can be deleted anytime)",
+      "subtitle3": "4.3 Deletion Methods",
+      "methods": [
+        "Select \"Delete Immediately\" on the review completion page",
+        "Delete individual records in history",
+        "Batch delete all data in account settings",
+        "Contact customer service to request deletion"
+      ]
+    },
+    "section5": {
+      "title": "5. Your Privacy Rights",
+      "right1": "Right to Access: You have the right to view all personal information we hold about you",
+      "right2": "Right to Rectification: You can update or correct inaccurate personal information",
+      "right3": "Right to Deletion: You can request deletion of your personal information",
+      "right4": "Right to Export: You can export your data in common formats",
+      "right5": "Right to Withdraw Consent: You can withdraw previously given consent at any time"
+    },
+    "section6": {
+      "title": "6. Contact Us",
+      "content": "For any questions about this Privacy Policy, please contact:",
+      "email": "Email:",
+      "response": "Response time: Within 24 hours"
+    },
+    "agreement": "By using the Platform, you confirm that you have read and understood this Privacy Policy."
+  },
+  "disclaimer": {
+    "title": "PolicyBridge.ai Disclaimer",
+    "lastUpdated": "Last Updated: December 2024",
+    "backToHome": "Back to Home",
+    "importantNotice": "Important Notice: Please read this disclaimer carefully before using this service",
+    "section1": {
+      "title": "1. Nature of Service Statement",
+      "subtitle1": "1.1 Auxiliary Tool Positioning",
+      "content1": "PolicyBridge.ai is an AI-powered auxiliary reference tool designed to help users preliminarily identify potential compliance issues in cross-border trade contracts.",
+      "subtitle2": "1.2 Not Professional Legal Services",
+      "warning": "All analysis, recommendations, and information provided by the Platform do NOT constitute:",
+      "notConstitute": [
+        "Formal legal opinions",
+        "Professional legal consultation",
+        "Attorney-client relationship",
+        "Evidence directly usable in legal proceedings"
+      ],
+      "subtitle3": "1.3 Necessity of Professional Advice",
+      "recommend": "We strongly recommend:",
+      "recommendations": [
+        "Consult a professional lawyer before signing important contracts",
+        "Conduct independent due diligence for matters involving significant interests",
+        "Make decisions based on specific circumstances and latest regulations",
+        "Do not use the Platform's analysis as the sole basis for decision-making"
+      ]
+    },
+    "section2": {
+      "title": "2. Data Accuracy Statement",
+      "subtitle1": "2.1 Best Efforts Obligation",
+      "commitment": "We commit to:",
+      "commitments": [
+        "Regularly update legal and regulatory databases",
+        "Obtain information from official authoritative sources",
+        "Continuously improve AI model accuracy"
+      ],
+      "subtitle2": "2.2 Accuracy Limitations",
+      "cannot": "However, we cannot guarantee:",
+      "limitations": [
+        "All information is 100% accurate, complete, or current",
+        "Coverage of all laws in all countries and regions",
+        "AI analysis results are completely error-free"
+      ]
+    },
+    "section3": {
+      "title": "3. Technical Limitations Statement",
+      "subtitle1": "3.1 AI Technology Limitations",
+      "content1": "Artificial intelligence technology has inherent limitations:",
+      "limits": [
+        "May produce misjudgments or omissions",
+        "Understanding of complex situations may be incomplete",
+        "Cannot replace human professional judgment"
+      ],
+      "subtitle2": "3.2 Scope Limitations",
+      "suitableFor": "The Platform is primarily designed for:",
+      "suitable": [
+        "International trade contracts",
+        "Cross-border transaction compliance",
+        "Customs and trade regulations"
+      ],
+      "notSuitableFor": "May not be suitable for:",
+      "notSuitable": [
+        "Specialized contracts in special industries",
+        "Complex multi-party agreements",
+        "Highly customized legal documents"
+      ]
+    },
+    "section4": {
+      "title": "4. Liability Limitations",
+      "content": "To the maximum extent permitted by law, we are not liable for:",
+      "noLiability": [
+        "Contract disputes arising from use of this service",
+        "Business decisions made based on the Platform's recommendations",
+        "Unidentified compliance risks",
+        "Losses due to data inaccuracies",
+        "Loss of profits, business opportunities, or goodwill"
+      ]
+    },
+    "section5": {
+      "title": "5. User Responsibilities",
+      "content": "Users should:",
+      "responsibilities": [
+        "Take full responsibility for their own decisions",
+        "Conduct independent risk assessments",
+        "Seek professional advice",
+        "Comply with all applicable laws",
+        "Use the Platform as a reference tool",
+        "Not over-rely on AI analysis"
+      ]
+    },
+    "section6": {
+      "title": "6. Data Security Statement",
+      "content": "We take reasonable security measures to protect your data, but:",
+      "limitations": [
+        "Cannot guarantee absolute security",
+        "Not liable for security incidents such as hacker attacks",
+        "Recommend users take their own security measures"
+      ],
+      "privacyTitle": "Privacy Protection Recommendations:",
+      "privacyTips": [
+        "Please review our Privacy Policy for details",
+        "Recommend desensitizing sensitive information before uploading",
+        "Can choose to delete data immediately after review"
+      ]
+    },
+    "section7": {
+      "title": "7. Contact Information",
+      "content": "For any questions about this disclaimer, please contact:",
+      "email": "Email:",
+      "response": "Response time: Within 24 hours"
+    },
+    "reminder": {
+      "title": "Important Reminder",
+      "content": "Before using this service, please ensure you have:",
+      "checklist": [
+        "Read and understood this disclaimer in full",
+        "Understood the nature and limitations of the Platform's services",
+        "Known when to consult a professional lawyer",
+        "Agreed to bear the risks of using this service"
+      ]
+    },
+    "finalAgreement": "By using the Platform, you confirm that you have read, understood, and accepted all terms of this disclaimer."
+  }
+}

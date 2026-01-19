@@ -1,0 +1,16 @@
+import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/lib/supabase';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { toast } from 'sonner';
+import { Send, Upload, Loader2, MessageSquare, Trash2, ArrowLeft, User, Scale, X, FileText, File, Download, ExternalLink } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import ConfirmDialog from '@/components/ConfirmDialog';
+import { UpgradeDialog } from '@/components/UpgradeDialog';
+import { checkFeatureAccess } from '@/lib/permissions';
+import { stripMarkdown } from '@/lib/markdownUtils';
