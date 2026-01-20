@@ -206,3 +206,21 @@
   animation: aurora-5 20s ease-in-out infinite;
   animation-delay: 3s;
 }
+/* 无限滚动轮播动画 */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-infinite {
+  animation: scroll-infinite 60s linear infinite;
+}
+
+/* 鼠标悬停时暂停动画 */
+.animate-scroll-infinite:hover {
+  animation-play-state: paused;
+}

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail } from 'lucide-react';
+import { Mail, CheckCircle2, Zap, Shield, FileText, BarChart3, Clock } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
 export default function Index() {
@@ -13,8 +13,50 @@ export default function Index() {
   // Check if current language is Chinese
   const isChineseLanguage = i18n.language === 'zh' || i18n.language === 'zh-CN';
 
+  // 社会证明数据
+  const testimonials = [
+    { name: '张先生', company: '科技公司', avatar: '/images/testimonial-1.png' },
+    { name: '李女士', company: '律师事务所', avatar: '/images/testimonial-2.png' },
+    { name: '王先生', company: '投资公司', avatar: '/images/testimonial-3.png' },
+    { name: '陈女士', company: '企业集团', avatar: '/images/testimonial-4.png' },
+  ];
+
+  // 特性数据
+  const features = [
+    {
+      icon: <Zap className="h-8 w-8" />,
+      title: '快速审查',
+      description: '秒级完成合同分析'
+    },
+    {
+      icon: <Shield className="h-8 w-8" />,
+      title: '精准识别',
+      description: 'AI 驱动的风险检测'
+    },
+    {
+      icon: <FileText className="h-8 w-8" />,
+      title: '多国法律',
+      description: '支持多个司法管辖区'
+    },
+    {
+      icon: <Clock className="h-8 w-8" />,
+      title: '实时更新',
+      description: '最新法律法规同步'
+    },
+    {
+      icon: <BarChart3 className="h-8 w-8" />,
+      title: '详细报告',
+      description: '完整的风险分析报告'
+    },
+    {
+      icon: <CheckCircle2 className="h-8 w-8" />,
+      title: '数据安全',
+      description: '企业级加密保护'
+    },
+  ];
+
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative overflow-hidden">
       {/* 深蓝 + 金色配色的背景 */}
       <div className="fixed inset-0 -z-10 overflow-hidden bg-white">
         {/* 浅色渐变基底 */}
@@ -35,81 +77,265 @@ export default function Index() {
 
       <Navbar />
       
-      {/* Hero Section - 新设计 */}
-      <section className="container mx-auto px-4 py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          {/* 左侧 - 文字内容 */}
-          <div className="space-y-8">
-            {/* Logo */}
-            <div className="flex items-center gap-3">
-              <img 
-                src="/images/pba-logo-transparent.png" 
-                alt="PBA Logo" 
-                className="h-16 w-auto" 
-              />
-            </div>
-
-            {/* 标题 */}
-            <div className="space-y-4">
-              <h1 className="text-6xl font-bold text-slate-900 leading-tight">
-                {t('hero.title')}
-              </h1>
-              <p className="text-2xl font-semibold text-slate-700">
-                {t('hero.subtitle')}
-              </p>
-            </div>
-
-            {/* 描述 */}
-            <p className="text-lg text-slate-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('hero.description') }} />
-
-            {/* 税务风险提示 - 仅中文显示 */}
-            {isChineseLanguage && (
-              <div className="p-4 bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-400 rounded">
-                <p className="text-sm font-semibold text-amber-900">
-                  ✨ {t('hero.taxPhase4')}
-                </p>
-              </div>
-            )}
-
-            {/* CTA 按钮 */}
-            <div className="flex gap-4 pt-4">
-              {user ? (
-                <Link to="/dify-chat">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-950 hover:to-blue-800 text-white shadow-lg shadow-blue-900/30 px-8 py-6 text-lg font-semibold rounded-lg">
-                    {t('hero.startReview')}
-                  </Button>
-                </Link>
-              ) : (
-                <>
-                  <Link to="/register">
-                    <Button size="lg" className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-900 shadow-lg shadow-amber-400/30 px-8 py-6 text-lg font-semibold rounded-lg">
-                      {t('hero.getStarted')}
-                    </Button>
-                  </Link>
-                  <Link to="/login">
-                    <Button size="lg" variant="outline" className="border-2 border-slate-900 text-slate-900 hover:bg-slate-50 px-8 py-6 text-lg font-semibold rounded-lg">
-                      {t('nav.login')}
-                    </Button>
-                  </Link>
-                </>
-              )}
-            </div>
+      {/* Hero Section - 极简风格 */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* 超大标题 - 高级字体效果 */}
+          <div className="space-y-4">
+            <h1 className="text-7xl md:text-8xl font-black text-slate-900 leading-tight tracking-tight">
+              <span className="block">在签署合同前</span>
+              <span className="block">
+                <span className="bg-gradient-to-r from-blue-900 via-amber-500 to-blue-900 bg-clip-text text-transparent">
+                  验证风险
+                </span>
+              </span>
+            </h1>
+            
+            <p className="text-2xl md:text-3xl font-light text-slate-600 leading-relaxed tracking-wide">
+              PolicyBridge AI 为没有专业法务团队的中小跨国企业，提供跨境合同的第一道合规风险筛查
+            </p>
           </div>
 
-          {/* 右侧 - 浅金色背景区域（可放置插图） */}
+          {/* 税务风险提示 - 仅中文显示 */}
+          {isChineseLanguage && (
+            <div className="p-6 bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-400 rounded-lg max-w-2xl mx-auto">
+              <p className="text-lg font-semibold text-amber-900">
+                ✨ 金税四期来了？我们帮您在签约前就发现税务风险
+              </p>
+            </div>
+          )}
+
+          {/* CTA 按钮 */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+            {user ? (
+              <Link to="/dify-chat">
+                <Button size="lg" className="bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-950 hover:to-blue-800 text-white shadow-lg shadow-blue-900/30 px-10 py-7 text-lg font-semibold rounded-xl">
+                  {t('hero.startReview')}
+                </Button>
+              </Link>
+            ) : (
+              <>
+                <Link to="/register">
+                  <Button size="lg" className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-900 shadow-lg shadow-amber-400/30 px-10 py-7 text-lg font-semibold rounded-xl">
+                    立即开始免费审查
+                  </Button>
+                </Link>
+                <Link to="/login">
+                  <Button size="lg" variant="outline" className="border-2 border-slate-900 text-slate-900 hover:bg-slate-50 px-10 py-7 text-lg font-semibold rounded-xl">
+                    {t('nav.login')}
+                  </Button>
+                </Link>
+              </>
+            )}
+          </div>
+
+          {/* 社会证明 */}
+          <div className="pt-8 border-t border-slate-200">
+            <div className="flex flex-col items-center gap-6">
+              {/* 用户头像 */}
+              <div className="flex -space-x-3">
+                {testimonials.map((person, idx) => (
+                  <div
+                    key={idx}
+                    className="w-12 h-12 rounded-full border-2 border-white shadow-md overflow-hidden"
+                    title={person.name}
+                  >
+                    <img src={person.avatar} alt={person.name} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+              {/* 评分 */}
+              <div className="flex items-center gap-2">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-amber-400 text-xl">★</span>
+                  ))}
+                </div>
+                <span className="text-sm font-semibold text-slate-700">5.0 (128 条评价)</span>
+              </div>
+              {/* 文字 */}
+              <p className="text-sm text-slate-500 font-medium tracking-wide">受到 500+ 用户信赖</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 无限滚动轮播 */}
+      <section className="py-16 overflow-hidden bg-gradient-to-b from-transparent to-slate-50/30">
+        <div className="relative">
+          {/* 标题 */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+              专业法律 AI 与普通 AI 的本质区别
+            </h2>
+            <p className="text-lg text-slate-600">
+              看看我们如何帮助您的企业
+            </p>
+          </div>
+
+          {/* 无限滚动容器 */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-amber-100 to-yellow-100 rounded-2xl p-12 shadow-2xl aspect-square flex items-center justify-center">
-              {/* 这里可以放置 3D 插图或其他视觉元素 */}
-              <div className="text-center">
-                <div className="text-6xl mb-4">🔍</div>
-                <p className="text-xl font-semibold text-slate-700">
-                  智能合同审查
-                </p>
-                <p className="text-sm text-slate-600 mt-2">
-                  AI 驱动的法律风险识别
-                </p>
+            {/* 左侧渐变遮罩 */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+            {/* 右侧渐变遮罩 */}
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+            
+            {/* 滚动轨道 */}
+            <div className="flex animate-scroll-infinite">
+              {/* 第一组图片 */}
+              <div className="flex gap-8 px-4">
+                {/* 对比图 - 普通AI */}
+                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-red-200 bg-white">
+                  <div className="bg-red-50 px-6 py-3 border-b-2 border-red-200">
+                    <p className="text-lg font-bold text-red-700">❌ 普通 AI（DeepSeek）</p>
+                  </div>
+                  <img src="/images/carousel/generic-ai.jpg" alt="普通AI分析" className="w-full h-auto" />
+                </div>
+
+                {/* 对比图 - PolicyBridge AI */}
+                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-white">
+                  <div className="bg-green-50 px-6 py-3 border-b-2 border-green-200">
+                    <p className="text-lg font-bold text-green-700">✅ PolicyBridge AI</p>
+                  </div>
+                  <img src="/images/carousel/pba-ai.png" alt="PolicyBridge AI分析" className="w-full h-auto" />
+                </div>
+
+                {/* 多角色选择 */}
+                <div className="flex-shrink-0 w-[700px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 bg-white">
+                  <div className="bg-blue-50 px-6 py-3 border-b-2 border-blue-200">
+                    <p className="text-lg font-bold text-blue-700">🎯 多角色选择 - 精准审查</p>
+                  </div>
+                  <img src="/images/carousel/role-selection.png" alt="多角色选择" className="w-full h-auto" />
+                </div>
+
+                {/* 核心功能 */}
+                <div className="flex-shrink-0 w-[800px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-200 bg-white">
+                  <div className="bg-amber-50 px-6 py-3 border-b-2 border-amber-200">
+                    <p className="text-lg font-bold text-amber-700">⚡ 核心功能</p>
+                  </div>
+                  <img src="/images/carousel/core-features.png" alt="核心功能" className="w-full h-auto" />
+                </div>
+
+                {/* 数据库1 */}
+                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-200 bg-white">
+                  <div className="bg-purple-50 px-6 py-3 border-b-2 border-purple-200">
+                    <p className="text-lg font-bold text-purple-700">📚 案例数据库</p>
+                  </div>
+                  <img src="/images/carousel/database-1.png" alt="案例数据库" className="w-full h-auto" />
+                </div>
+
+                {/* 数据库2 */}
+                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-indigo-200 bg-white">
+                  <div className="bg-indigo-50 px-6 py-3 border-b-2 border-indigo-200">
+                    <p className="text-lg font-bold text-indigo-700">📖 法规数据库</p>
+                  </div>
+                  <img src="/images/carousel/database-2.png" alt="法规数据库" className="w-full h-auto" />
+                </div>
+
+                {/* 数据库3 */}
+                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-white">
+                  <div className="bg-pink-50 px-6 py-3 border-b-2 border-pink-200">
+                    <p className="text-lg font-bold text-pink-700">🏛️ 税法数据库</p>
+                  </div>
+                  <img src="/images/carousel/database-3.png" alt="税法数据库" className="w-full h-auto" />
+                </div>
+              </div>
+
+              {/* 第二组图片（重复，实现无缝循环） */}
+              <div className="flex gap-8 px-4">
+                {/* 对比图 - 普通AI */}
+                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-red-200 bg-white">
+                  <div className="bg-red-50 px-6 py-3 border-b-2 border-red-200">
+                    <p className="text-lg font-bold text-red-700">❌ 普通 AI（DeepSeek）</p>
+                  </div>
+                  <img src="/images/carousel/generic-ai.jpg" alt="普通AI分析" className="w-full h-auto" />
+                </div>
+
+                {/* 对比图 - PolicyBridge AI */}
+                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-white">
+                  <div className="bg-green-50 px-6 py-3 border-b-2 border-green-200">
+                    <p className="text-lg font-bold text-green-700">✅ PolicyBridge AI</p>
+                  </div>
+                  <img src="/images/carousel/pba-ai.png" alt="PolicyBridge AI分析" className="w-full h-auto" />
+                </div>
+
+                {/* 多角色选择 */}
+                <div className="flex-shrink-0 w-[700px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 bg-white">
+                  <div className="bg-blue-50 px-6 py-3 border-b-2 border-blue-200">
+                    <p className="text-lg font-bold text-blue-700">🎯 多角色选择 - 精准审查</p>
+                  </div>
+                  <img src="/images/carousel/role-selection.png" alt="多角色选择" className="w-full h-auto" />
+                </div>
+
+                {/* 核心功能 */}
+                <div className="flex-shrink-0 w-[800px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-200 bg-white">
+                  <div className="bg-amber-50 px-6 py-3 border-b-2 border-amber-200">
+                    <p className="text-lg font-bold text-amber-700">⚡ 核心功能</p>
+                  </div>
+                  <img src="/images/carousel/core-features.png" alt="核心功能" className="w-full h-auto" />
+                </div>
+
+                {/* 数据库1 */}
+                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-200 bg-white">
+                  <div className="bg-purple-50 px-6 py-3 border-b-2 border-purple-200">
+                    <p className="text-lg font-bold text-purple-700">📚 案例数据库</p>
+                  </div>
+                  <img src="/images/carousel/database-1.png" alt="案例数据库" className="w-full h-auto" />
+                </div>
+
+                {/* 数据库2 */}
+                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-indigo-200 bg-white">
+                  <div className="bg-indigo-50 px-6 py-3 border-b-2 border-indigo-200">
+                    <p className="text-lg font-bold text-indigo-700">📖 法规数据库</p>
+                  </div>
+                  <img src="/images/carousel/database-2.png" alt="法规数据库" className="w-full h-auto" />
+                </div>
+
+                {/* 数据库3 */}
+                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-white">
+                  <div className="bg-pink-50 px-6 py-3 border-b-2 border-pink-200">
+                    <p className="text-lg font-bold text-pink-700">🏛️ 税法数据库</p>
+                  </div>
+                  <img src="/images/carousel/database-3.png" alt="税法数据库" className="w-full h-auto" />
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 为什么选择 PolicyBridge AI */}
+      <section className="container mx-auto px-4 py-24">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6">
+              为什么选择合规桥 PBA？
+            </h2>
+            <p className="text-xl text-slate-600">
+              专业的法律 AI 与普通 AI 的本质区别
+            </p>
+          </div>
+
+          {/* 特性网格 */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, idx) => (
+              <div
+                key={idx}
+                className="group p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-200 hover:border-amber-300 transition-all duration-300 hover:shadow-xl hover:shadow-amber-200/20"
+              >
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900/10 to-amber-400/10 flex items-center justify-center mb-6 group-hover:from-blue-900/20 group-hover:to-amber-400/20 transition-colors">
+                  <div className="text-blue-900 group-hover:text-amber-500 transition-colors">
+                    {feature.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -117,7 +343,7 @@ export default function Index() {
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-20 bg-gradient-to-b from-transparent to-slate-50/50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             {t('contact.title')}
           </h2>
           <p className="text-lg text-gray-600 mb-8">
