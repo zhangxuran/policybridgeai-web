@@ -467,7 +467,7 @@
       "monthly": {
         "name": "Membre mensuel",
         "period": "Mensuel",
-        "unitCost": "€39.9/mois",
+        "unitCost": "€35/mois",
         "features": {
           "positioning": "🔑 Cœur : Outil d'évaluation de conformité stable",
           "legalConsulting": "✅ Consultation juridique / de conformité",
@@ -483,7 +483,7 @@
       "yearly": {
         "name": "Membre annuel",
         "period": "Annuel",
-        "unitCost": "€329/an",
+        "unitCost": "€399/an",
         "features": {
           "positioning": "🔑 Cœur : Évaluation des risques de conformité dans le cadre du flux de travail à long terme",
           "legalConsulting": "✅ Consultation juridique / de conformité",

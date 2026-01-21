@@ -459,7 +459,7 @@
       "monthly": {
         "name": "Monatliches Mitglied",
         "period": "Monatlich",
-        "unitCost": "€39.9/Monat",
+        "unitCost": "€35/Monat",
         "features": {
           "positioning": "🔑 Kern: Stabiles Compliance-Bewertungstool",
           "legalConsulting": "✅ Rechts- / Compliance-Beratung",
@@ -475,7 +475,7 @@
       "yearly": {
         "name": "Jährliches Mitglied",
         "period": "Jährlich",
-        "unitCost": "€329/Jahr",
+        "unitCost": "€399/Jahr",
         "features": {
           "positioning": "🔑 Kern: Compliance-Risikobewertung als Teil des langfristigen Workflows",
           "legalConsulting": "✅ Rechts- / Compliance-Beratung",

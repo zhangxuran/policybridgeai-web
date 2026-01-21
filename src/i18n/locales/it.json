@@ -184,7 +184,7 @@
       "professional": {
         "name": "Membro settimanale",
         "period": "Settimanale",
-        "unitCost": "¥49/settimana",
+        "unitCost": "¥59/settimana",
         "features": {
           "positioning": "🔑 Core: Strumento di valutazione dei rischi di conformità a breve termine e intensivo",
           "legalConsulting": "✅ Consulenza legale / di conformità",
@@ -198,7 +198,7 @@
       "monthly": {
         "name": "Membro mensile",
         "period": "Mensile",
-        "unitCost": "¥299/mese",
+        "unitCost": "¥199/mese",
         "features": {
           "positioning": "🔑 Core: Strumento di valutazione della conformità stabile",
           "legalConsulting": "✅ Consulenza legale / di conformità",
@@ -214,7 +214,7 @@
       "yearly": {
         "name": "Membro annuale",
         "period": "Annuale",
-        "unitCost": "¥2499/anno",
+        "unitCost": "¥2199/anno",
         "features": {
           "positioning": "🔑 Core: Valutazione dei rischi di conformità come parte del flusso di lavoro a lungo termine",
           "legalConsulting": "✅ Consulenza legale / di conformità",

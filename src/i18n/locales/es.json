@@ -206,7 +206,7 @@
       "monthly": {
         "name": "Miembro mensual",
         "period": "Mensual",
-        "unitCost": "€39.9/mes",
+        "unitCost": "€35/mes",
         "features": {
           "positioning": "🔑 Núcleo: Herramienta de evaluación de cumplimiento estable",
           "legalConsulting": "✅ Consulta legal / de cumplimiento",
@@ -222,7 +222,7 @@
       "yearly": {
         "name": "Miembro anual",
         "period": "Anual",
-        "unitCost": "€329/año",
+        "unitCost": "€399/año",
         "features": {
           "positioning": "🔑 Núcleo: Evaluación de riesgos de cumplimiento como parte del flujo de trabajo a largo plazo",
           "legalConsulting": "✅ Consulta legal / de cumplimiento",
