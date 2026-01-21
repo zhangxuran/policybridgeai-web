@@ -1005,14 +1005,19 @@ export default function DifyChat() {
   };
 
   const handleSend = async () => {
-    if (!input.trim() || loading) {
+    // 检查是否有文字输入或上传的文件
+    const hasInput = input.trim();
+    const hasFile = uploadedFile?.id && uploadedFile?.name;
+    
+    if ((!hasInput && !hasFile) || loading) {
       return;
     }
     
     const fileIdToSend = uploadedFile?.id;
     const fileNameToSend = uploadedFile?.name;
     
-    await handleSendMessage(input, fileIdToSend, fileNameToSend);
+    // 如果没有文字输入，传入空字符串给handleSendMessage
+    await handleSendMessage(hasInput ? input : '', fileIdToSend, fileNameToSend);
     
     setUploadedFile(null);
   };
