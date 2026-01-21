@@ -40,10 +40,10 @@ export default function ProductIntroduction() {
       <section className="container mx-auto px-4 py-12">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {t('hero.title')} - 产品介绍
+            {t('hero.title')} - {t('productIntroduction.title')}
           </h1>
           <p className="text-xl text-gray-600">
-            了解我们的核心优势和功能
+            {t('productIntroduction.subtitle')}
           </p>
         </div>
       </section>

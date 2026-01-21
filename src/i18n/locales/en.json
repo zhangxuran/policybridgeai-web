@@ -60,6 +60,10 @@
     "startReview": "Start Review",
     "getStarted": "Free Contract Risk Scan"
   },
+  "productIntroduction": {
+    "title": "Product Introduction",
+    "subtitle": "Learn About Our Core Advantages and Features"
+  },
   "advantage": {
     "title": "Our Core Advantages",
     "subtitle": "Unlike traditional LLMs, PolicyBridge.ai provides professional services based on real-time legal data",

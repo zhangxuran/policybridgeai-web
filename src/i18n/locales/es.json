@@ -21,6 +21,10 @@
     "startReview": "Iniciar revisión",
     "getStarted": "Escaneo gratuito de riesgos contractuales"
   },
+  "productIntroduction": {
+    "title": "Introduccion del producto",
+    "subtitle": "Descubra nuestras ventajas principales y caracteristicas"
+  },
   "advantage": {
     "title": "Nuestras ventajas principales",
     "subtitle": "A diferencia de los LLM tradicionales, PolicyBridge.ai proporciona servicios profesionales basados en datos legales en tiempo real",

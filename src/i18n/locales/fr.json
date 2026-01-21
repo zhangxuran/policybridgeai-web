@@ -21,6 +21,10 @@
     "startReview": "Commencer la révision",
     "getStarted": "Analyse gratuite des risques contractuels"
   },
+  "productIntroduction": {
+    "title": "Presentation du produit",
+    "subtitle": "Decouvrez nos avantages fondamentaux et nos fonctionnalites"
+  },
   "advantage": {
     "title": "Nos avantages principaux",
     "subtitle": "Contrairement aux LLM traditionnels, PolicyBridge.ai fournit des services professionnels basés sur des données juridiques en temps réel",

@@ -61,6 +61,10 @@
     "startReview": "开始审查",
     "getStarted": "免费合同风险扫描"
   },
+  "productIntroduction": {
+    "title": "产品介绍",
+    "subtitle": "了解我们的核心优势和功能"
+  },
   "advantage": {
     "title": "我们的核心优势",
     "subtitle": "与传统 LLM 不同,合规桥 PBA 基于实时法律数据提供专业服务",

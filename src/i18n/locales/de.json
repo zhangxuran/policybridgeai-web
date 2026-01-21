@@ -21,6 +21,10 @@
     "startReview": "Überprüfung starten",
     "getStarted": "Kostenloser Vertragsrisiko-Scan"
   },
+  "productIntroduction": {
+    "title": "Produkteinfuhrung",
+    "subtitle": "Entdecken Sie unsere Kernvorteile und Funktionen"
+  },
   "advantage": {
     "title": "Unsere Kernvorteile",
     "subtitle": "Im Gegensatz zu traditionellen LLMs bietet PolicyBridge.ai professionelle Dienstleistungen basierend auf Echtzeit-Rechtsdaten",
