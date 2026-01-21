@@ -648,12 +648,27 @@ export default function DifyChat() {
       return;
     }
     
-    // 如果只有文件没有文字，使用默认消息（不会显示给用户）
+    // 如果只有文件没有文字，使用根据语言的默认消息（不会显示给用户）
     const displayText = hasMessageText ? messageText : '';
-    const queryText = hasMessageText ? messageText : '请分析这份文档';
+    
+    // 根据用户语言生成默认消息
+    const getDefaultMessage = (language: string): string => {
+      const defaultMessages: Record<string, string> = {
+        'zh': '请分析这份文档',
+        'en': 'Please analyze this document',
+        'fr': 'Veuillez analyser ce document',
+        'de': 'Bitte analysieren Sie dieses Dokument',
+        'es': 'Por favor analiza este documento',
+        'it': 'Si prega di analizzare questo documento',
+      };
+      return defaultMessages[language] || defaultMessages['en'];
+    };
+    
+    const queryText = hasMessageText ? messageText : getDefaultMessage(i18n.language);
     
     console.log('📝 Display text:', displayText);
     console.log('📝 Query text for Dify:', queryText);
+    console.log('📝 User language:', i18n.language);
 
     if (isRadarSession) {
       console.log('🎯 Detected Radar Session - Routing to Radar API');
