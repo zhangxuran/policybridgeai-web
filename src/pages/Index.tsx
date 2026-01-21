@@ -25,33 +25,33 @@ export default function Index() {
   const features = [
     {
       icon: <Zap className="h-8 w-8" />,
-      title: '快速审查',
-      description: '秒级完成合同分析'
+      title: t('home.features.fastReview'),
+      description: t('home.features.fastReviewDesc')
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: '精准识别',
-      description: 'AI 驱动的风险检测'
+      title: t('home.features.accurateDetection'),
+      description: t('home.features.accurateDetectionDesc')
     },
     {
       icon: <FileText className="h-8 w-8" />,
-      title: '多国法律',
-      description: '支持多个司法管辖区'
+      title: t('home.features.multiCountryLaw'),
+      description: t('home.features.multiCountryLawDesc')
     },
     {
       icon: <Clock className="h-8 w-8" />,
-      title: '实时更新',
-      description: '最新法律法规同步'
+      title: t('home.features.realTimeUpdate'),
+      description: t('home.features.realTimeUpdateDesc')
     },
     {
       icon: <BarChart3 className="h-8 w-8" />,
-      title: '详细报告',
-      description: '完整的风险分析报告'
+      title: t('home.features.detailedReport'),
+      description: t('home.features.detailedReportDesc')
     },
     {
       icon: <CheckCircle2 className="h-8 w-8" />,
-      title: '数据安全',
-      description: '企业级加密保护'
+      title: t('home.features.dataSecurity'),
+      description: t('home.features.dataSecurityDesc')
     },
   ];
 
@@ -83,16 +83,16 @@ export default function Index() {
           {/* 超大标题 - 高级字体效果 */}
           <div className="space-y-4">
             <h1 className="text-7xl md:text-8xl font-black text-slate-900 leading-tight tracking-tight">
-              <span className="block">在签署合同前</span>
+              <span className="block">{t('home.heroTitle')}</span>
               <span className="block">
                 <span className="bg-gradient-to-r from-blue-900 via-amber-500 to-blue-900 bg-clip-text text-transparent">
-                  验证风险
+                  {t('home.heroTitleGradient')}
                 </span>
               </span>
             </h1>
             
             <p className="text-2xl md:text-3xl font-light text-slate-600 leading-relaxed tracking-wide">
-              PolicyBridge AI 为没有专业法务团队的中小跨国企业，提供跨境合同的第一道合规风险筛查
+              {t('home.heroDescription')}
             </p>
           </div>
 
@@ -100,7 +100,7 @@ export default function Index() {
           {isChineseLanguage && (
             <div className="p-6 bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-400 rounded-lg max-w-2xl mx-auto">
               <p className="text-lg font-semibold text-amber-900">
-                ✨ 金税四期来了？我们帮您在签约前就发现税务风险
+                ✨ {t('home.taxWarning')}
               </p>
             </div>
           )}
@@ -117,7 +117,7 @@ export default function Index() {
               <>
                 <Link to="/register">
                   <Button size="lg" className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-900 shadow-lg shadow-amber-400/30 px-10 py-7 text-lg font-semibold rounded-xl">
-                    立即开始免费审查
+                    {t('home.startFreeReview')}
                   </Button>
                 </Link>
                 <Link to="/login">
@@ -151,10 +151,10 @@ export default function Index() {
                     <span key={i} className="text-amber-400 text-xl">★</span>
                   ))}
                 </div>
-                <span className="text-sm font-semibold text-slate-700">5.0 (128 条评价)</span>
+                <span className="text-sm font-semibold text-slate-700">{t('home.rating')}</span>
               </div>
               {/* 文字 */}
-              <p className="text-sm text-slate-500 font-medium tracking-wide">受到 500+ 用户信赖</p>
+              <p className="text-sm text-slate-500 font-medium tracking-wide">{t('home.trustedBy')}</p>
             </div>
           </div>
         </div>
@@ -166,10 +166,10 @@ export default function Index() {
           {/* 标题 */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
-              专业法律 AI 与普通 AI 的本质区别
+              {t('carousel.title')}
             </h2>
             <p className="text-lg text-slate-600">
-              看看我们如何帮助您的企业
+              {t('carousel.subtitle')}
             </p>
           </div>
 
@@ -185,118 +185,76 @@ export default function Index() {
               {/* 第一组图片 */}
               <div className="flex gap-8 px-4">
                 {/* 对比图 - 普通AI */}
-                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-red-200 bg-white">
-                  <div className="bg-red-50 px-6 py-3 border-b-2 border-red-200">
-                    <p className="text-lg font-bold text-red-700">❌ 普通 AI（DeepSeek）</p>
-                  </div>
-                  <img src="/images/carousel/generic-ai.jpg" alt="普通AI分析" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-red-200 bg-white">
+                  <img src="/images/carousel/generic-ai.jpg" alt="普通AI分析" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 对比图 - PolicyBridge AI */}
-                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-white">
-                  <div className="bg-green-50 px-6 py-3 border-b-2 border-green-200">
-                    <p className="text-lg font-bold text-green-700">✅ PolicyBridge AI</p>
-                  </div>
-                  <img src="/images/carousel/pba-ai.png" alt="PolicyBridge AI分析" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-white">
+                  <img src="/images/carousel/pba-ai.png" alt="PolicyBridge AI分析" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 多角色选择 */}
-                <div className="flex-shrink-0 w-[700px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 bg-white">
-                  <div className="bg-blue-50 px-6 py-3 border-b-2 border-blue-200">
-                    <p className="text-lg font-bold text-blue-700">🎯 多角色选择 - 精准审查</p>
-                  </div>
-                  <img src="/images/carousel/role-selection.png" alt="多角色选择" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 bg-white">
+                  <img src="/images/carousel/role-selection.png" alt="多角色选择" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 核心功能 */}
-                <div className="flex-shrink-0 w-[800px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-200 bg-white">
-                  <div className="bg-amber-50 px-6 py-3 border-b-2 border-amber-200">
-                    <p className="text-lg font-bold text-amber-700">⚡ 核心功能</p>
-                  </div>
-                  <img src="/images/carousel/core-features.png" alt="核心功能" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-200 bg-white">
+                  <img src="/images/carousel/core-features.png" alt="核心功能" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 数据库1 */}
-                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-200 bg-white">
-                  <div className="bg-purple-50 px-6 py-3 border-b-2 border-purple-200">
-                    <p className="text-lg font-bold text-purple-700">📚 案例数据库</p>
-                  </div>
-                  <img src="/images/carousel/database-1.png" alt="案例数据库" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-200 bg-white">
+                  <img src="/images/carousel/database-1.png" alt="案例数据库" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 数据库2 */}
-                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-indigo-200 bg-white">
-                  <div className="bg-indigo-50 px-6 py-3 border-b-2 border-indigo-200">
-                    <p className="text-lg font-bold text-indigo-700">📖 法规数据库</p>
-                  </div>
-                  <img src="/images/carousel/database-2.png" alt="法规数据库" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-indigo-200 bg-white">
+                  <img src="/images/carousel/database-2.png" alt="法规数据库" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 数据库3 */}
-                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-white">
-                  <div className="bg-pink-50 px-6 py-3 border-b-2 border-pink-200">
-                    <p className="text-lg font-bold text-pink-700">🏛️ 税法数据库</p>
-                  </div>
-                  <img src="/images/carousel/database-3.png" alt="税法数据库" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-white">
+                  <img src="/images/carousel/database-3.png" alt="税法数据库" className="w-full h-full object-cover" />
                 </div>
               </div>
 
               {/* 第二组图片（重复，实现无缝循环） */}
               <div className="flex gap-8 px-4">
                 {/* 对比图 - 普通AI */}
-                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-red-200 bg-white">
-                  <div className="bg-red-50 px-6 py-3 border-b-2 border-red-200">
-                    <p className="text-lg font-bold text-red-700">❌ 普通 AI（DeepSeek）</p>
-                  </div>
-                  <img src="/images/carousel/generic-ai.jpg" alt="普通AI分析" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-red-200 bg-white">
+                  <img src="/images/carousel/generic-ai.jpg" alt="普通AI分析" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 对比图 - PolicyBridge AI */}
-                <div className="flex-shrink-0 w-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-white">
-                  <div className="bg-green-50 px-6 py-3 border-b-2 border-green-200">
-                    <p className="text-lg font-bold text-green-700">✅ PolicyBridge AI</p>
-                  </div>
-                  <img src="/images/carousel/pba-ai.png" alt="PolicyBridge AI分析" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-white">
+                  <img src="/images/carousel/pba-ai.png" alt="PolicyBridge AI分析" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 多角色选择 */}
-                <div className="flex-shrink-0 w-[700px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 bg-white">
-                  <div className="bg-blue-50 px-6 py-3 border-b-2 border-blue-200">
-                    <p className="text-lg font-bold text-blue-700">🎯 多角色选择 - 精准审查</p>
-                  </div>
-                  <img src="/images/carousel/role-selection.png" alt="多角色选择" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 bg-white">
+                  <img src="/images/carousel/role-selection.png" alt="多角色选择" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 核心功能 */}
-                <div className="flex-shrink-0 w-[800px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-200 bg-white">
-                  <div className="bg-amber-50 px-6 py-3 border-b-2 border-amber-200">
-                    <p className="text-lg font-bold text-amber-700">⚡ 核心功能</p>
-                  </div>
-                  <img src="/images/carousel/core-features.png" alt="核心功能" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-200 bg-white">
+                  <img src="/images/carousel/core-features.png" alt="核心功能" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 数据库1 */}
-                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-200 bg-white">
-                  <div className="bg-purple-50 px-6 py-3 border-b-2 border-purple-200">
-                    <p className="text-lg font-bold text-purple-700">📚 案例数据库</p>
-                  </div>
-                  <img src="/images/carousel/database-1.png" alt="案例数据库" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-200 bg-white">
+                  <img src="/images/carousel/database-1.png" alt="案例数据库" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 数据库2 */}
-                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-indigo-200 bg-white">
-                  <div className="bg-indigo-50 px-6 py-3 border-b-2 border-indigo-200">
-                    <p className="text-lg font-bold text-indigo-700">📖 法规数据库</p>
-                  </div>
-                  <img src="/images/carousel/database-2.png" alt="法规数据库" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-indigo-200 bg-white">
+                  <img src="/images/carousel/database-2.png" alt="法规数据库" className="w-full h-full object-cover" />
                 </div>
 
                 {/* 数据库3 */}
-                <div className="flex-shrink-0 w-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-white">
-                  <div className="bg-pink-50 px-6 py-3 border-b-2 border-pink-200">
-                    <p className="text-lg font-bold text-pink-700">🏛️ 税法数据库</p>
-                  </div>
-                  <img src="/images/carousel/database-3.png" alt="税法数据库" className="w-full h-auto" />
+                <div className="flex-shrink-0 w-[600px] h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-white">
+                  <img src="/images/carousel/database-3.png" alt="税法数据库" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -309,10 +267,10 @@ export default function Index() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6">
-              为什么选择合规桥 PBA？
+              {t('home.whyChoose')}
             </h2>
             <p className="text-xl text-slate-600">
-              专业的法律 AI 与普通 AI 的本质区别
+              {t('home.whyChooseSubtitle')}
             </p>
           </div>
 
@@ -374,7 +332,7 @@ export default function Index() {
           {/* 快速链接 */}
           <div className="mt-12 flex justify-center gap-6">
             <Link to="/product-introduction" className="text-blue-900 hover:text-blue-700 font-semibold">
-              产品介绍
+              {t('home.quickLinks')}
             </Link>
             <span className="text-gray-400">|</span>
             <Link to="/pricing" className="text-blue-900 hover:text-blue-700 font-semibold">
@@ -382,7 +340,7 @@ export default function Index() {
             </Link>
             <span className="text-gray-400">|</span>
             <Link to="/contact" className="text-blue-900 hover:text-blue-700 font-semibold">
-              联系我们
+              {t('home.contactUsLink')}
             </Link>
           </div>
         </div>

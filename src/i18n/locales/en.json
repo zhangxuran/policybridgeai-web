@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "pricing": "Pricing",
+    "productIntroduction": "Product Introduction",
     "aiReview": "AI Review",
     "login": "Login",
     "register": "Register",
@@ -10,7 +11,8 @@
     "buyBooster": "Buy Booster",
     "logout": "Logout",
     "loggingOut": "Logging out...",
-    "remaining": "{{count}} remaining"
+    "remaining": "{{count}} remaining",
+    "contactUs": "Contact Us"
   },
   "admin": {
     "title": "Admin Panel",
@@ -85,6 +87,37 @@
       "point3": "Similar contract structures may present completely different risk outcomes in different disputes",
       "point4": "Combining legal practice experience helps identify easily overlooked risk points before signing"
     }
+  },
+  "carousel": {
+    "title": "Online Contract Review Tool",
+    "subtitle": "Product Features"
+  },
+  "home": {
+    "heroTitle": "Before Signing a Contract",
+    "heroTitleGradient": "Verify Risk",
+    "heroDescription": "PolicyBridge AI provides the first line of compliance risk screening for cross-border contracts for SMEs without professional legal teams",
+    "taxWarning": "Is the Golden Tax Phase 4 coming? We help you discover tax risks before signing",
+    "startFreeReview": "Start Free Review",
+    "rating": "5.0 (128 reviews)",
+    "trustedBy": "Trusted by 500+ users",
+    "whyChoose": "Why Choose PolicyBridge PBA?",
+    "whyChooseSubtitle": "The essential difference between professional legal AI and general AI",
+    "features": {
+      "fastReview": "Fast Review",
+      "fastReviewDesc": "Complete contract analysis in seconds",
+      "accurateDetection": "Accurate Detection",
+      "accurateDetectionDesc": "AI-driven risk detection",
+      "multiCountryLaw": "Multi-Country Law",
+      "multiCountryLawDesc": "Support for multiple jurisdictions",
+      "realTimeUpdate": "Real-time Updates",
+      "realTimeUpdateDesc": "Latest laws and regulations synchronized",
+      "detailedReport": "Detailed Report",
+      "detailedReportDesc": "Comprehensive risk analysis report",
+      "dataSecurity": "Data Security",
+      "dataSecurityDesc": "Enterprise-grade encryption protection"
+    },
+    "quickLinks": "Product Introduction",
+    "contactUsLink": "Contact Us"
   },
   "features": {
     "title": "Core Features",

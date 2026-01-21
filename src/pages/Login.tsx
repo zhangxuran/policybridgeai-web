@@ -85,25 +85,16 @@ export default function Login() {
     console.log('=== Google OAuth login started ===');
 
     try {
-      // Determine redirect URL based on environment
-      // Check if running on localhost or 127.0.0.1
-      const isLocalhost = window.location.hostname === 'localhost' || 
-                         window.location.hostname === '127.0.0.1' ||
-                         window.location.hostname.includes('localhost');
-      
-      const redirectUrl = isLocalhost
-        ? window.location.origin 
-        : 'https://www.policybridgeai.com';
-
+      // For Supabase OAuth, we don't need to specify redirectTo
+      // Supabase will use the Site URL from URL Configuration
+      // and the OAuth will be handled automatically
       console.log('Current hostname:', window.location.hostname);
       console.log('Current origin:', window.location.origin);
-      console.log('Is localhost:', isLocalhost);
-      console.log('Redirect URL:', redirectUrl);
 
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: redirectUrl
+          redirectTo: window.location.origin
         }
       });
 

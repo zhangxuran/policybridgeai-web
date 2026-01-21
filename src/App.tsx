@@ -6,6 +6,7 @@ import ProductIntroduction from '@/pages/ProductIntroduction';
 import ContactUs from '@/pages/ContactUs';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
+import AuthCallback from '@/pages/AuthCallback';
 import Dashboard from '@/pages/Dashboard';
 import AIReview from '@/pages/AIReview';
 import DifyChat from '@/pages/DifyChat';
@@ -22,7 +23,6 @@ import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import Disclaimer from '@/pages/Disclaimer';
 import AdminPanel from '@/pages/AdminPanel';
 import '@/i18n/config';
-
 function App() {
   return (
     <Router>
@@ -33,6 +33,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/ai-review" element={<AIReview />} />
           <Route path="/dify-chat" element={<DifyChat />} />
@@ -54,5 +55,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

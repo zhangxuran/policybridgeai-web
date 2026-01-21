@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "pricing": "Tarifs",
+    "productIntroduction": "Présentation du produit",
     "aiReview": "Révision IA",
     "login": "Connexion",
     "register": "S'inscrire",
@@ -10,7 +11,8 @@
     "buyBooster": "Acheter un booster",
     "logout": "Déconnexion",
     "loggingOut": "Déconnexion...",
-    "remaining": "{{count}} restant(s)"
+    "remaining": "{{count}} restant(s)",
+    "contactUs": "Nous contacter"
   },
   "hero": {
     "title": "PolicyBridge.ai",
@@ -46,6 +48,10 @@
       "point3": "Des structures contractuelles similaires peuvent présenter des résultats de risque complètement différents dans différents litiges",
       "point4": "Combiner l'expérience de la pratique juridique aide à identifier les points de risque facilement négligés avant la signature"
     }
+  },
+  "carousel": {
+    "title": "Outil d'examen des contrats en ligne",
+    "subtitle": "Caractéristiques du produit"
   },
   "features": {
     "title": "Fonctionnalités principales",
@@ -744,5 +750,32 @@
     "submit": "Soumettre",
     "search": "Rechercher",
     "pleaseLogin": "Veuillez d'abord vous connecter"
+  },
+  "home": {
+    "heroTitle": "Avant de signer un contrat",
+    "heroTitleGradient": "Vérifier le risque",
+    "heroDescription": "PolicyBridge AI fournit le premier niveau de filtrage des risques de conformité pour les contrats transfrontaliers pour les PME sans équipes juridiques professionnelles",
+    "taxWarning": "La phase 4 de la taxe d'or arrive-t-elle? Nous vous aidons à découvrir les risques fiscaux avant de signer",
+    "startFreeReview": "Commencer l'examen gratuit",
+    "rating": "5,0 (128 avis)",
+    "trustedBy": "Approuvé par plus de 500 utilisateurs",
+    "whyChoose": "Pourquoi choisir PolicyBridge PBA?",
+    "whyChooseSubtitle": "La différence essentielle entre l'IA juridique professionnelle et l'IA générale",
+    "features": {
+      "fastReview": "Examen rapide",
+      "fastReviewDesc": "Analyse complète du contrat en secondes",
+      "accurateDetection": "Détection précise",
+      "accurateDetectionDesc": "Détection des risques pilotée par l'IA",
+      "multiCountryLaw": "Droit multi-pays",
+      "multiCountryLawDesc": "Support pour plusieurs juridictions",
+      "realTimeUpdate": "Mises à jour en temps réel",
+      "realTimeUpdateDesc": "Lois et réglementations les plus récentes synchronisées",
+      "detailedReport": "Rapport détaillé",
+      "detailedReportDesc": "Rapport d'analyse des risques complet",
+      "dataSecurity": "Sécurité des données",
+      "dataSecurityDesc": "Protection par chiffrement de niveau entreprise"
+    },
+    "quickLinks": "Présentation du produit",
+    "contactUsLink": "Nous contacter"
   }
 }

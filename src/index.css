@@ -217,7 +217,7 @@
 }
 
 .animate-scroll-infinite {
-  animation: scroll-infinite 60s linear infinite;
+  animation: scroll-infinite 20s linear infinite;
 }
 
 /* 鼠标悬停时暂停动画 */

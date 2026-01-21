@@ -2,6 +2,7 @@
   "nav": {
     "home": "首页",
     "pricing": "定价",
+    "productIntroduction": "产品介绍",
     "aiReview": "AI 审查",
     "login": "登录",
     "register": "注册",
@@ -10,7 +11,8 @@
     "buyBooster": "购买加油包",
     "logout": "退出登录",
     "loggingOut": "正在退出...",
-    "remaining": "剩余 {{count}} 次"
+    "remaining": "剩余 {{count}} 次",
+    "contactUs": "联系我们"
   },
   "admin": {
     "title": "管理员后台",
@@ -86,6 +88,37 @@
       "point3": "相似的合同结构在不同纠纷中可能呈现完全不同的风险结果",
       "point4": "结合法律实践经验有助于在签约前识别容易被忽视的风险点"
     }
+  },
+  "carousel": {
+    "title": "在线合同审核工具",
+    "subtitle": "产品效果"
+  },
+  "home": {
+    "heroTitle": "在签署合同前",
+    "heroTitleGradient": "验证风险",
+    "heroDescription": "PolicyBridge AI 为没有专业法务团队的中小跨国企业，提供跨境合同的第一道合规风险筛查",
+    "taxWarning": "✨ 金税四期来了？我们帮您在签约前就发现税务风险",
+    "startFreeReview": "立即开始免费审查",
+    "rating": "5.0 (128 条评价)",
+    "trustedBy": "受到 500+ 用户信赖",
+    "whyChoose": "为什么选择合规桥 PBA？",
+    "whyChooseSubtitle": "专业的法律 AI 与普通 AI 的本质区别",
+    "features": {
+      "fastReview": "快速审查",
+      "fastReviewDesc": "秒级完成合同分析",
+      "accurateDetection": "精准识别",
+      "accurateDetectionDesc": "AI 驱动的风险检测",
+      "multiCountryLaw": "多国法律",
+      "multiCountryLawDesc": "支持多个司法管辖区",
+      "realTimeUpdate": "实时更新",
+      "realTimeUpdateDesc": "最新法律法规同步",
+      "detailedReport": "详细报告",
+      "detailedReportDesc": "完整的风险分析报告",
+      "dataSecurity": "数据安全",
+      "dataSecurityDesc": "企业级加密保护"
+    },
+    "quickLinks": "产品介绍",
+    "contactUsLink": "联系我们"
   },
   "features": {
     "title": "核心功能",

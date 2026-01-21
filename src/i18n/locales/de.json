@@ -2,6 +2,7 @@
   "nav": {
     "home": "Startseite",
     "pricing": "Preise",
+    "productIntroduction": "Produkteinführung",
     "aiReview": "KI-Überprüfung",
     "login": "Anmelden",
     "register": "Registrieren",
@@ -10,7 +11,8 @@
     "buyBooster": "Booster kaufen",
     "logout": "Abmelden",
     "loggingOut": "Abmeldung...",
-    "remaining": "{{count}} verbleibend"
+    "remaining": "{{count}} verbleibend",
+    "contactUs": "Kontaktieren Sie uns"
   },
   "hero": {
     "title": "PolicyBridge.ai",
@@ -46,6 +48,10 @@
       "point3": "Ähnliche Vertragsstrukturen können in verschiedenen Streitigkeiten völlig unterschiedliche Risikoergebnisse aufweisen",
       "point4": "Die Kombination rechtlicher Praxiserfahrung hilft, leicht übersehene Risikopunkte vor der Unterzeichnung zu identifizieren"
     }
+  },
+  "carousel": {
+    "title": "Online-Vertragsüberprüfungstool",
+    "subtitle": "Produktmerkmale"
   },
   "features": {
     "title": "Kernfunktionen",
@@ -682,5 +688,32 @@
     "submit": "Absenden",
     "search": "Suchen",
     "pleaseLogin": "Bitte melden Sie sich zuerst an"
+  },
+  "home": {
+    "heroTitle": "Vor der Unterzeichnung eines Vertrags",
+    "heroTitleGradient": "Risiko überprüfen",
+    "heroDescription": "PolicyBridge AI bietet die erste Ebene der Compliance-Risikobewertung für grenzüberschreitende Verträge für KMU ohne professionelle Rechtsteams",
+    "taxWarning": "Kommt die vierte Phase der Goldsteuer? Wir helfen Ihnen, Steuerrisiken vor der Unterzeichnung zu entdecken",
+    "startFreeReview": "Kostenlose Überprüfung starten",
+    "rating": "5,0 (128 Bewertungen)",
+    "trustedBy": "Vertraut von über 500 Benutzern",
+    "whyChoose": "Warum PolicyBridge PBA wählen?",
+    "whyChooseSubtitle": "Der wesentliche Unterschied zwischen professioneller Rechts-KI und allgemeiner KI",
+    "features": {
+      "fastReview": "Schnelle Überprüfung",
+      "fastReviewDesc": "Vollständige Vertragsanalyse in Sekunden",
+      "accurateDetection": "Genaue Erkennung",
+      "accurateDetectionDesc": "KI-gesteuerte Risikenerkennung",
+      "multiCountryLaw": "Mehrländerrecht",
+      "multiCountryLawDesc": "Unterstützung für mehrere Gerichtsbarkeiten",
+      "realTimeUpdate": "Echtzeit-Updates",
+      "realTimeUpdateDesc": "Neueste Gesetze und Vorschriften synchronisiert",
+      "detailedReport": "Detaillierter Bericht",
+      "detailedReportDesc": "Umfassender Risikoanalyse-Bericht",
+      "dataSecurity": "Datensicherheit",
+      "dataSecurityDesc": "Verschlüsselung auf Unternehmensebene"
+    },
+    "quickLinks": "Produktpräsentation",
+    "contactUsLink": "Kontaktieren Sie uns"
   }
 }

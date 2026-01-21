@@ -70,9 +70,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: t('nav.home'), path: '/' },
-    { name: '产品介绍', path: '/product-introduction' },
+    { name: t('nav.productIntroduction'), path: '/product-introduction' },
     { name: t('nav.pricing'), path: '/pricing' },
-    { name: '联系我们', path: '/contact' },
+    { name: t('nav.contactUs'), path: '/contact' },
   ];
 
   return (
