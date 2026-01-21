@@ -13,7 +13,7 @@ import { Send, Upload, Loader2, MessageSquare, Trash2, ArrowLeft, User, Scale, X
 import Navbar from '@/components/Navbar';
 import ConfirmDialog from '@/components/ConfirmDialog';
 import { UpgradeDialog } from '@/components/UpgradeDialog';
-import { stripMarkdown } from '@/lib/markdownUtils';
+import { stripMarkdown, stripHtmlTags } from '@/lib/markdownUtils';
 import { useTranslation, TFunction } from 'react-i18next';
 
 interface Message {
@@ -367,7 +367,9 @@ export default function DifyChat() {
 
   const handleCopyMessage = async (content: string, index: number) => {
     try {
-      const plainText = stripMarkdown(content);
+      // 先使用 stripMarkdown 处理 Markdown，然后使用 stripHtmlTags 移除所有 HTML 标签
+      // 这样不会有 <strong> 标签残留
+      const plainText = stripHtmlTags(stripMarkdown(content));
       await navigator.clipboard.writeText(plainText);
       setCopiedMessageIndex(index);
       toast.success(t('difyChat.messages.copiedSuccess') || '已复制到剪贴板');

@@ -74,6 +74,19 @@ export function stripMarkdown(text: string): string {
 }
 
 /**
+ * Remove all HTML tags from text, leaving only plain text
+ * Used for copying text to clipboard - removes <strong>, <em>, etc.
+ * 
+ * @param text - The text containing HTML tags
+ * @returns Plain text with all HTML tags removed
+ */
+export function stripHtmlTags(text: string): string {
+  if (!text) return '';
+  // Remove all HTML tags including <strong>, </strong>, etc.
+  return text.replace(/<[^>]+>/g, '');
+}
+
+/**
  * Check if text contains Markdown formatting
  * 
  * @param text - The text to check
