@@ -634,7 +634,7 @@ export default function DifyChat() {
     }
   };
 
-  const handleSendMessage = async (messageText: string, uploadedFileId?: string, uploadedFileName?: string) => {
+  const handleSendMessage = async (messageText: string, uploadedFileId?: string, uploadedFileName?: string, onComplete?: () => void) => {
     console.log('🚀 handleSendMessage called');
     console.log('📦 Session type check:', { isRadarSession, currentConversationId });
     console.log('📎 File info:', { uploadedFileId, uploadedFileName });
@@ -863,6 +863,10 @@ export default function DifyChat() {
       }
     } finally {
       setLoading(false);
+      // 调用完成回调（用于清除上传的文件）
+      if (onComplete) {
+        onComplete();
+      }
     }
   };
 
@@ -1032,9 +1036,10 @@ export default function DifyChat() {
     const fileNameToSend = uploadedFile?.name;
     
     // 如果没有文字输入，传入空字符串给handleSendMessage
-    await handleSendMessage(hasInput ? input : '', fileIdToSend, fileNameToSend);
-    
-    setUploadedFile(null);
+    // 并传入回调函数，在消息发送完成后清除文件
+    await handleSendMessage(hasInput ? input : '', fileIdToSend, fileNameToSend, () => {
+      setUploadedFile(null);
+    });
   };
 
   const handleIdentitySelect = async (identity: string) => {
