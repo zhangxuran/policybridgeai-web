@@ -64,20 +64,20 @@ export default function FeatureComparison() {
                       <TableHead className="text-center font-bold text-gray-900">
                         试用版
                         <Badge variant="outline" className="ml-2">
-                          ¥49
+                          ¥59
                         </Badge>
                       </TableHead>
                       <TableHead className="text-center font-bold text-gray-900">
                         进阶版
                         <Badge className="ml-2 bg-blue-600">推荐</Badge>
                         <Badge variant="outline" className="ml-2">
-                          ¥179/月
+                          ¥199/月
                         </Badge>
                       </TableHead>
                       <TableHead className="text-center font-bold text-gray-900">
                         高级版
                         <Badge variant="outline" className="ml-2">
-                          ¥379/月
+                          ¥2199/年
                         </Badge>
                       </TableHead>
                       <TableHead className="text-center font-bold text-gray-900">

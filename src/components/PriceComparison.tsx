@@ -26,7 +26,7 @@ export default function PriceComparison({ onCTAClick }: PriceComparisonProps) {
     },
     {
       title: 'AI智能审核',
-      price: '¥299',
+      price: '¥199',
       period: '每份合同',
       features: [
         { text: '3分钟完成审核', available: true },
@@ -117,9 +117,9 @@ export default function PriceComparison({ onCTAClick }: PriceComparisonProps) {
           <div className="text-center space-y-4">
             <h3 className="text-2xl font-bold text-gray-900">批量审核更优惠</h3>
             <p className="text-gray-700 text-lg">
-              月度套餐：10份合同仅需 <span className="font-bold text-blue-600">¥2,499</span>（单份¥249）
+              月度套餐：10份合同仅需 <span className="font-bold text-blue-600">¥1,990</span>（单份¥199）
               <br />
-              年度套餐：100份合同仅需 <span className="font-bold text-blue-600">¥19,999</span>（单份¥199）
+              年度套餐：100份合同仅需 <span className="font-bold text-blue-600">¥19,900</span>（单份¥199）
             </p>
             <p className="text-sm text-gray-600">企业定制方案请联系我们获取专属报价</p>
           </div>

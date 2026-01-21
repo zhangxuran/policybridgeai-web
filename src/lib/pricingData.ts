@@ -6,9 +6,9 @@ export const getPricingTiers = (t: (key: string) => string, language: string = '
   
   // 根据语言设置价格
   const prices = isChinese ? {
-    professional: 49,
-    monthly: 299,
-    yearly: 2499
+    professional: 59,
+    monthly: 199,
+    yearly: 2199
   } : {
     professional: 9.9,
     monthly: 39.9,
