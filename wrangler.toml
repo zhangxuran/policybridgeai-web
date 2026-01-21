@@ -1,8 +1,2 @@
 name = "policybridgeai-web"
 pages_build_output_dir = "dist"
-
-[env.production]
-name = "policybridgeai-web"
-routes = [
-  { pattern = "app.policybridgeai.com", zone_name = "policybridgeai.com" }
-]
