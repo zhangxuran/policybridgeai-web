@@ -11,8 +11,8 @@ export const getPricingTiers = (t: (key: string) => string, language: string = '
     yearly: 2199
   } : {
     professional: 9.9,
-    monthly: 39.9,
-    yearly: 329
+    monthly: 35,
+    yearly: 399
   };
 
   return [
