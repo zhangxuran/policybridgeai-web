@@ -808,7 +808,9 @@ export default function DifyChat() {
                       const newMessages = [...prev];
                       const lastMessage = newMessages[newMessages.length - 1];
                       if (lastMessage.role === 'assistant') {
-                        lastMessage.content = streamedContent;
+                        // 对流式内容进行 stripMarkdown 处理，确保 <strong> 标签被正确保留
+                        // 这样即使在流式过程中，<strong> 也会被正确渲染
+                        lastMessage.content = stripMarkdown(streamedContent);
                       }
                       return newMessages;
                     });
