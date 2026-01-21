@@ -21,6 +21,31 @@ export function SubscriptionAlert({ status, onDismiss }: SubscriptionAlertProps)
     return null;
   }
 
+  // Expiring today - urgent warning
+  if (status.isExpiringToday) {
+    return (
+      <Alert variant="destructive" className="mb-6 border-red-600 bg-red-50">
+        <AlertCircle className="h-4 w-4 text-red-600" />
+        <AlertTitle className="text-red-900">{t('subscriptionAlert.expiringToday.title')}</AlertTitle>
+        <AlertDescription className="flex items-center justify-between text-red-800">
+          <span>
+            {t('subscriptionAlert.expiringToday.description', {
+              plan: getPlanDisplayName(status.plan),
+              date: status.expirationDate?.toLocaleDateString(locale)
+            })}
+          </span>
+          <Button
+            size="sm"
+            onClick={() => navigate('/pricing')}
+            className="ml-4 bg-red-600 hover:bg-red-700"
+          >
+            {t('subscriptionAlert.expiringToday.renewButton')}
+          </Button>
+        </AlertDescription>
+      </Alert>
+    );
+  }
+
   // Expired subscription
   if (status.isExpired) {
     return (

@@ -10,6 +10,7 @@ export type SubscriptionPlan = 'free' | 'professional' | 'enterprise';
 export interface SubscriptionStatus {
   plan: SubscriptionPlan;
   isExpired: boolean;
+  isExpiringToday: boolean;
   daysRemaining: number;
   expirationDate: Date | null;
   showRenewalReminder: boolean;
@@ -59,6 +60,7 @@ export function calculateSubscriptionStatus(
     return {
       plan,
       isExpired: false,
+      isExpiringToday: false,
       daysRemaining: Infinity,
       expirationDate: null,
       showRenewalReminder: false,
@@ -83,12 +85,16 @@ export function calculateSubscriptionStatus(
   // Check if expired
   const isExpired = daysRemaining <= 0;
 
+  // Check if expiring today (daysRemaining === 1)
+  const isExpiringToday = daysRemaining === 1;
+
   // Show renewal reminder 2 days before expiration
   const showRenewalReminder = daysRemaining > 0 && daysRemaining <= 2;
 
   return {
     plan: isExpired ? 'free' : plan,
     isExpired,
+    isExpiringToday,
     daysRemaining: Math.max(0, daysRemaining),
     expirationDate: expiration,
     showRenewalReminder,

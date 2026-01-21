@@ -272,6 +272,11 @@
       "description": "Your {{plan}} subscription expired on {{date}}, please renew to continue using the service",
       "renewButton": "Renew Now"
     },
+    "expiringToday": {
+      "title": "⚠️ Subscription Expires Today",
+      "description": "Your {{plan}} subscription expires today ({{date}}), please renew immediately to avoid service interruption",
+      "renewButton": "Renew Now"
+    },
     "expiring": {
       "title": "Subscription Expiring Soon",
       "description": "Your {{plan}} subscription expires in {{days}} days ({{date}}), please renew in time",
