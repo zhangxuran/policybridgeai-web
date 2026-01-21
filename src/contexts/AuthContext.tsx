@@ -32,12 +32,73 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [subscriptionPlan, setSubscriptionPlan] = useState<string>('free');
   const [subscriptionStatus, setSubscriptionStatus] = useState<string>('active');
 
+  const ensureProfileExists = async (authUser: User) => {
+    try {
+      console.log('Checking if profile exists for user:', authUser.id);
+      
+      // Check if profile already exists
+      const { data: existingProfile, error: checkError } = await supabase
+        .from('profiles')
+        .select('id')
+        .eq('id', authUser.id)
+        .single();
+
+      if (checkError && checkError.code !== 'PGRST116') {
+        // PGRST116 means no rows found, which is expected
+        console.error('Error checking profile:', checkError);
+        return;
+      }
+
+      if (existingProfile) {
+        console.log('Profile already exists for user:', authUser.id);
+        return;
+      }
+
+      // Profile doesn't exist, create it
+      console.log('Creating profile for OAuth user:', authUser.id);
+      
+      const email = authUser.email || '';
+      const fullName = authUser.user_metadata?.full_name || authUser.user_metadata?.name || '';
+      const avatarUrl = authUser.user_metadata?.avatar_url || '';
+
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .insert({
+          id: authUser.id,
+          email: email,
+          full_name: fullName,
+          avatar_url: avatarUrl,
+          role: 'user',
+          subscription_plan: 'free',
+          subscription_status: 'active'
+        });
+
+      if (profileError) {
+        console.error('Profile creation error for OAuth user:', profileError);
+        // Don't throw error, profile might be created by trigger
+      } else {
+        console.log('✅ Profile created successfully for OAuth user:', authUser.id);
+        
+        // Sync to subscription table
+        try {
+          await syncSubscriptionOnUpdate(authUser.id, 'free', 'active');
+        } catch (syncError) {
+          console.error('Subscription sync error:', syncError);
+        }
+      }
+    } catch (error) {
+      console.error('Error ensuring profile exists:', error);
+    }
+  };
+
   useEffect(() => {
     // Check active sessions and sets the user
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
       if (session?.user) {
         loadSubscriptionInfo(session.user.id);
+        // Ensure profile exists for OAuth users
+        ensureProfileExists(session.user);
       }
       setLoading(false);
     });
@@ -47,6 +108,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(session?.user ?? null);
       if (session?.user) {
         loadSubscriptionInfo(session.user.id);
+        // Ensure profile exists for OAuth users (especially on sign in)
+        if (_event === 'SIGNED_IN') {
+          ensureProfileExists(session.user);
+        }
       } else {
         setSubscriptionPlan('free');
         setSubscriptionStatus('active');
