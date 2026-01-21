@@ -15,8 +15,8 @@ const corsHeaders = {
 const PRICE_MAP: Record<string, { CNY: number; EUR: number }> = {
   'professional': { CNY: 59, EUR: 9.9 },
   'weekly': { CNY: 59, EUR: 9.9 },
-  'monthly': { CNY: 199, EUR: 39.9 },
-  'yearly': { CNY: 2199, EUR: 329 },
+  'monthly': { CNY: 199, EUR: 35 },
+  'yearly': { CNY: 2199, EUR: 399 },
 };
 
 // 从套餐名称推断套餐类型
