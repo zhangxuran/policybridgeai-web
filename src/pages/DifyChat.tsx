@@ -637,19 +637,33 @@ export default function DifyChat() {
   const handleSendMessage = async (messageText: string, uploadedFileId?: string, uploadedFileName?: string) => {
     console.log('🚀 handleSendMessage called');
     console.log('📦 Session type check:', { isRadarSession, currentConversationId });
+    console.log('📎 File info:', { uploadedFileId, uploadedFileName });
     
-    if (!messageText.trim() || loading) {
+    // 检查是否有消息文本或上传的文件
+    const hasMessageText = messageText.trim();
+    const hasUploadedFile = uploadedFileId && uploadedFileName;
+    
+    if ((!hasMessageText && !hasUploadedFile) || loading) {
+      console.log('⚠️ No message text or file to send');
       return;
     }
+    
+    // 如果只有文件没有文字，使用默认消息（不会显示给用户）
+    const displayText = hasMessageText ? messageText : '';
+    const queryText = hasMessageText ? messageText : '请分析这份文档';
+    
+    console.log('📝 Display text:', displayText);
+    console.log('📝 Query text for Dify:', queryText);
 
     if (isRadarSession) {
       console.log('🎯 Detected Radar Session - Routing to Radar API');
       return handleRadarMessage(messageText);
     }
 
+    // 只有当用户输入了文字时，才在消息中显示内容
     const userMessage: Message = {
       role: 'user',
-      content: messageText,
+      content: displayText,
       timestamp: new Date(),
       ...(uploadedFileId && uploadedFileName ? {
         attachedFile: {
@@ -693,8 +707,9 @@ export default function DifyChat() {
     startThinkingAnimation(isFirst);
 
     try {
+      // 发送给Dify的请求使用queryText（可能是默认消息）
       const requestBody: DifyChatRequestBody = {
-        query: messageText,
+        query: queryText,
         user_id: user!.id
       };
 
@@ -1835,7 +1850,7 @@ export default function DifyChat() {
                 </div>
                 <Button
                   onClick={handleSend}
-                  disabled={isChatInputDisabled || !input.trim() || loading}
+                  disabled={isChatInputDisabled || (!input.trim() && !uploadedFile) || loading}
                   className="h-[60px] px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {loading ? (
