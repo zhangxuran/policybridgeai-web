@@ -20,6 +20,8 @@ interface UserProfile {
   contact_name?: string;
   phone?: string;
   subscription_plan: 'free' | 'professional' | 'enterprise';
+  subscription_status?: string;
+  remaining_days?: number;
   free_contracts_limit: number;
   free_contracts_used: number;
   created_at: string;
@@ -307,13 +309,13 @@ export default function Dashboard() {
                 <Badge className={getPlanBadgeColor(profile?.subscription_plan || 'free')}>
                   {getLocalizedPlanName(profile?.subscription_plan || 'free')}
                 </Badge>
-                {subscriptionStatus && subscriptionStatus.expirationDate && (
+                {profile?.remaining_days !== undefined && profile?.remaining_days !== null && (
                   <div className="mt-2 text-sm text-gray-600 flex items-center gap-1">
                     <Clock className="h-4 w-4" />
                     <span>
-                      {subscriptionStatus.isExpired 
+                      {profile?.remaining_days === 0
                         ? t('dashboardPage.userInfo.expired')
-                        : t('dashboardPage.userInfo.daysRemaining', { days: subscriptionStatus.daysRemaining })}
+                        : t('dashboardPage.userInfo.daysRemaining', { days: profile?.remaining_days })}
                     </span>
                   </div>
                 )}
@@ -426,19 +428,19 @@ export default function Dashboard() {
               <div className="p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
                 <div className="text-sm text-gray-600 mb-1">{t('dashboardPage.subscription.currentPlan')}</div>
                 <div className="text-2xl font-bold text-blue-900">
-                  {getLocalizedPlanName(subscriptionStatus?.plan || 'free')}
+                  {getLocalizedPlanName(profile?.subscription_plan || 'free')}
                 </div>
               </div>
               <div className="p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
                 <div className="text-sm text-gray-600 mb-1">
-                  {subscriptionStatus?.isExpired ? t('dashboardPage.subscription.expired') : t('dashboardPage.subscription.daysRemaining')}
+                  {profile?.remaining_days === 0 ? t('dashboardPage.subscription.expired') : t('dashboardPage.subscription.daysRemaining')}
                 </div>
                 <div className="text-2xl font-bold text-purple-900">
-                  {subscriptionStatus?.isExpired 
+                  {profile?.remaining_days === 0 
                     ? t('dashboardPage.subscription.zeroDays')
-                    : subscriptionStatus?.daysRemaining === Infinity 
+                    : profile?.remaining_days === Infinity 
                       ? t('dashboardPage.subscription.permanent')
-                      : t('dashboardPage.subscription.daysCount', { days: subscriptionStatus?.daysRemaining || 0 })}
+                      : t('dashboardPage.subscription.daysCount', { days: profile?.remaining_days || 0 })}
                 </div>
               </div>
             </div>
