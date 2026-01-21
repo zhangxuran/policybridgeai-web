@@ -208,7 +208,6 @@ export default function Pricing() {
                               <span className="text-gray-500">{t('pricing.perWeek')}</span>
                             )}
                           </div>
-                          <p className="text-sm text-gray-500 mt-2">{tier.unitCost}</p>
                         </>
                       ) : tier.id === 'free' ? (
                         <div className="text-3xl font-bold text-gray-900">{t('pricing.free')}</div>
