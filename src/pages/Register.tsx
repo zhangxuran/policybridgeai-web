@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from 'sonner';
-import { Scale, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 export default function Register() {
   const { t } = useTranslation();
@@ -106,9 +106,7 @@ export default function Register() {
       <Card className="w-full max-w-md shadow-xl">
         <CardHeader className="space-y-4">
           <div className="flex justify-center">
-            <div className="p-3 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl">
-              <Scale className="h-10 w-10 text-white" />
-            </div>
+            <img src="/images/pba-logo-clean.png" alt="PolicyBridge.ai" className="h-14 w-auto max-w-xs" />
           </div>
           <div className="text-center">
             <CardTitle className="text-2xl font-bold">{t('register.title')}</CardTitle>

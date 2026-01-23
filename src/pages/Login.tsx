@@ -141,7 +141,7 @@ export default function Login() {
       <Card className="w-full max-w-md shadow-xl">
         <CardHeader className="space-y-4">
           <div className="flex justify-center">
-            <img src="/images/pba-logo-transparent.png" alt="PolicyBridge.ai" className="h-16 w-auto" />
+            <img src="/images/pba-logo-clean.png" alt="PolicyBridge.ai" className="h-14 w-auto max-w-xs" />
           </div>
           <div className="text-center">
             <CardTitle className="text-2xl font-bold">{t('login.title')}</CardTitle>
