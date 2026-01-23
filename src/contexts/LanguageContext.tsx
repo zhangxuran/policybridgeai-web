@@ -10,20 +10,37 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const { i18n } = useTranslation();
-  const [language, setLanguageState] = useState<string>('en');
+  const [language, setLanguageState] = useState<string>(() => {
+    // Initialize from i18n immediately
+    return i18n.language || 'en';
+  });
 
   useEffect(() => {
-    // Initialize language from i18n
+    // Sync with i18n language changes
+    const handleLanguageChanged = (lng: string) => {
+      setLanguageState(lng);
+      console.log('✅ Language changed to:', lng);
+    };
+
+    // Listen for language changes
+    i18n.on('languageChanged', handleLanguageChanged);
+
+    // Set initial language
     const currentLanguage = i18n.language || 'en';
     setLanguageState(currentLanguage);
     console.log('✅ Language initialized:', currentLanguage);
+
+    return () => {
+      i18n.off('languageChanged', handleLanguageChanged);
+    };
   }, [i18n]);
 
   const setLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-    setLanguageState(lang);
+    localStorage.setItem('i18nextLng', lang);
     localStorage.setItem('preferred_language', lang);
-    console.log('✅ Language changed to:', lang);
+    i18n.changeLanguage(lang);
+    // setLanguageState will be updated via the languageChanged event listener
+    console.log('✅ Language change requested:', lang);
   };
 
   const value = {
