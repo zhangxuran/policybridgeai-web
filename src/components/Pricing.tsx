@@ -78,7 +78,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            灵活的定价方案
+            灵活的订阅方案
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             从试用到企业，满足不同规模的需求

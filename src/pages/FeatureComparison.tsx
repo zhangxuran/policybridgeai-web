@@ -41,7 +41,7 @@ export default function FeatureComparison() {
               className="mb-4"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              返回定价页面
+              返回订阅页面
             </Button>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               功能对比详情
@@ -209,7 +209,7 @@ export default function FeatureComparison() {
                   size="lg"
                   className="bg-white text-blue-600 hover:bg-gray-100"
                 >
-                  查看定价方案
+                  查看订阅方案
                 </Button>
                 <Button
                   onClick={() => navigate('/register')}

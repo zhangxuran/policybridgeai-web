@@ -125,7 +125,7 @@ export default function BoosterPack() {
               onClick={() => navigate('/pricing')}
               className="mt-6 bg-gradient-to-r from-blue-600 to-indigo-600"
             >
-              查看定价方案
+              查看订阅方案
             </Button>
           </div>
         </div>
