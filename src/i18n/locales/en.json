@@ -197,7 +197,19 @@
       "generic": "An error occurred during login",
       "googleLoginFailed": "Google login failed, please try again"
     },
-    "success": "Login successful!"
+    "success": "Login successful!",
+    "forgotPassword": "Forgot Password?"
+  },
+  "forgotPassword": {
+    "title": "Forgot Password",
+    "subtitle": "Enter your email to reset your password",
+    "emailSent": "Email Sent",
+    "checkEmail": "Please check your email for password reset instructions",
+    "redirecting": "Redirecting to login in 3 seconds...",
+    "sendButton": "Send Reset Link",
+    "backToLogin": "Back to Login",
+    "error": "Failed to send reset email",
+    "success": "Reset email sent successfully"
   },
   "register": {
     "title": "Create Account",
