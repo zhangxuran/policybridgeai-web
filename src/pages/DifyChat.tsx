@@ -120,9 +120,9 @@ const parseBoldText = (text: string, isUserMessage: boolean): React.ReactNode[] 
       parts.push(text.substring(lastIndex, match.index));
     }
 
-    // Add the bold text
+    // Add the bold text with enhanced styling
     parts.push(
-      <strong key={`bold-${key++}`} className="font-bold">
+      <strong key={`bold-${key++}`} className="font-bold font-semibold">
         {match[1]}
       </strong>
     );
@@ -196,7 +196,7 @@ const parseMessageContent = (content: string, isUserMessage: boolean = false, t:
           href={mdMatch.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center gap-1 underline ${
+          className={`inline-flex items-center gap-1 underline font-semibold ${
             isUserMessage 
               ? 'text-white hover:text-blue-100' 
               : 'text-blue-600 hover:text-blue-800'
@@ -268,7 +268,7 @@ const parseMessageContent = (content: string, isUserMessage: boolean = false, t:
             href={urlMatch.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-1 underline break-all ${
+            className={`inline-flex items-center gap-1 underline font-semibold break-all ${
               isUserMessage 
                 ? 'text-white hover:text-blue-100' 
                 : 'text-blue-600 hover:text-blue-800'
