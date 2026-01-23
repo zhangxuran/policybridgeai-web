@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '@/contexts/AuthContext';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 import { Toaster } from '@/components/ui/sonner';
 import Index from '@/pages/Index';
 import ProductIntroduction from '@/pages/ProductIntroduction';
@@ -29,8 +30,9 @@ import '@/i18n/config';
 function App() {
   return (
     <Router>
-      <AuthProvider>
-        <Routes>
+      <LanguageProvider>
+        <AuthProvider>
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/product-introduction" element={<ProductIntroduction />} />
           <Route path="/contact" element={<ContactUs />} />
@@ -55,9 +57,10 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/admin" element={<AdminPanel />} />
-        </Routes>
-        <Toaster />
-      </AuthProvider>
+          </Routes>
+          <Toaster />
+        </AuthProvider>
+      </LanguageProvider>
     </Router>
   );
 }
