@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Scale, Loader2, AlertCircle } from 'lucide-react';
+import { Loader2, AlertCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function Login() {
@@ -141,9 +141,7 @@ export default function Login() {
       <Card className="w-full max-w-md shadow-xl">
         <CardHeader className="space-y-4">
           <div className="flex justify-center">
-            <div className="p-3 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl">
-              <Scale className="h-8 w-8 text-white" />
-            </div>
+            <img src="/favicon.svg" alt="PolicyBridge.ai" className="h-12 w-12" />
           </div>
           <div className="text-center">
             <CardTitle className="text-2xl font-bold">{t('login.title')}</CardTitle>
