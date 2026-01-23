@@ -7,6 +7,10 @@
  * This function strips common Markdown syntax while preserving the actual content
  * EXCEPT for bold text which is converted to HTML <strong> tags
  * 
+ * Supports:
+ * - **text** or __text__ -> <strong>text</strong>
+ * - 【text】 (Chinese brackets) -> <strong>text</strong>
+ * 
  * @param text - The text containing Markdown formatting
  * @returns Plain text with all Markdown markers removed (bold converted to <strong>)
  */
@@ -19,6 +23,10 @@ export function stripMarkdown(text: string): string {
   // **text** or __text__ -> <strong>text</strong>
   result = result.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   result = result.replace(/__([^_]+)__/g, '<strong>$1</strong>');
+  
+  // Convert Chinese brackets 【text】 -> <strong>text</strong>
+  // This is important for Dify output which uses Chinese brackets for emphasis
+  result = result.replace(/【([^】]+)】/g, '<strong>$1</strong>');
 
   // Remove italic markers: *text* or _text_ -> text
   result = result.replace(/\*([^*]+)\*/g, '$1');
@@ -108,7 +116,8 @@ export function hasMarkdown(text: string): boolean {
     /^[\s]*[-*+]\s+/m, // Unordered lists
     /^[\s]*\d+\.\s+/m, // Ordered lists
     /\[([^\]]+)\]\([^)]+\)/, // Links
-    /!\[([^\]]*)\]\([^)]+\)/ // Images
+    /!\[([^\]]*)\]\([^)]+\)/, // Images
+    /【[^】]+】/  // Chinese brackets (Dify format)
   ];
 
   return markdownPatterns.some(pattern => pattern.test(text));
