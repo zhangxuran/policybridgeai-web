@@ -10,11 +10,10 @@ import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Loader2, AlertCircle } from 'lucide-react';
 import { toast } from 'sonner';
-import { useLanguage } from '@/contexts/LanguageContext';
+
 
 export default function Login() {
   const { t } = useTranslation();
-  const { language } = useLanguage();
   const navigate = useNavigate();
   const { user, login, loading: authLoading } = useAuth();
   const [email, setEmail] = useState('');
@@ -198,9 +197,8 @@ export default function Login() {
               </Alert>
             )}
 
-            {/* WeChat Login Button - Only for Chinese users */}
-            {language === 'zh' && (
-              <Button
+            {/* WeChat Login Button */}
+            <Button
                 type="button"
                 variant="outline"
                 className="w-full bg-[#09B981] hover:bg-[#059669] text-white border-[#09B981]"
@@ -221,7 +219,6 @@ export default function Login() {
                   </>
                 )}
               </Button>
-            )}
 
             {/* Google Login Button */}
             <Button
