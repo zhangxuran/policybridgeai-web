@@ -10,15 +10,18 @@ import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Loader2, AlertCircle } from 'lucide-react';
 import { toast } from 'sonner';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Login() {
   const { t } = useTranslation();
+  const { language } = useLanguage();
   const navigate = useNavigate();
   const { user, login, loading: authLoading } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
+  const [wechatLoading, setWechatLoading] = useState(false);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -114,6 +117,44 @@ export default function Login() {
     }
   };
 
+  const handleWechatLogin = () => {
+    if (wechatLoading) return;
+
+    setError('');
+    setWechatLoading(true);
+    console.log('=== WeChat OAuth login started ===');
+
+    try {
+      // WeChat OAuth parameters
+      const appId = import.meta.env.VITE_WECHAT_APP_ID;
+      if (!appId) {
+        throw new Error('WeChat App ID not configured');
+      }
+
+      const redirectUri = encodeURIComponent(
+        `${window.location.origin}/auth/wechat/callback`
+      );
+      const scope = 'snsapi_login';
+      const state = Math.random().toString(36).substring(2, 15) +
+        Math.random().toString(36).substring(2, 15);
+
+      // Store state in sessionStorage for verification
+      sessionStorage.setItem('wechat_oauth_state', state);
+
+      // Redirect to WeChat authorization page
+      const wechatAuthUrl = `https://open.weixin.qq.com/connect/qrconnect?appid=${appId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}&state=${state}#wechat_redirect`;
+
+      console.log('Redirecting to WeChat auth URL');
+      window.location.href = wechatAuthUrl;
+    } catch (error) {
+      console.error('WeChat login error:', error);
+      const errorMessage = error instanceof Error ? error.message : t('login.errors.wechatLoginFailed');
+      setError(errorMessage);
+      toast.error(errorMessage);
+      setWechatLoading(false);
+    }
+  };
+
   if (authLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
@@ -157,13 +198,38 @@ export default function Login() {
               </Alert>
             )}
 
+            {/* WeChat Login Button - Only for Chinese users */}
+            {language === 'zh' && (
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full bg-[#09B981] hover:bg-[#059669] text-white border-[#09B981]"
+                onClick={handleWechatLogin}
+                disabled={loading || googleLoading || wechatLoading}
+              >
+                {wechatLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    {t('login.wechatLoggingIn')}
+                  </>
+                ) : (
+                  <>
+                    <svg className="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.691 2.188C3.891 2.188 0 5.896 0 9.596c0 2.652 1.434 4.944 3.586 6.368-.059.811-.721 4.32-1.288 6.465.554-.146 3.54-1.755 5.051-2.585 1.078.227 2.181.347 3.341.347 4.8 0 8.691-3.708 8.691-8.408S13.491 2.188 8.691 2.188zM5.22 11.008h-1.77v1.771h1.77v-1.771zm2.655 0h-1.771v1.771h1.771v-1.771zm2.655 0h-1.77v1.771h1.77v-1.771zm2.655 0h-1.771v1.771h1.771v-1.771z" />
+                    </svg>
+                    {t('login.wechatLogin')}
+                  </>
+                )}
+              </Button>
+            )}
+
             {/* Google Login Button */}
             <Button
               type="button"
               variant="outline"
               className="w-full bg-white hover:bg-gray-50 text-gray-700 border-gray-300"
               onClick={handleGoogleLogin}
-              disabled={loading || googleLoading}
+              disabled={loading || googleLoading || wechatLoading}
             >
               {googleLoading ? (
                 <>
@@ -245,7 +311,7 @@ export default function Login() {
               <Button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                disabled={loading || googleLoading}
+                disabled={loading || googleLoading || wechatLoading}
               >
                 {loading ? (
                   <>

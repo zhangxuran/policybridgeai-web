@@ -190,15 +190,19 @@
     "googleLogin": "Sign in with Google",
     "googleLoggingIn": "Signing in with Google...",
     "orDivider": "Or",
+
+    "success": "Login successful!",
+    "forgotPassword": "Forgot Password?",
+    "wechatLogin": "Sign in with WeChat",
+    "wechatLoggingIn": "Signing in with WeChat...",
     "errors": {
       "emptyFields": "Please enter email and password",
       "loginFailed": "Login failed, please try again",
       "timeout": "Login timeout, please check your network connection",
       "generic": "An error occurred during login",
-      "googleLoginFailed": "Google login failed, please try again"
-    },
-    "success": "Login successful!",
-    "forgotPassword": "Forgot Password?"
+      "googleLoginFailed": "Google login failed, please try again",
+      "wechatLoginFailed": "WeChat login failed, please try again"
+    }
   },
   "forgotPassword": {
     "title": "Forgot Password",

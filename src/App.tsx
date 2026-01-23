@@ -24,6 +24,7 @@ import Disclaimer from '@/pages/Disclaimer';
 import AdminPanel from '@/pages/AdminPanel';
 import ForgotPassword from '@/pages/ForgotPassword';
 import ResetPassword from '@/pages/ResetPassword';
+import WechatCallback from '@/pages/WechatCallback';
 import '@/i18n/config';
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/auth/wechat/callback" element={<WechatCallback />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/ai-review" element={<AIReview />} />
           <Route path="/dify-chat" element={<DifyChat />} />

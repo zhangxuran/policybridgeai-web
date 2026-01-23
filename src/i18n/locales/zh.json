@@ -453,15 +453,19 @@
     "googleLogin": "使用 Google 登录",
     "googleLoggingIn": "正在使用 Google 登录...",
     "orDivider": "或",
+
+    "success": "登录成功!",
+    "forgotPassword": "忘记密码?",
+    "wechatLogin": "使用微信登录",
+    "wechatLoggingIn": "正在使用微信登录...",
     "errors": {
       "emptyFields": "请输入邮箱和密码",
       "loginFailed": "登录失败,请重试",
       "timeout": "登录超时,请检查网络连接",
       "generic": "登录过程中发生错误",
-      "googleLoginFailed": "Google 登录失败,请重试"
-    },
-    "success": "登录成功!",
-    "forgotPassword": "忘记密码?"
+      "googleLoginFailed": "Google 登录失败,请重试",
+      "wechatLoginFailed": "微信登录失败,请重试"
+    }
   },
   "forgotPassword": {
     "title": "找回密码",
