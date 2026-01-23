@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/contexts/AuthContext";
 
 interface WechatUser {
   id: string;
@@ -17,6 +18,7 @@ export const WechatCallback: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { t } = useLanguage();
+  const { setWechatUser } = useAuth();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -60,17 +62,18 @@ export const WechatCallback: React.FC = () => {
         const data = await response.json();
         const user: WechatUser = data.user;
 
-        // Store user info in localStorage
-        localStorage.setItem(
-          "wechat_user",
-          JSON.stringify({
-            id: user.id,
-            openid: user.openid,
-            nickname: user.nickname,
-            headimgurl: user.headimgurl,
-            loginTime: new Date().toISOString(),
-          })
-        );
+        // Store user info using AuthContext
+        setWechatUser({
+          id: user.id,
+          openid: user.openid,
+          nickname: user.nickname,
+          headimgurl: user.headimgurl,
+          province: user.province,
+          city: user.city,
+          country: user.country,
+          unionid: user.unionid,
+          loginTime: new Date().toISOString(),
+        });
 
         // Clear state from sessionStorage
         sessionStorage.removeItem("wechat_oauth_state");
@@ -94,7 +97,7 @@ export const WechatCallback: React.FC = () => {
     };
 
     handleWechatCallback();
-  }, [searchParams, navigate]);
+  }, [searchParams, navigate, setWechatUser]);
 
   if (loading) {
     return (

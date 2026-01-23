@@ -3,8 +3,21 @@ import { User } from '@supabase/supabase-js';
 import { supabase } from '@/lib/supabase';
 import { syncSubscriptionOnUpdate } from '@/lib/subscriptionSync';
 
+interface WechatUser {
+  id: string;
+  openid: string;
+  nickname: string;
+  headimgurl: string;
+  province?: string;
+  city?: string;
+  country?: string;
+  unionid?: string;
+  loginTime: string;
+}
+
 interface AuthContextType {
   user: User | null;
+  wechatUser: WechatUser | null;
   loading: boolean;
   subscriptionPlan: string;
   subscriptionStatus: string;
@@ -14,6 +27,7 @@ interface AuthContextType {
   signUp: (email: string, password: string) => Promise<void>;
   refreshSubscription: () => Promise<void>;
   resendVerificationEmail: (email: string) => Promise<{ success: boolean; message: string }>;
+  setWechatUser: (user: WechatUser | null) => void;
 }
 
 interface RegisterData {
@@ -28,9 +42,37 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
+  const [wechatUser, setWechatUserState] = useState<WechatUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [subscriptionPlan, setSubscriptionPlan] = useState<string>('free');
   const [subscriptionStatus, setSubscriptionStatus] = useState<string>('active');
+
+  // Initialize WeChat user from localStorage on mount
+  useEffect(() => {
+    const storedWechatUser = localStorage.getItem('wechat_user');
+    if (storedWechatUser) {
+      try {
+        const parsedUser = JSON.parse(storedWechatUser);
+        setWechatUserState(parsedUser);
+        console.log('✅ WeChat user restored from localStorage:', parsedUser.nickname);
+      } catch (error) {
+        console.error('Error parsing stored WeChat user:', error);
+        localStorage.removeItem('wechat_user');
+      }
+    }
+  }, []);
+
+  const setWechatUser = (user: WechatUser | null) => {
+    if (user) {
+      localStorage.setItem('wechat_user', JSON.stringify(user));
+      setWechatUserState(user);
+      console.log('✅ WeChat user saved to localStorage:', user.nickname);
+    } else {
+      localStorage.removeItem('wechat_user');
+      setWechatUserState(null);
+      console.log('WeChat user cleared from localStorage');
+    }
+  };
 
   const ensureProfileExists = async (authUser: User) => {
     try {
@@ -363,7 +405,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       // Clear any local storage items
       localStorage.removeItem('supabase.auth.token');
+      localStorage.removeItem('wechat_user');
       sessionStorage.clear();
+      setWechatUserState(null);
 
       console.log('Logout successful, clearing all auth data');
       return { success: true };
@@ -378,6 +422,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const value = {
     user,
+    wechatUser,
     loading,
     subscriptionPlan,
     subscriptionStatus,
@@ -387,6 +432,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     signUp,
     refreshSubscription,
     resendVerificationEmail,
+    setWechatUser,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
