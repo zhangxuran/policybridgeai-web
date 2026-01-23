@@ -23,6 +23,7 @@ import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import Disclaimer from '@/pages/Disclaimer';
 import AdminPanel from '@/pages/AdminPanel';
 import ForgotPassword from '@/pages/ForgotPassword';
+import ResetPassword from '@/pages/ResetPassword';
 import '@/i18n/config';
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/ai-review" element={<AIReview />} />

@@ -211,6 +211,23 @@
     "error": "Failed to send reset email",
     "success": "Reset email sent successfully"
   },
+  "resetPassword": {
+    "title": "Reset Password",
+    "subtitle": "Enter your new password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "resetButton": "Reset Password",
+    "successTitle": "Password Reset",
+    "successMessage": "Your password has been reset successfully",
+    "redirecting": "Redirecting to login in 3 seconds...",
+    "verifying": "Verifying reset link...",
+    "invalidLink": "Invalid or expired reset link",
+    "noSession": "No active session. Please use the link from the email.",
+    "emptyFields": "Please fill in all fields",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordMismatch": "Passwords do not match",
+    "success": "Password reset successfully"
+  },
   "register": {
     "title": "Create Account",
     "subtitle": "Create your PolicyBridge.ai account",

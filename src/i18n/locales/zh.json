@@ -474,6 +474,23 @@
     "error": "发送重置邮件失败",
     "success": "重置邮件发送成功"
   },
+  "resetPassword": {
+    "title": "重置密码",
+    "subtitle": "输入您的新密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "resetButton": "重置密码",
+    "successTitle": "密码重置",
+    "successMessage": "您的密码已成功重置",
+    "redirecting": "将在 3 秒后跳转到登录页面...",
+    "verifying": "正在验证重置链接...",
+    "invalidLink": "无效或已过期的重置链接",
+    "noSession": "没有活跃会话。请使用邮件中的链接。",
+    "emptyFields": "请填写所有字段",
+    "passwordTooShort": "密码必须至少 6 个字符",
+    "passwordMismatch": "两次输入的密码不一致",
+    "success": "密码重置成功"
+  },
   "register": {
     "title": "创建账户",
     "subtitle": "创建您的合规桥 PBA 账户",
