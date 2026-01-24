@@ -9,7 +9,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
-import { Send, Upload, Loader2, MessageSquare, Trash2, ArrowLeft, User, Scale, X, FileText, Download, ExternalLink, Radar, Copy, Check } from 'lucide-react';
+import { Send, Upload, Loader2, MessageSquare, Trash2, ArrowLeft, User, Scale, X, FileText, Download, ExternalLink, Radar, Copy, Check, Menu } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ConfirmDialog from '@/components/ConfirmDialog';
 import { UpgradeDialog } from '@/components/UpgradeDialog';
@@ -302,11 +302,10 @@ export default function DifyChat() {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [currentConversationId, setCurrentConversationId] = useState<string | null>(null);
   const [currentDifyConversationId, setCurrentDifyConversationId] = useState<string | null>(null);
+  const [selectedConversations, setSelectedConversations] = useState<Set<string>  const [showBatchDeleteDialog, setShowBatchDeleteDialog] = useState(false);
   const [selectedConversations, setSelectedConversations] = useState<Set<string>>(new Set());
-  const [showBatchDeleteDialog, setShowBatchDeleteDialog] = useState(false);
-  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [conversationToDelete, setConversationToDelete] = useState<string | null>(null);
-  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);nitialLoad, setIsInitialLoad] = useState(true);
   const [thinkingMessageIndex, setThinkingMessageIndex] = useState(0);
   const [isFirstMessage, setIsFirstMessage] = useState(false);
   const [showUpgradeDialog, setShowUpgradeDialog] = useState(false);
@@ -1488,8 +1487,31 @@ export default function DifyChat() {
       />
 
       <div className="container mx-auto px-4 pb-4">
-        <div className="flex gap-6 h-[calc(100vh-8rem)]">
-          <Card className="w-72 p-4 overflow-y-auto bg-white/80 backdrop-blur-sm border-gray-200 shadow-lg">
+        {/* Mobile menu toggle button */}
+        <div className="md:hidden mb-2 flex items-center gap-2">
+          <Button
+            onClick={() => setShowSidebar(!showSidebar)}
+            variant="ghost"
+            size="sm"
+            className="text-gray-600 hover:text-blue-600"
+          >
+            <Menu className="h-5 w-5" />
+          </Button>
+          <span className="text-sm text-gray-600">{t('difyChat.conversationHistory')}</span>
+        </div>
+
+        {/* Sidebar overlay for mobile */}
+        {showSidebar && (
+          <div
+            className="md:hidden fixed inset-0 bg-black/50 z-40 top-16"
+            onClick={() => setShowSidebar(false)}
+          />
+        )}
+
+        <div className="flex gap-4 md:gap-6 h-[calc(100vh-8rem)] md:h-[calc(100vh-8rem)]">
+          <Card className={`${
+            showSidebar ? 'fixed left-0 top-16 bottom-0 z-50 w-64 md:w-72 md:static md:bottom-auto md:top-auto md:z-auto' : 'hidden md:block md:w-72'
+          } p-4 overflow-y-auto bg-white/80 backdrop-blur-sm border-gray-200 shadow-lg md:shadow-lg`}>
             {i18n.language === 'zh' && (
               <Button
                 onClick={handleRadarButtonClick}
@@ -1569,7 +1591,7 @@ export default function DifyChat() {
             </div>
           </Card>
 
-          <Card className="flex-1 flex flex-col bg-white/90 backdrop-blur-sm border-gray-200 shadow-xl">
+          <Card className="flex-1 flex flex-col bg-white/90 backdrop-blur-sm border-gray-200 shadow-xl w-full md:w-auto">
             <div className="flex-1 overflow-y-auto p-6 space-y-4 scroll-smooth">
               {showRadarInterface ? (
                 <div className="w-full h-full overflow-y-auto animate-fadeIn">
@@ -1642,23 +1664,23 @@ export default function DifyChat() {
                             <div className="absolute inset-0 bg-blue-400/20 blur-xl rounded-full animate-pulse"></div>
                           </div>
                         </div>
-                        <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                           {t('difyChat.welcome.title')}
                         </h2>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-600 text-base md:text-lg">
                           {t('difyChat.welcome.subtitle')}
                         </p>
-                        <p className="text-gray-500 text-sm">
+                        <p className="text-gray-500 text-xs md:text-sm">
                           {t('difyChat.welcome.description')}
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-4 pt-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 pt-4">
                         <div className="space-y-3">
                           <Button
                             onClick={() => handleIdentitySelect(t('difyChat.welcome.identities.seller'))}
                             variant="outline"
-                            className="w-full h-14 text-base font-medium hover:bg-blue-50 hover:border-blue-400 hover:text-blue-700 hover:shadow-md transition-all duration-200"
+                            className="w-full h-12 md:h-14 text-sm md:text-base font-medium hover:bg-blue-50 hover:border-blue-400 hover:text-blue-700 hover:shadow-md transition-all duration-200"
                             disabled={loading}
                           >
                             {t('difyChat.welcome.identities.seller')}
@@ -1667,7 +1689,7 @@ export default function DifyChat() {
                           <Button
                             onClick={() => handleIdentitySelect(t('difyChat.welcome.identities.buyer'))}
                             variant="outline"
-                            className="w-full h-14 text-base font-medium hover:bg-green-50 hover:border-green-400 hover:text-green-700 hover:shadow-md transition-all duration-200"
+                            className="w-full h-12 md:h-14 text-sm md:text-base font-medium hover:bg-green-50 hover:border-green-400 hover:text-green-700 hover:shadow-md transition-all duration-200"
                             disabled={loading}
                           >
                             {t('difyChat.welcome.identities.buyer')}
@@ -1676,7 +1698,7 @@ export default function DifyChat() {
                           <Button
                             onClick={() => handleIdentitySelect(t('difyChat.welcome.identities.intermediary'))}
                             variant="outline"
-                            className="w-full h-14 text-base font-medium hover:bg-purple-50 hover:border-purple-400 hover:text-purple-700 hover:shadow-md transition-all duration-200"
+                            className="w-full h-12 md:h-14 text-sm md:text-base font-medium hover:bg-purple-50 hover:border-purple-400 hover:text-purple-700 hover:shadow-md transition-all duration-200"
                             disabled={loading}
                           >
                             {t('difyChat.welcome.identities.intermediary')}
@@ -1685,7 +1707,7 @@ export default function DifyChat() {
                           <Button
                             onClick={() => handleIdentitySelect(t('difyChat.welcome.identities.logistics'))}
                             variant="outline"
-                            className="w-full h-14 text-base font-medium hover:bg-orange-50 hover:border-orange-400 hover:text-orange-700 hover:shadow-md transition-all duration-200"
+                            className="w-full h-12 md:h-14 text-sm md:text-base font-medium hover:bg-orange-50 hover:border-orange-400 hover:text-orange-700 hover:shadow-md transition-all duration-200"
                             disabled={loading}
                           >
                             {t('difyChat.welcome.identities.logistics')}
@@ -1696,7 +1718,7 @@ export default function DifyChat() {
                           <Button
                             onClick={() => handleIdentitySelect(t('difyChat.welcome.identities.brand'))}
                             variant="outline"
-                            className="w-full h-14 text-base font-medium hover:bg-pink-50 hover:border-pink-400 hover:text-pink-700 hover:shadow-md transition-all duration-200"
+                            className="w-full h-12 md:h-14 text-sm md:text-base font-medium hover:bg-pink-50 hover:border-pink-400 hover:text-pink-700 hover:shadow-md transition-all duration-200"
                             disabled={loading}
                           >
                             {t('difyChat.welcome.identities.brand')}
@@ -1705,7 +1727,7 @@ export default function DifyChat() {
                           <Button
                             onClick={() => handleIdentitySelect(t('difyChat.welcome.identities.warehouse'))}
                             variant="outline"
-                            className="w-full h-14 text-base font-medium hover:bg-teal-50 hover:border-teal-400 hover:text-teal-700 hover:shadow-md transition-all duration-200"
+                            className="w-full h-12 md:h-14 text-sm md:text-base font-medium hover:bg-teal-50 hover:border-teal-400 hover:text-teal-700 hover:shadow-md transition-all duration-200"
                             disabled={loading}
                           >
                             {t('difyChat.welcome.identities.warehouse')}
@@ -1740,15 +1762,15 @@ export default function DifyChat() {
                       style={{ animationDelay: `${index * 0.05}s` }}
                     >
                       {message.role === 'assistant' && (
-                        <Avatar className="w-10 h-10 border-2 border-amber-300 shadow-md flex-shrink-0">
+                        <Avatar className="w-8 md:w-10 h-8 md:h-10 border-2 border-amber-300 shadow-md flex-shrink-0">
                           <AvatarFallback className="bg-gradient-to-br from-amber-500 to-amber-600 text-white">
-                            <Scale className="w-5 h-5" />
+                            <Scale className="w-4 md:w-5 h-4 md:h-5" />
                           </AvatarFallback>
                         </Avatar>
                       )}
 
                       <div
-                        className={`group/message max-w-[70%] p-4 rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg relative ${
+                        className={`group/message max-w-[85%] md:max-w-[70%] p-3 md:p-4 rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg relative text-sm md:text-base ${
                           message.role === 'user'
                             ? 'bg-gradient-to-br from-blue-600 to-indigo-600 text-white'
                             : 'bg-white border border-gray-200 text-gray-900'
@@ -1804,9 +1826,9 @@ export default function DifyChat() {
                       </div>
 
                       {message.role === 'user' && (
-                        <Avatar className="w-10 h-10 border-2 border-blue-200 shadow-md flex-shrink-0">
+                        <Avatar className="w-8 md:w-10 h-8 md:h-10 border-2 border-blue-200 shadow-md flex-shrink-0">
                           <AvatarFallback className="bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-                            <User className="w-5 h-5" />
+                            <User className="w-4 md:w-5 h-4 md:h-5" />
                           </AvatarFallback>
                         </Avatar>
                       )}
@@ -1817,11 +1839,11 @@ export default function DifyChat() {
               )}
             </div>
 
-            <div className="border-t border-gray-200 bg-white/80 backdrop-blur-sm p-4">
+            <div className="border-t border-gray-200 bg-white/80 backdrop-blur-sm p-3 md:p-4">
               {uploadedFile && (
-                <div className="mb-3 flex items-center gap-2 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                  <FileText className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                  <span className="text-sm text-gray-700 flex-1 truncate">{uploadedFile.name}</span>
+                <div className="mb-3 flex items-center gap-2 p-2 md:p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                  <FileText className="h-4 md:h-5 w-4 md:w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-xs md:text-sm text-gray-700 flex-1 truncate">{uploadedFile.name}</span>
                   <Button
                     variant="ghost"
                     size="sm"
@@ -1833,12 +1855,12 @@ export default function DifyChat() {
                 </div>
               )}
               
-              <div className="flex gap-3 items-end">
+              <div className="flex gap-2 md:gap-3 items-end">
                 <Button 
                   variant="outline" 
                   size="icon" 
                   disabled={isChatInputDisabled || loading || uploadingFile}
-                  className="hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="h-10 md:h-12 w-10 md:w-12 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
                   onClick={() => document.getElementById('file-upload')?.click()}
                 >
                   {uploadingFile ? (
@@ -1872,7 +1894,7 @@ export default function DifyChat() {
                           ? t('difyChat.input.placeholderWithFile')
                           : t('difyChat.input.placeholder')
                     }
-                    className="min-h-[60px] max-h-[200px] resize-none bg-white border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl transition-all duration-300 disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed"
+                    className="min-h-[50px] md:min-h-[60px] max-h-[200px] resize-none bg-white border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl transition-all duration-300 disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed text-sm md:text-base"
                     disabled={isChatInputDisabled || loading}
                   />
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-indigo-500/0 to-purple-500/0 group-focus-within:from-blue-500/5 group-focus-within:via-indigo-500/5 group-focus-within:to-purple-500/5 pointer-events-none transition-all duration-500"></div>
@@ -1880,12 +1902,12 @@ export default function DifyChat() {
                 <Button
                   onClick={handleSend}
                   disabled={isChatInputDisabled || (!input.trim() && !uploadedFile) || loading}
-                  className="h-[60px] px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="h-10 md:h-[60px] px-3 md:px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex-shrink-0"
                 >
                   {loading ? (
-                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <Loader2 className="w-4 md:w-5 h-4 md:h-5 animate-spin" />
                   ) : (
-                    <Send className="w-5 h-5" />
+                    <Send className="w-4 md:w-5 h-4 md:h-5" />
                   )}
                 </Button>
               </div>
