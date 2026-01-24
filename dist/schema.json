@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PolicyBridge AI (合规桥PBA)",
+  "alternateName": "合规桥PBA",
+  "description": "PolicyBridge AI (合规桥PBA) - 您的AI智能合同审查平台，为跨境贸易提供专业的合规风险筛选和法律支持。",
+  "url": "https://www.policybridgeai.com",
+  "image": "https://www.policybridgeai.com/og-image.png",
+  "applicationCategory": "BusinessApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "150"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "PolicyBridge AI",
+    "url": "https://www.policybridgeai.com",
+    "logo": "https://www.policybridgeai.com/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/policybridge-ai",
+      "https://twitter.com/policybridge_ai"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "policybridge.ai@gmail.com"
+    }
+  },
+  "inLanguage": ["en", "zh", "fr", "de", "it", "es"],
+  "operatingSystem": "Web",
+  "browserRequirements": "Requires JavaScript"
+}
