@@ -29,7 +29,8 @@ export default function Index() {
     {
       icon: <Zap className="h-8 w-8" />,
       title: t('home.features.fastReview'),
-      description: t('home.features.fastReviewDesc')
+      description: t('home.features.fastReviewDesc'),
+      details: '⚡ 上传合同后30秒内即可获得完整的风险分析报告。 📄 支持PDF、Word、图片等多种文件格式。 🎯 AI智能引擎快速识别关键条款和潜在风险。 ✨ 无需等待，立即了解合同中的重要信息。'
     },
     {
       icon: <Shield className="h-8 w-8" />,
@@ -298,7 +299,11 @@ export default function Index() {
                     </div>
                   </div>
                   <div className="pt-6 border-t border-slate-200">
-                    <p className="text-slate-500 text-sm">Detailed content coming soon...</p>
+                    {features[expandedFeatureIdx]?.details && (
+                      <p className="text-slate-600 text-base leading-relaxed whitespace-pre-wrap">
+                        {features[expandedFeatureIdx].details}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
