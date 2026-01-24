@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -9,6 +10,7 @@ import Navbar from '@/components/Navbar';
 export default function Index() {
   const { t, i18n } = useTranslation();
   const { user } = useAuth();
+  const [expandedFeatureIdx, setExpandedFeatureIdx] = React.useState<number | null>(null);
 
   // Check if current language is Chinese
   const isChineseLanguage = i18n.language === 'zh' || i18n.language === 'zh-CN';
@@ -274,26 +276,54 @@ export default function Index() {
             </p>
           </div>
 
-          {/* 特性网格 */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, idx) => (
-              <div
-                key={idx}
-                className="group p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-200 hover:border-amber-300 transition-all duration-300 hover:shadow-xl hover:shadow-amber-200/20"
-              >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900/10 to-amber-400/10 flex items-center justify-center mb-6 group-hover:from-blue-900/20 group-hover:to-amber-400/20 transition-colors">
-                  <div className="text-blue-900 group-hover:text-amber-500 transition-colors">
-                    {feature.icon}
+          {/* 特性网格 - 带悬停展开效果 */}
+          <div className="relative">
+            {expandedFeatureIdx !== null ? (
+              <div className="max-w-2xl mx-auto" onMouseLeave={() => setExpandedFeatureIdx(null)}>
+                <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-sm border-2 border-amber-300 shadow-2xl shadow-amber-200/30">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900/20 to-amber-400/20 flex items-center justify-center flex-shrink-0">
+                      <div className="text-blue-900 text-2xl">
+                        {features[expandedFeatureIdx].icon}
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        {features[expandedFeatureIdx].title}
+                      </h3>
+                      <p className="text-slate-600 leading-relaxed text-lg">
+                        {features[expandedFeatureIdx].description}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="pt-6 border-t border-slate-200">
+                    <p className="text-slate-500 text-sm">Detailed content coming soon...</p>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
-            ))}
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, idx) => (
+                  <div
+                    key={idx}
+                    className="group p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-200 hover:border-amber-300 transition-all duration-300 hover:shadow-xl hover:shadow-amber-200/20 cursor-pointer"
+                    onMouseEnter={() => setExpandedFeatureIdx(idx)}
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900/10 to-amber-400/10 flex items-center justify-center mb-6 group-hover:from-blue-900/20 group-hover:to-amber-400/20 transition-colors">
+                      <div className="text-blue-900 group-hover:text-amber-500 transition-colors">
+                        {feature.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
