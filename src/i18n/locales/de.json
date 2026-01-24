@@ -706,16 +706,22 @@
     "features": {
       "fastReview": "Schnelle Überprüfung",
       "fastReviewDesc": "Vollständige Vertragsanalyse in Sekunden",
+      "fastReviewDetails": "⚡ Erhalten Sie umfassende Risikoanalyseber ichte innerhalb von 30 Sekunden. 📄 Unterstützt mehrere Dateiformate wie PDF, Word und Bilder. 🎯 Die KI-Engine identifiziert schnell Schlüsselklauseln und potenzielle Risiken. ✨ Keine Wartezeit erforderlich, verstehen Sie sofort wichtige Informationen in Ihren Verträgen.",
       "accurateDetection": "Genaue Erkennung",
       "accurateDetectionDesc": "KI-gesteuerte Risikenerkennung",
+      "accurateDetectionDetails": "🎯 Die KI-gesteuerte Risikenerkennung identifiziert versteckte Vertragsfallen. ⚠️ Analysiert Schlüsselklauseln, Haftungsklauseln und Risikobestimmungen. 🔍 Kennzeichnet intelligente potenzielle Rechtsrisiken und Compliance-Probleme. 💡 Helfen Sie Ihnen, intelligentere Geschäftsentscheidungen zu treffen.",
       "multiCountryLaw": "Mehrländerrecht",
       "multiCountryLawDesc": "Unterstützung für mehrere Gerichtsbarkeiten",
+      "multiCountryLawDetails": "🌍 Unterstützt Rechtsrahmen mehrerer Länder und Regionen. 📚 Umfasst internationalen Handel, geistiges Eigentum und Datenschutz. ⚖️ Echtzeitaktualisierungen zu den neuesten Rechts- und Regelmäßigkeitsänderungen. 🔗 Anwendbar auf grenzüberschreitende Transaktionen und internationale Zusammenarbeit.",
       "realTimeUpdate": "Echtzeit-Updates",
       "realTimeUpdateDesc": "Neueste Gesetze und Vorschriften synchronisiert",
+      "realTimeUpdateDetails": "📡 Tägliche Aktualisierungen zu den neuesten Gesetzen, Vorschriften und Policänderungen. 🔄 Automatische Synchronisierung globaler Compliance-Standards. 🗠️ Bleiben Sie über Branchentrends und Risikowarnungen informiert. ✅ Stellen Sie sicher, dass Ihre Verträge immer den neuesten gesetzlichen Anforderungen entsprechen.",
       "detailedReport": "Detaillierter Bericht",
       "detailedReportDesc": "Umfassender Risikoanalyse-Bericht",
+      "detailedReportDetails": "📈 Erstellen Sie professionelle Risikoanalyseber ichte. 📏 Detaillierte Aufschlüsselung jedes Risikopunkts und seiner Auswirkungen. 🗣️ Bieten Sie professionelle Änderungsvorschläge und Optimierungslösungen. 📅 Unterstützt Download und Freigabe im PDF/Word-Format.",
       "dataSecurity": "Datensicherheit",
-      "dataSecurityDesc": "Verschlüsselung auf Unternehmensebene"
+      "dataSecurityDesc": "Verschlüsselung auf Unternehmensebene",
+      "dataSecurityDetails": "🔐 Verschlüsselung auf Unternehmensebene schützt Ihre vertraulichen Informationen. 🛡️ Konform mit DSGVO, ISO27001 und anderen internationalen Standards. 🔒 Alle Daten sind streng vertraulich und werden nicht mit Dritten geteilt. ✨ Laden Sie Verträge mit Zuversicht hoch und analysieren Sie sie."
     },
     "quickLinks": "Produktpräsentation",
     "contactUsLink": "Kontaktieren Sie uns"

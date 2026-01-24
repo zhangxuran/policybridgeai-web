@@ -768,16 +768,22 @@
     "features": {
       "fastReview": "Examen rapide",
       "fastReviewDesc": "Analyse complète du contrat en secondes",
+      "fastReviewDetails": "⚡ Obtenez des rapports d'analyse des risques complets en 30 secondes. 📄 Support pour plusieurs formats de fichiers incluant PDF, Word et images. 🎯 Le moteur alimenté par l'IA identifie rapidement les clauses clés et les risques potentiels. ✨ Pas d'attente requise, comprenez instantanément les informations importantes dans vos contrats.",
       "accurateDetection": "Détection précise",
       "accurateDetectionDesc": "Détection des risques pilotée par l'IA",
+      "accurateDetectionDetails": "🎯 La détection des risques pilotée par l'IA identifie les pièges de contrat cachés. ⚠️ Analyse les clauses clés, les clauses de responsabilité et les dispositions de risque. 🔍 Signale intelligemment les risques juridiques potentiels et les problèmes de conformité. 💡 Vous aider à prendre des décisions commerciales plus intelligentes.",
       "multiCountryLaw": "Droit multi-pays",
       "multiCountryLawDesc": "Support pour plusieurs juridictions",
+      "multiCountryLawDetails": "🌍 Support des cadres juridiques de plusieurs pays et régions. 📚 Couvre le commerce international, la propriété intellectuelle et la protection des données. ⚖️ Mises à jour en temps réel sur les derniers changements juridiques et réglementaires. 🔗 Applicable aux transactions transfrontalières et à la coopération internationale.",
       "realTimeUpdate": "Mises à jour en temps réel",
       "realTimeUpdateDesc": "Lois et réglementations les plus récentes synchronisées",
+      "realTimeUpdateDetails": "📡 Mises à jour quotidiennes sur les dernières lois, réglementations et changements de politique. 🔄 Synchronisation automatique des normes de conformité mondiales. 🗠️ Restez informé des tendances de l'industrie et des alertes de risque. ✅ Assurez-vous que vos contrats respectent toujours les dernières exigences légales.",
       "detailedReport": "Rapport détaillé",
       "detailedReportDesc": "Rapport d'analyse des risques complet",
+      "detailedReportDetails": "📈 Générez des rapports d'analyse des risques professionnels. 📏 Ventilation détaillée de chaque point de risque et de son impact. 🗣️ Fournir des suggestions de révision professionnelles et des solutions d'optimisation. 📅 Support du téléchargement et du partage au format PDF/Word.",
       "dataSecurity": "Sécurité des données",
-      "dataSecurityDesc": "Protection par chiffrement de niveau entreprise"
+      "dataSecurityDesc": "Protection par chiffrement de niveau entreprise",
+      "dataSecurityDetails": "🔐 Le chiffrement de niveau entreprise protège vos informations sensibles. 🛡️ Conforme au RGPD, ISO27001 et autres normes internationales. 🔒 Toutes les données sont strictement confidentielles et non partagées avec des tiers. ✨ Téléchargez et analysez n'importe quel contrat en toute tranquillité."
     },
     "quickLinks": "Présentation du produit",
     "contactUsLink": "Nous contacter"

@@ -507,16 +507,22 @@
     "features": {
       "fastReview": "Revisión rápida",
       "fastReviewDesc": "Análisis completo del contrato en segundos",
+      "fastReviewDetails": "⚡ Obtenga informes completos de análisis de riesgos en 30 segundos. 📄 Soporte para múltiples formatos de archivo incluyendo PDF, Word e imágenes. 🎯 El motor impulsado por IA identifica rápidamente cláusulas clave y riesgos potenciales. ✨ No se requiere espera, comprenda instantáneamente la información importante en sus contratos.",
       "accurateDetection": "Detección precisa",
       "accurateDetectionDesc": "Detección de riesgos impulsada por IA",
+      "accurateDetectionDetails": "🎯 La detección de riesgos impulsada por IA identifica trampas de contrato ocultas. ⚠️ Analiza cláusulas clave, cláusulas de responsabilidad y disposiciones de riesgo. 🔍 Marca inteligentemente riesgos legales potenciales y problemas de cumplimiento. 💡 Ayúdele a tomar decisiones comerciales más inteligentes.",
       "multiCountryLaw": "Ley multipaís",
       "multiCountryLawDesc": "Soporte para múltiples jurisdicciones",
+      "multiCountryLawDetails": "🌍 Soporta marcos legales de múltiples países y regiones. 📚 Cubre comercio internacional, propiedad intelectual y protección de datos. ⚖️ Actualizaciones en tiempo real sobre los últimos cambios legales y normativos. 🔗 Aplicable a transacciones transfronterizas y cooperación internacional.",
       "realTimeUpdate": "Actualizaciones en tiempo real",
       "realTimeUpdateDesc": "Leyes y regulaciones más recientes sincronizadas",
+      "realTimeUpdateDetails": "📡 Actualizaciones diarias sobre las últimas leyes, regulaciones y cambios de política. 🔄 Sincronización automática de estándares de cumplimiento global. 🗠️ Manténgase informado sobre tendencias de la industria y alertas de riesgo. ✅ Asegure que sus contratos siempre cumplan con los requisitos legales más recientes.",
       "detailedReport": "Informe detallado",
       "detailedReportDesc": "Informe completo de análisis de riesgos",
+      "detailedReportDetails": "📈 Genere informes profesionales de análisis de riesgos. 📏 Desglose detallado de cada punto de riesgo y su impacto. 🗣️ Proporcione sugerencias de revisión profesionales y soluciones de optimización. 📅 Soporta descarga y compartir en formato PDF/Word.",
       "dataSecurity": "Seguridad de datos",
-      "dataSecurityDesc": "Protección con cifrado de nivel empresarial"
+      "dataSecurityDesc": "Protección con cifrado de nivel empresarial",
+      "dataSecurityDetails": "🔐 El cifrado de nivel empresarial protege su información sensible. 🛡️ Cumple con RGPD, ISO27001 y otros estándares internacionales. 🔒 Todos los datos son estrictamente confidenciales y no se comparten con terceros. ✨ Cargue y analice cualquier contrato con tranquilidad."
     },
     "quickLinks": "Presentación del producto",
     "contactUsLink": "Contáctenos"
