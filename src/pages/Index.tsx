@@ -278,10 +278,10 @@ export default function Index() {
           </div>
 
           {/* 特性网格 - 带悬停展开效果 */}
-          <div className="relative">
+          <div className="relative min-h-[400px] px-4" onMouseLeave={() => setExpandedFeatureIdx(null)}>
             {expandedFeatureIdx !== null ? (
-              <div className="max-w-2xl mx-auto" onMouseLeave={() => setExpandedFeatureIdx(null)}>
-                <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-sm border-2 border-amber-300 shadow-2xl shadow-amber-200/30">
+              <div className="max-w-2xl mx-auto transition-all duration-300">
+                <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-sm border-2 border-amber-300 shadow-2xl shadow-amber-200/30 transition-all duration-500">
                   <div className="flex items-start gap-6 mb-6">
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900/20 to-amber-400/20 flex items-center justify-center flex-shrink-0">
                       <div className="text-blue-900 text-2xl">
@@ -303,7 +303,7 @@ export default function Index() {
                 </div>
               </div>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-300">
                 {features.map((feature, idx) => (
                   <div
                     key={idx}
