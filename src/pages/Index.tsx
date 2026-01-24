@@ -10,6 +10,7 @@ import Navbar from '@/components/Navbar';
 export default function Index() {
   const { t, i18n } = useTranslation();
   const { user } = useAuth();
+  // Feature card hover expansion state
   const [expandedFeatureIdx, setExpandedFeatureIdx] = React.useState<number | null>(null);
 
   // Check if current language is Chinese
