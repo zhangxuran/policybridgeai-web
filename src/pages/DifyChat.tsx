@@ -1487,8 +1487,8 @@ export default function DifyChat() {
         onOpenChange={setShowUpgradeDialog}
       />
 
-      <div className="container mx-auto px-4 pb-8">
-        <div className="flex gap-6 h-[calc(100vh-14rem)]">
+      <div className="container mx-auto px-4 pb-4">
+        <div className="flex gap-6 h-[calc(100vh-8rem)]">
           <Card className="w-72 p-4 overflow-y-auto bg-white/80 backdrop-blur-sm border-gray-200 shadow-lg">
             {i18n.language === 'zh' && (
               <Button
