@@ -302,10 +302,11 @@ export default function DifyChat() {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [currentConversationId, setCurrentConversationId] = useState<string | null>(null);
   const [currentDifyConversationId, setCurrentDifyConversationId] = useState<string | null>(null);
-  const [selectedConversations, setSelectedConversations] = useState<Set<string>  const [showBatchDeleteDialog, setShowBatchDeleteDialog] = useState(false);
   const [selectedConversations, setSelectedConversations] = useState<Set<string>>(new Set());
+  const [showBatchDeleteDialog, setShowBatchDeleteDialog] = useState(false);
   const [conversationToDelete, setConversationToDelete] = useState<string | null>(null);
-  const [showSidebar, setShowSidebar] = useState(false);nitialLoad, setIsInitialLoad] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [thinkingMessageIndex, setThinkingMessageIndex] = useState(0);
   const [isFirstMessage, setIsFirstMessage] = useState(false);
   const [showUpgradeDialog, setShowUpgradeDialog] = useState(false);
