@@ -30,37 +30,37 @@ export default function Index() {
       icon: <Zap className="h-8 w-8" />,
       title: t('home.features.fastReview'),
       description: t('home.features.fastReviewDesc'),
-      details: '⚡ 上传合同后30秒内即可获得完整的风险分析报告。 📄 支持PDF、Word、图片等多种文件格式。 🎯 AI智能引擎快速识别关键条款和潜在风险。 ✨ 无需等待，立即了解合同中的重要信息。'
+      detailsKey: 'home.features.fastReviewDetails'
     },
     {
       icon: <Shield className="h-8 w-8" />,
       title: t('home.features.accurateDetection'),
       description: t('home.features.accurateDetectionDesc'),
-      details: '🎯 AI驱动的风险检测，识别隐藏的合同陷阱。 ⚠️ 分析关键条款、责任条款和风险条款。 🔍 智能标记潜在的法律风险和合规问题。 💡 帮助您做出更明智的商业决策。'
+      detailsKey: 'home.features.accurateDetectionDetails'
     },
     {
       icon: <FileText className="h-8 w-8" />,
       title: t('home.features.multiCountryLaw'),
       description: t('home.features.multiCountryLawDesc'),
-      details: '🌍 支持多个国家和地区的法律框架。 📚 涵盖国际贸易、知识产权、数据保护等领域。 ⚖️ 实时更新最新的法律法规变化。 🔗 适用于跨境交易、国际合作等场景。'
+      detailsKey: 'home.features.multiCountryLawDetails'
     },
     {
       icon: <Clock className="h-8 w-8" />,
       title: t('home.features.realTimeUpdate'),
       description: t('home.features.realTimeUpdateDesc'),
-      details: '📡 每日更新最新的法律法规和政策变化。 🔄 自动同步全球合规标准。 🗠️ 及时推握行业动态和风险预警。 ✅ 确保您的合同始终符合最新法律要求。'
+      detailsKey: 'home.features.realTimeUpdateDetails'
     },
     {
       icon: <BarChart3 className="h-8 w-8" />,
       title: t('home.features.detailedReport'),
       description: t('home.features.detailedReportDesc'),
-      details: '📈 生成专业的风险分析报告。 📏 详细列出每个风险点及其影响。 🗣️ 提供专业的修改建议和优化方案。 📅 支持PDF/Word格式下载和分享。'
+      detailsKey: 'home.features.detailedReportDetails'
     },
     {
       icon: <CheckCircle2 className="h-8 w-8" />,
       title: t('home.features.dataSecurity'),
       description: t('home.features.dataSecurityDesc'),
-      details: '🔐 企业级加密保护您的敏感信息。 🛡️ 符合GDPR、ISO27001等国际标准。 🔒 所有数据严格保密，不与第三方共享。 ✨ 让您安心上传和分析任何合同。'
+      detailsKey: 'home.features.dataSecurityDetails'
     },
   ];
 
@@ -304,9 +304,9 @@ export default function Index() {
                     </div>
                   </div>
                   <div className="pt-6 border-t border-slate-200">
-                    {features[expandedFeatureIdx]?.details && (
+                    {features[expandedFeatureIdx]?.detailsKey && (
                       <p className="text-slate-600 text-base leading-relaxed whitespace-pre-wrap">
-                        {features[expandedFeatureIdx].details}
+                        {t(features[expandedFeatureIdx].detailsKey)}
                       </p>
                     )}
                   </div>

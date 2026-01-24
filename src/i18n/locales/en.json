@@ -109,16 +109,22 @@
     "features": {
       "fastReview": "Fast Review",
       "fastReviewDesc": "Complete contract analysis in seconds",
+      "fastReviewDetails": "⚡ Get comprehensive risk analysis reports within 30 seconds of uploading. 📄 Support for multiple file formats including PDF, Word, and images. 🎯 AI-powered engine quickly identifies key clauses and potential risks. ✨ No waiting required, instantly understand important information in your contracts.",
       "accurateDetection": "Accurate Detection",
       "accurateDetectionDesc": "AI-driven risk detection",
+      "accurateDetectionDetails": "🎯 AI-driven risk detection identifies hidden contract traps. ⚠️ Analyzes key clauses, liability clauses, and risk provisions. 🔍 Intelligently flags potential legal risks and compliance issues. 💡 Help you make smarter business decisions.",
       "multiCountryLaw": "Multi-Country Law",
       "multiCountryLawDesc": "Support for multiple jurisdictions",
+      "multiCountryLawDetails": "🌍 Support for legal frameworks across multiple countries and regions. 📚 Covers international trade, intellectual property, and data protection. ⚖️ Real-time updates on the latest legal and regulatory changes. 🔗 Applicable to cross-border transactions and international cooperation.",
       "realTimeUpdate": "Real-time Updates",
       "realTimeUpdateDesc": "Latest laws and regulations synchronized",
+      "realTimeUpdateDetails": "📡 Daily updates on the latest laws, regulations, and policy changes. 🔄 Automatically synchronize global compliance standards. 🗠️ Stay informed on industry trends and risk alerts. ✅ Ensure your contracts always comply with the latest legal requirements.",
       "detailedReport": "Detailed Report",
       "detailedReportDesc": "Comprehensive risk analysis report",
+      "detailedReportDetails": "📈 Generate professional risk analysis reports. 📏 Detailed breakdown of each risk point and its impact. 🗣️ Provide professional revision suggestions and optimization solutions. 📅 Support PDF/Word format download and sharing.",
       "dataSecurity": "Data Security",
-      "dataSecurityDesc": "Enterprise-grade encryption protection"
+      "dataSecurityDesc": "Enterprise-grade encryption protection",
+      "dataSecurityDetails": "🔐 Enterprise-grade encryption protects your sensitive information. 🛡️ Compliant with GDPR, ISO27001, and other international standards. 🔒 All data is strictly confidential and not shared with third parties. ✨ Upload and analyze any contract with peace of mind."
     },
     "quickLinks": "Product Introduction",
     "contactUsLink": "Contact Us"
