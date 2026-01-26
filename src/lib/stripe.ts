@@ -59,6 +59,7 @@ export async function createCheckoutSession(orderData: CheckoutSessionData): Pro
     cancelUrl: `${window.location.origin}/payment/cancel?order_id=${orderData.orderId}`,
   };
 
+  // Trigger deployment
   console.log('=== Creating Checkout Session ===');
   console.log('Request payload:', requestPayload);
   console.log('Package type:', orderData.packageType);
