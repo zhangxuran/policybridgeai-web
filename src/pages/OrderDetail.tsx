@@ -114,6 +114,9 @@ export default function OrderDetail() {
       console.log('Package type:', order.package_type);
       console.log('==============================');
 
+      // 支持卡和支付宝两种支付方式
+      const paymentMethods = ['card', 'alipay'];
+
       const session = await createCheckoutSession({
         orderId: order.order_id,
         amount: order.amount,
@@ -122,6 +125,7 @@ export default function OrderDetail() {
         packageType: order.package_type, // 传递套餐类型，让 Edge Function 重新计算价格
         currency: effectiveCurrency,
         language: effectiveLanguage,
+        paymentMethods: paymentMethods, // 传递支付方式
       });
 
       console.log('Checkout session created:', session);

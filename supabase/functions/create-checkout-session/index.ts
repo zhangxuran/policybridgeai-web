@@ -45,7 +45,7 @@ serve(async (req) => {
     console.log('Method:', req.method);
     console.log('Headers:', Object.fromEntries(req.headers.entries()));
 
-    const { orderId, amount, packageName, orderNumber, currency, language, packageType, successUrl, cancelUrl } = await req.json();
+    const { orderId, amount, packageName, orderNumber, currency, language, packageType, successUrl, cancelUrl, paymentMethods = ['card', 'alipay'] } = await req.json();
 
     console.log('=== Received Payment Request ===');
     console.log('Order ID:', orderId);
@@ -54,6 +54,7 @@ serve(async (req) => {
     console.log('Original amount:', amount);
     console.log('Currency:', currency);
     console.log('Language:', language);
+    console.log('Payment methods:', paymentMethods);
 
     // 确定货币代码
     const currencyCode = (currency || 'cny').toLowerCase();
@@ -78,7 +79,7 @@ serve(async (req) => {
 
     // 创建 Stripe Checkout 会话
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
+      payment_method_types: paymentMethods,
       line_items: [
         {
           price_data: {
@@ -102,6 +103,7 @@ serve(async (req) => {
         language: language || 'zh',
         original_amount: amount.toString(),
         final_amount: finalAmount.toString(),
+        payment_methods: paymentMethods.join(','),
       },
     });
 

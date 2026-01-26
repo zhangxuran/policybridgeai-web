@@ -28,6 +28,7 @@ export interface CheckoutSessionData {
   packageType?: string; // 新增: 套餐类型
   currency?: string; // 货币类型
   language?: string; // 用户语言
+  paymentMethods?: string[]; // 支付方式列表
 }
 
 export async function createCheckoutSession(orderData: CheckoutSessionData): Promise<{ id: string; url: string }> {
@@ -53,6 +54,7 @@ export async function createCheckoutSession(orderData: CheckoutSessionData): Pro
     packageType: orderData.packageType, // 传递套餐类型
     currency: orderData.currency || 'CNY',
     language: orderData.language || 'zh',
+    paymentMethods: orderData.paymentMethods || ['card', 'alipay'], // 传递支付方式
     successUrl: `${window.location.origin}/payment/success?order_id=${orderData.orderId}`,
     cancelUrl: `${window.location.origin}/payment/cancel?order_id=${orderData.orderId}`,
   };
