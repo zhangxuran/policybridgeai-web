@@ -74,7 +74,8 @@ export async function createCheckoutSession(orderData: CheckoutSessionData): Pro
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${session.access_token}`, // 使用用户的 session token
+        'Authorization': `Bearer ${session.access_token}`,
+        'apikey': import.meta.env.VITE_SUPABASE_ANON_KEY, // Supabase anon key
       },
       body: JSON.stringify(requestPayload),
     }
