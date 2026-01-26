@@ -1,10 +1,4 @@
-import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
-import Stripe from 'https://esm.sh/stripe@12.0.0?target=deno';
-
-const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
-  apiVersion: '2023-10-16',
-  httpClient: Stripe.createFetchHttpClient(),
-});
+import { serve } from 'https://deno.land/std@0.177.1/http/server.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -60,32 +54,33 @@ serve(async (req) => {
     const currencyCode = (currency || 'cny').toLowerCase();
     const currencyUpper = currencyCode.toUpperCase() as 'CNY' | 'EUR';
 
-    // 推断套餐类型
+    // 确定套餐类型
     const effectivePackageType = packageType || inferPackageType(packageName);
-    
-    // 根据套餐类型和货币获取正确的价格
-    let finalAmount = amount;
-    
-    if (PRICE_MAP[effectivePackageType]) {
-      const correctAmount = PRICE_MAP[effectivePackageType][currencyUpper];
-      if (correctAmount) {
-        finalAmount = correctAmount;
-        console.log('✅ Price recalculated:', finalAmount, currencyUpper);
-      }
-    }
+
+    // 从价格映射表获取价格
+    const priceData = PRICE_MAP[effectivePackageType] || PRICE_MAP['professional'];
+    const finalAmount = priceData[currencyUpper] || amount;
+
+    const packageNameStr = packageName || `${effectivePackageType} Package`;
 
     console.log('Final amount to charge:', finalAmount, currencyUpper);
     console.log('Unit amount (cents):', Math.round(finalAmount * 100));
 
-    // 创建 Stripe Checkout 会话
-    const session = await stripe.checkout.sessions.create({
+    // 调用 Stripe API 创建 Checkout 会话
+    const stripeSecretKey = Deno.env.get('STRIPE_SECRET_KEY');
+    if (!stripeSecretKey) {
+      throw new Error('STRIPE_SECRET_KEY environment variable is not set');
+    }
+
+    // 使用 Stripe REST API 而不是 SDK，以避免 Deno 兼容性问题
+    const checkoutSessionPayload = {
       payment_method_types: paymentMethods,
       line_items: [
         {
           price_data: {
             currency: currencyCode,
             product_data: {
-              name: packageName,
+              name: packageNameStr,
               description: `订单号: ${orderNumber}`,
             },
             unit_amount: Math.round(finalAmount * 100),
@@ -105,20 +100,51 @@ serve(async (req) => {
         final_amount: finalAmount.toString(),
         payment_methods: paymentMethods.join(','),
       },
+    };
+
+    console.log('=== Creating Stripe Checkout Session ===');
+    console.log('Payload:', JSON.stringify(checkoutSessionPayload, null, 2));
+
+    // 调用 Stripe API
+    const stripeResponse = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${stripeSecretKey}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams(
+        Object.entries(checkoutSessionPayload).reduce((acc, [key, value]) => {
+          if (Array.isArray(value)) {
+            value.forEach((v, i) => {
+              acc[`${key}[${i}]`] = String(v);
+            });
+          } else if (typeof value === 'object' && value !== null) {
+            Object.entries(value).forEach(([k, v]) => {
+              acc[`${key}[${k}]`] = String(v);
+            });
+          } else {
+            acc[key] = String(value);
+          }
+          return acc;
+        }, {} as Record<string, string>)
+      ).toString(),
     });
 
-    if (!session.url) {
-      throw new Error('Stripe 未返回支付链接');
+    if (!stripeResponse.ok) {
+      const errorText = await stripeResponse.text();
+      console.error('Stripe API error:', stripeResponse.status, errorText);
+      throw new Error(`Stripe API error: ${stripeResponse.status} ${errorText}`);
     }
+
+    const session = await stripeResponse.json();
 
     console.log('✅ Checkout session created:', session.id);
     console.log('Payment URL:', session.url);
-    console.log('================================');
 
     return new Response(
-      JSON.stringify({ 
+      JSON.stringify({
         id: session.id,
-        url: session.url
+        url: session.url,
       }),
       {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -126,14 +152,13 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error('❌ Error creating checkout session:', error);
-    console.error('Error details:', error instanceof Error ? error.message : 'Unknown error');
-    console.error('Error stack:', error instanceof Error ? error.stack : 'No stack trace');
+    console.error('❌ Error:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
     
     return new Response(
-      JSON.stringify({ 
-        error: error instanceof Error ? error.message : 'Unknown error',
-        details: error instanceof Error ? error.stack : undefined
+      JSON.stringify({
+        error: errorMessage,
+        details: error instanceof Error ? error.stack : undefined,
       }),
       {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
