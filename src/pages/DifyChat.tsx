@@ -561,7 +561,7 @@ export default function DifyChat() {
       // Query the profiles table directly to get the latest subscription info
       const { data, error } = await supabase
         .from('profiles')
-        .select('subscription_plan, subscription_status, email')
+        .select('subscription_plan, subscription_status, email, remaining_days, created_at, stripe_customer_id')
         .eq('id', user.id)
         .single();
 
@@ -580,6 +580,48 @@ export default function DifyChat() {
       console.log('   - Email:', data.email);
       console.log('   - Subscription Plan:', data.subscription_plan);
       console.log('   - Subscription Status:', data.subscription_status);
+      console.log('   - Remaining Days:', data.remaining_days);
+      console.log('   - Created At:', data.created_at);
+      console.log('   - Stripe Customer ID:', data.stripe_customer_id);
+
+      // 🆕 Check if trial period has expired and downgrade if necessary
+      if (data.subscription_plan === 'professional' && !data.stripe_customer_id) {
+        const createdAt = new Date(data.created_at);
+        const now = new Date();
+        const daysPassed = Math.floor((now.getTime() - createdAt.getTime()) / (1000 * 60 * 60 * 24));
+        const actualRemainingDays = Math.max(0, 7 - daysPassed);
+        
+        console.log('🔍 Trial User Check:');
+        console.log('   - Days Passed:', daysPassed);
+        console.log('   - Actual Remaining Days:', actualRemainingDays);
+        
+        // If trial has expired, downgrade to free
+        if (actualRemainingDays === 0) {
+          console.log('⏰ Trial period expired - downgrading to FREE');
+          await supabase
+            .from('profiles')
+            .update({ 
+              subscription_plan: 'free',
+              remaining_days: 0
+            })
+            .eq('id', user.id);
+          
+          const isPaid = false;
+          console.log('='.repeat(60));
+          console.log(`✅ SUBSCRIPTION CHECK RESULT: 🆓 FREE USER (trial expired)`);
+          console.log('='.repeat(60));
+          return isPaid;
+        }
+        
+        // Update remaining_days if it has changed
+        if (actualRemainingDays !== data.remaining_days) {
+          console.log(`📅 Updating remaining_days from ${data.remaining_days} to ${actualRemainingDays}`);
+          await supabase
+            .from('profiles')
+            .update({ remaining_days: actualRemainingDays })
+            .eq('id', user.id);
+        }
+      }
 
       const isPaid = data.subscription_plan !== 'free' && data.subscription_status === 'active';
       
