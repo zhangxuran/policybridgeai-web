@@ -182,6 +182,22 @@
     "contactUs": "Contact Us",
     "copyright": "© 2024 PolicyBridge.ai. All rights reserved"
   },
+  "banner": {
+    "title": "🎁 Limited Time Offer",
+    "message": "New users get 7 days of Professional plan free trial! Unlimited contract reviews, AI deep analysis",
+    "cta": "Register Now"
+  },
+  "welcome": {
+    "title": "🎉 Welcome to PolicyBridge.AI!",
+    "subtitle": "Congratulations on your successful registration!",
+    "trialTitle": "7-Day Professional Plan Free Trial",
+    "trialDescription": "You have full access to Professional plan features for 7 days, including unlimited contract reviews, AI deep analysis, and priority customer support.",
+    "feature1": "✨ Unlimited contract reviews",
+    "feature2": "🎯 AI deep risk analysis",
+    "feature3": "💡 Professional solution recommendations",
+    "startButton": "Start Experience →",
+    "footer": "After the trial period, you can choose to upgrade or continue using the free version"
+  },
   "login": {
     "title": "Welcome Back",
     "subtitle": "Sign in to your PolicyBridge.ai account",
@@ -258,6 +274,13 @@
       "terms": "Terms of Service",
       "and": "and",
       "privacy": "Privacy Policy"
+    },
+    "trial": {
+      "title": "✨ Register to Get",
+      "benefit1": "7-day Professional plan free trial",
+      "benefit2": "Unlimited contract reviews",
+      "benefit3": "AI deep analysis + Professional solutions",
+      "noCreditCard": "No credit card required, start now"
     },
     "errors": {
       "emptyFields": "Please fill in all fields",

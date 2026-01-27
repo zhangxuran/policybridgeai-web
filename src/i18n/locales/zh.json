@@ -445,6 +445,22 @@
     },
     "finalAgreement": "通过使用本平台,您确认已阅读、理解并接受本免责声明的所有条款。"
   },
+  "banner": {
+    "title": "🎁 限时福利",
+    "message": "新用户注册即享 7 天专业版免费试用！无限次合同审查，AI 深度分析",
+    "cta": "立即注册"
+  },
+  "welcome": {
+    "title": "🎉 欢迎加入 PolicyBridge.AI！",
+    "subtitle": "恭喜您成功注册！",
+    "trialTitle": "7天专业版免费试用",
+    "trialDescription": "您已获得7天专业版功能的完整访问权限，包括无限次合同审查、AI深度分析和优先客服支持。",
+    "feature1": "✨ 无限次合同审查",
+    "feature2": "🎯 AI 深度风险分析",
+    "feature3": "💡 专业解决方案建议",
+    "startButton": "开始体验 →",
+    "footer": "试用期结束后，您可以选择升级或继续使用免费版"
+  },
   "login": {
     "title": "欢迎回来",
     "subtitle": "登录您的合规桥 PBA 账户",
@@ -521,6 +537,13 @@
       "terms": "服务条款",
       "and": "和",
       "privacy": "隐私政策"
+    },
+    "trial": {
+      "title": "✨ 注册即可获得",
+      "benefit1": "7天专业版免费试用",
+      "benefit2": "无限次合同审查",
+      "benefit3": "AI 深度分析 + 专业解决方案",
+      "noCreditCard": "无需信用卡，立即开始"
     },
     "errors": {
       "emptyFields": "请填写所有字段",

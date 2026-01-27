@@ -110,6 +110,22 @@
     "contactUs": "Contactez-nous",
     "copyright": "© 2024 PolicyBridge.ai. Tous droits réservés"
   },
+  "banner": {
+    "title": "🎁 Offre limitée",
+    "message": "Les nouveaux utilisateurs bénéficient de 7 jours d'essai gratuit du plan Professionnel ! Analyses de contrats illimitées, analyse approfondie par IA",
+    "cta": "S'inscrire maintenant"
+  },
+  "welcome": {
+    "title": "🎉 Bienvenue chez PolicyBridge.AI !",
+    "subtitle": "Félicitations pour votre inscription réussie !",
+    "trialTitle": "Essai gratuit de 7 jours du plan Professionnel",
+    "trialDescription": "Vous avez un accès complet aux fonctionnalités du plan Professionnel pendant 7 jours, y compris les analyses de contrats illimitées, l'analyse approfondie par IA et le support client prioritaire.",
+    "feature1": "✨ Analyses de contrats illimitées",
+    "feature2": "🎯 Analyse approfondie des risques par IA",
+    "feature3": "💡 Recommandations de solutions professionnelles",
+    "startButton": "Commencer l'expérience →",
+    "footer": "Après la période d'essai, vous pouvez choisir de mettre à niveau ou de continuer avec la version gratuite"
+  },
   "login": {
     "title": "Bon retour",
     "subtitle": "Connectez-vous à votre compte PolicyBridge.ai",
@@ -153,6 +169,13 @@
       "terms": "les Conditions d'utilisation",
       "and": "et",
       "privacy": "la Politique de confidentialité"
+    },
+    "trial": {
+      "title": "✨ Inscrivez-vous pour obtenir",
+      "benefit1": "Essai gratuit de 7 jours du plan Professionnel",
+      "benefit2": "Analyses de contrats illimitées",
+      "benefit3": "Analyse approfondie par IA + Solutions professionnelles",
+      "noCreditCard": "Aucune carte de crédit requise, commencez maintenant"
     },
     "errors": {
       "emptyFields": "Veuillez remplir tous les champs",

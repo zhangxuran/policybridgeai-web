@@ -110,6 +110,22 @@
     "contactUs": "Contattaci",
     "copyright": "© 2024 PolicyBridge.ai. Tutti i diritti riservati"
   },
+  "banner": {
+    "title": "🎁 Offerta a tempo limitato",
+    "message": "I nuovi utenti ottengono 7 giorni di prova gratuita del piano Professional! Revisioni contrattuali illimitate, analisi approfondita IA",
+    "cta": "Registrati ora"
+  },
+  "welcome": {
+    "title": "🎉 Benvenuto in PolicyBridge.AI!",
+    "subtitle": "Congratulazioni per la tua registrazione riuscita!",
+    "trialTitle": "Prova gratuita di 7 giorni del piano Professional",
+    "trialDescription": "Hai accesso completo alle funzionalità del piano Professional per 7 giorni, incluse revisioni contrattuali illimitate, analisi approfondita IA e supporto clienti prioritario.",
+    "feature1": "✨ Revisioni contrattuali illimitate",
+    "feature2": "🎯 Analisi approfondita dei rischi IA",
+    "feature3": "💡 Raccomandazioni di soluzioni professionali",
+    "startButton": "Inizia l'esperienza →",
+    "footer": "Dopo il periodo di prova, puoi scegliere di aggiornare o continuare con la versione gratuita"
+  },
   "login": {
     "title": "Bentornato",
     "subtitle": "Accedi al tuo account PolicyBridge.ai",
@@ -146,6 +162,13 @@
       "terms": "i Termini di servizio",
       "and": "e",
       "privacy": "l'Informativa sulla privacy"
+    },
+    "trial": {
+      "title": "✨ Registrati per ottenere",
+      "benefit1": "Prova gratuita di 7 giorni del piano Professional",
+      "benefit2": "Revisioni contrattuali illimitate",
+      "benefit3": "Analisi approfondita IA + Soluzioni professionali",
+      "noCreditCard": "Nessuna carta di credito richiesta, inizia ora"
     },
     "errors": {
       "emptyFields": "Compila tutti i campi",
