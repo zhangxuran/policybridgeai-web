@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, CheckCircle2, Zap, Shield, FileText, BarChart3, Clock } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import { WelcomeDialog } from '@/components/WelcomeDialog';
+import { TrialBanner } from '@/components/TrialBanner';
 
 export default function Index() {
   const { t, i18n } = useTranslation();
@@ -87,6 +88,7 @@ export default function Index() {
       </div>
 
       <Navbar />
+      <TrialBanner />
       
       {/* Hero Section - 极简风格 */}
       <section className="container mx-auto px-4 py-16">

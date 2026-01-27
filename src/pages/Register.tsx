@@ -114,6 +114,46 @@ export default function Register() {
             <CardTitle className="text-2xl font-bold">{t('register.title')}</CardTitle>
             <CardDescription>{t('register.subtitle')}</CardDescription>
           </div>
+          {/* Trial Benefits Card */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-lg p-4">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 mt-0.5">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center">
+                  <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-blue-900 text-sm mb-1.5">
+                  {t('register.trial.title', '✨ 注册即可获得')}
+                </h3>
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2 text-xs text-blue-800">
+                    <svg className="h-4 w-4 flex-shrink-0 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">{t('register.trial.benefit1', '7天专业版免费试用')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-blue-800">
+                    <svg className="h-4 w-4 flex-shrink-0 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{t('register.trial.benefit2', '无限次合同审查')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-blue-800">
+                    <svg className="h-4 w-4 flex-shrink-0 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{t('register.trial.benefit3', 'AI 深度分析 + 专业解决方案')}</span>
+                  </div>
+                </div>
+                <p className="text-xs text-blue-700 mt-2 font-medium">
+                  {t('register.trial.noCreditCard', '无需信用卡，立即开始')}
+                </p>
+              </div>
+            </div>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
