@@ -44,10 +44,10 @@ export default function Register() {
     setLoading(true);
     try {
       await signUp(email, password);
-      // Don't set just_registered flag here, it will be set after email verification
-      toast.success('注册成功！请查看您的邮箱并点击验证链接');
-      // Redirect to email verification page
-      navigate(`/verify-email?email=${encodeURIComponent(email)}');
+      // Don't set just_registered flag here, it will be set after OTP verification
+      toast.success(t('register.success.otpSent'));
+      // Redirect to OTP verification page
+      navigate(`/verify-otp?email=${encodeURIComponent(email)}`);
     } catch (error) {
       toast.error(error instanceof Error ? error.message : t('register.errors.registerFailed'));
     } finally {

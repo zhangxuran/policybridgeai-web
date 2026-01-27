@@ -580,7 +580,44 @@
       "agreeToTerms": "请先同意服务条款和隐私政策",
       "googleRegisterFailed": "Google 注册失败,请重试"
     },
-    "success": "注册成功!请查收验证邮件"
+    "success": {
+      "default": "注册成功!请查收验证邮件",
+      "otpSent": "注册成功！验证码已发送到您的邮箱"
+    }
+  },
+  "verifyOTP": {
+    "title": "📧 验证您的邮箱",
+    "subtitle": "我们已向您的邮箱发送了一个6位数验证码",
+    "emailSentTo": "验证码已发送至：",
+    "otpLabel": "验证码",
+    "otpHint": "请输入邮件中的6位数字验证码",
+    "verifyButton": "验证邮箱",
+    "verifying": "验证中...",
+    "noCode": "没有收到验证码？",
+    "resendButton": "重新发送验证码",
+    "resending": "发送中...",
+    "success": "邮箱验证成功！欢迎加入PolicyBridge.AI",
+    "tips": {
+      "title": "💡 提示：",
+      "checkSpam": "如果未收到邮件，请检查垃圾邮件文件夹",
+      "validTime": "验证码有效期为10分钟",
+      "caseSensitive": "验证码仅包含数字，不区分大小写"
+    },
+    "benefits": {
+      "title": "🎁 验证后您将获得：",
+      "trial": "7天专业版免费试用",
+      "unlimited": "无限次合同审查",
+      "ai": "AI深度分析"
+    },
+    "backToLogin": "返回登录页面",
+    "errors": {
+      "emptyOTP": "请输入验证码",
+      "invalidLength": "验证码必须是6位数字",
+      "verificationFailed": "验证失败，请检查验证码是否正确",
+      "resendFailed": "发送失败，请稍后重试",
+      "generic": "验证过程中发生错误"
+    },
+    "resendSuccess": "验证码已重新发送，请查看您的邮箱"
   },
   "confirmDialog": {
     "confirm": "确认",

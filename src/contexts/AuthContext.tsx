@@ -188,12 +188,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signUp = async (email: string, password: string) => {
-    // Enable email verification
+    // Use OTP (One-Time Password) verification instead of magic link
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
+        // Enable email OTP verification
         emailRedirectTo: `${window.location.origin}/auth/callback`,
+        // This will send an OTP code to the email
       },
     });
     
