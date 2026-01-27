@@ -486,8 +486,34 @@
       "timeout": "登录超时,请检查网络连接",
       "generic": "登录过程中发生错误",
       "googleLoginFailed": "Google 登录失败,请重试",
-      "wechatLoginFailed": "微信登录失败,请重试"
+      "wechatLoginFailed": "微信登录失败,请重试",
+      "emailNotVerified": "请先验证您的邮箱后再登录。如果未收到验证邮件，请在注册页面重新发送。"
     }
+  },
+  "verifyEmail": {
+    "title": "📧 验证您的邮箱",
+    "subtitle": "我们已向您的邮箱发送了验证链接",
+    "emailSentTo": "验证邮件已发送至：",
+    "steps": {
+      "title": "📝 接下来的步骤：",
+      "step1": "打开您的邮箱收件箱",
+      "step2": "找到来自 PolicyBridge.AI 的验证邮件",
+      "step3": "点击邮件中的验证链接",
+      "step4": "验证成功后即可登录使用"
+    },
+    "benefits": {
+      "title": "🎁 验证后即可获得：",
+      "trial": "✨ 7天专业版免费试用",
+      "unlimited": "📄 无限次合同审查",
+      "ai": "🤖 AI深度分析"
+    },
+    "noEmail": "没有收到邮件？",
+    "resendButton": "重新发送验证邮件",
+    "resending": "发送中...",
+    "tip": "💡 提示：如果在收件箱中找不到邮件，请检查垃圾邮件文件夹。",
+    "backToLogin": "返回登录页面",
+    "resendSuccess": "验证邮件已重新发送，请查收您的邮箱。",
+    "resendError": "发送失败，请稍后重试"
   },
   "forgotPassword": {
     "title": "找回密码",

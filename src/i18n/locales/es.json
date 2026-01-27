@@ -145,7 +145,8 @@
       "loginFailed": "Inicio de sesión fallido, por favor intente nuevamente",
       "timeout": "Tiempo de espera de inicio de sesión agotado, por favor verifique su conexión de red",
       "generic": "Ocurrió un error durante el inicio de sesión",
-      "googleLoginFailed": "Inicio de sesión con Google fallido, por favor intente nuevamente"
+      "googleLoginFailed": "Inicio de sesión con Google fallido, por favor intente nuevamente",
+      "emailNotVerified": "Por favor, verifique su correo electrónico antes de iniciar sesión. Si no ha recibido el correo de verificación, vuelva a enviarlo desde la página de registro."
     },
     "success": "¡Inicio de sesión exitoso!"
   },
@@ -549,5 +550,30 @@
     },
     "quickLinks": "Presentación del producto",
     "contactUsLink": "Contáctenos"
+  },
+  "verifyEmail": {
+    "title": "📧 Verifica tu correo electrónico",
+    "subtitle": "Hemos enviado un enlace de verificación a tu correo electrónico",
+    "emailSentTo": "Correo de verificación enviado a:",
+    "steps": {
+      "title": "📝 Próximos pasos:",
+      "step1": "Abre tu bandeja de entrada de correo",
+      "step2": "Encuentra el correo de PolicyBridge.AI",
+      "step3": "Haz clic en el enlace de verificación en el correo",
+      "step4": "Puedes iniciar sesión después de la verificación exitosa"
+    },
+    "benefits": {
+      "title": "🎁 Después de la verificación, obtendrás:",
+      "trial": "✨ Prueba gratuita de 7 días del plan Profesional",
+      "unlimited": "📄 Revisiones de contratos ilimitadas",
+      "ai": "🤖 Análisis profundo de IA"
+    },
+    "noEmail": "¿No recibiste el correo?",
+    "resendButton": "Reenviar correo de verificación",
+    "resending": "Enviando...",
+    "tip": "💡 Consejo: Si no encuentras el correo en tu bandeja de entrada, revisa tu carpeta de spam.",
+    "backToLogin": "Volver a la página de inicio de sesión",
+    "resendSuccess": "El correo de verificación ha sido reenviado. Por favor, revisa tu bandeja de entrada.",
+    "resendError": "Fallo al enviar. Por favor, intenta de nuevo más tarde."
   }
 }

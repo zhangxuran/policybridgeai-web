@@ -141,7 +141,8 @@
       "emptyFields": "Inserisci email e password",
       "loginFailed": "Accesso fallito, riprova",
       "timeout": "Timeout di accesso, controlla la tua connessione di rete",
-      "generic": "Si è verificato un errore durante l'accesso"
+      "generic": "Si è verificato un errore durante l'accesso",
+      "emailNotVerified": "Verifica prima il tuo indirizzo email prima di accedere. Se non hai ricevuto l'email di verifica, inviala nuovamente dalla pagina di registrazione."
     },
     "success": "Accesso riuscito!"
   },
@@ -436,5 +437,30 @@
     },
     "quickLinks": "Presentazione del prodotto",
     "contactUsLink": "Contattaci"
+  },
+  "verifyEmail": {
+    "title": "📧 Verifica la tua email",
+    "subtitle": "Abbiamo inviato un link di verifica alla tua email",
+    "emailSentTo": "Email di verifica inviata a:",
+    "steps": {
+      "title": "📝 Prossimi passi:",
+      "step1": "Apri la tua casella di posta",
+      "step2": "Trova l'email da PolicyBridge.AI",
+      "step3": "Clicca sul link di verifica nell'email",
+      "step4": "Puoi accedere dopo la verifica riuscita"
+    },
+    "benefits": {
+      "title": "🎁 Dopo la verifica, otterrai:",
+      "trial": "✨ Prova gratuita di 7 giorni del piano Professional",
+      "unlimited": "📄 Revisioni contrattuali illimitate",
+      "ai": "🤖 Analisi approfondita IA"
+    },
+    "noEmail": "Non hai ricevuto l'email?",
+    "resendButton": "Invia nuovamente l'email di verifica",
+    "resending": "Invio in corso...",
+    "tip": "💡 Suggerimento: Se non trovi l'email nella tua casella di posta, controlla la cartella spam.",
+    "backToLogin": "Torna alla pagina di accesso",
+    "resendSuccess": "L'email di verifica è stata inviata nuovamente. Controlla la tua casella di posta.",
+    "resendError": "Invio fallito. Riprova più tardi."
   }
 }

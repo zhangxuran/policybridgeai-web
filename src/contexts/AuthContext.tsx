@@ -188,10 +188,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signUp = async (email: string, password: string) => {
-    // Simplified signup without email verification for now
+    // Enable email verification
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      },
     });
     
     if (error) throw error;
@@ -246,6 +249,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
 
       if (data.user) {
+        // Check if email is verified
+        if (!data.user.email_confirmed_at) {
+          console.log('⚠️ Email not verified for:', data.user.email);
+          // Sign out the user
+          await supabase.auth.signOut();
+          return { 
+            success: false, 
+            message: '请先验证您的邮箱后再登录。如果未收到验证邮件，请在注册页面重新发送。' 
+          };
+        }
+        
         console.log('✅ Login successful for:', data.user.email);
         setUser(data.user);
         await loadSubscriptionInfo(data.user.id);
@@ -281,11 +295,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         };
       }
 
-      // Simplified signup without email verification
+      // Enable email verification
       const { data: authData, error: signUpError } = await supabase.auth.signUp({
         email: data.email,
         password: data.password,
         options: {
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
           data: {
             company_name: data.companyName,
             contact_person: data.contactName,
@@ -344,7 +359,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       console.log('Registration successful');
       return { 
         success: true, 
-        message: '注册成功！您现在可以直接登录了。' 
+        message: '注册成功！请查看您的邮箱并点击验证链接以激活账户。' 
       };
     } catch (error) {
       console.error('Registration exception:', error);

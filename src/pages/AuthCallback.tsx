@@ -16,6 +16,41 @@ export default function AuthCallback() {
         console.log('=== Auth Callback Handler Started ===');
         console.log('Current URL:', window.location.href);
         
+        // Check if this is an email verification callback
+        const urlParams = new URLSearchParams(window.location.hash.substring(1));
+        const type = urlParams.get('type');
+        const accessToken = urlParams.get('access_token');
+        
+        console.log('Callback type:', type);
+        
+        // Handle email verification
+        if (type === 'signup' && accessToken) {
+          console.log('✅ Email verification callback detected');
+          
+          // Set flag for welcome dialog
+          localStorage.setItem('just_registered', 'true');
+          
+          // Wait a bit for Supabase to process the session
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          
+          // Get the session
+          const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+          
+          if (sessionError || !session) {
+            console.error('Session error after email verification:', sessionError);
+            setError('邮箱验证成功，但获取会话失败。请尝试登录。');
+            setIsProcessing(false);
+            // Redirect to login after 3 seconds
+            setTimeout(() => navigate('/login', { replace: true }), 3000);
+            return;
+          }
+          
+          console.log('✅ Email verified successfully for:', session.user.email);
+          setIsProcessing(false);
+          return;
+        }
+        
+        // Handle OAuth callback
         // Wait a bit for Supabase to process the session from URL
         await new Promise(resolve => setTimeout(resolve, 500));
         
@@ -36,8 +71,6 @@ export default function AuthCallback() {
           console.log('Checking URL for OAuth parameters...');
           
           // Check if we have OAuth parameters in URL
-          const urlParams = new URLSearchParams(window.location.hash.substring(1));
-          const accessToken = urlParams.get('access_token');
           const refreshToken = urlParams.get('refresh_token');
           
           console.log('URL has access_token:', !!accessToken);
@@ -67,7 +100,7 @@ export default function AuthCallback() {
     };
 
     handleCallback();
-  }, []);
+  }, [navigate]);
 
   // Once user is loaded from AuthContext, redirect to dashboard
   useEffect(() => {

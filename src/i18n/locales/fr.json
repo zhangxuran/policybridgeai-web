@@ -145,7 +145,8 @@
       "loginFailed": "Échec de la connexion, veuillez réessayer",
       "timeout": "Délai de connexion dépassé, veuillez vérifier votre connexion réseau",
       "generic": "Une erreur s'est produite lors de la connexion",
-      "googleLoginFailed": "Échec de la connexion avec Google, veuillez réessayer"
+      "googleLoginFailed": "Échec de la connexion avec Google, veuillez réessayer",
+      "emailNotVerified": "Veuillez d'abord vérifier votre adresse e-mail avant de vous connecter. Si vous n'avez pas reçu l'e-mail de vérification, veuillez le renvoyer depuis la page d'inscription."
     },
     "success": "Connexion réussie !"
   },
@@ -810,5 +811,30 @@
     },
     "quickLinks": "Présentation du produit",
     "contactUsLink": "Nous contacter"
+  },
+  "verifyEmail": {
+    "title": "📧 Vérifiez votre adresse e-mail",
+    "subtitle": "Nous avons envoyé un lien de vérification à votre adresse e-mail",
+    "emailSentTo": "E-mail de vérification envoyé à :",
+    "steps": {
+      "title": "📝 Étapes suivantes :",
+      "step1": "Ouvrez votre boîte de réception",
+      "step2": "Trouvez l'e-mail de PolicyBridge.AI",
+      "step3": "Cliquez sur le lien de vérification dans l'e-mail",
+      "step4": "Vous pouvez vous connecter après une vérification réussie"
+    },
+    "benefits": {
+      "title": "🎁 Après vérification, vous obtiendrez :",
+      "trial": "✨ Essai gratuit de 7 jours du plan Professionnel",
+      "unlimited": "📄 Analyses de contrats illimitées",
+      "ai": "🤖 Analyse approfondie par IA"
+    },
+    "noEmail": "Vous n'avez pas reçu l'e-mail ?",
+    "resendButton": "Renvoyer l'e-mail de vérification",
+    "resending": "Envoi en cours...",
+    "tip": "💡 Astuce : Si vous ne trouvez pas l'e-mail dans votre boîte de réception, vérifiez votre dossier spam.",
+    "backToLogin": "Retour à la page de connexion",
+    "resendSuccess": "L'e-mail de vérification a été renvoyé. Veuillez vérifier votre boîte de réception.",
+    "resendError": "Échec de l'envoi. Veuillez réessayer plus tard."
   }
 }

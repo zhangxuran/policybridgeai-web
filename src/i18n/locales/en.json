@@ -223,8 +223,34 @@
       "timeout": "Login timeout, please check your network connection",
       "generic": "An error occurred during login",
       "googleLoginFailed": "Google login failed, please try again",
-      "wechatLoginFailed": "WeChat login failed, please try again"
+      "wechatLoginFailed": "WeChat login failed, please try again",
+      "emailNotVerified": "Please verify your email before logging in. If you haven't received the verification email, please resend it from the registration page."
     }
+  },
+  "verifyEmail": {
+    "title": "📧 Verify Your Email",
+    "subtitle": "We've sent a verification link to your email",
+    "emailSentTo": "Verification email sent to:",
+    "steps": {
+      "title": "📝 Next Steps:",
+      "step1": "Open your email inbox",
+      "step2": "Find the email from PolicyBridge.AI",
+      "step3": "Click the verification link in the email",
+      "step4": "You can log in after successful verification"
+    },
+    "benefits": {
+      "title": "🎁 After verification, you'll get:",
+      "trial": "✨ 7-day Professional plan free trial",
+      "unlimited": "📄 Unlimited contract reviews",
+      "ai": "🤖 AI deep analysis"
+    },
+    "noEmail": "Didn't receive the email?",
+    "resendButton": "Resend verification email",
+    "resending": "Sending...",
+    "tip": "💡 Tip: If you can't find the email in your inbox, please check your spam folder.",
+    "backToLogin": "Back to login page",
+    "resendSuccess": "Verification email has been resent. Please check your inbox.",
+    "resendError": "Failed to send. Please try again later."
   },
   "forgotPassword": {
     "title": "Forgot Password",
