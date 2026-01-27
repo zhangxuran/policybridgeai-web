@@ -250,6 +250,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       if (data.user) {
         // Check if email is verified
+        // TEMPORARILY DISABLED: Allow login without email verification during testing
+        // This will be re-enabled once email delivery is stable
+        /*
         if (!data.user.email_confirmed_at) {
           console.log('⚠️ Email not verified for:', data.user.email);
           // Sign out the user
@@ -259,6 +262,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             message: '请先验证您的邮箱后再登录。如果未收到验证邮件，请在注册页面重新发送。' 
           };
         }
+        */
         
         console.log('✅ Login successful for:', data.user.email);
         setUser(data.user);
