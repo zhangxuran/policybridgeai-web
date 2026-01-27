@@ -22,6 +22,7 @@ export default function Register() {
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
+  // Email verification flow - updated 2026-01-27
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
