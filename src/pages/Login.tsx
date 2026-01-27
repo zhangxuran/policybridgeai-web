@@ -25,8 +25,15 @@ export default function Login() {
 
   useEffect(() => {
     if (!authLoading && user) {
-      console.log('User already logged in, redirecting to dashboard');
-      navigate('/dashboard', { replace: true });
+      // Check if user just registered
+      const justRegistered = localStorage.getItem('just_registered');
+      if (justRegistered === 'true') {
+        console.log('New user logged in, redirecting to home page');
+        navigate('/', { replace: true });
+      } else {
+        console.log('User already logged in, redirecting to dashboard');
+        navigate('/dashboard', { replace: true });
+      }
     }
   }, [user, authLoading, navigate]);
 
