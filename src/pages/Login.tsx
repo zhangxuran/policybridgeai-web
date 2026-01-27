@@ -61,7 +61,15 @@ export default function Login() {
       if (result.success) {
         toast.success(t('login.success'));
         console.log('Login successful, navigating to dashboard');
-        navigate('/dashboard', { replace: true });
+        
+        // Check if user just registered
+        const justRegistered = localStorage.getItem('just_registered');
+        if (justRegistered === 'true') {
+          // Navigate to home page to show welcome dialog
+          navigate('/', { replace: true });
+        } else {
+          navigate('/dashboard', { replace: true });
+        }
       } else {
         const errorMessage = result.message || t('login.errors.loginFailed');
         setError(errorMessage);

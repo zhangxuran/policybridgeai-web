@@ -43,6 +43,8 @@ export default function Register() {
     setLoading(true);
     try {
       await signUp(email, password);
+      // Set flag for welcome dialog
+      localStorage.setItem('just_registered', 'true');
       toast.success('注册成功！您现在可以登录了');
       navigate('/login');
     } catch (error) {

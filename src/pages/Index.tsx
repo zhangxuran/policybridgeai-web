@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, CheckCircle2, Zap, Shield, FileText, BarChart3, Clock } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import { WelcomeDialog } from '@/components/WelcomeDialog';
 
 export default function Index() {
   const { t, i18n } = useTranslation();
@@ -66,6 +67,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      <WelcomeDialog />
       {/* 深蓝 + 金色配色的背景 */}
       <div className="fixed inset-0 -z-10 overflow-hidden bg-white">
         {/* 浅色渐变基底 */}
