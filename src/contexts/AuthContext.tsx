@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 import { User } from '@supabase/supabase-js';
 import { supabase } from '@/lib/supabase';
 import { syncSubscriptionOnUpdate } from '@/lib/subscriptionSync';
+import { sendOTPEmail } from '@/lib/resend';
 
 interface WechatUser {
   id: string;
@@ -232,6 +233,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         } catch (syncError) {
           console.error('Subscription sync error:', syncError);
         }
+      }
+      
+      // Send OTP email via Resend API
+      console.log('📧 Sending OTP email via Resend API...');
+      // Generate a 6-digit OTP code
+      const otpCode = Math.floor(100000 + Math.random() * 900000).toString();
+      
+      // Store OTP in localStorage temporarily (in production, should be stored in database)
+      localStorage.setItem(`otp_${email}`, JSON.stringify({
+        code: otpCode,
+        timestamp: Date.now(),
+        userId: data.user.id
+      }));
+      
+      // Send email via Resend
+      const emailResult = await sendOTPEmail({ email, token: otpCode });
+      if (!emailResult.success) {
+        console.error('Failed to send OTP email:', emailResult.error);
+        // Don't throw error, user can still resend
+      } else {
+        console.log('✅ OTP email sent successfully');
       }
     }
   };

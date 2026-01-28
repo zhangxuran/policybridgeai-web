@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '@/lib/supabase';
+import { sendOTPEmail } from '@/lib/resend';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -43,6 +44,8 @@ export default function VerifyOTP() {
 
     setLoading(true);
     try {
+      // Verify OTP with Supabase
+      // Supabase will handle the OTP verification even though we sent the email via Resend
       const { data, error } = await supabase.auth.verifyOtp({
         email,
         token: otp,
@@ -57,6 +60,8 @@ export default function VerifyOTP() {
 
       if (data.user) {
         console.log('✅ Email verified successfully');
+        // Clean up localStorage
+        localStorage.removeItem(`otp_${email}`);
         toast.success(t('verifyOTP.success'));
         
         // Set flag for welcome dialog
@@ -78,17 +83,34 @@ export default function VerifyOTP() {
 
     setResending(true);
     try {
-      const { error } = await supabase.auth.resend({
-        type: 'signup',
-        email: email,
-      });
-
-      if (error) {
-        console.error('Resend OTP error:', error);
-        toast.error(error.message || t('verifyOTP.errors.resendFailed'));
+      // Generate new OTP
+      const otpCode = Math.floor(100000 + Math.random() * 900000).toString();
+      
+      // Get userId from stored OTP data
+      const storedOTPData = localStorage.getItem(`otp_${email}`);
+      let userId = '';
+      if (storedOTPData) {
+        const parsed = JSON.parse(storedOTPData);
+        userId = parsed.userId;
+      }
+      
+      // Store new OTP
+      localStorage.setItem(`otp_${email}`, JSON.stringify({
+        code: otpCode,
+        timestamp: Date.now(),
+        userId: userId
+      }));
+      
+      // Send email via Resend
+      const emailResult = await sendOTPEmail({ email, token: otpCode });
+      
+      if (!emailResult.success) {
+        console.error('Failed to resend OTP email:', emailResult.error);
+        toast.error(t('verifyOTP.errors.resendFailed'));
         return;
       }
 
+      console.log('✅ OTP email resent successfully');
       toast.success(t('verifyOTP.resendSuccess'));
       setCountdown(60); // 60 seconds cooldown
     } catch (error) {
