@@ -44,32 +44,103 @@ export default function VerifyOTP() {
 
     setLoading(true);
     try {
-      // Verify OTP with Supabase
-      // Supabase will handle the OTP verification even though we sent the email via Resend
-      const { data, error } = await supabase.auth.verifyOtp({
-        email,
-        token: otp,
-        type: 'signup'
-      });
-
-      if (error) {
-        console.error('OTP verification error:', error);
-        toast.error(error.message || t('verifyOTP.errors.verificationFailed'));
+      console.log('🔍 Verifying OTP for:', email);
+      
+      // 1. Get pending registration data from localStorage
+      const pendingDataStr = localStorage.getItem(`pending_registration_${email}`);
+      if (!pendingDataStr) {
+        toast.error('Registration data not found. Please register again.');
+        navigate('/register');
         return;
       }
-
-      if (data.user) {
-        console.log('✅ Email verified successfully');
-        // Clean up localStorage
-        localStorage.removeItem(`otp_${email}`);
-        toast.success(t('verifyOTP.success'));
-        
-        // Set flag for welcome dialog
-        localStorage.setItem('just_registered', 'true');
-        
-        // Redirect to home page to show welcome dialog
-        navigate('/', { replace: true });
+      
+      const pendingData = JSON.parse(pendingDataStr);
+      
+      // 2. Verify OTP code
+      if (pendingData.otpCode !== otp) {
+        toast.error(t('verifyOTP.errors.invalidOTP'));
+        return;
       }
+      
+      // 3. Check if OTP is expired (10 minutes)
+      const now = Date.now();
+      if (now - pendingData.timestamp > 10 * 60 * 1000) {
+        toast.error('OTP code has expired. Please register again.');
+        localStorage.removeItem(`pending_registration_${email}`);
+        navigate('/register');
+        return;
+      }
+      
+      console.log('✅ OTP verified successfully');
+      
+      // 4. Create Supabase account
+      console.log('📝 Creating Supabase account...');
+      const { data, error } = await supabase.auth.signUp({
+        email: pendingData.email,
+        password: pendingData.password,
+        options: {
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
+      
+      if (error) {
+        console.error('Account creation error:', error);
+        toast.error(error.message || 'Failed to create account');
+        return;
+      }
+      
+      if (!data.user) {
+        toast.error('Failed to create account');
+        return;
+      }
+      
+      console.log('✅ Supabase account created:', data.user.id);
+      
+      // 5. Create profile
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .insert({
+          id: data.user.id,
+          email: pendingData.email,
+          role: 'user',
+          subscription_plan: 'free',
+          subscription_status: 'active'
+        });
+      
+      if (profileError) {
+        console.error('Profile creation error:', profileError);
+        // Don't throw error, profile might be created by trigger
+      } else {
+        console.log('✅ Profile created successfully');
+      }
+      
+      // 6. Auto login
+      console.log('🔑 Auto login...');
+      const { error: loginError } = await supabase.auth.signInWithPassword({
+        email: pendingData.email,
+        password: pendingData.password,
+      });
+      
+      if (loginError) {
+        console.error('Auto login error:', loginError);
+        toast.warning('Account created but auto-login failed. Please login manually.');
+        navigate('/login');
+        return;
+      }
+      
+      // 7. Clean up localStorage
+      localStorage.removeItem(`pending_registration_${email}`);
+      localStorage.removeItem(`otp_${email}`);
+      
+      // 8. Set flag for welcome dialog
+      localStorage.setItem('just_registered', 'true');
+      
+      toast.success(t('verifyOTP.success'));
+      console.log('✅ Registration completed successfully!');
+      
+      // 9. Redirect to home page
+      navigate('/', { replace: true });
+      
     } catch (error) {
       console.error('Verification exception:', error);
       toast.error(error instanceof Error ? error.message : t('verifyOTP.errors.generic'));
@@ -83,22 +154,26 @@ export default function VerifyOTP() {
 
     setResending(true);
     try {
+      console.log('🔄 Resending OTP to:', email);
+      
+      // Get pending registration data
+      const pendingDataStr = localStorage.getItem(`pending_registration_${email}`);
+      if (!pendingDataStr) {
+        toast.error('Registration data not found. Please register again.');
+        navigate('/register');
+        return;
+      }
+      
+      const pendingData = JSON.parse(pendingDataStr);
+      
       // Generate new OTP
       const otpCode = Math.floor(100000 + Math.random() * 900000).toString();
       
-      // Get userId from stored OTP data
-      const storedOTPData = localStorage.getItem(`otp_${email}`);
-      let userId = '';
-      if (storedOTPData) {
-        const parsed = JSON.parse(storedOTPData);
-        userId = parsed.userId;
-      }
-      
-      // Store new OTP
-      localStorage.setItem(`otp_${email}`, JSON.stringify({
-        code: otpCode,
-        timestamp: Date.now(),
-        userId: userId
+      // Update pending registration data with new OTP
+      localStorage.setItem(`pending_registration_${email}`, JSON.stringify({
+        ...pendingData,
+        otpCode,
+        timestamp: Date.now()
       }));
       
       // Send email via Resend

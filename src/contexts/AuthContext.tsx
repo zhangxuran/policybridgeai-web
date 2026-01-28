@@ -189,72 +189,37 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signUp = async (email: string, password: string) => {
-    // Use OTP (One-Time Password) verification instead of magic link
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        // Enable email OTP verification
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
-        // This will send an OTP code to the email
-      },
-    });
-    
-    if (error) throw error;
-    
-    // Create profile after successful signup
-    if (data.user) {
-      // Check if profile already exists
-      const { data: existingProfile } = await supabase
-        .from('profiles')
-        .select('id')
-        .eq('id', data.user.id)
-        .single();
-
-      if (!existingProfile) {
-        const { error: profileError } = await supabase
-          .from('profiles')
-          .insert({
-            id: data.user.id,
-            email: email,
-            role: 'user',
-            subscription_plan: 'free',
-            subscription_status: 'active'
-          });
-        
-        if (profileError) {
-          console.error('Profile creation error:', profileError);
-          // Don't throw error, profile might be created by trigger
-        }
-
-        // Sync to subscription table
-        try {
-          await syncSubscriptionOnUpdate(data.user.id, 'free', 'active');
-        } catch (syncError) {
-          console.error('Subscription sync error:', syncError);
-        }
-      }
+    try {
+      console.log('📝 Starting registration for:', email);
       
-      // Send OTP email via Resend API
-      console.log('📧 Sending OTP email via Resend API...');
-      // Generate a 6-digit OTP code
+      // 1. Generate 6-digit OTP code
       const otpCode = Math.floor(100000 + Math.random() * 900000).toString();
       
-      // Store OTP in localStorage temporarily (in production, should be stored in database)
-      localStorage.setItem(`otp_${email}`, JSON.stringify({
-        code: otpCode,
-        timestamp: Date.now(),
-        userId: data.user.id
+      // 2. Store registration data temporarily in localStorage
+      localStorage.setItem(`pending_registration_${email}`, JSON.stringify({
+        email,
+        password,
+        otpCode,
+        timestamp: Date.now()
       }));
       
-      // Send email via Resend
+      console.log('💾 Registration data stored temporarily');
+      
+      // 3. Send OTP email via Resend API
+      console.log('📧 Sending OTP email...');
       const emailResult = await sendOTPEmail({ email, token: otpCode });
+      
       if (!emailResult.success) {
         console.error('Failed to send OTP email:', emailResult.error);
-        // Don't throw error, user can still resend
-      } else {
-        console.log('✅ OTP email sent successfully');
+        throw new Error('Failed to send verification email. Please try again.');
       }
+      
+      console.log('✅ OTP email sent successfully');
+      console.log('⏳ Waiting for user to verify OTP...');
+      
+    } catch (error) {
+      console.error('Signup error:', error);
+      throw error;
     }
   };
 
