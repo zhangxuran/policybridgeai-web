@@ -1,6 +1,5 @@
-// Resend API helper for sending OTP emails
-const RESEND_API_KEY = 're_6MgYm7th_F57fhMds7LN4uMgzPPPz9Uz1';
-const RESEND_API_URL = 'https://api.resend.com/emails';
+// Resend API helper for sending OTP emails via Supabase Edge Function
+import { supabase } from './supabase';
 
 interface SendOTPEmailParams {
   email: string;
@@ -9,11 +8,41 @@ interface SendOTPEmailParams {
 
 export async function sendOTPEmail({ email, token }: SendOTPEmailParams): Promise<{ success: boolean; error?: string }> {
   try {
-    const response = await fetch(RESEND_API_URL, {
+    // Call Supabase Edge Function to send OTP email
+    const { data, error } = await supabase.functions.invoke('send-otp-email', {
+      body: { email, token },
+    });
+
+    if (error) {
+      console.error('❌ Edge Function error:', error);
+      return { success: false, error: error.message };
+    }
+
+    if (data?.success) {
+      console.log('✅ OTP email sent successfully via Edge Function');
+      return { success: true };
+    } else {
+      console.error('❌ Edge Function returned error:', data);
+      return { success: false, error: data?.error || 'Unknown error' };
+    }
+  } catch (error) {
+    console.error('❌ Error calling Edge Function:', error);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error.message : 'Unknown error' 
+    };
+  }
+}
+
+// Legacy code - kept for reference
+/*
+export async function sendOTPEmailDirect({ email, token }: SendOTPEmailParams): Promise<{ success: boolean; error?: string }> {
+  try {
+    const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Authorization': `Bearer RESEND_API_KEY`,
       },
       body: JSON.stringify({
         from: 'PolicyBridge.AI <noreply@policybridgeai.com>',
@@ -121,3 +150,4 @@ export async function sendOTPEmail({ email, token }: SendOTPEmailParams): Promis
     };
   }
 }
+*/
