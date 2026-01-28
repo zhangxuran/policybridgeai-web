@@ -9,7 +9,7 @@ interface SendOTPEmailParams {
 export async function sendOTPEmail({ email, token }: SendOTPEmailParams): Promise<{ success: boolean; error?: string }> {
   try {
     // Call Supabase Edge Function to send OTP email
-    const { data, error } = await supabase.functions.invoke('send-otp-email', {
+    const { data, error } = await supabase.functions.invoke('smart-handler', {
       body: { email, token },
     });
 
