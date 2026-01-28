@@ -2,13 +2,15 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Gift, ArrowRight, X } from 'lucide-react';
 import { useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
 
 export function TrialBanner() {
   const { t } = useTranslation();
+  const { user } = useAuth();
   const [isVisible, setIsVisible] = useState(true);
 
-  // Don't show banner if user dismissed it
-  if (!isVisible) return null;
+  // Don't show banner if user is logged in or dismissed it
+  if (user || !isVisible) return null;
 
   return (
     <div className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
