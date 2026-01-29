@@ -15,6 +15,7 @@ import ConfirmDialog from '@/components/ConfirmDialog';
 import { UpgradeDialog } from '@/components/UpgradeDialog';
 import { stripMarkdown, stripHtmlTags } from '@/lib/markdownUtils';
 import { useTranslation, TFunction } from 'react-i18next';
+import { autoTranslateChinese } from '@/utils/translation';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -872,11 +873,20 @@ export default function DifyChat() {
           reader.releaseLock();
         }
 
+        // Translate Chinese to English if current language is English
+        if (i18n.language === 'en' && streamedContent) {
+          console.log('🌐 Checking for Chinese content in English mode...');
+          const translatedContent = await autoTranslateChinese(streamedContent);
+          streamedContent = translatedContent;
+        }
+
         setMessages((prev) => {
           const newMessages = [...prev];
           const lastMessage = newMessages[newMessages.length - 1];
           if (lastMessage.role === 'assistant') {
             lastMessage.isStreaming = false;
+            // Update with translated content
+            lastMessage.content = stripMarkdown(streamedContent);
           }
           return newMessages;
         });
@@ -1041,11 +1051,20 @@ export default function DifyChat() {
         reader.releaseLock();
       }
 
+      // Translate Chinese to English if current language is English
+      if (i18n.language === 'en' && streamedContent) {
+        console.log('🌐 Checking for Chinese content in Radar response...');
+        const translatedContent = await autoTranslateChinese(streamedContent);
+        streamedContent = translatedContent;
+      }
+
       setMessages((prev) => {
         const newMessages = [...prev];
         const lastMessage = newMessages[newMessages.length - 1];
         if (lastMessage.role === 'assistant') {
           lastMessage.isStreaming = false;
+          // Update with translated content
+          lastMessage.content = streamedContent;
         }
         return newMessages;
       });
