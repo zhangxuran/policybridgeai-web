@@ -873,10 +873,11 @@ export default function DifyChat() {
           reader.releaseLock();
         }
 
-        // Translate Chinese to English if current language is English
-        if (i18n.language === 'en' && streamedContent) {
-          console.log('🌐 Checking for Chinese content in English mode...');
-          const translatedContent = await autoTranslateChinese(streamedContent);
+        // Translate Chinese to target language if not in Chinese mode
+        const supportedLangs = ['en', 'fr', 'de'];
+        if (supportedLangs.includes(i18n.language) && streamedContent) {
+          console.log(`🌐 Checking for Chinese content in ${i18n.language.toUpperCase()} mode...`);
+          const translatedContent = await autoTranslateChinese(streamedContent, i18n.language);
           streamedContent = translatedContent;
         }
 
@@ -1051,10 +1052,11 @@ export default function DifyChat() {
         reader.releaseLock();
       }
 
-      // Translate Chinese to English if current language is English
-      if (i18n.language === 'en' && streamedContent) {
-        console.log('🌐 Checking for Chinese content in Radar response...');
-        const translatedContent = await autoTranslateChinese(streamedContent);
+      // Translate Chinese to target language if not in Chinese mode
+      const supportedLangs = ['en', 'fr', 'de'];
+      if (supportedLangs.includes(i18n.language) && streamedContent) {
+        console.log(`🌐 Checking for Chinese content in Radar response (${i18n.language.toUpperCase()})...`);
+        const translatedContent = await autoTranslateChinese(streamedContent, i18n.language);
         streamedContent = translatedContent;
       }
 

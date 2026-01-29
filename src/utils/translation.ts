@@ -1,6 +1,7 @@
 /**
- * Translation utilities for auto-translating Chinese to English
+ * Translation utilities for auto-translating Chinese to multiple languages
  * Uses DeepSeek API for high-quality translation
+ * Supports: English, French, German
  */
 
 /**
@@ -36,26 +37,43 @@ export function extractChineseSegments(text: string): Array<{
 }
 
 /**
- * Translate Chinese text to English using DeepSeek API
+ * Get target language name for translation prompt
  */
-export async function translateChineseToEnglish(text: string): Promise<string> {
+function getTargetLanguageName(langCode: string): string {
+  const languageMap: Record<string, string> = {
+    'en': 'English',
+    'fr': 'French',
+    'de': 'German',
+    'zh': 'Chinese'
+  };
+  return languageMap[langCode] || 'English';
+}
+
+/**
+ * Translate Chinese text to target language using DeepSeek API
+ * @param text - The Chinese text to translate
+ * @param targetLang - Target language code ('en', 'fr', 'de')
+ */
+export async function translateChineseToTargetLanguage(text: string, targetLang: string = 'en'): Promise<string> {
   try {
+    const targetLanguageName = getTargetLanguageName(targetLang);
+    
     const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer sk-662a5ce6198e49ab8d51ff9be78a0757'
+        'Authorization': `Bearer ${import.meta.env.VITE_DEEPSEEK_API_KEY}`
       },
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages: [
           {
             role: 'system',
-            content: 'You are a professional translator specializing in legal and business terminology. Translate the following Chinese text to English. Keep the translation concise, professional, and accurate. Only return the translated text without any explanations or additional comments.'
+            content: `You are a professional translator specializing in legal and business terminology. Translate the following Chinese text to ${targetLanguageName}. Keep the translation concise, professional, and accurate. Only return the translated text without any explanations or additional comments.`
           },
           {
             role: 'user',
-            content: `Translate to English: ${text}`
+            content: `Translate to ${targetLanguageName}: ${text}`
           }
         ],
         temperature: 0.3,
@@ -70,7 +88,7 @@ export async function translateChineseToEnglish(text: string): Promise<string> {
     const data = await response.json();
     const translation = data.choices[0].message.content.trim();
     
-    console.log(`🌐 Translated: "${text}" → "${translation}"`);
+    console.log(`🌐 Translated (${targetLanguageName}): "${text}" → "${translation}"`);
     return translation;
   } catch (error) {
     console.error('Translation error:', error);
@@ -80,18 +98,29 @@ export async function translateChineseToEnglish(text: string): Promise<string> {
 }
 
 /**
- * Translate multiple Chinese segments in batch
+ * Translate Chinese text to English using DeepSeek API (backward compatibility)
  */
-export async function batchTranslate(segments: string[]): Promise<string[]> {
+export async function translateChineseToEnglish(text: string): Promise<string> {
+  return translateChineseToTargetLanguage(text, 'en');
+}
+
+/**
+ * Translate multiple Chinese segments in batch
+ * @param segments - Array of Chinese text segments
+ * @param targetLang - Target language code ('en', 'fr', 'de')
+ */
+export async function batchTranslate(segments: string[], targetLang: string = 'en'): Promise<string[]> {
   if (segments.length === 0) return [];
   
   // If only one segment, translate directly
   if (segments.length === 1) {
-    const translation = await translateChineseToEnglish(segments[0]);
+    const translation = await translateChineseToTargetLanguage(segments[0], targetLang);
     return [translation];
   }
 
   try {
+    const targetLanguageName = getTargetLanguageName(targetLang);
+    
     // Combine all segments with separator
     const combined = segments.map((s, i) => `[${i}] ${s}`).join('\n');
     
@@ -99,18 +128,18 @@ export async function batchTranslate(segments: string[]): Promise<string[]> {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer sk-662a5ce6198e49ab8d51ff9be78a0757'
+        'Authorization': `Bearer ${import.meta.env.VITE_DEEPSEEK_API_KEY}`
       },
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages: [
           {
             role: 'system',
-            content: 'You are a professional translator. Translate each numbered line from Chinese to English. Keep the same format with numbers. Only return the translations without explanations.'
+            content: `You are a professional translator. Translate each numbered line from Chinese to ${targetLanguageName}. Keep the same format with numbers. Only return the translations without explanations.`
           },
           {
             role: 'user',
-            content: `Translate each line to English:\n${combined}`
+            content: `Translate each line to ${targetLanguageName}:\n${combined}`
           }
         ],
         temperature: 0.3,
@@ -135,7 +164,7 @@ export async function batchTranslate(segments: string[]): Promise<string[]> {
         translations.push(line.replace(`[${i}]`, '').trim());
       } else {
         // Fallback to individual translation
-        translations.push(await translateChineseToEnglish(segments[i]));
+        translations.push(await translateChineseToTargetLanguage(segments[i], targetLang));
       }
     }
     
@@ -143,21 +172,24 @@ export async function batchTranslate(segments: string[]): Promise<string[]> {
   } catch (error) {
     console.error('Batch translation error:', error);
     // Fallback: translate individually
-    return Promise.all(segments.map(s => translateChineseToEnglish(s)));
+    return Promise.all(segments.map(s => translateChineseToTargetLanguage(s, targetLang)));
   }
 }
 
 /**
- * Auto-detect and translate Chinese text to English
+ * Auto-detect and translate Chinese text to target language
  * This is the main function to use in your components
+ * @param text - The text that may contain Chinese
+ * @param targetLang - Target language code ('en', 'fr', 'de')
  */
-export async function autoTranslateChinese(text: string): Promise<string> {
+export async function autoTranslateChinese(text: string, targetLang: string = 'en'): Promise<string> {
   // 1. Check if text contains Chinese
   if (!containsChinese(text)) {
     return text;
   }
 
-  console.log('🔍 Detected Chinese in text, translating...');
+  const targetLanguageName = getTargetLanguageName(targetLang);
+  console.log(`🔍 Detected Chinese in text, translating to ${targetLanguageName}...`);
 
   try {
     // 2. Extract all Chinese segments
@@ -171,9 +203,9 @@ export async function autoTranslateChinese(text: string): Promise<string> {
 
     // 3. Batch translate all segments
     const originalTexts = segments.map(s => s.original);
-    const translations = await batchTranslate(originalTexts);
+    const translations = await batchTranslate(originalTexts, targetLang);
 
-    // 4. Replace Chinese with English (from end to start to preserve indices)
+    // 4. Replace Chinese with translated text (from end to start to preserve indices)
     let result = text;
     for (let i = segments.length - 1; i >= 0; i--) {
       const segment = segments[i];
@@ -195,20 +227,25 @@ export async function autoTranslateChinese(text: string): Promise<string> {
 
 /**
  * Translation cache to avoid re-translating the same text
+ * Key format: `${text}|${targetLang}`
  */
 const translationCache = new Map<string, string>();
 
 /**
  * Translate with caching
+ * @param text - The text that may contain Chinese
+ * @param targetLang - Target language code ('en', 'fr', 'de')
  */
-export async function translateWithCache(text: string): Promise<string> {
-  if (translationCache.has(text)) {
+export async function translateWithCache(text: string, targetLang: string = 'en'): Promise<string> {
+  const cacheKey = `${text}|${targetLang}`;
+  
+  if (translationCache.has(cacheKey)) {
     console.log('💾 Using cached translation');
-    return translationCache.get(text)!;
+    return translationCache.get(cacheKey)!;
   }
   
-  const translation = await autoTranslateChinese(text);
-  translationCache.set(text, translation);
+  const translation = await autoTranslateChinese(text, targetLang);
+  translationCache.set(cacheKey, translation);
   return translation;
 }
 
