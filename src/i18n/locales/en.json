@@ -1239,5 +1239,44 @@
       ]
     },
     "finalAgreement": "By using the Platform, you confirm that you have read, understood, and accepted all terms of this disclaimer."
+  },
+  "feedback": {
+    "title": "Share Your Feedback",
+    "rating": {
+      "label": "How would you rate your experience?",
+      "1star": "Poor - Needs significant improvement",
+      "2star": "Fair - Below expectations",
+      "3star": "Good - Meets expectations",
+      "4star": "Very Good - Exceeds expectations",
+      "5star": "Excellent - Outstanding experience"
+    },
+    "type": {
+      "label": "Feedback Type",
+      "userExperience": "User Experience",
+      "featureRequest": "Feature Request",
+      "bugReport": "Bug Report",
+      "other": "Other"
+    },
+    "comment": {
+      "label": "Your Feedback",
+      "placeholder": "Please share your thoughts, suggestions, or concerns... (minimum 10 characters)",
+      "characters": "characters"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "submit": "Submit Feedback",
+      "submitting": "Submitting...",
+      "feedback": "Feedback"
+    },
+    "errors": {
+      "ratingRequired": "Please select a rating",
+      "commentTooShort": "Please provide at least 10 characters",
+      "notLoggedIn": "Please log in to submit feedback",
+      "submitFailed": "Failed to submit feedback. Please try again.",
+      "unexpected": "An unexpected error occurred"
+    },
+    "success": {
+      "submitted": "Thank you for your feedback!"
+    }
   }
 }

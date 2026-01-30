@@ -774,5 +774,44 @@
     "backToLogin": "Zurück zur Anmeldeseite",
     "resendSuccess": "Die Bestätigungs-E-Mail wurde erneut gesendet. Bitte überprüfen Sie Ihren Posteingang.",
     "resendError": "Senden fehlgeschlagen. Bitte versuchen Sie es später erneut."
+  },
+  "feedback": {
+    "title": "Teilen Sie Ihr Feedback",
+    "rating": {
+      "label": "Wie bewerten Sie Ihre Erfahrung?",
+      "1star": "Schlecht - Erhebliche Verbesserungen erforderlich",
+      "2star": "Ausreichend - Unter den Erwartungen",
+      "3star": "Gut - Entspricht den Erwartungen",
+      "4star": "Sehr gut - Übertrifft die Erwartungen",
+      "5star": "Ausgezeichnet - Hervorragende Erfahrung"
+    },
+    "type": {
+      "label": "Feedback-Typ",
+      "userExperience": "Benutzererfahrung",
+      "featureRequest": "Funktionsanfrage",
+      "bugReport": "Fehlerbericht",
+      "other": "Sonstiges"
+    },
+    "comment": {
+      "label": "Ihr Feedback",
+      "placeholder": "Teilen Sie Ihre Gedanken, Vorschläge oder Bedenken... (mindestens 10 Zeichen)",
+      "characters": "Zeichen"
+    },
+    "buttons": {
+      "cancel": "Abbrechen",
+      "submit": "Feedback senden",
+      "submitting": "Wird gesendet...",
+      "feedback": "Feedback"
+    },
+    "errors": {
+      "ratingRequired": "Bitte wählen Sie eine Bewertung",
+      "commentTooShort": "Bitte geben Sie mindestens 10 Zeichen ein",
+      "notLoggedIn": "Bitte melden Sie sich an, um Feedback zu senden",
+      "submitFailed": "Feedback konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+      "unexpected": "Ein unerwarteter Fehler ist aufgetreten"
+    },
+    "success": {
+      "submitted": "Vielen Dank für Ihr Feedback!"
+    }
   }
 }

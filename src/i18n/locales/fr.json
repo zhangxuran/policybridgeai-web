@@ -836,5 +836,44 @@
     "backToLogin": "Retour à la page de connexion",
     "resendSuccess": "L'e-mail de vérification a été renvoyé. Veuillez vérifier votre boîte de réception.",
     "resendError": "Échec de l'envoi. Veuillez réessayer plus tard."
+  },
+  "feedback": {
+    "title": "Partagez vos commentaires",
+    "rating": {
+      "label": "Comment évaluez-vous votre expérience ?",
+      "1star": "Mauvais - Nécessite des améliorations importantes",
+      "2star": "Passable - En dessous des attentes",
+      "3star": "Bon - Répond aux attentes",
+      "4star": "Très bon - Dépasse les attentes",
+      "5star": "Excellent - Expérience exceptionnelle"
+    },
+    "type": {
+      "label": "Type de commentaire",
+      "userExperience": "Expérience utilisateur",
+      "featureRequest": "Demande de fonctionnalité",
+      "bugReport": "Signalement de bug",
+      "other": "Autre"
+    },
+    "comment": {
+      "label": "Vos commentaires",
+      "placeholder": "Partagez vos pensées, suggestions ou préoccupations... (minimum 10 caractères)",
+      "characters": "caractères"
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "submit": "Envoyer les commentaires",
+      "submitting": "Envoi en cours...",
+      "feedback": "Commentaires"
+    },
+    "errors": {
+      "ratingRequired": "Veuillez sélectionner une note",
+      "commentTooShort": "Veuillez fournir au moins 10 caractères",
+      "notLoggedIn": "Veuillez vous connecter pour soumettre des commentaires",
+      "submitFailed": "Échec de l'envoi des commentaires. Veuillez réessayer.",
+      "unexpected": "Une erreur inattendue s'est produite"
+    },
+    "success": {
+      "submitted": "Merci pour vos commentaires !"
+    }
   }
 }

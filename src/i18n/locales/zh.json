@@ -1234,5 +1234,44 @@
     "submit": "提交",
     "search": "搜索",
     "pleaseLogin": "请先登录"
+  },
+  "feedback": {
+    "title": "分享您的反馈",
+    "rating": {
+      "label": "您如何评价您的体验？",
+      "1star": "很差 - 需要大幅改进",
+      "2star": "一般 - 低于预期",
+      "3star": "良好 - 符合预期",
+      "4star": "很好 - 超出预期",
+      "5star": "优秀 - 卓越的体验"
+    },
+    "type": {
+      "label": "反馈类型",
+      "userExperience": "使用体验",
+      "featureRequest": "功能建议",
+      "bugReport": "问题反馈",
+      "other": "其他"
+    },
+    "comment": {
+      "label": "您的反馈",
+      "placeholder": "请分享您的想法、建议或疑虑...（至少10个字符）",
+      "characters": "个字符"
+    },
+    "buttons": {
+      "cancel": "取消",
+      "submit": "提交反馈",
+      "submitting": "提交中...",
+      "feedback": "反馈"
+    },
+    "errors": {
+      "ratingRequired": "请选择评分",
+      "commentTooShort": "请至少输入10个字符",
+      "notLoggedIn": "请登录后提交反馈",
+      "submitFailed": "提交反馈失败，请重试",
+      "unexpected": "发生意外错误"
+    },
+    "success": {
+      "submitted": "感谢您的反馈！"
+    }
   }
 }

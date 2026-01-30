@@ -12,9 +12,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { User, LogOut, LayoutDashboard, ShoppingCart, Menu, X } from 'lucide-react';
+import { User, LogOut, LayoutDashboard, ShoppingCart, Menu, X, MessageSquare } from 'lucide-react';
 import { toast } from 'sonner';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import FeedbackDialog from '@/components/FeedbackDialog';
 
 const BETA_VERSION = true;
 
@@ -25,6 +26,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [remainingContracts, setRemainingContracts] = useState<number>(0);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   useEffect(() => {
     if (user && !BETA_VERSION) {
@@ -137,6 +139,11 @@ export default function Navbar() {
                         {t('nav.buyBooster')}
                       </DropdownMenuItem>
                     )}
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={() => setFeedbackOpen(true)}>
+                      <MessageSquare className="mr-2 h-4 w-4" />
+                      {t('feedback.buttons.feedback')}
+                    </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem 
                       onClick={handleLogout} 
@@ -263,5 +270,6 @@ export default function Navbar() {
         )}
       </div>
     </nav>
+    <FeedbackDialog isOpen={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
   );
 }

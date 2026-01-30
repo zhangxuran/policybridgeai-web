@@ -12,6 +12,7 @@ import { toast } from 'sonner';
 import { Send, Upload, Loader2, MessageSquare, Trash2, ArrowLeft, User, Scale, X, FileText, Download, ExternalLink, Radar, Copy, Check, Menu } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ConfirmDialog from '@/components/ConfirmDialog';
+import FeedbackDialog from '@/components/FeedbackDialog';
 import { UpgradeDialog } from '@/components/UpgradeDialog';
 import { stripMarkdown, stripHtmlTags } from '@/lib/markdownUtils';
 import { useTranslation, TFunction } from 'react-i18next';
@@ -318,6 +319,7 @@ export default function DifyChat() {
   const [selectedIdentity, setSelectedIdentity] = useState<string>('');
   const [copiedMessageIndex, setCopiedMessageIndex] = useState<number | null>(null);
   const [isRadarSession, setIsRadarSession] = useState(false);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
   
   const [fundingOptions, setFundingOptions] = useState<FundingOption[]>([
     { id: 'A', label: t('difyChat.radarInterface.fundingOptions.A'), checked: false, amount: '' },
@@ -1975,6 +1977,14 @@ export default function DifyChat() {
                     <Send className="w-4 md:w-5 h-4 md:h-5" />
                   )}
                 </Button>
+                <Button
+                  onClick={() => setFeedbackOpen(true)}
+                  variant="outline"
+                  className="h-10 md:h-[60px] px-3 md:px-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 flex-shrink-0"
+                  title={t('feedback.buttons.feedback')}
+                >
+                  <MessageSquare className="w-4 md:w-5 h-4 md:h-5" />
+                </Button>
               </div>
             </div>
           </Card>
@@ -2015,6 +2025,8 @@ export default function DifyChat() {
           background: linear-gradient(to bottom, #2563eb, #4f46e5);
         }
       `}</style>
+      
+      <FeedbackDialog isOpen={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
     </div>
   );
 }
