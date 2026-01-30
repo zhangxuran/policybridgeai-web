@@ -875,5 +875,12 @@
     "success": {
       "submitted": "Merci pour vos commentaires !"
     }
+  },
+  "share": {
+    "button": "Partager",
+    "title": "Partager cette page",
+    "copyLink": "Copier le lien",
+    "linkCopied": "Lien copié dans le presse-papiers !",
+    "success": "Partagé avec succès !"
   }
 }

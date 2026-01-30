@@ -1278,5 +1278,12 @@
     "success": {
       "submitted": "Thank you for your feedback!"
     }
+  },
+  "share": {
+    "button": "Share",
+    "title": "Share this page",
+    "copyLink": "Copy Link",
+    "linkCopied": "Link copied to clipboard!",
+    "success": "Shared successfully!"
   }
 }

@@ -1273,5 +1273,12 @@
     "success": {
       "submitted": "感谢您的反馈！"
     }
+  },
+  "share": {
+    "button": "分享",
+    "title": "分享此页面",
+    "copyLink": "复制链接",
+    "linkCopied": "链接已复制到剪贴板！",
+    "success": "分享成功！"
   }
 }

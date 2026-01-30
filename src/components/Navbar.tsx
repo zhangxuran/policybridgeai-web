@@ -16,6 +16,7 @@ import { User, LogOut, LayoutDashboard, ShoppingCart, Menu, X, MessageSquare } f
 import { toast } from 'sonner';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import FeedbackDialog from '@/components/FeedbackDialog';
+import { ShareButton } from '@/components/ShareButton';
 
 const BETA_VERSION = true;
 
@@ -108,6 +109,7 @@ export default function Navbar() {
 
             {user ? (
               <div className="flex items-center gap-4">
+                <ShareButton />
                 {!BETA_VERSION && remainingContracts > 0 && (
                   <Badge
                     variant="outline"
@@ -159,6 +161,7 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="flex items-center gap-3">
+                <ShareButton />
                 <Button variant="ghost" onClick={() => navigate('/login')}>
                   {t('nav.login')}
                 </Button>

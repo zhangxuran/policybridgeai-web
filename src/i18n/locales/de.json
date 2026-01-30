@@ -813,5 +813,12 @@
     "success": {
       "submitted": "Vielen Dank für Ihr Feedback!"
     }
+  },
+  "share": {
+    "button": "Teilen",
+    "title": "Diese Seite teilen",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Link in die Zwischenablage kopiert!",
+    "success": "Erfolgreich geteilt!"
   }
 }
