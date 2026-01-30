@@ -12,11 +12,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { User, LogOut, LayoutDashboard, ShoppingCart, Menu, X, MessageSquare } from 'lucide-react';
+import { User, LogOut, LayoutDashboard, ShoppingCart, Menu, X, MessageSquare, Share2 } from 'lucide-react';
 import { toast } from 'sonner';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import FeedbackDialog from '@/components/FeedbackDialog';
-import { ShareButton } from '@/components/ShareButton';
+import { ShareDialog } from '@/components/ShareDialog';
 
 const BETA_VERSION = true;
 
@@ -28,6 +28,7 @@ export default function Navbar() {
   const [remainingContracts, setRemainingContracts] = useState<number>(0);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
 
   useEffect(() => {
     if (user && !BETA_VERSION) {
@@ -109,7 +110,6 @@ export default function Navbar() {
 
             {user ? (
               <div className="flex items-center gap-4">
-                <ShareButton />
                 {!BETA_VERSION && remainingContracts > 0 && (
                   <Badge
                     variant="outline"
@@ -147,6 +147,10 @@ export default function Navbar() {
                       <MessageSquare className="mr-2 h-4 w-4" />
                       {t('feedback.buttons.feedback')}
                     </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setShareOpen(true)}>
+                      <Share2 className="mr-2 h-4 w-4" />
+                      {t('share.button')}
+                    </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem 
                       onClick={handleLogout} 
@@ -161,7 +165,6 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                <ShareButton />
                 <Button variant="ghost" onClick={() => navigate('/login')}>
                   {t('nav.login')}
                 </Button>
@@ -275,6 +278,7 @@ export default function Navbar() {
       </div>
       </nav>
       <FeedbackDialog isOpen={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+      <ShareDialog isOpen={shareOpen} onClose={() => setShareOpen(false)} />
     </>
   );
 }
