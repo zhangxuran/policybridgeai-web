@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Star, Send } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
-import { toast } from 'react-hot-toast';
+import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 
 interface FeedbackDialogProps {
